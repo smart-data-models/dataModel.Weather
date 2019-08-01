@@ -1,71 +1,59 @@
 # Weather Observed
 
-The Weather observed in Spain is provided by
+The Weather observations in Spain are provided by
 [Spanish National Meteorology Agency](http://aemet.es), from Portugal by
 [Instituto Português do Mar e da Atmosfera](http://www.ipma.pt/pt).
-[Harvesters](./harvest) transform this data to NGSI v2.
-
-[Harvester for Spain](./harvest/spain) requires the
-[list](../../PointOfInterest/WeatherStation) of stations.
+[Harvesters](./harvesters) transform this data to NGSI v2.
 
 This folder contains the following scripts:
 
--   `weather_observed.py` .- Contains all the logic to expose the weather
-    observed as an NGSI v2 data model (outdated).
--   `spain/harvester.py` .- Performs data harvesting using AEMET's data site as
-    the origin and Orion Context Broker as the destination.
--   `portugal/harvester.py` .- Performs data harvesting using IPMA's data site
-    as the origin and Orion Context Broker as the destination.
+-   `harvesters/spain/spain_weather_observed.py` - Performs data harvesting
+    using AEMET's data site as the origin and Orion Context Broker as the
+    destination.
+-   `harvesters/portugal/portugal_weather_observed.py` - Performs data
+    harvesting using IPMA's data site as the origin and Orion Context Broker as
+    the destination.
 
 Please check data licenses at the original data sources before using this data
 in an application.
 
 ## Public instance
 
-To get access to a public instance offering weather observed data please have a
-look at the
-[GSMA's API Directory](http://apidirectory.connectedliving.gsma.com).
-
-The instance described
-[here](https://docs.google.com/document/d/1lHP7XS-7TNzsxLa0bNFb-96JnJXh0ecIHS3-H0qMREg/edit?usp=sharing)
-has been set up by the FIWARE Community.
-
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+You can read about public instance offering information about observed weather
+[here](../../gsma.md).
 
 ## Examples of use
 
-What was the weather observed today in Valladolid (Spain)?
-
-`curl -H 'fiware-service:weather' -H 'fiware-servicepath:/Spain' "https://orion.lab.fiware.org/v2/entities?type=WeatherObserved&q=address.addressLocality:Valladolid&options=keyValues"`
+```bash
+curl -X GET \
+  'https://streams.lab.fiware.org/v2/entities?type=WeatherObserved&options=keyValues&q=address.addressLocality:Barcelona' \
+  -H 'fiware-service: weather' \
+  -H 'fiware-servicepath: /Spain' | python -m json.tool
+```
 
 ```json
 [
     {
         "address": {
             "addressCountry": "ES",
-            "addressLocality": "Valladolid"
+            "addressLocality": "Barcelona"
         },
-        "atmosphericPressure": 937.7,
         "dataProvider": "FIWARE",
-        "dateObserved": "2019-01-10T19:00:00.00Z",
-        "id": "Spain-WeatherObserved-2422-latest",
+        "dateObserved": "2019-05-27T21:00:00.00Z",
+        "id": "Spain-WeatherObserved-0201D-latest",
         "location": {
-            "coordinates": [-4.754444444, 41.640833333],
+            "coordinates": [2.2, 41.3906],
             "type": "Point"
         },
         "precipitation": 0,
-        "pressureTendency": 0.7,
-        "relativeHumidity": 0.65,
+        "relativeHumidity": 90,
         "source": "http://www.aemet.es",
-        "stationCode": "2422",
-        "stationName": "Valladolid",
-        "temperature": 1.9,
+        "stationCode": "0201D",
+        "stationName": "Barcelona",
+        "temperature": 17,
         "type": "WeatherObserved",
-        "windDirection": -135,
-        "windSpeed": 2.8
+        "windDirection": 105,
+        "windSpeed": 3.5
     }
 ]
 ```

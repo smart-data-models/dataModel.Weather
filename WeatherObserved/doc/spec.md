@@ -4,7 +4,7 @@
 
 An observation of weather conditions at a certain place and time. This data
 model has been developed in cooperation with mobile operators and the
-[GSMA](http://www.gsma.com/connectedliving/iot-big-data/).
+[GSMA](https://www.gsma.com/iot/iot-big-data/).
 
 ## Data Model
 
@@ -18,16 +18,16 @@ A JSON Schema corresponding to this data model can be found
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `dateModified` : Last update timestamp of this entity.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `dateCreated` : Entity's creation timestamp.
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 -   `name` : Name given to the weather observed location.
 
@@ -37,7 +37,7 @@ A JSON Schema corresponding to this data model can be found
 -   `location` : Location of the weather observation represented by a GeoJSON
     geometry.
 
-    -   Attribute type: `geo:json`.
+    -   Attribute type: Property. `geo:json`.
     -   Normative References:
         [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
     -   Mandatory if `address` is not defined.
@@ -52,33 +52,31 @@ A JSON Schema corresponding to this data model can be found
 -   `dateObserved` : The date and time of this observation in ISO8601 UTCformat.
     It can be represented by an specific time instant or by an ISO8601 interval.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime) or an ISO8601
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime) or an ISO8601
         interval represented as [Text](https://schema.org/Text).
     -   Mandatory
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: [Text](https://schema.org/Text) or
+    -   Attribute type: Property. [Text](https://schema.org/Text) or
         [URL](https://schema.org/URL)
     -   Optional
 
 -   `refDevice` : A reference to the device(s) which captured this observation.
 
-    -   Attribute type: Reference to an entity of type `Device`
+    -   Attribute type: Relationship. Reference to an entity of type `Device`
     -   Optional
 
 -   `refPointOfInterest` : A reference to a point of interest (usually a weather
     station) associated to this observation.
 
-    -   Attribute type: Reference to an entity of type `PointOfInterest`
+    -   Attribute type: Relationship. Reference to an entity of type `PointOfInterest`
     -   Optional
 
 -   `weatherType` : The observed weather type. It is represented by a comma
-    separated list of weather statuses, for instance `overcast, lightRain`. A
-    proposed mapping for Spanish terms can be found
-    [here](https://github.com/Fiware/dataModels/blob/master/specs/Weather/WeatherForecast/harvest/spain_weather_forecast_harvest.py#L135). +
-    Attribute type: [Text](https://schema.org/Text)
+    separated list of weather statuses, for instance `overcast, lightRain`.
 
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Allowed values: A combination of (`clearNight`,`sunnyDay`,
         `slightlyCloudy`, `partlyCloudy`, `mist`, `fog`, `highClouds`, `cloudy`,
         `veryCloudy`, `overcast`, `lightRainShower`, `drizzle`, `lightRain`,
@@ -89,7 +87,7 @@ A JSON Schema corresponding to this data model can be found
 
 -   `dewPoint` : The dew point encoded as a number.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Default unit: Celsius degrees.
     -   See also:
         [https://en.wikipedia.org/wiki/Dew_point](https://en.wikipedia.org/wiki/Dew_point)
@@ -97,14 +95,14 @@ A JSON Schema corresponding to this data model can be found
 
 -   `visibility` : Visibility reported.
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Allowed values: One of (`veryPoor`, `poor`, `moderate`, `good`,
         `veryGood`, `excellent`)
     -   Optional
 
 -   `temperature` : Air's temperature observed.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Default unit: Degrees centigrades.
     -   Attribute metadata:
         -   `timestamp` : optional timestamp for the observed value. It can be
@@ -116,7 +114,7 @@ A JSON Schema corresponding to this data model can be found
 -   `relativeHumidity` : Air's relative humidity observed (percentage, expressed
     in parts per one).
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Allowed values: A number between `0` and `1`.
     -   Attribute metadata:
         -   `timestamp` : optional timestamp for the observed value. It can be
@@ -127,7 +125,7 @@ A JSON Schema corresponding to this data model can be found
 
 -   `precipitation` : Precipitation level observed.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Default unit: Liters per square meter.
     -   Attribute metadata:
         -   `timestamp` : optional timestamp for the observed value. It can be
@@ -139,7 +137,7 @@ A JSON Schema corresponding to this data model can be found
 -   `windDirection` : The wind direction expressed in decimal degrees compared
     to geographic North (measured clockwise), encoded as a Number.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Default unit: Decimal degrees
     -   Attribute metadata:
         -   `timestamp` : optional timestamp for the observed value. It can be
@@ -150,7 +148,7 @@ A JSON Schema corresponding to this data model can be found
 
 -   `windSpeed` : The observed wind speed in m/s, encoded as a Number.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Default unit: meters per second
     -   Attribute metadata:
         -   `timestamp` : optional timestamp for the observed value. It can be
@@ -162,7 +160,7 @@ A JSON Schema corresponding to this data model can be found
 -   `atmosphericPressure` : The atmospheric pressure observed measured in Hecto
     Pascals.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Default unit: Hecto Pascals
     -   Attribute metadata:
         -   `timestamp` : optional timestamp for the observed value. It can be
@@ -174,7 +172,7 @@ A JSON Schema corresponding to this data model can be found
 -   `pressureTendency` : Is the pressure rising or falling? It can be expressed
     in quantitative terms or qualitative terms.
 
-    -   Attribute type: [Text](https://schema.org/Text) or
+    -   Attribute type: Property. [Text](https://schema.org/Text) or
         [Number](https://schema.org/Number)
     -   Allowed values, if expressed in quantitative terms: one Of (`raising`,
         `falling`, `steady`)
@@ -183,7 +181,7 @@ A JSON Schema corresponding to this data model can be found
 -   `solarRadiation` : The solar radiation observed measured in Watts per square
     meter.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Default unit: Watts per square meter
     -   Attribute metadata:
         -   `timestamp` : optional timestamp for the observed value. It can be
@@ -196,7 +194,7 @@ A JSON Schema corresponding to this data model can be found
     [illumninance](https://en.wikipedia.org/wiki/Illuminance) observed measured
     in lux (lx) or lumens per square metre (cd·sr·m−2).
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Default unit: Lux
     -   Attribute metadata:
     -   `timestamp` : optional timestamp for the observed value. It can be
@@ -210,7 +208,7 @@ A JSON Schema corresponding to this data model can be found
     [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge), expressed in
     centimeters.
 
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Default unit: Centimeters (cm)
     -   Attribute metadata:
         -   `timestamp` : optional timestamp for the observed value. It can be
@@ -220,7 +218,7 @@ A JSON Schema corresponding to this data model can be found
 
 -   `snowHeight`: The snow height observed by generic snow depth measurement
     sensors, expressed in centimeters.
-    -   Attribute type: [Number](https://schema.org/Number)
+    -   Attribute type: Property. [Number](https://schema.org/Number)
     -   Default unit: Centimeters (cm)
     -   Attribute metadata:
         -   `timestamp` : optional timestamp for the observed value. It can be
@@ -228,10 +226,9 @@ A JSON Schema corresponding to this data model can be found
             the `dateObserved` attribute at entity level.
     -   Optional
 
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+**Note**: JSON Schemas are intended to capture the data type and associated
+constraints of the different Attributes, regardless their final representation
+format in NGSI(v2, LD).
 
 ## Examples
 
@@ -342,14 +339,106 @@ Sample uses simplified representation for data consumers `?options=keyValues`
 }
 ```
 
-## Use it with a real service
+### LD Example
 
-To get access to a public instance offering weather observed data please have a
-look at the
-[GSMA's API Directory](http://apidirectory.connectedliving.gsma.com/api/weather-spain).
+Sample uses the NGSI-LD representation
 
-The instance described
-[here](https://docs.google.com/document/d/1lHP7XS-7TNzsxLa0bNFb-96JnJXh0ecIHS3-H0qMREg/edit?usp=sharing)
-has been set up by the FIWARE Community.
+```json
+{
+    "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",
+    "type": "WeatherObserved",
+    "dateObserved": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2016-11-30T07:00:00.00Z"
+        }
+    },
+    "illuminance": {
+        "type": "Property",
+        "value": 1000
+    },
+    "temperature": {
+        "type": "Property",
+        "value": 3.3
+    },
+    "precipitation": {
+        "type": "Property",
+        "value": 0
+    },
+    "atmosphericPressure": {
+        "type": "Property",
+        "value": 938.9
+    },
+    "pressureTendency": {
+        "type": "Property",
+        "value": 0.5
+    },
+    "refDevice": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Device:device-0A3478"
+    },
+    "source": {
+        "type": "Property",
+        "value": "http://www.aemet.es"
+    },
+    "windSpeed": {
+        "type": "Property",
+        "value": 2
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [-4.754444444, 41.640833333]
+        }
+    },
+    "stationName": {
+        "type": "Property",
+        "value": "Valladolid"
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressLocality": "Valladolid",
+            "addressCountry": "ES",
+            "type": "PostalAddress"
+        }
+    },
+    "stationCode": {
+        "type": "Property",
+        "value": "2422"
+    },
+    "dataProvider": {
+        "type": "Property",
+        "value": "TEF"
+    },
+    "windDirection": {
+        "type": "Property",
+        "value": -45
+    },
+    "relativeHumidity": {
+        "type": "Property",
+        "value": 1
+    },
+    "streamGauge": {
+        "type": "Property",
+        "value": 50
+    },
+    "snowHeight": {
+        "type": "Property",
+        "value": 20
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
+}
+```
+
+## Public instance
+
+You can read about public instance offering information about observed weather
+[here](../../../gsma.md).
 
 ## Open Issues
