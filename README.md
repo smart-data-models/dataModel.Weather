@@ -9,10 +9,10 @@ and agriculture but is applicable to many different applications.
 
 The main entities identified are:
 
--   [WeatherForecast](../WeatherForecast/doc/spec.md). It represents a weather
+-   [WeatherForecast](./WeatherForecast/doc/spec.md). It represents a weather
     forecast for a period of time and a location.
--   [WeatherObserved](../WeatherObserved/doc/spec.md). It represents a weather
+-   [WeatherObserved](./WeatherObserved/doc/spec.md). It represents a weather
     observation made over a period of time at a specific location.
 
-*   [WeatherAlert](../WeatherAlert/doc/spec.md). It represents a weather alarm
+*   [WeatherAlert](./WeatherAlert/doc/spec.md). It represents a weather alarm
     intended to raise attention over a forecasted extreme weather condition.
