@@ -439,6 +439,6 @@ Sample uses the NGSI-LD representation
 ## Public instance
 
 You can read about public instance offering information about observed weather
-[here](../../../gsma.md).
+[here](https://github.com/FIWARE/dataModels/blob/master/specs/gsma.md).
 
 ## Open Issues
