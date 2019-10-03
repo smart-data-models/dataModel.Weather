@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/dataModels/specs/Weather/WeatherObserved/schema.json",
+  "$id": "https://smart-data-models.github.io/data-models/specs/Weather/WeatherObserved/schema.json",
   "title": " - Weather Observed schema",
   "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
   "type": "object",
