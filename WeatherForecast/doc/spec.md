@@ -15,7 +15,7 @@ Spanish) [here](http://www.aemet.es/es/eltiempo/prediccion/municipios/ayuda).
 ## Data Model
 
 A JSON Schema corresponding to this data model can be found
-[here](http://fiware.github.io/dataModels/specs/Weather/WeatherForecast/schema.json).
+[here](http://fiware.github.io/data-models/specs/Weather/WeatherForecast/schema.json).
 
 -   `id` : Unique identifier.
 
@@ -386,6 +386,6 @@ Sample uses the NGSI-LD representation
 ## Public instance
 
 You can read about public instance offering information about weather forecast
-[here](https://github.com/FIWARE/dataModels/blob/master/specs/gsma.md).
+[here](https://github.com/FIWARE/data-models/blob/master/specs/gsma.md).
 
 ## Open Issues

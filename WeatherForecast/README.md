@@ -3,7 +3,7 @@
 ## Public instance
 
 You can read about public instance offering information about weather forecast
-[here](https://github.com/FIWARE/dataModels/blob/master/specs/gsma.md).
+[here](https://github.com/FIWARE/data-models/blob/master/specs/gsma.md).
 
 ## Examples of use
 

@@ -9,7 +9,7 @@ model has been developed in cooperation with mobile operators and the
 ## Data Model
 
 A JSON Schema corresponding to this data model can be found
-[here](https://fiware.github.io/dataModels/specs/Weather/WeatherObserved/schema.json).
+[here](https://fiware.github.io/data-models/specs/Weather/WeatherObserved/schema.json).
 
 -   `id` : Unique identifier.
 
@@ -442,6 +442,6 @@ Sample uses the NGSI-LD representation
 ## Public instance
 
 You can read about public instance offering information about observed weather
-[here](https://github.com/FIWARE/dataModels/blob/master/specs/gsma.md).
+[here](https://github.com/FIWARE/data-models/blob/master/specs/gsma.md).
 
 ## Open Issues
