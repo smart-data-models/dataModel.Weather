@@ -1,5 +1,7 @@
 # Weather Alert
 
+Use [Alert](https://github.com/smart-data-models/dataModel.Alert/blob/master/alert/README.md) with `weather` as `category`.
+
 This folder contains all the software artefacts to offer weather alert data in
 NGSI v2. The source of this data is the global
 [European Weather Alarm Service](http://meteoalarm.eu).

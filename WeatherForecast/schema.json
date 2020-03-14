@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/data-models/specs/Weather/WeatherForecast/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/schema.json",
   "title": " - Weather Forecast schema",
   "description": "A harmonised description of a Weather Forecast",
   "type": "object",
@@ -12,7 +12,7 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/data-models/specs/Weather/weather-schema.json#/definitions/Weather-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
     },
     {
       "properties": {
@@ -45,7 +45,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "https://smart-data-models.github.io/data-models/specs/Weather/weather-schema.json#/definitions/Weather-AirConditions"
+              "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions"
             }
           ]
         },
@@ -53,7 +53,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "https://smart-data-models.github.io/data-models/specs/Weather/weather-schema.json#/definitions/Weather-AirConditions"
+              "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions"
             }
           ]
         },
