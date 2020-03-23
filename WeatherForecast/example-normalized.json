@@ -65,5 +65,8 @@
   },
   "relativeHumidity": {
     "value": 0.85
+  },
+  "uVIndexMax": {
+    "value": 1.00
   }
 }

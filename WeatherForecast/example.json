@@ -28,5 +28,6 @@
   "validTo": "2016-12-01T23:00:00.00Z",
   "validity": "2016-12-01T18:00:00+01:00/2016-12-02T00:00:00+01:00",
   "weatherType": "overcast",
-  "windSpeed": 0
+  "windSpeed": 0,
+  "uVIndexMax": 1
 }

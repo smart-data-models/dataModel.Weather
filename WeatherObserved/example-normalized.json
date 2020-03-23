@@ -64,5 +64,8 @@
   },
   "snowHeight": {
     "value": 20
+  },
+  "uvIndexMax": {
+    "value": 1.0
   }
 }

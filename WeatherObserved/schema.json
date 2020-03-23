@@ -63,6 +63,10 @@
         },
         "snowHeight": {
           "type": "number"
+        },
+        "uVIndexMax": {
+          "type": "number",
+          "minimum": 1
         }
       }
     }

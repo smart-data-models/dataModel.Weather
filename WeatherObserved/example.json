@@ -24,5 +24,6 @@
   "illuminance": 1000,
   "refDevice": "device-0A3478",
   "streamGauge": 50,
-  "snowHeight": 20
+  "snowHeight": 20, 
+  "uvIndexMax": 1.0
 }
