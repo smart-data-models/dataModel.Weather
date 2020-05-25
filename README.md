@@ -13,6 +13,5 @@ The main entities identified are:
     forecast for a period of time and a location.
 -   [WeatherObserved](./WeatherObserved/README.md). It represents a weather
     observation made over a period of time at a specific location.
-
-*   [WeatherAlert](./WeatherAlert/README.md). It represents a weather alarm
+-   [WeatherAlert](./WeatherAlert/README.md). It represents a weather alarm
     intended to raise attention over a forecasted extreme weather condition.
