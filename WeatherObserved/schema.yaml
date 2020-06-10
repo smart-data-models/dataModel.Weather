@@ -1,0 +1,110 @@
+WeatherObserved:
+  required:
+    - id
+    - type
+    - dateObserved
+    - location
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: >-
+    An observation of weather conditions at a certain place and time. This data
+    model has been developed in cooperation with mobile operators and the GSMA.
+  properties:
+    address:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    areaServed:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    atmosphericPressure:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    dateObserved:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    dewPoint:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    illuminance:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    location:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    precipitation:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    snowHeight:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    solarRadiation:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    streamGauge:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
+    uVIndexMax:
+      x-ngsi:
+        type: Property
+      type: number
+      description: ''
