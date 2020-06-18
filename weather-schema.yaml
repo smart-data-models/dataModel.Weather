@@ -1,0 +1,97 @@
+WeatherCommons:
+  type: object
+  allOf:
+    - $ref: '#/Weather-AirConditions'
+    - properties:
+        weatherType:
+          type: string
+        visibility:
+          $ref: "#/visibility"
+        windDirection:
+          type: number
+          minimum: -180
+          maximum: 180
+        windSpeed:
+          type: number
+          minimum: 0
+        refPointOfInterest:
+          type: string
+
+
+Weather-AirConditions: 
+  type: object
+  properties:
+    temperature:
+      type: number
+    feelLikesTemperature:
+      type: number
+    relativeHumidity:
+      type: number
+      minimum: 0
+      maximum: 1
+
+WeatherAlertCategories: 
+  description: >
+    - `avalanches`
+    - `coastalEvent`
+    - `coldWave`
+    - `flood`
+    - `fog`
+    - `forestFire`
+    - `heatWave`
+    - `highTemperature`
+    - `hurricane`
+    - `ice`
+    - `lowTemperature`
+    - `rain/flood"
+    - `rainfall`
+    - `snow`
+    - `snow/ice`
+    - `thunderstorms`
+    - `tornado`
+    - `tropicalCyclone`
+    - `tsunami`
+    - `wind`
+  enum: 
+    - avalanches
+    - coastalEvent
+    - coldWave
+    - flood
+    - fog
+    - forestFire
+    - heatWave
+    - highTemperature
+    - hurricane
+    - ice
+    - lowTemperature
+    - rain/flood"
+    - rainfall
+    - snow
+    - snow/ice
+    - thunderstorms
+    - tornado
+    - tropicalCyclone
+    - tsunami
+    - wind
+  type: string
+  x-ngsi: 
+    uri-prefix: "https://uri.fiware.org/ns/data-models#"
+
+visibility:
+  description: |
+    - `veryPoor`
+    - `poor`
+    - `moderate`
+    - `good`
+    - `veryGood`
+    - `excellent`
+  type: string
+  x-ngsi: 
+    uri-prefix: "https://uri.fiware.org/ns/data-models#"
+  enum:
+    - veryPoor
+    - poor
+    - moderate
+    - good
+    - veryGood
+    - excellent
