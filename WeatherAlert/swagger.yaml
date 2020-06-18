@@ -3,6 +3,8 @@ components:
   schemas: 
     WeatherAlert: 
       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherAlert/schema.yaml#/WeatherAlert"
+    WeatherAlertCategories:
+      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAlertCategories'
 info: 
   description: |
     Use [Alert](https://github.com/smart-data-models/dataModel.Alert/blob/master/alert/README.md) with `weather` as `category`.
