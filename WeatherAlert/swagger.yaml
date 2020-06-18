@@ -4,7 +4,21 @@ components:
     WeatherAlert: 
       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherAlert/schema.yaml#/WeatherAlert"
 info: 
-  description: ""
+  description: |
+    Use [Alert](https://github.com/smart-data-models/dataModel.Alert/blob/master/alert/README.md) with `weather` as `category`.
+
+    This folder contains all the software artefacts to offer weather alert data in
+    NGSI v2. The source of this data is the global
+    [European Weather Alarm Service](http://meteoalarm.eu).
+    
+    -   `meteoalarm_harvest.py`. A harvester for weather alarms throughout Europe.
+    
+    Before using this data please check license at the original data source.
+    
+    **Note**: JSON Schemas only capture the NGSI simplified representation, this
+    means that to test the JSON schema examples with a
+    [FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
+    API implementation, you need to use the `keyValues` mode (`options=keyValues`).
   title: WeatherAlert
   version: "1.0.0"
 openapi: "3.0.0"
@@ -33,12 +47,7 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherAlert/example.json"
-                normalized: 
-                  summary: "Normalized NGSI-LD"
-                  value: 
-                    - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherAlert/example-normalized.jsonld"
+                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherAlert/example-1.json"
           description: OK
       tags: 
         - ngsi-ld
