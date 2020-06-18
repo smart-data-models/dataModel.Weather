@@ -5,8 +5,8 @@ WeatherObserved:
     - dateObserved
     - location
   allOf:
-    - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+    - $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common'
+    - $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherCommons'
   type: object
   description: >-
     An observation of weather conditions at a certain place and time. This data
