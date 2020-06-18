@@ -1,7 +1,7 @@
 WeatherCommons:
   type: object
   allOf:
-    - $ref: '#/Weather-AirConditions'
+    - $ref: '#/WeatherAirConditions'
     - properties:
         weatherType:
           type: string
@@ -18,7 +18,7 @@ WeatherCommons:
           type: string
 
 
-Weather-AirConditions: 
+WeatherAirConditions: 
   type: object
   properties:
     temperature:
@@ -31,7 +31,7 @@ Weather-AirConditions:
       maximum: 1
 
 WeatherAlertCategories: 
-  description: >
+  description: |
     - `avalanches`
     - `coastalEvent`
     - `coldWave`
@@ -43,7 +43,7 @@ WeatherAlertCategories:
     - `hurricane`
     - `ice`
     - `lowTemperature`
-    - `rain/flood"
+    - `rain/flood`
     - `rainfall`
     - `snow`
     - `snow/ice`
@@ -64,7 +64,7 @@ WeatherAlertCategories:
     - hurricane
     - ice
     - lowTemperature
-    - rain/flood"
+    - rain/flood
     - rainfall
     - snow
     - snow/ice
