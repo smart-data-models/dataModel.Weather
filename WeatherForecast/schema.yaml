@@ -5,8 +5,9 @@ WeatherForecast:
     - dateIssued
     - address
   allOf:
-    - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+    - $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common'
+    - $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherCommons'
+
   type: object
   description: A harmonised description of a Weather Forecast
   properties:
