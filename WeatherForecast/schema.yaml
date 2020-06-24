@@ -7,7 +7,6 @@ WeatherForecast:
   allOf:
     - $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common'
     - $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherCommons'
-
   type: object
   description: A harmonised description of a Weather Forecast
   properties:
@@ -67,7 +66,8 @@ WeatherForecast:
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
     owner:
       x-ngsi:
-        type: Property
+        type: Relationship
+        model: https://schema.org/URL  
       type: array
       description: ''
       items:
