@@ -24,8 +24,9 @@ WeatherObserved:
     atmosphericPressure:
       x-ngsi:
         type: Property
+        model: 'https://schema.org/Number'
       type: number
-      description: ''
+      description: 'The atmospheric pressure observed measured in Hecto Pascals.'
     dataProvider:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
@@ -34,7 +35,7 @@ WeatherObserved:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'The date and time the observation was made in ISO8601 UTC format.'
       format: date-time
     description:
       $ref: >-
@@ -43,12 +44,12 @@ WeatherObserved:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The dew point encoded as a number. Celsius degrees.'
     illuminance:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)'
     location:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
@@ -61,17 +62,19 @@ WeatherObserved:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: Air's temperature observed. Liters per square meter. 
+    pressureTendency: 
+       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherObserved/schema.yaml#/PressureTendency"
     snowHeight:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'The snow height observed by generic snow depth measurement sensors, expressed in centimeters'
     solarRadiation:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: The solar radiation observed measured in Watts per square meter.
     source:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
@@ -79,9 +82,28 @@ WeatherObserved:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: |
+        The water level surface elevation observed by Hydrometric
+        measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge),
+        expressed in centimeters.
     uVIndexMax:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: |
+        The maximum UV index for the period, based on the World Health Organization's UV Index measure. 
+        [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)
+
+
+PressureTendency:
+  type: string
+  enum: 
+    - falling
+    - raising
+    - steady
+  description: |
+    Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.
+    
+    - `falling`
+    - `raising`
+    - `steady`
