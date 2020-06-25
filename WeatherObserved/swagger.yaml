@@ -3,6 +3,8 @@ components:
   schemas: 
     WeatherObserved: 
       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherObserved/schema.yaml#/WeatherObserved"
+    PressureTendency: 
+       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherObserved/schema.yaml#/PressureTendency"
     WeatherVisibility:
       $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/Visibility'
     WeatherType:
