@@ -4,7 +4,9 @@ components:
     WeatherObserved: 
       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherObserved/schema.yaml#/WeatherObserved"
     WeatherVisibility:
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/visibility"
+      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/Visibility'
+    WeatherType:
+      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherType'
 info: 
   description: |
     An observation of weather conditions at a certain place and time. This data
