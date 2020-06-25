@@ -31,7 +31,7 @@ WeatherAirConditions:
     temperature:
       description: Air's temperature forecasted.
       type: number
-    feelLikesTemperature:
+    feelsLikesTemperature:
       description: Feels like temperature forecasted.
       type: number
     relativeHumidity:
