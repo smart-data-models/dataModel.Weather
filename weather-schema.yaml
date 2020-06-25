@@ -6,7 +6,7 @@ WeatherCommons:
             https://github.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherType
     visibility:
       $ref: >-
-            https://github.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#//Visibility
+            https://github.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/Visibility
     windDirection:
       description: Wind direction forecasted
       type: number
@@ -23,7 +23,7 @@ WeatherCommons:
       type: string
       format: uri
       description: 'A reference to a point of interest associated to this forecast.'
-
+    
 
 WeatherAirConditions: 
   type: object
@@ -31,7 +31,7 @@ WeatherAirConditions:
     temperature:
       description: Air's temperature forecasted.
       type: number
-    feelsLikesTemperature:
+    feelsLikeTemperature:
       description: Feels like temperature forecasted.
       type: number
     relativeHumidity:
@@ -105,7 +105,7 @@ Visibility:
     - good
     - veryGood
     - excellent
-    
+
 WeatherType: 
   type: string
   x-ngsi: 
