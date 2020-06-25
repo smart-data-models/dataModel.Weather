@@ -1,5 +1,7 @@
 WeatherCommons:
   type: object
+  allOf:
+    - $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions'
   properties:
     refPointOfInterest:
       x-ngsi:
