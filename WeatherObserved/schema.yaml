@@ -27,11 +27,8 @@ WeatherObserved:
       type: number
       description: ''
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
     dateObserved:
       x-ngsi:
         type: Property
