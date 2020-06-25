@@ -1,12 +1,19 @@
 WeatherCommons:
   type: object
   properties:
-    weatherType:
-      $ref: >-
-            https://github.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherType
+    refPointOfInterest:
+      x-ngsi:
+        type: Relationship
+        model: 'https://schema.org/URL'
+      type: string
+      format: uri
+      description: 'A reference to a point of interest associated to this forecast.'
     visibility:
       $ref: >-
-            https://github.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/Visibility
+        https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/Visibility
+    weatherType:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherType
     windDirection:
       description: Wind direction forecasted
       type: number
@@ -16,15 +23,8 @@ WeatherCommons:
       description: Wind speed forecasted.
       type: number
       minimum: 0
-    refPointOfInterest:
-      x-ngsi:
-        type: Relationship
-        model: 'https://schema.org/URL'
-      type: string
-      format: uri
-      description: 'A reference to a point of interest associated to this forecast.'
     
-
+   
 WeatherAirConditions: 
   type: object
   properties:
