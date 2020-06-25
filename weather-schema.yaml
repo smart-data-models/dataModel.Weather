@@ -6,7 +6,7 @@ WeatherCommons:
         weatherType:
           type: string
         visibility:
-          $ref: "#/visibility"
+          $ref: "#/Visibility"
         windDirection:
           type: number
           minimum: -180
@@ -77,7 +77,7 @@ WeatherAlertCategories:
   x-ngsi: 
     uri-prefix: "https://uri.fiware.org/ns/data-models#"
 
-visibility:
+Visibility:
   description: |
     - `veryPoor`
     - `poor`
@@ -95,3 +95,62 @@ visibility:
     - good
     - veryGood
     - excellent
+    
+WeatherType: 
+  type: string
+  x-ngsi: 
+    uri-prefix: "https://uri.fiware.org/ns/data-models#" 
+  description: |
+    - `clearNight`
+    - `cloudy`
+    - `drizzle`
+    - `fog`
+    - `hail`
+    - `hailShower`
+    - `heavyRain`
+    - `heavyRainShower`
+    - `heavySnowShower`
+    - `heavySnow`
+    - `highClouds`
+    - `lightRain`
+    - `lightRainShower`
+    - `lightSnow`
+    - `mist`
+    - `overcast`
+    - `partlyCloudy`
+    - `sleet`
+    - `sleetShower`
+    - `slightlyCloudy`
+    - `shower`
+    - `snow`
+    - `sunnyDay`
+    - `thunderShower`
+    - `thunder`
+    - `veryCloudy`
+  enum:
+    - clearNight
+    - cloudy
+    - drizzle
+    - fog
+    - hail
+    - hailShower
+    - heavyRain
+    - heavyRainShower
+    - heavySnowShower
+    - heavySnow
+    - highClouds
+    - lightRain
+    - lightRainShower
+    - lightSnow
+    - mist
+    - overcast
+    - partlyCloudy
+    - sleet
+    - sleetShower
+    - slightlyCloudy
+    - shower
+    - snow
+    - sunnyDay
+    - thunderShower
+    - thunder
+    - veryCloudy
