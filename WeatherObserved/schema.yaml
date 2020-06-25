@@ -59,19 +59,7 @@ WeatherObserved:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items:
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+      $ref: https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
     precipitation:
       x-ngsi:
         type: Property
