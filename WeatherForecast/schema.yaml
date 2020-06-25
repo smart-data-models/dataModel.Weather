@@ -8,7 +8,16 @@ WeatherForecast:
     - $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common'
     - $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherCommons'
   type: object
-  description: A harmonised description of a Weather Forecast
+  description: |
+    This entity contains a harmonised description of a Weather Forecast. This entity
+    is primarily associated with the vertical segments of the environment and
+    agriculture but is applicable to many different applications.
+
+    This data model has been developed in cooperation with mobile operators and the
+    [GSMA](https://www.gsma.com/iot/iot-big-data/).
+
+    You can see a description of weather forecast parameters provided by AEMET (in
+    Spanish) [here](http://www.aemet.es/es/eltiempo/prediccion/municipios/ayuda).
   properties:
     address:
       $ref: >-
@@ -27,26 +36,42 @@ WeatherForecast:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'The date and time the forecast was issued by the meteorological bureau in ISO8601 UTC format.'
       format: date-time
+
     dateRetrieved:
       x-ngsi:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'The date and time the forecast was retrieved in ISO8601 UTC format.'
       format: date-time
     dayMaximum:
       x-ngsi:
         type: Property
       type: object
-      description: ''
+      description: 'Maximum values for the reported period.'
+      properties:
+        feelsLikeTemperature:
+          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/feelsLikeTemperature'
+        relativeHumidity:
+          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/relativeHumidity'
+        temperature:
+          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/temperature'
+
     dayMinimum:
       x-ngsi:
         type: Property
       type: object
-      description: ''
-    description:
+      description: 'Minimum values forecasted for the reported period'
+      properties:
+        feelsLikeTemperature:
+          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/feelsLikeTemperature'
+        relativeHumidity:
+          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/relativeHumidity'
+        temperature:
+          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/temperature'
+
     description:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
@@ -59,6 +84,9 @@ WeatherForecast:
     owner:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
+    precipitationProbability : 
+      description: The probability of precipitation, expressed as a number between 0 ≤ precipitationProbability ≤ 1.
+      type: number
     source:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
@@ -66,24 +94,29 @@ WeatherForecast:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: The maximum UV index for the period, based on the World Health Organization's UV Index measure.
+      externalDocs:
+        url: http://www.who.int/uv/intersunprogramme/activities/uv_index/en/
     validFrom:
       x-ngsi:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'The start of the validity period for this forecast as a ISO8601 format'
       format: date-time
     validTo:
       x-ngsi:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
-      description: ''
+      description: 'The end of the validity period for this forecast as a ISO8601 format'
       format: date-time
     validity:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: |
+        Includes the validity period for this forecast as a ISO8601
+        time interval. As a workaround for the lack of support of Orion Context
+        Broker for datetime intervals, it can be used two separate attributes
