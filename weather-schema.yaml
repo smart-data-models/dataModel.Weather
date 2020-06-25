@@ -29,10 +29,13 @@ WeatherAirConditions:
   type: object
   properties:
     temperature:
+      description: Air's temperature forecasted.
       type: number
     feelLikesTemperature:
+      description: Feels like temperature forecasted.
       type: number
     relativeHumidity:
+      description: Air's relative humidity forecasted (percentage, expressed in parts per one).
       type: number
       minimum: 0
       maximum: 1
