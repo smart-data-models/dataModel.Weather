@@ -4,7 +4,10 @@ components:
     WeatherForecast: 
       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherForecast/schema.yaml#/WeatherForecast"
     WeatherVisibility:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/visibility'
+      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/Visibility'
+    WeatherType:
+      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherType'
+         
 info: 
   description: |
     This entity contains a harmonised description of a Weather Forecast. This entity
