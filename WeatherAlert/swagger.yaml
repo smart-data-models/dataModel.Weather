@@ -2,9 +2,17 @@
 components: 
   schemas: 
     WeatherAlert: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherAlert/schema.yaml#/WeatherAlert"
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.yaml#/WeatherAlert
+    AlertCategory:
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert-schema.yaml#/AlertCategory
+    AlertSeverity:
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert-schema.yaml#/AlertSeverity
     WeatherAlertCategories:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAlertCategories'
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Weather/weather-schema.yaml#/WeatherAlertCategories
 info: 
   description: |
     Use [Alert](https://github.com/smart-data-models/dataModel.Alert/blob/master/alert/README.md) with `weather` as `category`.
@@ -49,7 +57,7 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherAlert/example-1.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/example-1.json"
           description: OK
       tags: 
         - ngsi-ld
