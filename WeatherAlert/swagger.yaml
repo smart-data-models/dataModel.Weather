@@ -57,7 +57,7 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/example-1.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/examples/example-1.json"
           description: OK
       tags: 
         - ngsi-ld
