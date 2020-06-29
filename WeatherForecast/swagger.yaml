@@ -2,11 +2,11 @@
 components: 
   schemas: 
     WeatherForecast: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherForecast/schema.yaml#/WeatherForecast"
+      $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/model.yaml#/WeatherForecast"
     WeatherVisibility:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/Visibility'
+      $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/Visibility'
     WeatherType:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherType'
+      $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherType'
          
 info: 
   description: |
@@ -47,12 +47,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherForecast/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherForecast/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

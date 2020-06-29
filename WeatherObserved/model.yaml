@@ -5,8 +5,8 @@ WeatherObserved:
     - dateObserved
     - location
   allOf:
-    - $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common'
-    - $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherCommons'
+    - $ref: 'https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common'
+    - $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherCommons'
   type: object
   description: >-
     An observation of weather conditions at a certain place and time. This data
@@ -14,13 +14,13 @@ WeatherObserved:
   properties:
     address:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     areaServed:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
     atmosphericPressure:
       x-ngsi:
         type: Property
@@ -29,7 +29,7 @@ WeatherObserved:
       description: 'The atmospheric pressure observed measured in Hecto Pascals.'
     dataProvider:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     dateObserved:
       x-ngsi:
         type: Property
@@ -39,7 +39,7 @@ WeatherObserved:
       format: date-time
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     dewPoint:
       x-ngsi:
         type: Property
@@ -52,19 +52,19 @@ WeatherObserved:
       description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)'
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
-      $ref: https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
+      $ref: https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     precipitation:
       x-ngsi:
         type: Property
       type: number
       description: Air's temperature observed. Liters per square meter. 
     pressureTendency: 
-       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherObserved/schema.yaml#/PressureTendency"
+       $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/model.yaml#/PressureTendency"
     snowHeight:
       x-ngsi:
         type: Property
@@ -77,7 +77,7 @@ WeatherObserved:
       description: The solar radiation observed measured in Watts per square meter.
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     streamGauge:
       x-ngsi:
         type: Property

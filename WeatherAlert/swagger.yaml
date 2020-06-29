@@ -3,19 +3,19 @@ components:
   schemas: 
     WeatherAlert: 
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.yaml#/WeatherAlert
+        https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/model.yaml#/WeatherAlert
     AlertCategory:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Alert/alert-schema.yaml#/AlertCategory
+        https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertCategory
     AlertSeverity:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Alert/alert-schema.yaml#/AlertSeverity
+        https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertSeverity
     WeatherAlertCategories:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Weather/weather-schema.yaml#/WeatherAlertCategories
+        https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAlertCategories
 info: 
   description: |
-    Use [Alert](https://github.com/smart-data-models/dataModel.Alert/blob/master/alert/README.md) with `weather` as `category`.
+    Use [Alert](https://github.com/smart-data-models/dataModel.Alert/blob/alert/README.md) with `weather` as `category`.
 
     This folder contains all the software artefacts to offer weather alert data in
     NGSI v2. The source of this data is the global

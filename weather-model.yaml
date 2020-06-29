@@ -1,7 +1,7 @@
 WeatherCommons:
   type: object
   allOf:
-    - $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions'
+    - $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAirConditions'
   properties:
     refPointOfInterest:
       x-ngsi:
@@ -12,10 +12,10 @@ WeatherCommons:
       description: 'A reference to a point of interest associated to this forecast.'
     visibility:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/Visibility
+        https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/Visibility
     weatherType:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherType
+        https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherType
     windDirection:
       description: Wind direction forecasted
       type: number

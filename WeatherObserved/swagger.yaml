@@ -2,13 +2,13 @@
 components: 
   schemas: 
     WeatherObserved: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherObserved/schema.yaml#/WeatherObserved"
+      $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/model.yaml#/WeatherObserved"
     PressureTendency: 
-       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherObserved/schema.yaml#/PressureTendency"
+       $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/model.yaml#/PressureTendency"
     WeatherVisibility:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/Visibility'
+      $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/Visibility'
     WeatherType:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherType'
+      $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherType'
 info: 
   description: |
     An observation of weather conditions at a certain place and time. This data
@@ -42,12 +42,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherObserved/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/WeatherObserved/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

@@ -5,8 +5,8 @@ WeatherForecast:
     - dateIssued
     - address
   allOf:
-    - $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common'
-    - $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherCommons'
+    - $ref: 'https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common'
+    - $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherCommons'
   type: object
   description: |
     This entity contains a harmonised description of a Weather Forecast. This entity
@@ -21,16 +21,16 @@ WeatherForecast:
   properties:
     address:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/address
     alternateName:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/alternateName
     areaServed:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/areaServed
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/areaServed
     dataProvider:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     dateIssued:
       x-ngsi:
         type: Property
@@ -53,11 +53,11 @@ WeatherForecast:
       description: 'Maximum values for the reported period.'
       properties:
         feelsLikeTemperature:
-          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/feelsLikeTemperature'
+          $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAirConditions/properties/feelsLikeTemperature'
         relativeHumidity:
-          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/relativeHumidity'
+          $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAirConditions/properties/relativeHumidity'
         temperature:
-          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/temperature'
+          $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAirConditions/properties/temperature'
 
     dayMinimum:
       x-ngsi:
@@ -66,30 +66,30 @@ WeatherForecast:
       description: 'Minimum values forecasted for the reported period'
       properties:
         feelsLikeTemperature:
-          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/feelsLikeTemperature'
+          $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAirConditions/properties/feelsLikeTemperature'
         relativeHumidity:
-          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/relativeHumidity'
+          $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAirConditions/properties/relativeHumidity'
         temperature:
-          $ref: 'https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/weather-schema.yaml#/WeatherAirConditions/properties/temperature'
+          $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAirConditions/properties/temperature'
 
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     precipitationProbability : 
       description: The probability of precipitation, expressed as a number between 0 ≤ precipitationProbability ≤ 1.
       type: number
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
     uVIndexMax:
       x-ngsi:
         type: Property
