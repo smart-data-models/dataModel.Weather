@@ -2,36 +2,36 @@ description: This is a compilation list of all CONTRIBUTORS across different obj
 contributors:
 -
  name: Alberto
- surname:  Abella
- mail: None
- organization: fiware
+ surname: Abella
+ mail: alberto.abella@fiware.org
+ organization: Fiware
  project: 
  comments: 
 -
  name: Dmitrii
- surname:  Demin
+ surname: Demin
  mail: mail@demin.co
  organization: None
  project: 
  comments: 
 -
  name: Jason
- surname:  Fox
- mail: None
- organization: @Fiware
+ surname: Fox
+ mail:
+ organization: Fiware
  project: 
  comments: 
 -
  name: Jose M.
- surname:  Cantera
+ surname: Cantera
  mail: jmcanterafonseca4github@gmail.com
  organization: CanteraFonseca.EU
  project: 
  comments: 
 -
  name: Joud
- surname: 
- mail: None
- organization: None
+ surname: Sayed Issa
+ mail: joudsayedissa@gmail.com
+ organization: 
  project: 
  comments: 
