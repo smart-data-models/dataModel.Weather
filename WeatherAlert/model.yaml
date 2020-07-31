@@ -13,7 +13,11 @@ WeatherAlert:
   type: object
   description: A harmonised description of a Weather Alert
   properties: 
-    subCategory: 
+    subCategory:
+      description: ''
+      x-ngsi:
+        type: Property
+        model:
       type: string
       anyOf:
         - $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAlertCategories'

@@ -42,7 +42,6 @@ WeatherForecast:
       type: string
       description: 'The date and time the forecast was issued by the meteorological bureau in ISO8601 UTC format.'
       format: date-time
-
     dateRetrieved:
       x-ngsi:
         type: Property
