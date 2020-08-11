@@ -14,7 +14,7 @@ WeatherAlert:
   description: A harmonised description of a Weather Alert
   properties: 
     subCategory:
-      description: ''
+      description: 'Any of the elements in the subcategory of events Weather Alerts'
       x-ngsi:
         type: Property
         model:
