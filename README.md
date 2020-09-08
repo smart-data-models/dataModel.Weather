@@ -1,5 +1,7 @@
 # dataModel.Weather
 
+### List of data models
+
 The following entity types are available:
 - [WeatherAlert](https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherAlert/README.md). A harmonised description of a Weather Alert
 
@@ -19,8 +21,12 @@ model has been developed in cooperation with mobile operators and the GSMA.
 
 
 
+
+### Contributors
 [Link](https://github.com/smart-data-models/dataModel.Weather/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
 
+
+### Contribution
 You can raise an [issue](https://github.com/smart-data-models/dataModel.Weather/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.Weather/pulls) on existing data models
 
 
