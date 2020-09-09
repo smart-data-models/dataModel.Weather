@@ -1,4 +1,5 @@
 # dataModel.Weather
+These data models describe entities useful for dealing with weather data. These entities are primarily associated with the vertical segments of the environment and agriculture but is applicable to many different applications.
 
 ### List of data models
 
