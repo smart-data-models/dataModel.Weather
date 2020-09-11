@@ -9,7 +9,7 @@ model has been developed in cooperation with mobile operators and the GSMA.
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/examples/example.json) (keyvalues) for NGSI v2
