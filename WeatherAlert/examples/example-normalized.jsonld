@@ -1,5 +1,5 @@
 {
-  "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",
+  "id": "urn:ngsi-ld:WeatherAlert:WeatherAlert-83b872975414bfca10832e564a1bb416-7",
   "type": "Alert",
   "severity": {
     "type": "Text",
