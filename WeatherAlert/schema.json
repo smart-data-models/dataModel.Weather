@@ -16,7 +16,7 @@
           "enum": ["weather"]
         },
         "subCategory": {
-          "$ref": "https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/schema.json#/definitions/WeatherAlertCategories"
+          "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/WeatherAlertCategories"
         }
       }
     }
