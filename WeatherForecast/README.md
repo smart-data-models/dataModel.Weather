@@ -16,7 +16,7 @@ Spanish) [here](http://www.aemet.es/es/eltiempo/prediccion/municipios/ayuda).
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherForecast/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/examples/example.json) (keyvalues) for NGSI v2
