@@ -1,20 +1,15 @@
-# Weather Observed:
-  - required:
-    - id
-    - type
-    - dateObserved
-    - location
-  - type: "object"
-    - allOf:
-      - $ref: "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-      - $ref: "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-      - $ref: "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"  
+# Weather Observed: 
    - description: >
       ## Description
       An observation of weather conditions at a certain place and time. This data model has been developed 
       in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/).
         
       ## Data Model
+      - type: "object"
+  - allOf:
+    - $ref: "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    - $ref: "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    - $ref: "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
   - properties:  
     - dataProvider:
       - x-ngsi:
@@ -214,3 +209,9 @@
          - minimum: 0
        - description: The maximum UV index for the period, based on the World
     Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)
+  - required:
+    - id
+    - type
+    - dateObserved
+    - location
+  
