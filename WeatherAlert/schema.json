@@ -13,7 +13,9 @@
       "properties": {
         "category": {
           "type": "string",
-          "enum": ["weather"]
+          "enum": [
+            "weather"
+          ]
         },
         "subCategory": {
           "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/WeatherAlertCategories"
@@ -21,28 +23,12 @@
       }
     }
   ],
-  "oneOf": [
-    {
-      "required": [
-        "id",
-        "type",
-        "location",
-        "alertSource",
-        "category",
-        "subCategory",
-        "dateIssued"
-      ]
-    },
-    {
-      "required": [
-        "id",
-        "type",
-        "address",
-        "alertSource",
-        "category",
-        "subCategory",
-        "dateIssued"
-      ]
-    }
+  "required": [
+    "id",
+    "type",
+    "alertSource",
+    "category",
+    "subCategory",
+    "dateIssued"
   ]
 }
