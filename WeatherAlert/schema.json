@@ -11,8 +11,16 @@
     {
       "type": "object",
       "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "WeatherAlert"
+          ],
+          "description": "Property. NGSI Entity type"
+        },
         "category": {
           "type": "string",
+          "description": "Property. Category of the entity",
           "enum": [
             "weather"
           ]
