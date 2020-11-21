@@ -20,27 +20,32 @@
         "type": {
           "type": "string",
           "enum": ["WeatherObserved"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type"
         },
         "dateObserved": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. "
         },
         "precipitation": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number' "
         },
         "atmosphericPressure": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number' The atmospheric pressure observed measured in Hecto Pascals."
         },
         "solarRadiation": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. The solar radiation observed measured in Watts per square meter."
         },
         "illuminance": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. observed measured in lux (lx) or lumens per square metre"
         },
         "pressureTendency": {
           "oneOf": [
@@ -51,23 +56,29 @@
             {
               "type": "number"
             }
-          ]
+          ],
+          "description": "Property. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms."
         },
         "dewPoint": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. The dew point encoded as a number. Celsius degrees. "
         },
         "refDevice": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
+          "description": "Property. A reference to the device(s) which captured this observation. "
         },
         "streamGauge": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. The water level surface elevation observed by Hydrometric measurement sensors "
         },
         "snowHeight": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number' "
         },
         "uVIndexMax": {
           "type": "number",
-          "minimum": 1
+          "minimum": 1,
+          "description": "Property. Model:'https://schema.org/Number' "
         }
       }
     }
