@@ -5,9 +5,10 @@ Entité : WeatherObserved
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `areaServed`: La zone géographique où un service ou un article offert est fourni.  `atmosphericPressure`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateObserved`:   `description`: Une description de cet article  `dewPoint`:   `feelLikesTemperature`:   `id`:   `illuminance`:   `location`:   `name`: Le nom de cet article.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `precipitation`:   `pressureTendency`:   `refDevice`:   `refPointOfInterest`:   `relativeHumidity`:   `seeAlso`:   `snowHeight`:   `solarRadiation`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `streamGauge`:   `temperature`:   `type`: NGSI Type d'entité  `uVIndexMax`:   `visibility`:   `weatherType`:   `windDirection`:   `windSpeed`:   ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `atmosphericPressure`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateObserved`:   - `description`: Une description de cet article  - `dewPoint`:   - `feelLikesTemperature`:   - `id`:   - `illuminance`:   - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `precipitation`:   - `pressureTendency`:   - `refDevice`:   - `refPointOfInterest`:   - `relativeHumidity`:   - `seeAlso`:   - `snowHeight`:   - `solarRadiation`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `streamGauge`:   - `temperature`:   - `type`: NGSI Type d'entité  - `uVIndexMax`:   - `visibility`:   - `weatherType`:   - `windDirection`:   - `windSpeed`:   ## Modèle de données description des biens  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 WeatherObserved:    
   description: 'An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.'    
   properties:    
@@ -303,6 +304,9 @@ WeatherObserved:
     - location    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### WeatherObserved NGSI V2 - Exemple de valeurs clés  
 Voici un exemple de WeatherObserved en format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -335,6 +339,7 @@ WeatherObserved:
   "uvIndexMax": 1.0  
 }  
 ```  
+#### WeatherObserved NGSI V2 normalisé Exemple  
 Voici un exemple de WeatherObserved au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -409,6 +414,7 @@ WeatherObserved:
   }  
 }  
 ```  
+#### WeatherObserved NGSI-LD valeurs clés Exemple  
 Voici un exemple de WeatherObserved au format JSON-LD comme valeurs clés. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -442,6 +448,7 @@ WeatherObserved:
     "@context": ["https://smart-data-models.github.io/data-models/context.jsonld"]  
 }  
 ```  
+#### WeatherObserved NGSI-LD normalisé Exemple  
 Voici un exemple de WeatherObserved au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
