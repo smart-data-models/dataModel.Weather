@@ -5,7 +5,7 @@ Entity: WeatherAlert
 
 ## List of properties  
 
-`category`: Category of the entity  `subCategory`:   `type`: Type of the Entity'}  ## Data Model description of properties  
+- `category`: Category of the entity  - `subCategory`:   - `type`: Type of the Entity'}  ## Data Model description of properties  
 Sorted alphabetically  
 ```yaml  
 WeatherAlert:    
@@ -97,6 +97,7 @@ WeatherAlert:
     - dateIssued    
   type: object    
 ```  
+#### WeatherAlert NGSI V2 key-values Example    
 Here is an example of a WeatherAlert in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -115,6 +116,7 @@ WeatherAlert:
   "validFrom": "2016-03-14T13:00:00.00Z"  
 }  
 ```  
+#### WeatherAlert NGSI V2 normalized Example    
 Here is an example of a WeatherAlert in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -157,6 +159,7 @@ WeatherAlert:
   }  
 }  
 ```  
+#### WeatherAlert NGSI-LD key-values Example    
 Here is an example of a WeatherAlert in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
@@ -178,6 +181,7 @@ WeatherAlert:
   ]  
 }  
 ```  
+#### WeatherAlert NGSI-LD normalized Example    
 Here is an example of a WeatherAlert in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
