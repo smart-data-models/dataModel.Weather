@@ -5,8 +5,10 @@ Entity: WeatherForecast
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateIssued`:   - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateRetrieved`:   - `dayMaximum`:   - `dayMinimum`:   - `description`: A description of this item  - `feelLikesTemperature`:   - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refPointOfInterest`:   - `relativeHumidity`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `temperature`:   - `type`: NGSI Entity type  - `uVIndexMax`:   - `validFrom`:   - `validTo`:   - `validity`:   - `visibility`:   - `weatherType`:   - `windDirection`:   - `windSpeed`:   ## Data Model description of properties  
-Sorted alphabetically  
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateIssued`:   - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateRetrieved`:   - `dayMaximum`:   - `dayMinimum`:   - `description`: A description of this item  - `feelLikesTemperature`:   - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refPointOfInterest`:   - `relativeHumidity`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `temperature`:   - `type`: NGSI Entity type  - `uVIndexMax`:   - `validFrom`:   - `validTo`:   - `validity`:   - `visibility`:   - `weatherType`:   - `windDirection`:   - `windSpeed`:     
+Required properties  
+- `address`  - `dateIssued`  - `id`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WeatherForecast:    
@@ -307,6 +309,7 @@ WeatherForecast:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### WeatherForecast NGSI V2 key-values Example    
 Here is an example of a WeatherForecast in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -345,7 +348,7 @@ WeatherForecast:
 }  
 ```  
 #### WeatherForecast NGSI V2 normalized Example    
-Here is an example of a WeatherForecast in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a WeatherForecast in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
@@ -421,7 +424,7 @@ WeatherForecast:
 }  
 ```  
 #### WeatherForecast NGSI-LD key-values Example    
-Here is an example of a WeatherForecast in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a WeatherForecast in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
     "id": "urn:ngsi-ld:WeatherForecast:Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
