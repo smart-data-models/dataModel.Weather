@@ -5,8 +5,10 @@ Entity: WeatherAlert
 
 ## List of properties  
 
-- `category`: Category of the entity  - `subCategory`:   - `type`: Type of the Entity'}  ## Data Model description of properties  
-Sorted alphabetically  
+- `category`: Category of the entity  - `subCategory`:   - `type`: Type of the Entity'}    
+Required properties  
+- `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WeatherAlert:    
@@ -99,6 +101,7 @@ WeatherAlert:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### WeatherAlert NGSI V2 key-values Example    
 Here is an example of a WeatherAlert in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -119,7 +122,7 @@ WeatherAlert:
 }  
 ```  
 #### WeatherAlert NGSI V2 normalized Example    
-Here is an example of a WeatherAlert in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a WeatherAlert in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
@@ -162,7 +165,7 @@ WeatherAlert:
 }  
 ```  
 #### WeatherAlert NGSI-LD key-values Example    
-Here is an example of a WeatherAlert in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a WeatherAlert in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WeatherAlert:WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
