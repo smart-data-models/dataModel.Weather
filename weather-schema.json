@@ -5,6 +5,7 @@
   "description": "Common definitions of weather data models",
   "definitions": {
     "WeatherAlertCategories": {
+      "description": "Weather categories",
       "enum": [
         "rainfall",
         "highTemperature",
@@ -30,6 +31,7 @@
     },
     "Weather-AirConditions": {
       "type": "object",
+      "description": "Air conditions categories",
       "properties": {
         "temperature": {
           "type": "number"
@@ -51,9 +53,11 @@
         {
           "properties": {
             "weatherType": {
-              "type": "string"
+              "type": "string",
+              "description": "Property. Text description of the weather. Model:'http://schema.org/Text'."
             },
             "visibility": {
+              "description": "Property. Model:'http://schema.org/Text'. Categories of visibility",
               "anyOf": [
                 {
                   "type": "string",
@@ -74,15 +78,18 @@
             },
             "windDirection": {
               "type": "number",
+              "description": "Property. Model:'http://schema.org/Number'. Direction of the wind bet",
               "minimum": -180,
               "maximum": 180
             },
             "windSpeed": {
               "type": "number",
+              "description": "Property. Model:'http//schema.org/Number'. Intensity of the wind",
               "minimum": 0
             },
             "refPointOfInterest": {
-              "type": "string"
+              "type": "string",
+              "description": "Relationship. Model:'http://schema.org/URL'. Point of interest related to the item"
             }
           }
         }

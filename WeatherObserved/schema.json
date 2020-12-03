@@ -20,34 +20,34 @@
         "type": {
           "type": "string",
           "enum": ["WeatherObserved"],
-          "description": "Property. NGSI Entity type"
+          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
         },
         "dateObserved": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. "
+          "description": "Property. Model:'https://schema.org/DateTime'. "
         },
         "precipitation": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number' "
+          "description": "Property. Model:'https://schema.org/Number'. Air's temperature observed. Liters per square meter. "
         },
         "atmosphericPressure": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number' The atmospheric pressure observed measured in Hecto Pascals."
+          "description": "Property. Model:'https://schema.org/Number'. The atmospheric pressure observed measured in Hecto Pascals. Units:'Hecto pascals'"
         },
         "solarRadiation": {
           "type": "number",
-          "minimum": 0,
-          "description": "Property. The solar radiation observed measured in Watts per square meter."
+          "minimum": 0
         },
         "illuminance": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. observed measured in lux (lx) or lumens per square metre"
+          "description": "Property. Model:'https://schema.org/Number'. (https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)."
         },
         "pressureTendency": {
+          "description": "Property. Model:'https://schema.org/DateTime'. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.",
           "oneOf": [
             {
               "type": "string",
@@ -56,29 +56,43 @@
             {
               "type": "number"
             }
-          ],
-          "description": "Property. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms."
+          ]
         },
         "dewPoint": {
           "type": "number",
-          "description": "Property. The dew point encoded as a number. Celsius degrees. "
+          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number"
         },
         "refDevice": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-          "description": "Property. A reference to the device(s) which captured this observation. "
+          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation.",
+          "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+          "description" : "Property. Identifier format of any NGSI entity"
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "description" : "Property. Identifier format of any NGSI entity"
+        }
+      ]
         },
         "streamGauge": {
           "type": "number",
-          "description": "Property. The water level surface elevation observed by Hydrometric measurement sensors "
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
         },
         "snowHeight": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/Number' "
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
         },
         "uVIndexMax": {
           "type": "number",
           "minimum": 1,
-          "description": "Property. Model:'https://schema.org/Number' "
+          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)"
         }
       }
     }
