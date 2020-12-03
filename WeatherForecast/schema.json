@@ -20,27 +20,32 @@
         "type": {
           "type": "string",
           "enum": ["WeatherForecast"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type"
         },
         "dateRetrieved": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. The date and time the forecast was retrieved in ISO8601 UTC format."
         },
         "dateIssued": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. The date and time the forecast was issued by the meteorological bureau in ISO8601 UTC format."
         },
         "validity": {
           "title": "ISO8601 Interval",
-          "type": "string"
+          "type": "string",
+          "description": "Property. Includes the validity period for this forecast as a ISO8601 time interval."
         },
         "validFrom": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Validity period start date and time."
         },
         "validTo": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": "Property. Validity period end date and time."
         },
         "dayMaximum": {
           "type": "object",
@@ -56,13 +61,15 @@
             {
               "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions"
             }
-          ]
+          ],
+          "description": "Property. Minimum values forecasted for the reported period."
         },
         "uVIndexMax": {
           "type": "number",
           "minimum": 0
         }
-      }
+      },
+          "description": "Property. The maximum UV index for the period"
     }
   ],
   "required": ["id", "type", "dateIssued", "address"]
