@@ -5,7 +5,7 @@ Entity: WeatherObserved
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `atmosphericPressure`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`:   - `description`: A description of this item  - `dewPoint`:   - `feelLikesTemperature`:   - `id`:   - `illuminance`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `precipitation`:   - `pressureTendency`:   - `refDevice`:   - `refPointOfInterest`:   - `relativeHumidity`:   - `seeAlso`:   - `snowHeight`:   - `solarRadiation`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `streamGauge`:   - `temperature`:   - `type`: NGSI Entity type  - `uVIndexMax`:   - `visibility`:   - `weatherType`:   - `windDirection`:   - `windSpeed`:     
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `atmosphericPressure`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`:   - `description`: A description of this item  - `dewPoint`: The dew point encoded as a number. Celsius degrees.   - `feelLikesTemperature`:   - `id`:   - `illuminance`: observed measured in lux (lx) or lumens per square metre  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `precipitation`:   - `pressureTendency`: Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.  - `refDevice`:   - `refPointOfInterest`:   - `relativeHumidity`:   - `seeAlso`: list of uri pointing to additional resources about the item  - `snowHeight`:   - `solarRadiation`: The solar radiation observed measured in Watts per square meter.  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `streamGauge`: The water level surface elevation observed by Hydrometric measurement sensors   - `temperature`:   - `type`: NGSI Entity type  - `uVIndexMax`:   - `visibility`:   - `weatherType`:   - `windDirection`:   - `windSpeed`:     
 Required properties  
 - `dateObserved`  - `id`  - `location`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -39,8 +39,11 @@ WeatherObserved:
       description: 'The geographic area where a service or offered item is provided.'    
       type: Property    
     atmosphericPressure:    
+      description: ""    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: 'https://schema.org/Number The atmospheric pressure observed measured in Hecto Pascals.'    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -53,13 +56,15 @@ WeatherObserved:
       format: date-time    
       type: Property    
     dateObserved:    
+      description: ""    
       format: date-time    
-      type: string    
+      type: Property    
     description:    
       description: 'A description of this item'    
       type: Property    
     dewPoint:    
-      type: number    
+      description: 'The dew point encoded as a number. Celsius degrees. '    
+      type: Property    
     feelLikesTemperature:    
       type: number    
     id:    
@@ -73,8 +78,9 @@ WeatherObserved:
           format: uri    
           type: string    
     illuminance:    
+      description: 'observed measured in lux (lx) or lumens per square metre'    
       minimum: 0    
-      type: number    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -231,9 +237,13 @@ WeatherObserved:
         anyOf: *weatherobserved_-_properties_-_owner_-_items_-_anyof    
       type: Property    
     precipitation:    
+      description: ""    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: 'https://schema.org/Number '    
     pressureTendency:    
+      description: 'Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.'    
       oneOf:    
         - enum:    
             - raising    
@@ -241,6 +251,7 @@ WeatherObserved:
             - steady    
           type: string    
         - type: number    
+      type: Property    
     refDevice:    
       anyOf: *weatherobserved_-_properties_-_owner_-_items_-_anyof    
     refPointOfInterest:    
@@ -250,6 +261,7 @@ WeatherObserved:
       minimum: 0    
       type: number    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -258,26 +270,35 @@ WeatherObserved:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     snowHeight:    
-      type: number    
+      description: ""    
+      type: Property    
+      x-ngsi:    
+        model: 'https://schema.org/Number '    
     solarRadiation:    
+      description: 'The solar radiation observed measured in Watts per square meter.'    
       minimum: 0    
-      type: number    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     streamGauge:    
-      type: number    
+      description: 'The water level surface elevation observed by Hydrometric measurement sensors '    
+      type: Property    
     temperature:    
       type: number    
     type:    
       description: 'NGSI Entity type'    
       enum:    
         - WeatherObserved    
-      type: string    
+      type: Property    
     uVIndexMax:    
+      description: ""    
       minimum: 1    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: 'https://schema.org/Number '    
     visibility:    
       anyOf:    
         - enum:    
