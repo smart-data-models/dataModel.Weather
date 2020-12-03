@@ -5,7 +5,7 @@ Entity: WeatherForecast
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateIssued`:   - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateRetrieved`:   - `dayMaximum`:   - `dayMinimum`:   - `description`: A description of this item  - `feelLikesTemperature`:   - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refPointOfInterest`:   - `relativeHumidity`:   - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `temperature`:   - `type`: NGSI Entity type  - `uVIndexMax`:   - `validFrom`:   - `validTo`:   - `validity`:   - `visibility`:   - `weatherType`:   - `windDirection`:   - `windSpeed`:     
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateIssued`: The date and time the forecast was issued by the meteorological bureau in ISO8601 UTC format.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateRetrieved`: The date and time the forecast was retrieved in ISO8601 UTC format.  - `dayMaximum`:   - `dayMinimum`: Minimum values forecasted for the reported period.  - `description`: A description of this item  - `feelLikesTemperature`:   - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refPointOfInterest`:   - `relativeHumidity`:   - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `temperature`:   - `type`: NGSI Entity type  - `uVIndexMax`:   - `validFrom`: Validity period start date and time.  - `validTo`: Validity period end date and time.  - `validity`: Includes the validity period for this forecast as a ISO8601 time interval.  - `visibility`:   - `weatherType`:   - `windDirection`:   - `windSpeed`:     
 Required properties  
 - `address`  - `dateIssued`  - `id`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -46,15 +46,17 @@ WeatherForecast:
       format: date-time    
       type: Property    
     dateIssued:    
+      description: 'The date and time the forecast was issued by the meteorological bureau in ISO8601 UTC format.'    
       format: date-time    
-      type: string    
+      type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
       type: Property    
     dateRetrieved:    
+      description: 'The date and time the forecast was retrieved in ISO8601 UTC format.'    
       format: date-time    
-      type: string    
+      type: Property    
     dayMaximum:    
       allOf:    
         - properties: &properties    
@@ -72,7 +74,8 @@ WeatherForecast:
       allOf:    
         - properties: *properties    
           type: object    
-      type: object    
+      description: 'Minimum values forecasted for the reported period.'    
+      type: Property    
     description:    
       description: 'A description of this item'    
       type: Property    
@@ -250,6 +253,7 @@ WeatherForecast:
       minimum: 0    
       type: number    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -258,6 +262,7 @@ WeatherForecast:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
@@ -267,19 +272,22 @@ WeatherForecast:
       description: 'NGSI Entity type'    
       enum:    
         - WeatherForecast    
-      type: string    
+      type: Property    
     uVIndexMax:    
       minimum: 0    
       type: number    
     validFrom:    
+      description: 'Validity period start date and time.'    
       format: date-time    
-      type: string    
+      type: Property    
     validTo:    
+      description: 'Validity period end date and time.'    
       format: date-time    
-      type: string    
+      type: Property    
     validity:    
+      description: 'Includes the validity period for this forecast as a ISO8601 time interval.'    
       title: 'ISO8601 Interval'    
-      type: string    
+      type: Property    
     visibility:    
       anyOf:    
         - enum:    
