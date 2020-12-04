@@ -7,7 +7,9 @@ Entity: WeatherAlert
 
 - `alertSource`:   - `category`: Category of the entity  - `data`:   - `dateIssued`:   - `description`: Description of the Entity  - `severity`: Severity of the Alarm  - `subCategory`:   - `type`: NGSI Entity type. It has to be Alert  - `validFrom`:   - `validTo`:     
 Required properties  
-- `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`  ## Data Model description of properties  
+- `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`    
+This folder contains all the software artefacts to offer weather alert data in NGSI v2. The source of this data is the global [European Weather Alarm Service](http://meteoalarm.eu).  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
