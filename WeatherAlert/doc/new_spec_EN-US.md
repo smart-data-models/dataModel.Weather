@@ -5,7 +5,7 @@ Entity: WeatherAlert
 
 ## List of properties  
 
-- `alertSource`:   - `category`: Category of the entity  - `data`:   - `dateIssued`:   - `description`: Description of the Entity  - `severity`: Severity of the Alarm  - `subCategory`:   - `type`: NGSI Entity type. It has to be Alert  - `validFrom`:   - `validTo`:     
+- `alertSource`:   - `category`: Category of the entity  - `data`:   - `dateIssued`:   - `description`: Description of the Entity  - `severity`: Severity of the Alarm  - `subCategory`: Weather categories  - `type`: NGSI Entity type. It has to be Alert  - `validFrom`:   - `validTo`:     
 Required properties  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`    
 This folder contains all the software artefacts to offer weather alert data in NGSI v2. The source of this data is the global [European Weather Alarm Service](http://meteoalarm.eu).  
@@ -34,7 +34,7 @@ WeatherAlert:
     data:    
       type: object    
     dateIssued:    
-      description: ""    
+      description: 'The date and time the item was issued in ISO8601 UTC format.'    
       format: date-time    
       type: Property    
       x-ngsi:    
@@ -52,40 +52,42 @@ WeatherAlert:
         - critical    
       type: Property    
     subCategory:    
+      description: 'Weather categories'    
       enum:    
-        - rainfall    
-        - highTemperature    
-        - lowTemperature    
-        - heatWave    
+        - avalanches    
+        - coastalEvent    
         - coldWave    
-        - ice    
-        - snow    
-        - wind    
-        - fog    
         - flood    
-        - tsunami    
-        - tornado    
-        - tropicalCyclone    
+        - fog    
+        - forestFire    
+        - heatWave    
+        - highTemperature    
         - hurricane    
+        - ice    
+        - lowTemperature    
+        - rainfall    
+        - rain/flood    
+        - snow    
         - snow/ice    
         - thunderstorms    
-        - coastalEvent    
-        - forestFire    
-        - avalanches    
-        - rain/flood    
+        - tornado    
+        - tropicalCyclone    
+        - tsunami    
+        - wind    
+      type: Property    
     type:    
       description: 'NGSI Entity type. It has to be Alert'    
       enum:    
         - Alert    
       type: Property    
     validFrom:    
-      description: ""    
+      description: 'The start of the validity period for this forecast as a ISO8601 format'    
       format: date-time    
       type: Property    
       x-ngsi:    
         model: https://schema.org/DateTime    
     validTo:    
-      description: ""    
+      description: 'The end of the validity period for this forecast as a ISO8601 format'    
       format: date-time    
       type: Property    
       x-ngsi:    
