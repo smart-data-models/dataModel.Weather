@@ -44,7 +44,7 @@ WeatherObserved:
       format: date-time
       type: Property
     dateObserved:
-      description: ""
+      description: 'Date of the observation'
       format: date-time
       type: Property
       x-ngsi:
@@ -293,8 +293,12 @@ WeatherObserved:
         model: https://schema.org/Number
         units: centimeters
     solarRadiation:
+      description: 'The solar radiation observed measured in Watts per square'
       minimum: 0
-      type: number
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: w/m2
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
       type: Property
