@@ -19,7 +19,7 @@ WeatherAlert:
     data:
       type: object
     dateIssued:
-      description: ""
+      description: 'The date and time the item was issued in ISO8601 UTC format.'
       format: date-time
       type: Property
       x-ngsi:
@@ -66,13 +66,13 @@ WeatherAlert:
         - Alert
       type: Property
     validFrom:
-      description: ""
+      description: 'The start of the validity period for this forecast as a ISO8601 format'
       format: date-time
       type: Property
       x-ngsi:
         model: https://schema.org/DateTime
     validTo:
-      description: ""
+      description: 'The end of the validity period for this forecast as a ISO8601 format'
       format: date-time
       type: Property
       x-ngsi:
