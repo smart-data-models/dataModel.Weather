@@ -5,9 +5,11 @@ Entity: WeatherForecast
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateIssued`: The date and time the forecast was issued by the meteorological bureau in ISO8601 UTC format.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateRetrieved`: The date and time the forecast was retrieved in ISO8601 UTC format.  - `dayMaximum`:   - `dayMinimum`: Minimum values forecasted for the reported period.  - `description`: A description of this item  - `feelLikesTemperature`:   - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refPointOfInterest`:   - `relativeHumidity`:   - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `temperature`:   - `type`: NGSI Entity type  - `uVIndexMax`:   - `validFrom`: Validity period start date and time.  - `validTo`: Validity period end date and time.  - `validity`: Includes the validity period for this forecast as a ISO8601 time interval.  - `visibility`:   - `weatherType`:   - `windDirection`:   - `windSpeed`:     
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateIssued`: The date and time the forecast was issued by the meteorological bureau in ISO8601 UTC format.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateRetrieved`: The date and time the forecast was retrieved in ISO8601 UTC format.  - `dayMaximum`: Maximum values for the reported period. Subattributes:- `temperature` : Maximum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Maximum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.-   `relativeHumidity`. Maximum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`.  - `dayMinimum`: Minimum values forecasted for the reported period.  Minimum values for the reported period. Subattributes:- `temperature` : Minimum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Minimum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`  - `description`: A description of this item  - `feelLikesTemperature`: Temperature appreciation of the item  - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refPointOfInterest`: Point of interest related to the item  - `relativeHumidity`: Humidity in the Air  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `temperature`: Temperature of the item  - `type`: NGSI Entity type. It has to be WeatherForecast  - `uVIndexMax`: The maximum UV index for the period, based on the World Health Organization's UV Index measure. Normative references: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `validFrom`: Validity period start date and time.  - `validTo`: Validity period end date and time.  - `validity`: Includes the validity period for this forecast as a ISO8601 time interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `validFrom`, `validTo`.  - `visibility`: Categories of visibility  - `weatherType`: Text description of the weather  - `windDirection`: Direction of the wind bet  - `windSpeed`: Intensity of the wind    
 Required properties  
-- `address`  - `dateIssued`  - `id`  - `type`  ## Data Model description of properties  
+- `address`  - `dateIssued`  - `id`  - `type`    
+This entity is primarily associated with the vertical segments of the environment and agriculture but is applicable to many different applications. This data model has been developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/).  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -49,6 +51,8 @@ WeatherForecast:
       description: 'The date and time the forecast was issued by the meteorological bureau in ISO8601 UTC format.'    
       format: date-time    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
@@ -57,30 +61,43 @@ WeatherForecast:
       description: 'The date and time the forecast was retrieved in ISO8601 UTC format.'    
       format: date-time    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     dayMaximum:    
       allOf:    
-        - properties: &properties    
+        - description: 'Property. Air conditions categories'    
+          properties: &properties    
             feelLikesTemperature:    
+              description: 'Property. Temperature appreciation of the item'    
               type: number    
             relativeHumidity:    
+              description: 'Property. Humidity in the Air'    
               maximum: 1    
               minimum: 0    
               type: number    
             temperature:    
+              description: 'Property. Temperature of the item'    
               type: number    
           type: object    
-      type: object    
+      description: 'Maximum values for the reported period. Subattributes:- `temperature` : Maximum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Maximum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.-   `relativeHumidity`. Maximum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/StructuredValue    
     dayMinimum:    
       allOf:    
-        - properties: *properties    
+        - description: 'Property. Air conditions categories'    
+          properties: *properties    
           type: object    
-      description: 'Minimum values forecasted for the reported period.'    
+      description: 'Minimum values forecasted for the reported period.  Minimum values for the reported period. Subattributes:- `temperature` : Minimum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Minimum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     description:    
       description: 'A description of this item'    
       type: Property    
     feelLikesTemperature:    
-      type: number    
+      description: 'Temperature appreciation of the item'    
+      type: Property    
     id:    
       anyOf: &weatherforecast_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -247,11 +264,15 @@ WeatherForecast:
         anyOf: *weatherforecast_-_properties_-_owner_-_items_-_anyof    
       type: Property    
     refPointOfInterest:    
-      type: string    
+      description: 'Point of interest related to the item'    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL    
     relativeHumidity:    
+      description: 'Humidity in the Air'    
       maximum: 1    
       minimum: 0    
-      type: number    
+      type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -267,27 +288,36 @@ WeatherForecast:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     temperature:    
-      type: number    
+      description: 'Temperature of the item'    
+      type: Property    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be WeatherForecast'    
       enum:    
         - WeatherForecast    
       type: Property    
     uVIndexMax:    
+      description: 'The maximum UV index for the period, based on the World Health Organization''s UV Index measure. Normative references: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)'    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     validFrom:    
       description: 'Validity period start date and time.'    
       format: date-time    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     validTo:    
       description: 'Validity period end date and time.'    
       format: date-time    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     validity:    
-      description: 'Includes the validity period for this forecast as a ISO8601 time interval.'    
-      title: 'ISO8601 Interval'    
+      description: 'Includes the validity period for this forecast as a ISO8601 time interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `validFrom`, `validTo`.'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     visibility:    
       anyOf:    
         - enum:    
@@ -300,15 +330,28 @@ WeatherForecast:
           type: string    
         - minimum: 0    
           type: number    
+      description: 'Categories of visibility'    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Text    
     weatherType:    
-      type: string    
+      description: 'Text description of the weather'    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Text.    
     windDirection:    
+      description: 'Direction of the wind bet'    
       maximum: 180    
       minimum: -180    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: http://schema.org/Number    
     windSpeed:    
+      description: 'Intensity of the wind'    
       minimum: 0    
-      type: number    
+      type: Property    
+      x-ngsi:    
+        model: http//schema.org/Number    
   required:    
     - id    
     - type    
