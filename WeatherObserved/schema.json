@@ -25,7 +25,7 @@
         "dateObserved": {
           "type": "string",
           "format": "date-time",
-          "description": "Property. Model:'https://schema.org/DateTime'. "
+          "description": "Property. Model:'https://schema.org/DateTime'. Date of the observation"
         },
         "precipitation": {
           "type": "number",
@@ -39,7 +39,8 @@
         },
         "solarRadiation": {
           "type": "number",
-          "minimum": 0
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
         },
         "illuminance": {
           "type": "number",
