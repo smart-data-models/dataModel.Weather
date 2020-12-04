@@ -11,13 +11,18 @@ WeatherAlert:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
+      description: 'Source of the alert'
+      type: Relationship
+      x-ngsi:
+        model: http://schema.org/URL.
     category:
       description: 'Category of the entity'
       enum:
         - weather
       type: Property
     data:
-      type: object
+      description: 'Payload containing the data retrieved.'
+      type: Property
     dateIssued:
       description: 'The date and time the item was issued in ISO8601 UTC format.'
       format: date-time
