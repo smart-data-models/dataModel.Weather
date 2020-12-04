@@ -5,7 +5,7 @@ Entity: WeatherAlert
 
 ## List of properties  
 
-- `alertSource`:   - `category`: Category of the entity  - `data`:   - `dateIssued`:   - `description`: Description of the Entity  - `severity`:   - `subCategory`:   - `type`: NGSI Entity type  - `validFrom`:   - `validTo`:     
+- `alertSource`:   - `category`: Category of the entity  - `data`:   - `dateIssued`:   - `description`: Description of the Entity  - `severity`: Severity of the Alarm  - `subCategory`:   - `type`: NGSI Entity type. It has to be Alert  - `validFrom`:   - `validTo`:     
 Required properties  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -30,8 +30,7 @@ WeatherAlert:
         - weather    
       type: Property    
     data:    
-      description: ""    
-      type: Property    
+      type: object    
     dateIssued:    
       description: ""    
       format: date-time    
@@ -42,7 +41,7 @@ WeatherAlert:
       description: 'Description of the Entity'    
       type: Property    
     severity:    
-      description: ""    
+      description: 'Severity of the Alarm'    
       enum:    
         - informational    
         - low    
@@ -73,7 +72,7 @@ WeatherAlert:
         - avalanches    
         - rain/flood    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be Alert'    
       enum:    
         - Alert    
       type: Property    
