@@ -5,44 +5,47 @@
   "description": "Common definitions of weather data models",
   "definitions": {
     "WeatherAlertCategories": {
-      "description": "Weather categories",
+      "description": "Property. Weather categories",
       "enum": [
-        "rainfall",
-        "highTemperature",
-        "lowTemperature",
-        "heatWave",
+        "avalanches",
+        "coastalEvent",
         "coldWave",
-        "ice",
-        "snow",
-        "wind",
-        "fog",
         "flood",
-        "tsunami",
-        "tornado",
-        "tropicalCyclone",
+        "fog",
+        "forestFire",
+        "heatWave",
+        "highTemperature",
         "hurricane",
+        "ice",
+        "lowTemperature",
+        "rainfall",
+        "rain/flood",
+        "snow",
         "snow/ice",
         "thunderstorms",
-        "coastalEvent",
-        "forestFire",
-        "avalanches",
-        "rain/flood"
+        "tornado",
+        "tropicalCyclone",
+        "tsunami",
+        "wind"
       ]
     },
     "Weather-AirConditions": {
       "type": "object",
-      "description": "Air conditions categories",
+      "description": "Property. Air conditions categories",
       "properties": {
         "temperature": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. Temperature of the item"
         },
         "feelLikesTemperature": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. Temperature appreciation of the item"
         },
         "relativeHumidity": {
           "type": "number",
           "minimum": 0,
-          "maximum": 1
+          "maximum": 1,
+          "description": "Property. Humidity in the Air"
         }
       }
     },
