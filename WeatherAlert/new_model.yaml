@@ -37,27 +37,29 @@ WeatherAlert:
         - critical
       type: Property
     subCategory:
+      description: 'Weather categories'
       enum:
-        - rainfall
-        - highTemperature
-        - lowTemperature
-        - heatWave
+        - avalanches
+        - coastalEvent
         - coldWave
-        - ice
-        - snow
-        - wind
-        - fog
         - flood
-        - tsunami
-        - tornado
-        - tropicalCyclone
+        - fog
+        - forestFire
+        - heatWave
+        - highTemperature
         - hurricane
+        - ice
+        - lowTemperature
+        - rainfall
+        - rain/flood
+        - snow
         - snow/ice
         - thunderstorms
-        - coastalEvent
-        - forestFire
-        - avalanches
-        - rain/flood
+        - tornado
+        - tropicalCyclone
+        - tsunami
+        - wind
+      type: Property
     type:
       description: 'NGSI Entity type. It has to be Alert'
       enum:
