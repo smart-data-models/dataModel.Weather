@@ -1,11 +1,11 @@
 Entité : WeatherObserved  
 ========================  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter l'impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherObserved/LICENSE.md)  
 Description globale : **Une observation des conditions météorologiques à un certain endroit et à un certain moment. Ce modèle de données a été développé en coopération avec les opérateurs de téléphonie mobile et la GSMA.**  
 
 ## Liste des biens  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `atmosphericPressure`: La pression atmosphérique observée mesurée en Hecto Pascals  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateObserved`: Date de l'observation  - `description`: Une description de cet article  - `dewPoint`: Le point de rosée encodé sous forme de nombre  - `feelLikesTemperature`: Appréciation de la température de l'objet  - `id`:   - `illuminance`: (https://en.wikipedia.org/wiki/Illuminance) observé mesuré en lux (lx) ou en lumens par mètre carré (cd-sr-m-2).  - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `precipitation`: Température de l'air observée. Litres par mètre carré.  - `pressureTendency`: Enum : "tomber, se relever, se stabiliser". La pression monte-t-elle ou baisse-t-elle ? Elle peut être exprimée en termes quantitatifs ou qualitatifs.  - `refDevice`: Une référence au(x) dispositif(s) qui a(ont) capté cette observation.  - `refPointOfInterest`: Point d'intérêt lié à l'article  - `relativeHumidity`: Humidité de l'air  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `snowHeight`: La hauteur de neige observée par les capteurs génériques de mesure de l'épaisseur de la neige, exprimée en centimètres  - `solarRadiation`: Le rayonnement solaire observé mesuré en Watts par carré  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `streamGauge`: L'élévation de la surface du niveau de l'eau observée par les capteurs de mesure hydrométriques, à savoir un [jaugeur de cours d'eau] (https://en.wikipedia.org/wiki/Stream_gauge), exprimée en centimètres  - `temperature`: Température de l'objet  - `type`: Type d'entité NGSI. Il doit être WeatherObserved  - `uVIndexMax`: L'indice UV maximum pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `visibility`: Catégories de visibilité  - `weatherType`: Description textuelle de la météo  - `windDirection`: Pari sur la direction du vent  - `windSpeed`: Intensité du vent    
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `atmosphericPressure`: La pression atmosphérique observée mesurée en Hecto Pascals  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateObserved`: Date de l'observation  - `description`: Une description de cet article  - `dewPoint`: Le point de rosée encodé sous forme de nombre  - `feelLikesTemperature`: Appréciation de la température de l'objet  - `id`: Identifiant unique de l'entité  - `illuminance`: (https://en.wikipedia.org/wiki/Illuminance) observé mesuré en lux (lx) ou en lumens par mètre carré (cd-sr-m-2).  - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `precipitation`: Température de l'air observée. Litres par mètre carré.  - `pressureTendency`: Enum : "tomber, se relever, se stabiliser". La pression augmente-t-elle ou diminue-t-elle ? Elle peut être exprimée en termes quantitatifs ou qualitatifs.  - `refDevice`: Une référence au(x) dispositif(s) qui a(ont) capté cette observation.  - `refPointOfInterest`: Point d'intérêt lié à l'article  - `relativeHumidity`: Humidité de l'air  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `snowHeight`: La hauteur de neige observée par les capteurs génériques de mesure de l'épaisseur de la neige, exprimée en centimètres  - `solarRadiation`: Le rayonnement solaire observé mesuré en Watts par carré  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `streamGauge`: L'élévation de la surface du niveau de l'eau observée par les capteurs de mesure hydrométriques, à savoir un [jaugeur de cours d'eau] (https://en.wikipedia.org/wiki/Stream_gauge), exprimée en centimètres  - `temperature`: Température de l'objet  - `type`: Type d'entité NGSI. Il doit être WeatherObserved  - `uVIndexMax`: L'indice UV maximum pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `visibility`: Catégories de visibilité  - `weatherType`: Description textuelle de la météo  - `windDirection`: Pari sur la direction du vent  - `windSpeed`: Intensité du vent    
 Propriétés requises  
 - `dateObserved`  - `id`  - `location`  - `type`  ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
@@ -18,26 +18,35 @@ WeatherObserved:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     atmosphericPressure:    
       description: 'The atmospheric pressure observed measured in Hecto Pascals'    
       minimum: 0    
@@ -84,6 +93,8 @@ WeatherObserved:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     illuminance:    
       description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2).'    
       minimum: 0    
@@ -244,6 +255,7 @@ WeatherObserved:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *weatherobserved_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     precipitation:    
       description: 'Air''s temperature observed. Liters per square meter. '    
