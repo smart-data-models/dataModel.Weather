@@ -5,7 +5,7 @@ Entity: WeatherAlert
 
 ## List of properties  
 
-- `alertSource`: Source of the alert  - `category`: Category of the entity  - `data`: Payload containing the data retrieved.  - `dateIssued`: The date and time the item was issued in ISO8601 UTC format.  - `description`: Description of the Entity  - `severity`: Severity of the Alarm  - `subCategory`: Weather categories  - `type`: NGSI Entity type. It has to be Alert  - `validFrom`: The start of the validity period for this forecast as a ISO8601 format  - `validTo`: The end of the validity period for this forecast as a ISO8601 format    
+- `alertSource`: Source of the alert  - `category`: Category of the entity  - `data`: Payload containing the data retrieved.  - `dateIssued`: The date and time the item was issued in ISO8601 UTC format.  - `description`: Description of the Entity  - `severity`: Severity of the Alarm  - `subCategory`: Weather categories  - `type`: NGSI Entity type. It has to be Alert.  - `validFrom`: The start of the validity period for this forecast as a ISO8601 format  - `validTo`: The end of the validity period for this forecast as a ISO8601 format    
 Required properties  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`    
 This folder contains all the software artefacts to offer weather alert data in NGSI v2. The source of this data is the global [European Weather Alarm Service](http://meteoalarm.eu).  
@@ -81,7 +81,7 @@ WeatherAlert:
         - wind    
       type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be Alert'    
+      description: 'NGSI Entity type. It has to be Alert.'    
       enum:    
         - Alert    
       type: Property    
