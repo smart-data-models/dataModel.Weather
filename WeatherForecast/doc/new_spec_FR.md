@@ -1,11 +1,11 @@
 Entité : Prévisions météorologiques  
 ===================================  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherForecast/LICENSE.md)  
 Description globale : **Description harmonisée d'une prévision météorologique**  
 
 ## Liste des biens  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateIssued`: La date et l'heure auxquelles la prévision a été émise par le bureau météorologique au format ISO8601 UTC.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateRetrieved`: La date et l'heure de la prévision ont été récupérées au format ISO8601 UTC.  - `dayMaximum`: Valeurs maximales pour la période couverte par le rapport. Sous-attributs:- "température" : température maximale. Voir `WeatherForecast.temperature` pour la description et les unités. - FeelLikesTemperature". Maximum ressemble à la température. Même sémantique et unités que pour le fichier `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Humidité relative maximale. Même sémantique et mêmes unités que pour "WeatherForecast.relativeHumidity".  - `dayMinimum`: Valeurs minimales prévues pour la période couverte par le rapport.  Valeurs minimales pour la période couverte par le rapport. Sous-attributs:- `temperature` : Température minimale. Voir `WeatherForecast.temperature` pour la description et les unités. - FeelLikesTemperature". Température minimale ressentie. Même sémantique et unités que pour le fichier `WeatherForecast.feelLikeTemperature`.- `relativeHumidity`. Humidité relative minimale. Même sémantique et unités que pour "WeatherForecast.relativeHumidity".  - `description`: Une description de cet article  - `feelLikesTemperature`: Appréciation de la température de l'objet  - `id`:   - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refPointOfInterest`: Point d'intérêt lié à l'article  - `relativeHumidity`: Humidité de l'air  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `temperature`: Température de l'objet  - `type`: Type d'entité NGSI. Il doit s'agir de WeatherForecast  - `uVIndexMax`: L'indice UV maximum pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. Références normatives : [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `validFrom`: Date et heure de début de la période de validité.  - `validTo`: Date et heure de fin de la période de validité.  - `validity`: Inclut la période de validité de cette prévision comme un intervalle de temps ISO8601. Pour pallier le manque de prise en charge d'Orion Context Broker pour les intervalles date-heure, il peut être utilisé avec deux attributs distincts : validFrom, validTo.  - `visibility`: Catégories de visibilité  - `weatherType`: Description textuelle de la météo  - `windDirection`: Pari sur la direction du vent  - `windSpeed`: Intensité du vent    
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateIssued`: La date et l'heure auxquelles la prévision a été émise par le bureau météorologique au format ISO8601 UTC.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateRetrieved`: La date et l'heure de la prévision ont été récupérées au format ISO8601 UTC.  - `dayMaximum`: Valeurs maximales pour la période couverte par le rapport. Sous-attributs:- "température" : température maximale. Voir `WeatherForecast.temperature` pour la description et les unités. - FeelLikesTemperature". Maximum ressemble à la température. Même sémantique et unités que pour le fichier `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Humidité relative maximale. Même sémantique et mêmes unités que pour "WeatherForecast.relativeHumidity".  - `dayMinimum`: Valeurs minimales prévues pour la période couverte par le rapport.  Valeurs minimales pour la période couverte par le rapport. Sous-attributs:- `temperature` : Température minimale. Voir `WeatherForecast.temperature` pour la description et les unités. - FeelLikesTemperature". Température minimale ressentie. Même sémantique et unités que pour le fichier `WeatherForecast.feelLikeTemperature`.- `relativeHumidity`. Humidité relative minimale. Même sémantique et unités que pour "WeatherForecast.relativeHumidity".  - `description`: Une description de cet article  - `feelLikesTemperature`: Appréciation de la température de l'objet  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refPointOfInterest`: Point d'intérêt lié à l'article  - `relativeHumidity`: Humidité de l'air  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `temperature`: Température de l'objet  - `type`: Type d'entité NGSI. Il doit s'agir de WeatherForecast  - `uVIndexMax`: L'indice UV maximum pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. Références normatives : [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `validFrom`: Date et heure de début de la période de validité.  - `validTo`: Date et heure de fin de la période de validité.  - `validity`: Inclut la période de validité de cette prévision comme un intervalle de temps ISO8601. Pour pallier le manque de prise en charge d'Orion Context Broker pour les intervalles date-heure, il peut être utilisé avec deux attributs distincts : validFrom, validTo.  - `visibility`: Catégories de visibilité  - `weatherType`: Description textuelle de la météo  - `windDirection`: Pari sur la direction du vent  - `windSpeed`: Intensité du vent    
 Propriétés requises  
 - `address`  - `dateIssued`  - `id`  - `type`    
 Cette entité est principalement associée aux segments verticaux de l'environnement et de l'agriculture mais s'applique à de nombreuses applications différentes. Ce modèle de données a été développé en coopération avec les opérateurs de téléphonie mobile et le [GSMA] (https://www.gsma.com/iot/iot-big-data/).  
@@ -20,26 +20,35 @@ WeatherForecast:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -108,6 +117,8 @@ WeatherForecast:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -262,6 +273,7 @@ WeatherForecast:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *weatherforecast_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     refPointOfInterest:    
       description: 'Point of interest related to the item'    
