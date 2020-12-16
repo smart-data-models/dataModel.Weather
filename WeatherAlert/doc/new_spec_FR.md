@@ -1,11 +1,11 @@
 Entité : WeatherAlert  
 =====================  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherAlert/LICENSE.md)  
 Description globale : **Alerte météorologique générée par un utilisateur ou un appareil dans un lieu donné**  
 
 ## Liste des biens  
 
-- `alertSource`: Source de l'alerte  - `category`: Catégorie de l'entité  - `data`: Charge utile contenant les données récupérées.  - `dateIssued`: La date et l'heure d'émission de l'article au format ISO8601 UTC.  - `description`: Description de l'entité  - `severity`: Gravité de l'alarme  - `subCategory`: Catégories météorologiques  - `type`: Type d'entité NGSI. Il doit s'agir de Alert  - `validFrom`: Le début de la période de validité de cette prévision au format ISO8601  - `validTo`: La fin de la période de validité de cette prévision au format ISO8601    
+- `alertSource`: Source de l'alerte  - `category`: Catégorie de l'entité  - `data`: Charge utile contenant les données récupérées.  - `dateIssued`: La date et l'heure d'émission de l'article au format ISO8601 UTC.  - `description`: Description de l'entité  - `severity`: Gravité de l'alarme  - `subCategory`: Catégories météorologiques  - `type`: Type d'entité NGSI. Il doit s'agir d'Alert.  - `validFrom`: Le début de la période de validité de cette prévision au format ISO8601  - `validTo`: La fin de la période de validité de cette prévision au format ISO8601    
 Propriétés requises  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`    
 Ce dossier contient tous les artefacts logiciels permettant d'offrir des données d'alerte météorologique dans NGSI v2. La source de ces données est le service mondial [European Weather Alarm Service] (http://meteoalarm.eu).  
@@ -81,7 +81,7 @@ WeatherAlert:
         - wind    
       type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be Alert'    
+      description: 'NGSI Entity type. It has to be Alert.'    
       enum:    
         - Alert    
       type: Property    
