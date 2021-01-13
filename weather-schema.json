@@ -5,7 +5,7 @@
   "description": "Common definitions of weather data models",
   "definitions": {
     "WeatherAlertCategories": {
-      "description": "Property. Weather categories",
+      "description": "Property. Weather categories. Enum:' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'",
       "enum": [
         "avalanches",
         "coastalEvent",
@@ -19,9 +19,9 @@
         "ice",
         "lowTemperature",
         "rainfall",
-        "rain/flood",
+        "rain_flood",
         "snow",
-        "snow/ice",
+        "snow_ice",
         "thunderstorms",
         "tornado",
         "tropicalCyclone",
