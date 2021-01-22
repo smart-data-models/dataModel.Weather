@@ -2,9 +2,7 @@
 
 ## Description 
 
-An observation of weather conditions at a certain place and time. This data
-model has been developed in cooperation with mobile operators and the GSMA.
-
+An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/swagger.yaml)
