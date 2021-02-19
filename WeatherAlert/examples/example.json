@@ -1,7 +1,7 @@
 {
   "severity": "medium",
   "category": "weather",
-  "subCategory": "snow/ice",
+  "subCategory": "snow_ice",
   "alertSource": "http://www.meteoalarm.eu",
   "address": {
     "addressCountry": "ES",
