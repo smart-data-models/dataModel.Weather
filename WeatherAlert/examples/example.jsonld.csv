@@ -1,0 +1,2 @@
+"id_", "type_", "severity_", "category_", "subCategory_", "alertSource_", "address__addressCountry_", "address__addressRegion_", "dateIssued_", "validTo_", "validFrom_", "@context__0_"
+"urn:ngsi-ld:WeatherAlert:WeatherAlert-83b872975414bfca10832e564a1bb416-7", "Alert", "medium", "weather", "snow/ice", "http://www.meteoalarm.eu", "ES", "Huesca", "2016-03-14T13:54:01.00Z", "2016-03-14T23:59:00.00Z", "2016-03-14T13:00:00.00Z", "https://smart-data-models.github.io/data-models/context.jsonld"
