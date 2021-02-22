@@ -74,7 +74,7 @@
         "precipitation": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Air's temperature observed. Liters per square meter. "
+          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain expected. Units:'Liters per square meter'."
         }
       }
     }
