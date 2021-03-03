@@ -52,7 +52,9 @@
     "Weather-Commons": {
       "type": "object",
       "allOf": [
-        { "$ref": "#/definitions/Weather-AirConditions" },
+        {
+          "$ref": "#/definitions/Weather-AirConditions"
+        },
         {
           "properties": {
             "weatherType": {
@@ -93,6 +95,16 @@
             "refPointOfInterest": {
               "type": "string",
               "description": "Relationship. Model:'http://schema.org/URL'. Point of interest related to the item"
+            },
+            "atmosphericPressure": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Property. Model:'https://schema.org/Number'. The atmospheric pressure observed measured in Hecto Pascals. Units:'Hecto pascals'"
+            },
+            "illuminance": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Property. Model:'https://schema.org/Number'. (https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)."
             }
           }
         }

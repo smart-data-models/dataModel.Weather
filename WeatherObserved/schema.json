@@ -25,9 +25,7 @@
           "description": "Property. NGSI Entity type. It has to be WeatherObserved"
         },
         "dateObserved": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. Model:'https://schema.org/DateTime'. Date of the observation"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
         },
         "temperature": {
           "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/temperature"
@@ -44,9 +42,7 @@
           "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Unis:'Liters per square meter'. "
         },
         "atmosphericPressure": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The atmospheric pressure observed measured in Hecto Pascals. Units:'Hecto pascals'"
+          "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/atmosphericPressure"
         },
         "solarRadiation": {
           "type": "number",
@@ -54,9 +50,7 @@
           "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
         },
         "illuminance": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. (https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)."
+          "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/illuminance"
         },
         "pressureTendency": {
           "description": "Property. Model:'https://schema.org/DateTime'. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.",
