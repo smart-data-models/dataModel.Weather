@@ -13,7 +13,7 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons/allOf/1/properties"
     },
     {
       "properties": {
@@ -51,32 +51,32 @@
         "dayMaximum": {
           "type": "object",
           "description": "Property. Model:'https://schema.org/StructuredValue'. Maximum values for the reported period. Subattributes:- `temperature` : Maximum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Maximum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.-   `relativeHumidity`. Maximum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`.",
-          "properties": [
-            {
+          "properties": {
+            "temperature": {
               "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/temperature"
             },
-            {
+            "feelLikesTemperature": {
               "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/feelLikesTemperature"
             },
-            {
+            "relativeHumidity": {
               "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/relativeHumidity"
             }
-          ]
+          }
         },
         "dayMinimum": {
           "type": "object",
           "description": "Property. Model:'https://schema.org/Text'. Minimum values forecasted for the reported period.  Minimum values for the reported period. Subattributes:- `temperature` : Minimum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Minimum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`",
-          "properties": [
-            {
+          "properties": {
+            "temperature": {
               "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/temperature"
             },
-            {
+            "feelLikesTemperature": {
               "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/feelLikesTemperature"
             },
-            {
+            "relativeHumidity": {
               "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/relativeHumidity"
             }
-          ]
+          }
         },
         "uVIndexMax": {
           "type": "number",
