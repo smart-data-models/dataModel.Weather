@@ -13,19 +13,30 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons/allOf/properties"
     },
     {
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["WeatherObserved"],
+          "enum": [
+            "WeatherObserved"
+          ],
           "description": "Property. NGSI Entity type. It has to be WeatherObserved"
         },
         "dateObserved": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'https://schema.org/DateTime'. Date of the observation"
+        },
+        "temperature": {
+          "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/temperature"
+        },
+        "feelsLikeTemperature": {
+          "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/feelsLikeTemperature"
+        },
+        "relativeHumidity": {
+          "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/relativeHumidity"
         },
         "precipitation": {
           "type": "number",
@@ -52,7 +63,11 @@
           "oneOf": [
             {
               "type": "string",
-              "enum": ["raising", "falling", "steady"]
+              "enum": [
+                "raising",
+                "falling",
+                "steady"
+              ]
             },
             {
               "type": "number"
@@ -66,19 +81,19 @@
         "refDevice": {
           "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation.",
           "anyOf": [
-        {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 256,
-          "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-          "description" : "Property. Identifier format of any NGSI entity"
-        },
-        {
-          "type": "string",
-          "format": "uri",
-          "description" : "Property. Identifier format of any NGSI entity"
-        }
-      ]
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ]
         },
         "streamGauge": {
           "type": "number",
@@ -98,5 +113,10 @@
       }
     }
   ],
-  "required": ["id", "type", "dateObserved", "location"]
+  "required": [
+    "id",
+    "type",
+    "dateObserved",
+    "location"
+  ]
 }
