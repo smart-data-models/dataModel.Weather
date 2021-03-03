@@ -76,24 +76,25 @@
             {
               "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/relativeHumidity"
             }
-          ],
-          "uVIndexMax": {
-            "type": "number",
-            "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. Normative references: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)",
-            "minimum": 0
-          },
-          "precipitation": {
-            "type": "number",
-            "minimum": 0,
-            "description": "Property. Model:'https://schema.org/Number'. Amount of water rain expected. Units:'Liters per square meter'."
-          }
+          ]
+        },
+        "uVIndexMax": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. Normative references: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)",
+          "minimum": 0
+        },
+        "precipitation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain expected. Units:'Liters per square meter'."
         }
       }
-      ],
-      "required": [
-        "id",
-        "type",
-        "dateIssued",
-        "address"
-      ]
     }
+  ],
+  "required": [
+    "id",
+    "type",
+    "dateIssued",
+    "address"
+  ]
+}
