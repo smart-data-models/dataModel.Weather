@@ -46,9 +46,6 @@
           "minimum": 0,
           "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
         },
-        "illuminance": {
-          "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/illuminance"
-        },
         "pressureTendency": {
           "description": "Property. Model:'https://schema.org/DateTime'. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.",
           "oneOf": [
