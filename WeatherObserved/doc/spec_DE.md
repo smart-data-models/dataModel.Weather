@@ -391,8 +391,8 @@ WeatherObserved:
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
-#### WeatherObserved NGSI V2 key-values Beispiel  
-Hier ist ein Beispiel für ein WeatherObserved im JSON-Format als Key-Values. Dies ist kompatibel mit NGSI V2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### WeatherObserved NGSI-v2 key-values Beispiel  
+Hier ist ein Beispiel für ein WeatherObserved im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
@@ -424,8 +424,8 @@ WeatherObserved:
   "uvIndexMax": 1.0  
 }  
 ```  
-#### WetterObserviert NGSI V2 normalisiert Beispiel  
-Hier ist ein Beispiel für ein WeatherObserved im JSON-Format wie normalisiert. Dies ist kompatibel mit NGSI V2, wenn keine Optionen verwendet werden und liefert die Kontextdaten einer einzelnen Entität.  
+#### WetterObserviert NGSI-v2 normalisiert Beispiel  
+Hier ist ein Beispiel für ein WeatherObserved im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
