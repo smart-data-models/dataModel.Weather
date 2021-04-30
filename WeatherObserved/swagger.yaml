@@ -1,28 +1,19 @@
 ---
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.Weather
+# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# 
 
 
-components: 
+components:
   schemas: 
     WeatherObserved: 
       $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/model.yaml#/WeatherObserved"
-    PressureTendency: 
-       $ref: "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/model.yaml#/PressureTendency"
-    WeatherVisibility:
-      $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/Visibility'
-    WeatherType:
-      $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherType'
-info: 
-  description: |
-    An observation of weather conditions at a certain place and time. This data
-    model has been developed in cooperation with mobile operators and the
-    [GSMA](https://www.gsma.com/iot/iot-big-data/).
+info:
+  description:  |
+    An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.
   title: WeatherObserved
   version: "1.0.0"
 openapi: "3.0.0"
 
-# These paths are merely representative.
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
