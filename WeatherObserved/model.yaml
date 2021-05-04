@@ -2,30 +2,32 @@ WeatherObserved:
   description: 'An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.'
   properties:
     address:
-      description: 'The mailing address.'
+      description: 'The mailing address'
       properties:
         addressCountry:
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
           type: string
         addressLocality:
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''
           type: string
         addressRegion:
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
         areaServed:
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''
           type: string
         postOfficeBoxNumber:
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
         postalCode:
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''
           type: string
         streetAddress:
-          description: 'Property. The street address. Model:''https://schema.org/Text'''
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
       type: Property
+      x-ngsi:
+        model: https://schema.org/address
     alternateName:
       description: 'An alternative name for this item'
       type: Property
@@ -34,13 +36,6 @@ WeatherObserved:
       type: Property
       x-ngsi:
         model: https://schema.org/Text
-    atmosphericPressure:
-      description: 'The atmospheric pressure observed measured in Hecto Pascals'
-      minimum: 0
-      type: Property
-      x-ngsi:
-        model: https://schema.org/Number
-        units: 'Hecto pascals'
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
       type: Property
@@ -53,11 +48,9 @@ WeatherObserved:
       format: date-time
       type: Property
     dateObserved:
-      description: 'Date of the observation'
+      description: 'Date of the observed entity defined by the user.'
       format: date-time
       type: Property
-      x-ngsi:
-        model: https://schema.org/DateTime
     description:
       description: 'A description of this item'
       type: Property
@@ -67,7 +60,7 @@ WeatherObserved:
       x-ngsi:
         model: https://schema.org/Number
         units: 'Celsius degrees'
-    feelLikesTemperature:
+    feelsLikesTemperature:
       description: 'Temperature appreciation of the item'
       type: Property
     id:
@@ -82,12 +75,6 @@ WeatherObserved:
           type: string
       description: 'Unique identifier of the entity'
       type: Property
-    illuminance:
-      description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2).'
-      minimum: 0
-      type: Property
-      x-ngsi:
-        model: https://schema.org/Number
     location:
       $id: https://geojson.org/schema/Geometry.json
       $schema: "http://json-schema.org/draft-07/schema#"
@@ -245,7 +232,7 @@ WeatherObserved:
         description: 'Property. Unique identifier of the entity'
       type: Property
     precipitation:
-      description: 'Air''s temperature observed. Liters per square meter. '
+      description: 'Amount of water rain registered. Unis:''Liters per square meter''. '
       minimum: 0
       type: Property
       x-ngsi:
@@ -276,11 +263,6 @@ WeatherObserved:
       type: Relationship
       x-ngsi:
         model: https://schema.org/URL
-    refPointOfInterest:
-      description: 'Point of interest related to the item'
-      type: Relationship
-      x-ngsi:
-        model: http://schema.org/URL
     relativeHumidity:
       description: 'Humidity in the Air'
       maximum: 1
@@ -290,8 +272,8 @@ WeatherObserved:
       description: 'list of uri pointing to additional resources about the item'
       oneOf:
         - items:
-            - format: uri
-              type: string
+            format: uri
+            type: string
           minItems: 1
           type: array
         - format: uri
@@ -335,40 +317,6 @@ WeatherObserved:
       type: Property
       x-ngsi:
         model: https://schema.org/Number
-    visibility:
-      anyOf:
-        - enum:
-            - veryPoor
-            - poor
-            - moderate
-            - good
-            - veryGood
-            - excellent
-          type: string
-        - minimum: 0
-          type: number
-      description: 'Categories of visibility'
-      type: Property
-      x-ngsi:
-        model: http://schema.org/Text
-    weatherType:
-      description: 'Text description of the weather'
-      type: Property
-      x-ngsi:
-        model: http://schema.org/Text.
-    windDirection:
-      description: 'Direction of the wind bet'
-      maximum: 180
-      minimum: -180
-      type: Property
-      x-ngsi:
-        model: http://schema.org/Number
-    windSpeed:
-      description: 'Intensity of the wind'
-      minimum: 0
-      type: Property
-      x-ngsi:
-        model: http//schema.org/Number
   required:
     - id
     - type
