@@ -2,30 +2,32 @@ WeatherForecast:
   description: 'A harmonised description of a Weather Forecast'
   properties:
     address:
-      description: 'The mailing address.'
+      description: 'The mailing address'
       properties:
         addressCountry:
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
           type: string
         addressLocality:
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''
           type: string
         addressRegion:
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
         areaServed:
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''
           type: string
         postOfficeBoxNumber:
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
         postalCode:
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''
           type: string
         streetAddress:
-          description: 'Property. The street address. Model:''https://schema.org/Text'''
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
       type: Property
+      x-ngsi:
+        model: https://schema.org/address
     alternateName:
       description: 'An alternative name for this item'
       type: Property
@@ -58,39 +60,41 @@ WeatherForecast:
       x-ngsi:
         model: https://schema.org/DateTime
     dayMaximum:
-      allOf:
-        - description: 'Property. Air conditions categories'
-          properties: &properties
-            feelLikesTemperature:
-              description: 'Property. Temperature appreciation of the item'
-              type: number
-            relativeHumidity:
-              description: 'Property. Humidity in the Air'
-              maximum: 1
-              minimum: 0
-              type: number
-            temperature:
-              description: 'Property. Temperature of the item'
-              type: number
-          type: object
       description: 'Maximum values for the reported period. Subattributes:- `temperature` : Maximum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Maximum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.-   `relativeHumidity`. Maximum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`.'
+      properties:
+        feelLikesTemperature:
+          description: 'Property. Temperature appreciation of the item'
+          type: number
+        relativeHumidity:
+          description: 'Property. Humidity in the Air'
+          maximum: 1
+          minimum: 0
+          type: number
+        temperature:
+          description: 'Property. Temperature of the item'
+          type: number
       type: Property
       x-ngsi:
         model: https://schema.org/StructuredValue
     dayMinimum:
-      allOf:
-        - description: 'Property. Air conditions categories'
-          properties: *properties
-          type: object
       description: 'Minimum values forecasted for the reported period.  Minimum values for the reported period. Subattributes:- `temperature` : Minimum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Minimum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`'
+      properties:
+        feelLikesTemperature:
+          description: 'Property. Temperature appreciation of the item'
+          type: number
+        relativeHumidity:
+          description: 'Property. Humidity in the Air'
+          maximum: 1
+          minimum: 0
+          type: number
+        temperature:
+          description: 'Property. Temperature of the item'
+          type: number
       type: Property
       x-ngsi:
         model: https://schema.org/Text
     description:
       description: 'A description of this item'
-      type: Property
-    feelLikesTemperature:
-      description: 'Temperature appreciation of the item'
       type: Property
     id:
       anyOf: &weatherforecast_-_properties_-_owner_-_items_-_anyof
@@ -260,22 +264,19 @@ WeatherForecast:
         anyOf: *weatherforecast_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
       type: Property
-    refPointOfInterest:
-      description: 'Point of interest related to the item'
-      type: Relationship
-      x-ngsi:
-        model: http://schema.org/URL
-    relativeHumidity:
-      description: 'Humidity in the Air'
-      maximum: 1
+    precipitation:
+      description: 'Amount of water rain expected'
       minimum: 0
       type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+        units: 'Liters per square meter.'
     seeAlso:
       description: 'list of uri pointing to additional resources about the item'
       oneOf:
         - items:
-            - format: uri
-              type: string
+            format: uri
+            type: string
           minItems: 1
           type: array
         - format: uri
@@ -283,9 +284,6 @@ WeatherForecast:
       type: Property
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
-      type: Property
-    temperature:
-      description: 'Temperature of the item'
       type: Property
     type:
       description: 'NGSI Entity type. It has to be WeatherForecast'
@@ -315,40 +313,6 @@ WeatherForecast:
       type: Property
       x-ngsi:
         model: https://schema.org/Text
-    visibility:
-      anyOf:
-        - enum:
-            - veryPoor
-            - poor
-            - moderate
-            - good
-            - veryGood
-            - excellent
-          type: string
-        - minimum: 0
-          type: number
-      description: 'Categories of visibility'
-      type: Property
-      x-ngsi:
-        model: http://schema.org/Text
-    weatherType:
-      description: 'Text description of the weather'
-      type: Property
-      x-ngsi:
-        model: http://schema.org/Text.
-    windDirection:
-      description: 'Direction of the wind bet'
-      maximum: 180
-      minimum: -180
-      type: Property
-      x-ngsi:
-        model: http://schema.org/Number
-    windSpeed:
-      description: 'Intensity of the wind'
-      minimum: 0
-      type: Property
-      x-ngsi:
-        model: http//schema.org/Number
   required:
     - id
     - type
