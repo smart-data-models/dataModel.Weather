@@ -238,8 +238,8 @@ WeatherObserved:
       description: 'Enum:''falling, raising, steady''. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.'
       oneOf:
         - enum:
-            - raising
             - falling
+            - raising
             - steady
           type: string
         - type: number
