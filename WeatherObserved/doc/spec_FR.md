@@ -6,7 +6,7 @@ Entité : WeatherObserved
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: Date de l'entité observée définie par l'utilisateur.  - `description`: Une description de cet article  - `dewPoint`: Le point de rosée encodé comme un nombre  - `feelsLikesTemperature`: Appréciation de la température de l'objet  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `precipitation`: Quantité d'eau de pluie enregistrée. Unis : "Litres par mètre carré".  - `pressureTendency`: Enum : 'falling, raising, steady'. La pression est-elle en hausse ou en baisse ? Elle peut être exprimée en termes quantitatifs ou qualitatifs.  - `refDevice`: Une référence au(x) dispositif(s) qui a (ont) capturé cette observation.  - `relativeHumidity`: L'humidité dans l'air  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `snowHeight`: La hauteur de neige observée par les capteurs génériques de mesure de l'épaisseur de la neige, exprimée en centimètres.  - `solarRadiation`: Le rayonnement solaire observé mesuré en Watts par carré  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `streamGauge`: L'élévation de la surface de l'eau observée par des capteurs de mesure hydrométrique, à savoir un [Stream Gauge] (https://en.wikipedia.org/wiki/Stream_gauge), exprimée en centimètres.  - `temperature`: Température de l'article  - `type`: Type d'entité NGSI. Il doit s'agir de WeatherObserved  - `uVIndexMax`: L'indice UV maximum pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: Date de l'entité observée définie par l'utilisateur.  - `description`: Une description de cet article  - `dewPoint`: Le point de rosée encodé comme un nombre  - `feelsLikesTemperature`: Appréciation de la température de l'objet  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `precipitation`: Quantité d'eau de pluie enregistrée. Unis : "Litres par mètre carré".  - `pressureTendency`: Enum : 'falling, raising, steady'. La pression est-elle en hausse ou en baisse ? Elle peut être exprimée en termes quantitatifs ou qualitatifs.  - `refDevice`: Une référence au(x) dispositif(s) qui a (ont) capturé cette observation.  - `relativeHumidity`: L'humidité dans l'air  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `snowHeight`: La hauteur de neige observée par les capteurs génériques de mesure de l'épaisseur de la neige, exprimée en centimètres.  - `solarRadiation`: Le rayonnement solaire observé mesuré en Watts par carré  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `streamGauge`: L'élévation de la surface de l'eau observée par des capteurs de mesure hydrométrique, à savoir un [Stream Gauge] (https://en.wikipedia.org/wiki/Stream_gauge), exprimée en centimètres.  - `temperature`: Température de l'article  - `type`: Type d'entité NGSI. Il doit s'agir de WeatherObserved  - `uVIndexMax`: L'indice UV maximum pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)    
 Propriétés requises  
 - `dateObserved`  - `id`  - `location`  - `type`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -87,10 +87,10 @@ WeatherObserved:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -110,7 +110,8 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -133,7 +134,8 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -158,7 +160,8 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -180,7 +183,8 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -205,7 +209,8 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -232,7 +237,7 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -337,7 +342,7 @@ WeatherObserved:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### Valeurs-clés NGSI-v2 WeatherObserved Exemple  
+#### WeatherObserved NGSI-v2 key-values Exemple  
 Voici un exemple de WeatherObserved au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
