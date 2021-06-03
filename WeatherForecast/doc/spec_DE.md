@@ -1,11 +1,12 @@
 Entität: WeatherForecast  
 ========================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherForecast/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Eine harmonisierte Beschreibung einer Wettervorhersage**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift.  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateIssued`: Das Datum und die Uhrzeit, zu der die Vorhersage vom Wetteramt ausgegeben wurde, im Format ISO8601 UTC.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateRetrieved`: Das Datum und die Uhrzeit, zu der die Vorhersage abgerufen wurde, im Format ISO8601 UTC.  - `dayMaximum`: Maximalwerte für den gemeldeten Zeitraum. Unterattribute:- `temperature` : Maximale Temperatur. Siehe `WeatherForecast.temperature` für Beschreibung und Einheiten. - feelLikesTemperature`. Maximale gefühlte Temperatur. Gleiche Semantik und Einheiten wie `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Maximale relative Luftfeuchtigkeit. Dieselbe Semantik und dieselben Einheiten wie `WeatherForecast.relativeHumidity`.  - `dayMinimum`: Minimale Werte, die für die gemeldete Periode prognostiziert wurden.  Minimalwerte für den gemeldeten Zeitraum. Unterattribute:- `temperature` : Mindesttemperatur. Siehe `WeatherForecast.temperature` für Beschreibung und Einheiten. - FeelLikesTemperature`. Minimale gefühlte Temperatur. Gleiche Semantik und Einheiten wie `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimale relative Luftfeuchtigkeit. Dieselbe Semantik und dieselben Einheiten wie `WeatherForecast.relativeHumidity`.  - `description`: Eine Beschreibung dieses Artikels  - `feelLikesTemperature`: Temperaturaufwertung des Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`:   - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `refPointOfInterest`: Punkt von Interesse in Bezug auf den Artikel  - `relativeHumidity`: Feuchte in der Luft  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `temperature`: Temperatur des Artikels  - `type`: NGSI Entity-Typ. Es muss WeatherForecast sein  - `uVIndexMax`: Der maximale UV-Index für den Zeitraum, basierend auf dem UV-Index-Maß der Weltgesundheitsorganisation. Normative Referenzen: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `validFrom`: Datum und Uhrzeit für den Beginn des Gültigkeitszeitraums.  - `validTo`: Datum und Uhrzeit des Endes des Gültigkeitszeitraums.  - `validity`: Enthält den Gültigkeitszeitraum für diese Prognose als ISO8601-Zeitintervall. Als Workaround für die fehlende Unterstützung von Orion Context Broker für Datumsintervalle können zwei separate Attribute verwendet werden: `validFrom`, `validTo`.  - `visibility`: Kategorien der Sichtbarkeit  - `weatherType`: Textbeschreibung des Wetters  - `windDirection`: Richtung der Windwette  - `windSpeed`: Intensität des Windes    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateIssued`: Das Datum und die Uhrzeit, zu der die Vorhersage vom Wetteramt ausgegeben wurde, im Format ISO8601 UTC.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateRetrieved`: Das Datum und die Uhrzeit, zu der die Vorhersage abgerufen wurde, im Format ISO8601 UTC.  - `dayMaximum`: Maximalwerte für den gemeldeten Zeitraum. Unterattribute:- `temperature` : Maximale Temperatur. Siehe `WeatherForecast.temperature` für Beschreibung und Einheiten. - feelLikesTemperature`. Maximale gefühlte Temperatur. Gleiche Semantik und Einheiten wie `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Maximale relative Luftfeuchtigkeit. Dieselbe Semantik und dieselben Einheiten wie `WeatherForecast.relativeHumidity`.  - `dayMinimum`: Minimale Werte, die für die gemeldete Periode prognostiziert wurden.  Minimalwerte für den gemeldeten Zeitraum. Unterattribute:- `temperature` : Mindesttemperatur. Siehe `WeatherForecast.temperature` für Beschreibung und Einheiten. - FeelLikesTemperature`. Minimale gefühlte Temperatur. Gleiche Semantik und Einheiten wie `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimale relative Luftfeuchtigkeit. Dieselbe Semantik und dieselben Einheiten wie `WeatherForecast.relativeHumidity`.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `precipitation`: Erwartete Wassermenge Regen  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI Entity-Typ. Es muss WeatherForecast sein  - `uVIndexMax`: Der maximale UV-Index für den Zeitraum, basierend auf dem UV-Index-Maß der Weltgesundheitsorganisation. Normative Referenzen: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `validFrom`: Datum und Uhrzeit für den Beginn des Gültigkeitszeitraums.  - `validTo`: Datum und Uhrzeit des Endes des Gültigkeitszeitraums.  - `validity`: Enthält den Gültigkeitszeitraum für diese Prognose als ISO8601-Zeitintervall. Als Workaround für die fehlende Unterstützung von Orion Context Broker für Datumsintervalle können zwei separate Attribute verwendet werden: `validFrom`, `validTo`.    
 Erforderliche Eigenschaften  
 - `address`  - `dateIssued`  - `id`  - `type`    
 Diese Entität wird in erster Linie mit den vertikalen Segmenten Umwelt und Landwirtschaft in Verbindung gebracht, ist aber auf viele verschiedene Anwendungen anwendbar. Dieses Datenmodell wurde in Zusammenarbeit mit Mobilfunkbetreibern und der [GSMA](https://www.gsma.com/iot/iot-big-data/) entwickelt.  
@@ -17,30 +18,29 @@ WeatherForecast:
   description: 'A harmonised description of a Weather Forecast'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -73,39 +73,41 @@ WeatherForecast:
       x-ngsi:    
         model: https://schema.org/DateTime    
     dayMaximum:    
-      allOf:    
-        - description: 'Property. Air conditions categories'    
-          properties: &properties    
-            feelLikesTemperature:    
-              description: 'Property. Temperature appreciation of the item'    
-              type: number    
-            relativeHumidity:    
-              description: 'Property. Humidity in the Air'    
-              maximum: 1    
-              minimum: 0    
-              type: number    
-            temperature:    
-              description: 'Property. Temperature of the item'    
-              type: number    
-          type: object    
       description: 'Maximum values for the reported period. Subattributes:- `temperature` : Maximum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Maximum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.-   `relativeHumidity`. Maximum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`.'    
+      properties:    
+        feelLikesTemperature:    
+          description: 'Property. Temperature appreciation of the item'    
+          type: number    
+        relativeHumidity:    
+          description: 'Property. Humidity in the Air'    
+          maximum: 1    
+          minimum: 0    
+          type: number    
+        temperature:    
+          description: 'Property. Temperature of the item'    
+          type: number    
       type: Property    
       x-ngsi:    
         model: https://schema.org/StructuredValue    
     dayMinimum:    
-      allOf:    
-        - description: 'Property. Air conditions categories'    
-          properties: *properties    
-          type: object    
       description: 'Minimum values forecasted for the reported period.  Minimum values for the reported period. Subattributes:- `temperature` : Minimum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Minimum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`'    
+      properties:    
+        feelLikesTemperature:    
+          description: 'Property. Temperature appreciation of the item'    
+          type: number    
+        relativeHumidity:    
+          description: 'Property. Humidity in the Air'    
+          maximum: 1    
+          minimum: 0    
+          type: number    
+        temperature:    
+          description: 'Property. Temperature of the item'    
+          type: number    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
     description:    
       description: 'A description of this item'    
-      type: Property    
-    feelLikesTemperature:    
-      description: 'Temperature appreciation of the item'    
       type: Property    
     id:    
       anyOf: &weatherforecast_-_properties_-_owner_-_items_-_anyof    
@@ -120,10 +122,10 @@ WeatherForecast:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -143,7 +145,8 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -166,7 +169,8 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -191,7 +195,8 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -213,7 +218,8 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -238,7 +244,8 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -265,7 +272,7 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -275,22 +282,19 @@ WeatherForecast:
         anyOf: *weatherforecast_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: Property    
-    refPointOfInterest:    
-      description: 'Point of interest related to the item'    
-      type: Relationship    
-      x-ngsi:    
-        model: http://schema.org/URL    
-    relativeHumidity:    
-      description: 'Humidity in the Air'    
-      maximum: 1    
+    precipitation:    
+      description: 'Amount of water rain expected'    
       minimum: 0    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        units: 'Liters per square meter.'    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -298,9 +302,6 @@ WeatherForecast:
       type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
-    temperature:    
-      description: 'Temperature of the item'    
       type: Property    
     type:    
       description: 'NGSI Entity type. It has to be WeatherForecast'    
@@ -330,40 +331,6 @@ WeatherForecast:
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
-    visibility:    
-      anyOf:    
-        - enum:    
-            - veryPoor    
-            - poor    
-            - moderate    
-            - good    
-            - veryGood    
-            - excellent    
-          type: string    
-        - minimum: 0    
-          type: number    
-      description: 'Categories of visibility'    
-      type: Property    
-      x-ngsi:    
-        model: http://schema.org/Text    
-    weatherType:    
-      description: 'Text description of the weather'    
-      type: Property    
-      x-ngsi:    
-        model: http://schema.org/Text.    
-    windDirection:    
-      description: 'Direction of the wind bet'    
-      maximum: 180    
-      minimum: -180    
-      type: Property    
-      x-ngsi:    
-        model: http://schema.org/Number    
-    windSpeed:    
-      description: 'Intensity of the wind'    
-      minimum: 0    
-      type: Property    
-      x-ngsi:    
-        model: http//schema.org/Number    
   required:    
     - id    
     - type    
