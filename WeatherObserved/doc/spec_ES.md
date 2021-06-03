@@ -6,7 +6,7 @@ Entidad: WeatherObserved
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateObserved`: Fecha de la entidad observada definida por el usuario.  - `description`: Una descripción de este artículo  - `dewPoint`: El punto de rocío codificado como un número  - `feelsLikesTemperature`: Apreciación de la temperatura del artículo  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `precipitation`: Cantidad de agua de lluvia registrada. Unis:'Litros por metro cuadrado'.  - `pressureTendency`: Enum:'bajando, subiendo, estable'. ¿La presión aumenta o disminuye? Puede expresarse en términos cuantitativos o cualitativos.  - `refDevice`: Una referencia al dispositivo o dispositivos que captaron esta observación.  - `relativeHumidity`: Humedad en el aire  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `snowHeight`: La altura de la nieve observada por los sensores genéricos de medición de la profundidad de la nieve, expresada en centímetros  - `solarRadiation`: La radiación solar observada, medida en vatios por cuadrado  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `streamGauge`: La elevación de la superficie del nivel del agua observada por los sensores de medición hidrométrica, concretamente un [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expresada en centímetros  - `temperature`: Temperatura del artículo  - `type`: Tipo de entidad NGSI. Tiene que ser WeatherObserved  - `uVIndexMax`: El índice UV máximo para el periodo, basado en la medida del índice UV de la Organización Mundial de la Salud. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateObserved`: Fecha de la entidad observada definida por el usuario.  - `description`: Una descripción de este artículo  - `dewPoint`: El punto de rocío codificado como un número  - `feelsLikesTemperature`: Apreciación de la temperatura del artículo  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `precipitation`: Cantidad de agua de lluvia registrada. Unis:'Litros por metro cuadrado'.  - `pressureTendency`: Enum:'bajando, subiendo, estable'. ¿La presión aumenta o disminuye? Puede expresarse en términos cuantitativos o cualitativos.  - `refDevice`: Una referencia al dispositivo o dispositivos que captaron esta observación.  - `relativeHumidity`: Humedad en el aire  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `snowHeight`: La altura de la nieve observada por los sensores genéricos de medición de la profundidad de la nieve, expresada en centímetros  - `solarRadiation`: La radiación solar observada, medida en vatios por cuadrado  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `streamGauge`: La elevación de la superficie del nivel del agua observada por los sensores de medición hidrométrica, concretamente un [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expresada en centímetros  - `temperature`: Temperatura del artículo  - `type`: Tipo de entidad NGSI. Tiene que ser WeatherObserved  - `uVIndexMax`: El índice UV máximo para el periodo, basado en la medida del índice UV de la Organización Mundial de la Salud. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)    
 Propiedades requeridas  
 - `dateObserved`  - `id`  - `location`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -87,10 +87,10 @@ WeatherObserved:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -110,7 +110,8 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -133,7 +134,8 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -158,7 +160,8 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -180,7 +183,8 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -205,7 +209,8 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -232,7 +237,7 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
