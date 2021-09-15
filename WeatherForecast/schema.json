@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/schema.json",
-    "title": " - Weather Forecast schema"
+    "title": " - Weather Forecast schema",
+    "description": "A harmonised description of a Weather Forecast"
 }
