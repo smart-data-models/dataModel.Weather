@@ -27,5 +27,13 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "alertSource",
+        "category",
+        "subCategory",
+        "dateIssued"
     ]
 }
