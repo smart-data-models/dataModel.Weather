@@ -91,5 +91,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "dateIssued",
+        "address"
     ]
 }
