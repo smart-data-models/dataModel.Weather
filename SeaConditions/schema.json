@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Environment/SeaConditions/schema.json",
     "title": "Sea Conditions schema",
-    "description": "This entity contains a harmonised geographic description of sea conditions"
+    "description": "This entity contains a harmonised geographic description of sea conditions",
+    "type": "object"
 }
