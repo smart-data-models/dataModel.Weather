@@ -45,7 +45,7 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "description": "Property. Humidity in the Air"
+          "description": "Property. Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)"
         }
       }
     },
@@ -91,6 +91,10 @@
               "type": "number",
               "description": "Property. Model:'http//schema.org/Number'. Intensity of the wind",
               "minimum": 0
+            },
+            "gustSpeed": {
+              "type": "number",
+              "description": "Property. A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds."
             },
             "refPointOfInterest": {
               "type": "string",
