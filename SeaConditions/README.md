@@ -6,7 +6,7 @@ Version: 0.0.1
 This entity contains a harmonised geographic description of sea conditions
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Weather/blob/master/SeaConditions/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/SeaConditions/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Weather/blob/master/SeaConditions/doc/spec.md)
 
