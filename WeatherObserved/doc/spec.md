@@ -1,15 +1,14 @@
-Entity: WeatherObserved  
-=======================  
-[Open License](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherObserved/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Global description: **An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.**  
-
-## List of properties  
-
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateObserved`: Date of the observed entity defined by the user.  - `description`: A description of this item  - `dewPoint`: The dew point encoded as a number  - `feelsLikesTemperature`: Temperature appreciation of the item  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `precipitation`: Amount of water rain registered. Unis:'Liters per square meter'.   - `pressureTendency`: Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.  - `refDevice`: A reference to the device(s) which captured this observation.  - `relativeHumidity`: Humidity in the Air  - `seeAlso`: list of uri pointing to additional resources about the item  - `snowHeight`: The snow height observed by generic snow depth measurement sensors, expressed in centimeters  - `solarRadiation`: The solar radiation observed measured in Watts per square  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `streamGauge`: The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters  - `temperature`: Temperature of the item  - `type`: NGSI Entity type. It has to be WeatherObserved  - `uVIndexMax`: The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)    
-Required properties  
-- `dateObserved`  - `id`  - `location`  - `type`  ## Data Model description of properties  
-Sorted alphabetically (click for details)  
+language not supported  
+======================  
+language not supported  
+language not supported  
+language not supported  
+language not supported  
+language not supported  
+- `address`: language not supported  - `airQualityIndex`: language not supported  - `airTemperatureForecast`: language not supported  - `alternateName`: language not supported  - `aqiMajorPollutant`: language not supported  - `aqiMajorPollutantForecast`: language not supported  - `areaServed`: language not supported  - `atmosphericPressure`: language not supported  - `dataProvider`: language not supported  - `dateCreated`: language not supported  - `dateModified`: language not supported  - `dateObserved`: language not supported  - `description`: language not supported  - `dewPoint`: language not supported  - `feelLikesTemperature`: language not supported  - `feelsLikesTemperature`: language not supported  - `gustSpeed`: language not supported  - `id`: language not supported  - `illuminance`: language not supported  - `location`: language not supported  - `name`: language not supported  - `owner`: language not supported  - `precipitation`: language not supported  - `precipitationForecast`: language not supported  - `pressureTendency`: language not supported  - `refDevice`: language not supported  - `refPointOfInterest`: language not supported  - `relativeHumidity`: language not supported  - `relativeHumidityForecast`: language not supported  - `seeAlso`: language not supported  - `snowHeight`: language not supported  - `solarRadiation`: language not supported  - `source`: language not supported  - `streamGauge`: language not supported  - `temperature`: language not supported  - `type`: language not supported  - `uVIndexMax`: language not supported  - `visibility`: language not supported  - `weatherType`: language not supported  - `windDirection`: language not supported  - `windSpeed`: language not supported    
+language not supported  
+- `dateObserved`  - `id`  - `location`  - `type`  ## language not supported  
+language not supported  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WeatherObserved:    
@@ -36,44 +35,103 @@ WeatherObserved:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
+    airQualityIndex:    
+      description: 'Air quality index is a number used to report the quality of the air on any given day.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    airTemperatureForecast:    
+      description: 'Forecasted value of air temperature over a certain duration in future.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
-    areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    aqiMajorPollutant:    
+      description: 'Major pollutant in the Air Quality Index (AQI).'    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
+    aqiMajorPollutantForecast:    
+      description: 'Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future.'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
+        type: Property    
+    atmosphericPressure:    
+      description: 'The atmospheric pressure observed measured in Hecto Pascals'    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: 'Hecto pascals'    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateObserved:    
       description: 'Date of the observed entity defined by the user.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dewPoint:    
-      description: 'The dew point encoded as a number'    
-      type: Property    
+      description: 'The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor'    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'Celsius degrees'    
+    feelLikesTemperature:    
+      description: 'Temperature appreciation of the item'    
+      type: number    
+      x-ngsi:    
+        type: Property    
     feelsLikesTemperature:    
       description: 'Temperature appreciation of the item'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
+    gustSpeed:    
+      description: 'A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds.'    
+      type: number    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &weatherobserved_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -85,7 +143,15 @@ WeatherObserved:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
+    illuminance:    
+      description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2).'    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -237,22 +303,34 @@ WeatherObserved:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *weatherobserved_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     precipitation:    
       description: 'Amount of water rain registered. Unis:''Liters per square meter''. '    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
+    precipitationForecast:    
+      description: 'Forecasted rainfall over a certain duration in future.'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
     pressureTendency:    
       description: 'Enum:''falling, raising, steady''. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.'    
       oneOf:    
@@ -262,9 +340,9 @@ WeatherObserved:
             - steady    
           type: string    
         - type: number    
-      type: Property    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     refDevice:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -276,14 +354,28 @@ WeatherObserved:
           format: uri    
           type: string    
       description: 'A reference to the device(s) which captured this observation.'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
+    refPointOfInterest:    
+      description: 'Point of interest related to the item'    
+      type: string    
+      x-ngsi:    
+        model: http://schema.org/URL    
+        type: Relationship    
     relativeHumidity:    
-      description: 'Humidity in the Air'    
+      description: 'Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)'    
       maximum: 1    
       minimum: 0    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
+    relativeHumidityForecast:    
+      description: 'Forecasted relative humidity (water vapour in air) over a certain duration in future'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -294,56 +386,105 @@ WeatherObserved:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     snowHeight:    
       description: 'The snow height observed by generic snow depth measurement sensors, expressed in centimeters'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: centimeters    
     solarRadiation:    
       description: 'The solar radiation observed measured in Watts per square'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: w/m2    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     streamGauge:    
       description: 'The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: centimeters    
     temperature:    
       description: 'Temperature of the item'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be WeatherObserved'    
       enum:    
         - WeatherObserved    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     uVIndexMax:    
       description: 'The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)'    
       minimum: 1    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
+    visibility:    
+      anyOf:    
+        - enum:    
+            - veryPoor    
+            - poor    
+            - moderate    
+            - good    
+            - veryGood    
+            - excellent    
+          type: string    
+        - minimum: 0    
+          type: number    
+      description: 'Categories of visibility'    
+      x-ngsi:    
+        model: http://schema.org/Text    
+        type: Property    
+    weatherType:    
+      description: 'Text description of the weather'    
+      type: string    
+      x-ngsi:    
+        model: http://schema.org/Text.    
+        type: Property    
+    windDirection:    
+      description: 'Direction of the wind bet'    
+      maximum: 180    
+      minimum: -180    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+    windSpeed:    
+      description: 'Intensity of the wind'    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: http//schema.org/Number    
+        type: Property    
   required:    
     - id    
     - type    
     - dateObserved    
     - location    
   type: object    
+  version: 0.0.3    
 ```  
 </details>    
-## Example payloads    
-#### WeatherObserved NGSI-v2 key-values Example    
-Here is an example of a WeatherObserved in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+language not supported  
+language not supported  
+language not supported  
 ```json  
 {  
   "id": "Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
@@ -375,8 +516,8 @@ WeatherObserved:
   "uvIndexMax": 1.0  
 }  
 ```  
-#### WeatherObserved NGSI-v2 normalized Example    
-Here is an example of a WeatherObserved in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+language not supported  
+language not supported  
 ```json  
 {  
   "id": "Valladolid.2016-11-30T07-00-00.00Z",  
@@ -468,8 +609,8 @@ WeatherObserved:
   }  
 }  
 ```  
-#### WeatherObserved NGSI-LD key-values Example    
-Here is an example of a WeatherObserved in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+language not supported  
+language not supported  
 ```json  
 {  
   "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
@@ -507,8 +648,8 @@ WeatherObserved:
   ]  
 }  
 ```  
-#### WeatherObserved NGSI-LD normalized Example    
-Here is an example of a WeatherObserved in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+language not supported  
+language not supported  
 ```json  
 {  
   "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
