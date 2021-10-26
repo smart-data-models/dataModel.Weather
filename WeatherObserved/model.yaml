@@ -26,10 +26,34 @@ WeatherObserved:
       x-ngsi:
         model: https://schema.org/address
         type: Property
+    airQualityIndex:
+      description: 'Air quality index is a number used to report the quality of the air on any given day.'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+    airTemperatureForecast:
+      description: 'Forecasted value of air temperature over a certain duration in future.'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
     alternateName:
       description: 'An alternative name for this item'
       type: string
       x-ngsi:
+        type: Property
+    aqiMajorPollutant:
+      description: 'Major pollutant in the Air Quality Index (AQI).'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    aqiMajorPollutantForecast:
+      description: 'Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
         type: Property
     areaServed:
       description: 'The geographic area where a service or offered item is provided'
@@ -37,6 +61,14 @@ WeatherObserved:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
+    atmosphericPressure:
+      description: 'The atmospheric pressure observed measured in Hecto Pascals'
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: 'Hecto pascals'
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
       type: string
@@ -66,14 +98,24 @@ WeatherObserved:
       x-ngsi:
         type: Property
     dewPoint:
-      description: 'The dew point encoded as a number'
+      description: 'The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
         units: 'Celsius degrees'
+    feelLikesTemperature:
+      description: 'Temperature appreciation of the item'
+      type: number
+      x-ngsi:
+        type: Property
     feelsLikesTemperature:
       description: 'Temperature appreciation of the item'
+      type: number
+      x-ngsi:
+        type: Property
+    gustSpeed:
+      description: 'A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds.'
       type: number
       x-ngsi:
         type: Property
@@ -89,6 +131,13 @@ WeatherObserved:
           type: string
       description: 'Unique identifier of the entity'
       x-ngsi:
+        type: Property
+    illuminance:
+      description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2).'
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
         type: Property
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
@@ -263,6 +312,12 @@ WeatherObserved:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
+    precipitationForecast:
+      description: 'Forecasted rainfall over a certain duration in future.'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
     pressureTendency:
       description: 'Enum:''falling, raising, steady''. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.'
       oneOf:
@@ -289,12 +344,24 @@ WeatherObserved:
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
+    refPointOfInterest:
+      description: 'Point of interest related to the item'
+      type: string
+      x-ngsi:
+        model: http://schema.org/URL
+        type: Relationship
     relativeHumidity:
-      description: 'Humidity in the Air'
+      description: 'Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)'
       maximum: 1
       minimum: 0
       type: number
       x-ngsi:
+        type: Property
+    relativeHumidityForecast:
+      description: 'Forecasted relative humidity (water vapour in air) over a certain duration in future'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
         type: Property
     seeAlso:
       description: 'list of uri pointing to additional resources about the item'
@@ -356,10 +423,47 @@ WeatherObserved:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
+    visibility:
+      anyOf:
+        - enum:
+            - veryPoor
+            - poor
+            - moderate
+            - good
+            - veryGood
+            - excellent
+          type: string
+        - minimum: 0
+          type: number
+      description: 'Categories of visibility'
+      x-ngsi:
+        model: http://schema.org/Text
+        type: Property
+    weatherType:
+      description: 'Text description of the weather'
+      type: string
+      x-ngsi:
+        model: http://schema.org/Text.
+        type: Property
+    windDirection:
+      description: 'Direction of the wind bet'
+      maximum: 180
+      minimum: -180
+      type: number
+      x-ngsi:
+        model: http://schema.org/Number
+        type: Property
+    windSpeed:
+      description: 'Intensity of the wind'
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: http//schema.org/Number
+        type: Property
   required:
     - id
     - type
     - dateObserved
     - location
   type: object
-  version: 0.0.2
+  version: 0.0.3
