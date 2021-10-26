@@ -1,5 +1,6 @@
 WeatherForecast:
   description: 'A harmonised description of a Weather Forecast'
+  modelTags: ""
   properties:
     address:
       description: 'The mailing address'
@@ -75,7 +76,7 @@ WeatherForecast:
           description: 'Property. Temperature appreciation of the item'
           type: number
         relativeHumidity:
-          description: 'Property. Humidity in the Air'
+          description: 'Property. Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)'
           maximum: 1
           minimum: 0
           type: number
@@ -93,7 +94,7 @@ WeatherForecast:
           description: 'Property. Temperature appreciation of the item'
           type: number
         relativeHumidity:
-          description: 'Property. Humidity in the Air'
+          description: 'Property. Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)'
           maximum: 1
           minimum: 0
           type: number
@@ -353,3 +354,4 @@ WeatherForecast:
     - dateIssued
     - address
   type: object
+  version: 0.0.1
