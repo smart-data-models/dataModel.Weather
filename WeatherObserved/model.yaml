@@ -362,3 +362,4 @@ WeatherObserved:
     - dateObserved
     - location
   type: object
+  version: 0.0.2
