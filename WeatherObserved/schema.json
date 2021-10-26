@@ -61,7 +61,7 @@
               "type": "number"
             }
           ],
-          "description": "Property. Model:'https://schema.org/DateTime'. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms."
+          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms."
         },
         "dewPoint": {
           "type": "number",
