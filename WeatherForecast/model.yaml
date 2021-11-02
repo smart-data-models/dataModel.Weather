@@ -1,6 +1,5 @@
 WeatherForecast:
   description: 'A harmonised description of a Weather Forecast'
-  modelTags: ""
   properties:
     address:
       description: 'The mailing address'
@@ -434,4 +433,9 @@ WeatherForecast:
     - dateIssued
     - address
   type: object
-  version: 0.0.1
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherForecast/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/schema.json
+  x-model-tags: ""
+  x-version: 0.0.1
