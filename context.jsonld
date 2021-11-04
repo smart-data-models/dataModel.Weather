@@ -28,6 +28,7 @@
         "illuminance": "https://smartdatamodels.org/dataModel.Weather/illuminance",
         "location": "ngsi-ld:location",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "owner": "https://smartdatamodels.org/owner",
         "pH": "https://smartdatamodels.org/dataModel.Weather/pH",
         "precipitation": "https://smartdatamodels.org/dataModel.Weather/precipitation",
