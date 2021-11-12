@@ -1,18 +1,18 @@
-Entité : WeatherForecast  
-========================  
-[Licence ouverte] (https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherForecast/LICENSE.md)  
-[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Description globale : **Description harmonisée d'une prévision météorologique**  
-version : 0.0.1  
+Entità: WeatherForecast  
+=======================  
+[Licenza aperta](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherForecast/LICENSE.md)  
+[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descrizione globale: **Una descrizione armonizzata di una previsione meteorologica**  
+versione: 0.0.1  
 
-## Liste des propriétés  
+## Elenco delle proprietà  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `atmosphericPressure`: La pression atmosphérique observée mesurée en Hecto Pascals  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateIssued`: La date et l'heure auxquelles la prévision a été émise par le bureau météorologique, au format ISO8601 UTC.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateRetrieved`: La date et l'heure auxquelles la prévision a été récupérée au format ISO8601 UTC.  - `dayMaximum`: Valeurs maximales pour la période considérée. Sous-attributs:- `temperature` : Température maximale. Voir `WeatherForecast.temperature` pour la description et les unités. - `feelLikesTemperature`. Température maximale ressentie. Mêmes sémantique et unités que `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Humidité relative maximale. Mêmes sémantique et unités que `WeatherForecast.relativeHumidity`.  - `dayMinimum`: Valeurs minimales prévues pour la période considérée.  Valeurs minimales pour la période rapportée. Sous-attributs:- `temperature` : Température minimale. Voir `WeatherForecast.temperature` pour la description et les unités. - `feelLikesTemperature`. Température minimale ressentie. Mêmes sémantique et unités que `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Humidité relative minimale. Mêmes sémantique et unités que `WeatherForecast.relativeHumidity`.  - `description`: Une description de cet article  - `feelLikesTemperature`: Appréciation de la température de l'objet  - `gustSpeed`: Une soudaine rafale de vent à grande vitesse, supérieure à la vitesse moyenne observée, qui ne dure que quelques secondes.  - `id`: Identifiant unique de l'entité  - `illuminance`: (https://en.wikipedia.org/wiki/Illuminance) observée mesurée en lux (lx) ou en lumens par mètre carré (cd-sr-m-2).  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `precipitation`: Quantité d'eau de pluie attendue  - `refPointOfInterest`: Point d'intérêt lié à l'article  - `relativeHumidity`: Humidité dans l'air. Humidité relative instantanée observée (vapeur d'eau dans l'air)  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `temperature`: Température de l'article  - `type`: Type d'entité NGSI. Il doit s'agir de WeatherForecast  - `uVIndexMax`: L'indice UV maximal pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. Références normatives : [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `validFrom`: Date et heure de début de la période de validité.  - `validTo`: Date et heure de fin de la période de validité.  - `validity`: Comprend la période de validité de cette prévision sous forme d'intervalle de temps ISO8601. Pour pallier l'absence de prise en charge des intervalles de temps par Orion Context Broker, il est possible d'utiliser deux attributs distincts : `validFrom`, `validTo`.  - `visibility`: Catégories de visibilité  - `weatherType`: Description textuelle de la météo  - `windDirection`: Direction du pari du vent  - `windSpeed`: Intensité du vent    
-Propriétés requises  
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `atmosphericPressure`: La pressione atmosferica osservata misurata in Hecto Pascal  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateIssued`: La data e l'ora in cui la previsione è stata emessa dall'ufficio meteorologico nel formato ISO8601 UTC.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateRetrieved`: La data e l'ora in cui la previsione è stata recuperata nel formato ISO8601 UTC.  - `dayMaximum`: Valori massimi per il periodo riportato. Sottoattributi:- `temperatura` : Temperatura massima. Vedere `WeatherForecast.temperature` per la descrizione e le unità. - `feelLikesTemperature`. Temperatura massima "feels like". Stessa semantica e unità di misura di `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Massima umidità relativa. Stessa semantica e unità di misura di `WeatherForecast.relativeHumidity`.  - `dayMinimum`: Valori minimi previsti per il periodo riportato.  Valori minimi per il periodo riportato. Sottoattributi:- `temperature` : Temperatura minima. Vedere `WeatherForecast.temperature` per la descrizione e le unità. - `feelLikesTemperature`. Temperatura minima "feels like". Stessa semantica e unità di misura di `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Umidità relativa minima. Stessa semantica e unità di misura di `WeatherForecast.relativeHumidity`.  - `description`: Una descrizione di questo articolo  - `feelLikesTemperature`: Valutazione della temperatura dell'oggetto  - `gustSpeed`: Un improvviso scoppio di vento ad alta velocità oltre la velocità media del vento osservata che dura solo per pochi secondi.  - `id`: Identificatore unico dell'entità  - `illuminance`: (https://en.wikipedia.org/wiki/Illuminance) osservati misurati in lux (lx) o lumen per metro quadrato (cd-sr-m-2).  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `precipitation`: Quantità di pioggia prevista  - `refPointOfInterest`: Punto di interesse relativo all'articolo  - `relativeHumidity`: Umidità nell'aria. Umidità relativa istantanea osservata (vapore acqueo nell'aria)  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `temperature`: Temperatura dell'oggetto  - `type`: Tipo di entità NGSI. Deve essere WeatherForecast  - `uVIndexMax`: L'indice UV massimo per il periodo, basato sulla misura dell'indice UV dell'Organizzazione Mondiale della Sanità. Riferimenti normativi: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `validFrom`: Data e ora di inizio del periodo di validità.  - `validTo`: Data e ora di fine del periodo di validità.  - `validity`: Include il periodo di validità di questa previsione come intervallo di tempo ISO8601. Come workaround per la mancanza di supporto di Orion Context Broker per gli intervalli di tempo, si possono usare due attributi separati: `validFrom`, `validTo`.  - `visibility`: Categorie di visibilità  - `weatherType`: Descrizione testuale del tempo  - `windDirection`: Direzione della scommessa del vento  - `windSpeed`: Intensità del vento    
+Proprietà richieste  
 - `address`  - `dateIssued`  - `id`  - `type`    
-Cette entité est principalement associée aux segments verticaux de l'environnement et de l'agriculture, mais elle est applicable à de nombreuses applications différentes. Ce modèle de données a été développé en coopération avec les opérateurs mobiles et la [GSMA] (https://www.gsma.com/iot/iot-big-data/).  
-## Description des propriétés du modèle de données  
-Classés par ordre alphabétique (cliquez pour plus de détails)  
+Questa entità è principalmente associata ai segmenti verticali dell'ambiente e dell'agricoltura, ma è applicabile a molte applicazioni diverse. Questo modello di dati è stato sviluppato in collaborazione con gli operatori mobili e il [GSMA](https://www.gsma.com/iot/iot-big-data/).  
+## Descrizione del modello di dati delle proprietà  
+Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WeatherForecast:    
@@ -454,9 +454,9 @@ WeatherForecast:
   version: 0.0.1    
 ```  
 </details>    
-## Exemples de charges utiles  
-#### WeatherForecast NGSI-v2 key-values Exemple  
-Voici un exemple de WeatherForecast au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+## Esempio di payloads  
+#### WeatherForecast NGSI-v2 valori chiave Esempio  
+Ecco un esempio di un WeatherForecast in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
@@ -492,8 +492,8 @@ WeatherForecast:
   "uVIndexMax": 1  
 }  
 ```  
-#### WeatherForecast NGSI-v2 normalisé Exemple  
-Voici un exemple de WeatherForecast au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+#### WeatherForecast NGSI-v2 normalizzato Esempio  
+Ecco un esempio di un WeatherForecast in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
@@ -580,8 +580,8 @@ WeatherForecast:
   }  
 }  
 ```  
-#### WeatherForecast NGSI-LD key-values Exemple  
-Voici un exemple de WeatherForecast au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### WeatherForecast NGSI-LD valori chiave Esempio  
+Ecco un esempio di un WeatherForecast in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WeatherForecast:Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
@@ -685,8 +685,8 @@ WeatherForecast:
   ]  
 }  
 ```  
-#### WeatherForecast NGSI-LD normalisé Exemple  
-Voici un exemple de WeatherForecast au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+#### WeatherForecast NGSI-LD normalizzato Esempio  
+Ecco un esempio di un WeatherForecast in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  

@@ -1,6 +1,5 @@
 WeatherObserved:
   description: 'An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.'
-  modelTags: IUDX
   properties:
     address:
       description: 'The mailing address'
@@ -329,7 +328,6 @@ WeatherObserved:
           type: string
         - type: number
       x-ngsi:
-        model: https://schema.org/DateTime
         type: Property
     refDevice:
       anyOf:
@@ -467,4 +465,9 @@ WeatherObserved:
     - dateObserved
     - location
   type: object
-  version: 0.1.0
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json
+  x-model-tags: IUDX
+  x-version: 0.1.0

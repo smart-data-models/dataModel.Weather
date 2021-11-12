@@ -15,6 +15,7 @@ Entity: WeatherObserved
 ```yaml  
 WeatherObserved:    
   description: 'An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.'    
+  modelTags: IUDX    
   properties:    
     address:    
       description: 'The mailing address'    
