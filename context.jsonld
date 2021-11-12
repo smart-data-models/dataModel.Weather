@@ -2,6 +2,7 @@
     "@context": {
         "address": "https://smartdatamodels.org/address",
         "airQualityIndex": "https://smartdatamodels.org/dataModel.Weather/airQualityIndex",
+        "airQualityIndexForecast": "https://smartdatamodels.org/dataModel.Weather/airQualityIndexForecast",
         "airTemperatureForecast": "https://smartdatamodels.org/dataModel.Weather/airTemperatureForecast",
         "alertSource": "https://smartdatamodels.org/dataModel.Weather/alertSource",
         "alternateName": "https://smartdatamodels.org/alternateName",
