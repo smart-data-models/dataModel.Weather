@@ -3,21 +3,19 @@
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherForecast/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな記述です。**A harmonised description of a Weather Forecast**（天気予報の調和された記述  
-バージョン: 0.0.1  
 
 ## プロパティのリスト  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `atmosphericPressure`: 気圧はヘクトパスカルで測定される。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateIssued`: 気象庁が予報を発表した日時（ISO8601 UTC形式）。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateRetrieved`: 予測が取得された日時（ISO8601 UTC形式）。  - `dayMaximum`: 報告された期間の最大値。Subattributes:- `temperature` : 最高気温。説明と単位は `WeatherForecast.temperature` を参照してください。- feelLikesTemperature`.最大の体感温度。WeatherForecast.feelishLikeTemperature`と同じセマンティクスと単位である。最大の相対湿度。WeatherForecast.relativeHumidity`と同じ意味と単位です。  - `dayMinimum`: 報告された期間に予測される最小値。  報告された期間の最低値。Subattributes:- `temperature` : 最低気温です。説明と単位は `WeatherForecast.temperature` を参照してください。- feelLikesTemperature`.最低体感温度。WeatherForecast.feelesLikeTemperature`と同じセマンティクスと単位です。最小の相対湿度です。WeatherForecast.relativeHumidity`と同じ意味と単位です。  - `description`: このアイテムの説明  - `feelLikesTemperature`: アイテムの鑑賞温度  - `gustSpeed`: 観測された平均風速を超える高速の風が、数秒間だけ突然吹くこと。  - `id`: エンティティのユニークな識別子  - `illuminance`: (https://en.wikipedia.org/wiki/Illuminance）は、ルクス（lx）またはルーメン/平方メートル（cd-sr-m-2）で測定して観察されます。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `precipitation`: 予想される水の雨量  - `refPointOfInterest`: アイテムに関連するポイント  - `relativeHumidity`: 空気中の湿度。観測された瞬間の相対湿度（空気中の水蒸気量  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: アイテムの温度  - `type`: NGSI エンティティ・タイプ。それはWeatherForecastでなければならない。  - `uVIndexMax`: 世界保健機関（WHO）のUVインデックス指標に基づく、期間中の最大UVインデックス。規範となる文献[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `validFrom`: 有効期間の開始日時が記載されています。  - `validTo`: 有効期間の終了日時が表示されます。  - `validity`: ISO8601時間間隔として、この予測の有効期間を含む。Orion Context Brokerが日付間隔をサポートしていないための回避策として、2つの別々の属性を使用することができます。validFrom`, `validTo`.  - `visibility`: 視認性のカテゴリー  - `weatherType`: 天気のテキスト説明  - `windDirection`: 風切り音の方向  - `windSpeed`: 風の強さ    
+- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `atmosphericPressure`: 気圧はヘクトパスカルで測定される。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateIssued`: 気象局が予報を発表した日時（ISO8601 UTC形式）。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateRetrieved`: 予測が取得された日時（ISO8601 UTC形式）。  - `dayMaximum`: 報告された期間の最大値。Subattributes:- `temperature` : 最高気温。説明と単位は `WeatherForecast.temperature` を参照してください。- feelLikesTemperature`.最大の体感温度。WeatherForecast.feelishLikeTemperature`と同じセマンティクスと単位である。最大の相対湿度。WeatherForecast.relativeHumidity`と同じ意味と単位です。  - `dayMinimum`: 報告された期間に予測される最小値。  報告された期間の最低値。Subattributes:- `temperature` : 最低気温です。説明と単位は `WeatherForecast.temperature` を参照してください。- feelLikesTemperature`.最低体感温度。WeatherForecast.feelesLikeTemperature`と同じセマンティクスと単位です。最小の相対湿度です。WeatherForecast.relativeHumidity`と同じ意味と単位です。  - `description`: このアイテムの説明  - `feelLikesTemperature`: アイテムの鑑賞温度  - `gustSpeed`: 観測された平均風速を超える高速の風が、数秒間だけ突然吹くこと。  - `id`: エンティティのユニークな識別子  - `illuminance`: (https://en.wikipedia.org/wiki/Illuminance）は、ルクス（lx）またはルーメン/平方メートル（cd-sr-m-2）で測定して観察されます。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `precipitation`: 予想される水の雨量  - `refPointOfInterest`: アイテムに関連するポイント  - `relativeHumidity`: 空気中の湿度。観測された瞬間の相対湿度（空気中の水蒸気量）  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `temperature`: アイテムの温度  - `type`: NGSI エンティティ・タイプ。それはWeatherForecastでなければならない。  - `uVIndexMax`: 世界保健機関（WHO）のUVインデックス指標に基づく、期間中の最大UVインデックス。規範となる文献[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `validFrom`: 有効期間の開始日時が記載されています。  - `validTo`: 有効期間の終了日時が表示されます。  - `validity`: ISO8601時間間隔として、この予測の有効期間を含む。Orion Context Brokerが日付間隔をサポートしていないための回避策として、2つの別々の属性を使用することができます。validFrom`, `validTo`.  - `visibility`: 視認性のカテゴリー  - `weatherType`: 天気のテキスト説明  - `windDirection`: 風切り音の方向  - `windSpeed`: 風の強さ    
 必須項目  
 - `address`  - `dateIssued`  - `id`  - `type`    
 このエンティティは、主に環境と農業の垂直セグメントに関連していますが、多くの異なるアプリケーションに適用できます。このデータモデルは、携帯電話事業者および[GSMA](https://www.gsma.com/iot/iot-big-data/)の協力を得て開発されました。  
 ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+アルファベット順（クリックすると詳細が表示されます）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WeatherForecast:    
   description: 'A harmonised description of a Weather Forecast'    
-  modelTags: ""    
   properties:    
     address:    
       description: 'The mailing address'    
@@ -451,11 +449,16 @@ WeatherForecast:
     - dateIssued    
     - address    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherForecast/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
-#### ウェザーフォーキャスト NGSI-v2 キーバリューの例  
+#### WeatherForecast NGSI-v2 key-values の例。  
 ここではWeatherForecastをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
