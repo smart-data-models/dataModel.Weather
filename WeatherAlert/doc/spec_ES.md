@@ -6,7 +6,7 @@ Entidad: WeatherAlert
 
 ## Lista de propiedades  
 
-- `alertSource`: Fuente de la alerta  - `alternateName`: Un nombre alternativo para este artículo  - `category`: Categoría de la entidad  - `data`: Carga útil que contiene los datos recuperados.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateIssued`: La fecha y la hora en que se emitió el artículo en formato ISO8601 UTC.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `severity`: Gravedad de la alarma  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `subCategory`: Categorías meteorológicas. Enum:' Avalanchas, evento costero, ola de frío, inundación, niebla, incendio forestal, ola de calor, alta temperatura, huracán, hielo, baja temperatura, precipitación, lluvia_inundación, nieve, nieve_hielo, tormentas eléctricas, tornado, ciclón tropical, tsunami, viento'  - `type`: Tipo de entidad NGSI. Tiene que ser Alerta.  - `validFrom`: El inicio del período de validez de esta previsión en formato ISO8601  - `validTo`: El final del período de validez de esta previsión en formato ISO8601    
+- `alertSource`: Fuente de la alerta  - `alternateName`: Un nombre alternativo para este artículo  - `category`: Categoría de la entidad  - `data`: Carga útil que contiene los datos recuperados.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateIssued`: La fecha y la hora en que se emitió el artículo en formato ISO8601 UTC.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `severity`: Gravedad de la alarma  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `subCategory`: Categorías meteorológicas. Enum:' Avalanchas, evento costero, ola de frío, inundación, niebla, incendio forestal, ola de calor, alta temperatura, huracán, hielo, baja temperatura, precipitación, lluvia_inundación, nieve, nieve_hielo, tormentas eléctricas, tornado, ciclón tropical, tsunami, viento'  - `type`: Tipo de entidad NGSI. Tiene que ser Alerta.  - `validFrom`: El inicio del período de validez de esta previsión en formato ISO8601  - `validTo`: El final del período de validez de esta previsión en formato ISO8601    
 Propiedades requeridas  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`    
 Esta carpeta contiene todos los artefactos de software para ofrecer datos de alerta meteorológica en NGSI v2. La fuente de estos datos es el [Servicio Europeo de Alarma Meteorológica] global (http://meteoalarm.eu).  
@@ -28,40 +28,55 @@ WeatherAlert:
           format: uri    
           type: string    
       description: 'Source of the alert'    
-      type: Relationship    
       x-ngsi:    
         model: http://schema.org/URL.    
+        type: Relationship    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     category:    
       description: 'Category of the entity'    
       enum:    
         - weather    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     data:    
       description: 'Payload containing the data retrieved.'    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateIssued:    
       description: 'The date and time the item was issued in ISO8601 UTC format.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &weatheralert_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -73,16 +88,21 @@ WeatherAlert:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *weatheralert_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -93,7 +113,8 @@ WeatherAlert:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     severity:    
       description: 'Severity of the Alarm'    
       enum:    
@@ -102,10 +123,14 @@ WeatherAlert:
         - medium    
         - high    
         - critical    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     subCategory:    
       description: 'Weather categories. Enum:'' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'''    
       enum:    
@@ -129,24 +154,29 @@ WeatherAlert:
         - tropicalCyclone    
         - tsunami    
         - wind    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be Alert.'    
       enum:    
         - Alert    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validFrom:    
       description: 'The start of the validity period for this forecast as a ISO8601 format'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     validTo:    
       description: 'The end of the validity period for this forecast as a ISO8601 format'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
   required:    
     - id    
     - type    
@@ -155,6 +185,12 @@ WeatherAlert:
     - subCategory    
     - dateIssued    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherAlert/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json    
+  x-model-tags: ""    
+  x-version: 0.1.1    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -224,45 +260,21 @@ WeatherAlert:
 Aquí hay un ejemplo de un WeatherAlert en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:WeatherAlert:WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-  "type": "Alert",  
-  "severity": {  
-    "type": "Text",  
-    "value": "medium"  
-  },  
-  "category": {  
-    "type": "Text",  
-    "value": "weather"  
-  },  
-  "subCategory": {  
-    "type": "Text",  
-    "value": "snow/ice"  
-  },  
-  "alertSource": {  
-    "type": "Text",  
-    "value": "http://www.meteoalarm.eu"  
-  },  
+  "severity": "medium",  
+  "category": "weather",  
+  "subCategory": "snow_ice",  
+  "alertSource": "http://www.meteoalarm.eu",  
   "address": {  
-    "type": "PostalAddress",  
-    "value": {  
-      "addressCountry": "ES",  
-      "addressRegion": "Huesca"  
-    }  
+    "addressCountry": "ES",  
+    "addressRegion": "Huesca"  
   },  
-  "dateIssued": {  
-    "type": "DateTime",  
-    "value": "2016-03-14T13:54:01.00Z"  
-  },  
-  "validTo": {  
-    "type": "DateTime",  
-    "value": "2016-03-14T23:59:00.00Z"  
-  },  
-  "validFrom": {  
-    "type": "DateTime",  
-    "value": "2016-03-14T13:00:00.00Z"  
-  },  
+  "dateIssued": "2016-03-14T13:54:01.00Z",  
+  "type": "Alert",  
+  "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
+  "validTo": "2016-03-14T23:59:00.00Z",  
+  "validFrom": "2016-03-14T13:00:00.00Z",  
   "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
@@ -270,21 +282,52 @@ WeatherAlert:
 Este es un ejemplo de una Alerta Meteorológica en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:WeatherAlert:WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
+  "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
   "type": "Alert",  
-  "severity": "medium",  
-  "category": "weather",  
-  "subCategory": "snow/ice",  
-  "alertSource": "http://www.meteoalarm.eu",  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressRegion": "Huesca"  
+  "severity": {  
+    "type": "Property",  
+    "value": "medium"  
   },  
-  "dateIssued": "2016-03-14T13:54:01.00Z",  
-  "validTo": "2016-03-14T23:59:00.00Z",  
-  "validFrom": "2016-03-14T13:00:00.00Z",  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
+  "category": {  
+    "type": "Property",  
+    "value": "weather"  
+  },  
+  "subCategory": {  
+    "type": "Property",  
+    "value": "snow/ice"  
+  },  
+  "alertSource": {  
+    "type": "Property",  
+    "value": "http://www.meteoalarm.eu"  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "ES",  
+      "addressRegion": "Huesca"  
+    }  
+  },  
+  "dateIssued": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-03-14T13:54:01.00Z"  
+    }  
+  },  
+  "validTo": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-03-14T23:59:00.00Z"  
+    }  
+  },  
+  "validFrom": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-03-14T13:00:00.00Z"  
+    }  
+  },  
+  "@context": "https://smartdatamodels.org/context.jsonld"  
 }  
 ```  
