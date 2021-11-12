@@ -2,11 +2,11 @@ Entität: SeaConditions
 ======================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Weather/blob/master/SeaConditions/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Einheit enthält eine harmonisierte geografische Beschreibung der Seebedingungen**  
+Globale Beschreibung: **Diese Einheit enthält eine harmonisierte geografische Beschreibung der Meeresbedingungen**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Das Datum und die Uhrzeit dieser Beobachtung im Format ISO8601 UTC.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `pH`: Azidität oder Basizität einer wässrigen Lösung.  - `salinity`: Menge der in Wasser gelösten Salze.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `surfaceTemperature`: Temperatur der Meeresoberfläche.  - `type`: NGSI-LD-Entitätstyp. Es muss SeaConditions sein  - `waveHeight`: Höhe der Wellen.  - `waveLevel`: Er zeigt die Höhe der Wellen an und misst auch den Wellengang des Meeres.  - `wavePeriod`: Gibt die Zeit zwischen den Scheitelpunkten einer Welle an.    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Das Datum und die Uhrzeit dieser Beobachtung im Format ISO8601 UTC.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `pH`: Azidität oder Basizität einer wässrigen Lösung.  - `salinity`: Menge der in Wasser gelösten Salze.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `surfaceTemperature`: Temperatur der Meeresoberfläche.  - `type`: NGSI-LD-Entitätstyp. Es muss SeaConditions sein  - `waveHeight`: Höhe der Wellen.  - `waveLevel`: Er zeigt die Höhe der Wellen an und misst auch den Seegang des Meeres.  - `wavePeriod`: Gibt die Zeit zwischen den Scheitelpunkten einer Welle an.    
 Erforderliche Eigenschaften  
 - `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -36,37 +36,50 @@ SeaConditions:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateObserved:    
       description: 'The date and time of this observation in ISO8601 UTC format.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &seaconditions_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -78,7 +91,8 @@ SeaConditions:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -230,29 +244,36 @@ SeaConditions:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *seaconditions_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     pH:    
       description: 'Acidity or basicity of an aqueous solution.'    
       maximum: 14    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
     salinity:    
       description: 'Amount of salts dissolved in water.'    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'Parts per thousand'    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
@@ -264,50 +285,65 @@ SeaConditions:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     surfaceTemperature:    
       description: 'Sea surface temperature.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'Celsius degrees'    
     type:    
       description: 'NGSI-LD Entity Type. It has to be SeaConditions'    
       enum:    
         - SeaConditions    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     waveHeight:    
       description: 'Height of the waves.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: Meters    
     waveLevel:    
       description: 'It indicates the height of the waves and also measures the swell of the sea.'    
       maximum: 9    
       minimum: 0    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: 'Douglas sea scale'    
     wavePeriod:    
       description: 'Indicates the time between the crests of a wave.'    
-      type: Property    
+      type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
         units: Seconds    
   required:    
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/SeaConditions/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Environment/SeaConditions/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
 #### SeaConditions NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "SeaCondition-PlayaLevante-Benidorm-123456",  
@@ -336,7 +372,7 @@ SeaConditions:
 }  
 ```  
 #### SeaConditions NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "SeaCondition-PlayaLevante.Benidorm.123456",  
@@ -442,29 +478,40 @@ SeaConditions:
 }  
 ```  
 #### SeaConditions NGSI-LD Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
-{"@context": ["https://smaertdatamodels.org/context.jsonld",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "id": "urn:ngsi-ld:SeaCondition:SeaCondition-PlayaLevante-Benidorm-123456",  
- "type": "SeaConditions",  
- "dateObserved": "2021-02-20T06:45:00Z",  
- "location": {"coordinates": [-8.768460000000001, 42.60214472222222],  
-              "type": "Point"},  
- "name": "Mar en la Playa Levante",  
- "description": "InformaciÃ³n del estado del mar en la playa Levante",  
- "address": {"addressCountry": "ES",  
-             "addressLocality": "Benidorm"},  
- "dataProvider": "Water-sensor-12345",  
- "waveLevel": 1,  
- "surfaceTemperature": 14.7,  
- "waveHeight": 0.05,  
- "wavePeriod": 1.5,  
- "pH": 8.5,  
- "salinity": 35}  
+{  
+  "@context": [  
+    "https://smaertdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "id": "urn:ngsi-ld:SeaCondition:SeaCondition-PlayaLevante-Benidorm-123456",  
+  "type": "SeaConditions",  
+  "dateObserved": "2021-02-20T06:45:00Z",  
+  "location": {  
+    "coordinates": [  
+      -8.768460000000001,  
+      42.60214472222222  
+    ],  
+    "type": "Point"  
+  },  
+  "name": "Mar en la Playa Levante",  
+  "description": "InformaciÃ³n del estado del mar en la playa Levante",  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Benidorm"  
+  },  
+  "dataProvider": "Water-sensor-12345",  
+  "waveLevel": 1,  
+  "surfaceTemperature": 14.7,  
+  "waveHeight": 0.05,  
+  "wavePeriod": 1.5,  
+  "pH": 8.5,  
+  "salinity": 35  
+}  
 ```  
 #### SeaConditions NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SeaCondition:SeaCondition-PlayaLevante-Benidorm-123456",  
