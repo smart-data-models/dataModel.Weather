@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.1.0",
+  "$schemaVersion": "0.2.0",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
   "title": "Weather Observed schema - Smart Data Models",
@@ -122,6 +122,14 @@
         "relativeHumidityForecast": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
+        },
+        "illuminance": {
+          "type": "number",
+          "description": "Property. Observed instantaneous ambient light intensity.Units:'Lux'"
+        },
+        "airQualityIndexForecast": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future."
         }
       }
     }
