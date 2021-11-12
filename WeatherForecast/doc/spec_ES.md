@@ -3,7 +3,6 @@ Entidad: WeatherForecast
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherForecast/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Una descripción armonizada de una previsión meteorológica**  
-versión: 0.0.1  
 
 ## Lista de propiedades  
 
@@ -17,7 +16,6 @@ Entidad: WeatherForecast
 ```yaml  
 WeatherForecast:    
   description: 'A harmonised description of a Weather Forecast'    
-  modelTags: ""    
   properties:    
     address:    
       description: 'The mailing address'    
@@ -451,7 +449,12 @@ WeatherForecast:
     - dateIssued    
     - address    
   type: object    
-  version: 0.0.1    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherForecast/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Ejemplo de carga útil  
