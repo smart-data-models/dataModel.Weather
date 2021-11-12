@@ -32,6 +32,12 @@ WeatherObserved:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
+    airQualityIndexForecast:
+      description: 'Forecasted overall Air Quality Index (AQI) over a certain duration in future.'
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
     airTemperatureForecast:
       description: 'Forecasted value of air temperature over a certain duration in future.'
       type: number
@@ -133,12 +139,11 @@ WeatherObserved:
       x-ngsi:
         type: Property
     illuminance:
-      description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2).'
-      minimum: 0
+      description: ""
       type: number
       x-ngsi:
-        model: https://schema.org/Number
         type: Property
+        units: 'Observed instantaneous ambient light intensity.Lux'
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
@@ -470,4 +475,4 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json
   x-model-tags: IUDX
-  x-version: 0.1.0
+  x-version: 0.2.0
