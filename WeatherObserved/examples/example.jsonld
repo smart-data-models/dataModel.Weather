@@ -30,6 +30,7 @@
   "snowHeight": 20,
   "uvIndexMax": 1.0,
   "@context": [
-    "https://smartdatamodels.org/context.jsonld"
+    "https://smartdatamodels.org/context.jsonld",
+    "iudx:EnvWeather"
   ]
 }
