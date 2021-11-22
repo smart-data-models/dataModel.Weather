@@ -44,6 +44,20 @@ WeatherObserved:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
+    airTemperatureTSA:
+      description: 'Object defining the temporal processing of a basic property during a period. It provides Maximum, minimum, instant value and average'
+      properties:
+        avgOverTime:
+          type: number
+        instValue:
+          type: number
+        maxOverTime:
+          type: number
+        minOverTime:
+          type: number
+      type: object
+      x-ngsi:
+        type: Property
     alternateName:
       description: 'An alternative name for this item'
       type: string
@@ -139,11 +153,11 @@ WeatherObserved:
       x-ngsi:
         type: Property
     illuminance:
-      description: ""
+      description: 'Observed instantaneous ambient light intensity'
       type: number
       x-ngsi:
         type: Property
-        units: 'Observed instantaneous ambient light intensity.Lux'
+        units: Lux
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
@@ -475,4 +489,4 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json
   x-model-tags: IUDX
-  x-version: 0.2.0
+  x-version: 0.2.1
