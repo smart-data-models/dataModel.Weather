@@ -6,7 +6,7 @@ Entität: WeatherObserved
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `airQualityIndex`: Der Luftqualitätsindex ist eine Zahl, mit der die Qualität der Luft an einem bestimmten Tag angegeben wird.  - `airQualityIndexForecast`: Prognostizierter Gesamtluftqualitätsindex (AQI) über einen bestimmten Zeitraum in der Zukunft.  - `airTemperatureForecast`: Prognostizierter Wert der Lufttemperatur über einen bestimmten Zeitraum in der Zukunft.  - `alternateName`: Ein alternativer Name für diesen Artikel  - `aqiMajorPollutant`: Hauptschadstoff im Luftqualitätsindex (AQI).  - `aqiMajorPollutantForecast`: Prognostizierter Hauptluftschadstoff im Luftqualitätsindex (AQI) über einen bestimmten Zeitraum in der Zukunft.  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `atmosphericPressure`: Der beobachtete atmosphärische Druck, gemessen in Hecto-Pascal  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Datum der vom Benutzer definierten beobachteten Einheit.  - `description`: Eine Beschreibung dieses Artikels  - `dewPoint`: Der als Zahl kodierte Taupunkt. Beobachtete Temperatur, auf die Luft abgekühlt werden muss, um mit Wasserdampf gesättigt zu werden  - `feelLikesTemperature`: Bewertung der Temperatur des Gegenstands  - `feelsLikesTemperature`: Bewertung der Temperatur des Gegenstands  - `gustSpeed`: Ein plötzlicher Ausbruch von Wind mit hoher Geschwindigkeit, der die beobachtete durchschnittliche Windgeschwindigkeit übersteigt und nur wenige Sekunden dauert.  - `id`: Eindeutiger Bezeichner der Entität  - `illuminance`:   - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `precipitation`: Menge des registrierten Regenwassers. Unis:'Liter pro Quadratmeter'.  - `precipitationForecast`: Vorhersage der Niederschlagsmenge für einen bestimmten Zeitraum in der Zukunft.  - `pressureTendency`: Enum:'fallend, steigend, gleichbleibend'. Steigt oder fällt der Druck? Dies kann quantitativ oder qualitativ ausgedrückt werden.  - `refDevice`: Ein Verweis auf das/die Gerät(e), das/die diese Beobachtung aufgezeichnet hat/haben.  - `refPointOfInterest`: Interessanter Punkt im Zusammenhang mit dem Artikel  - `relativeHumidity`: Feuchte in der Luft. Beobachtete momentane relative Luftfeuchtigkeit (Wasserdampf in der Luft)  - `relativeHumidityForecast`: Vorhersage der relativen Luftfeuchtigkeit (Wasserdampf in der Luft) für einen bestimmten Zeitraum in der Zukunft  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `snowHeight`: Die von den Sensoren zur Messung der Schneehöhe erfasste Schneehöhe, ausgedrückt in Zentimetern  - `solarRadiation`: Die beobachtete Sonneneinstrahlung, gemessen in Watt pro Quadratmeter  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `streamGauge`: Die von hydrometrischen Messsensoren, d. h. einem [Strömungsmesser] (https://en.wikipedia.org/wiki/Stream_gauge), beobachtete Wasserstandshöhe in Zentimetern  - `temperature`: Temperatur des Gegenstandes  - `type`: NGSI-Entitätstyp. Es muss WeatherObserved sein  - `uVIndexMax`: Der maximale UV-Index für diesen Zeitraum, basierend auf dem UV-Index der Weltgesundheitsorganisation. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `visibility`: Kategorien der Sichtbarkeit  - `weatherType`: Textbeschreibung des Wetters  - `windDirection`: Wette auf die Windrichtung  - `windSpeed`: Intensität des Windes    
+- `address`: Die Postanschrift  - `airQualityIndex`: Der Luftqualitätsindex ist eine Zahl, mit der die Qualität der Luft an einem bestimmten Tag angegeben wird.  - `airQualityIndexForecast`: Prognostizierter Gesamtluftqualitätsindex (AQI) über einen bestimmten Zeitraum in der Zukunft.  - `airTemperatureForecast`: Prognostizierter Wert der Lufttemperatur über einen bestimmten Zeitraum in der Zukunft.  - `airTemperatureTSA`: Objekt, das die zeitliche Verarbeitung einer Grundeigenschaft während eines Zeitraums definiert. Es bietet Maximum, Minimum, Momentanwert und Durchschnitt  - `alternateName`: Ein alternativer Name für diesen Artikel  - `aqiMajorPollutant`: Hauptschadstoff im Luftqualitätsindex (AQI).  - `aqiMajorPollutantForecast`: Prognostizierter Hauptluftschadstoff im Luftqualitätsindex (AQI) über einen bestimmten Zeitraum in der Zukunft.  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `atmosphericPressure`: Der beobachtete atmosphärische Druck, gemessen in Hecto-Pascal  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Datum der vom Benutzer definierten beobachteten Einheit.  - `description`: Eine Beschreibung dieses Artikels  - `dewPoint`: Der als Zahl kodierte Taupunkt. Beobachtete Temperatur, auf die Luft abgekühlt werden muss, um mit Wasserdampf gesättigt zu werden  - `feelLikesTemperature`: Bewertung der Temperatur des Gegenstands  - `feelsLikesTemperature`: Bewertung der Temperatur des Gegenstands  - `gustSpeed`: Ein plötzlicher Ausbruch von Wind mit hoher Geschwindigkeit, der die beobachtete durchschnittliche Windgeschwindigkeit übersteigt und nur wenige Sekunden dauert.  - `id`: Eindeutiger Bezeichner der Entität  - `illuminance`: Beobachtete momentane Umgebungslichtintensität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `precipitation`: Menge des registrierten Regenwassers. Unis:'Liter pro Quadratmeter'.  - `precipitationForecast`: Vorhersage der Niederschlagsmenge über einen bestimmten Zeitraum in der Zukunft.  - `pressureTendency`: Enum:'fallend, steigend, gleichbleibend'. Steigt oder fällt der Druck? Dies kann quantitativ oder qualitativ ausgedrückt werden.  - `refDevice`: Ein Verweis auf das/die Gerät(e), das/die diese Beobachtung aufgezeichnet hat/haben.  - `refPointOfInterest`: Interessanter Punkt im Zusammenhang mit dem Artikel  - `relativeHumidity`: Feuchte in der Luft. Beobachtete momentane relative Luftfeuchtigkeit (Wasserdampf in der Luft)  - `relativeHumidityForecast`: Vorhersage der relativen Luftfeuchtigkeit (Wasserdampf in der Luft) für einen bestimmten Zeitraum in der Zukunft  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `snowHeight`: Die von den Sensoren zur Messung der Schneehöhe erfasste Schneehöhe, ausgedrückt in Zentimetern  - `solarRadiation`: Die beobachtete Sonneneinstrahlung, gemessen in Watt pro Quadratmeter  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `streamGauge`: Die von hydrometrischen Messsensoren, d. h. einem [Strömungsmesser] (https://en.wikipedia.org/wiki/Stream_gauge), beobachtete Wasserstandshöhe in Zentimetern  - `temperature`: Temperatur des Gegenstandes  - `type`: NGSI-Entitätstyp. Es muss WeatherObserved sein  - `uVIndexMax`: Der maximale UV-Index für diesen Zeitraum, basierend auf dem UV-Index der Weltgesundheitsorganisation. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `visibility`: Kategorien der Sichtbarkeit  - `weatherType`: Textbeschreibung des Wetters  - `windDirection`: Wette auf die Windrichtung  - `windSpeed`: Intensität des Windes    
 Erforderliche Eigenschaften  
 - `dateObserved`  - `id`  - `location`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -57,6 +57,20 @@ WeatherObserved:
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
+    airTemperatureTSA:    
+      description: 'Object defining the temporal processing of a basic property during a period. It provides Maximum, minimum, instant value and average'    
+      properties:    
+        avgOverTime:    
+          type: number    
+        instValue:    
+          type: number    
+        maxOverTime:    
+          type: number    
+        minOverTime:    
+          type: number    
+      type: object    
+      x-ngsi:    
         type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
@@ -153,11 +167,11 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     illuminance:    
-      description: ""    
+      description: 'Observed instantaneous ambient light intensity'    
       type: number    
       x-ngsi:    
         type: Property    
-        units: 'Observed instantaneous ambient light intensity.Lux'    
+        units: Lux    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -489,7 +503,7 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
@@ -620,7 +634,7 @@ WeatherObserved:
 }  
 ```  
 #### WeatherObserved NGSI-LD Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für ein WeatherObserved im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein WeatherObserved im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
@@ -654,12 +668,13 @@ WeatherObserved:
   "snowHeight": 20,  
   "uvIndexMax": 1.0,  
   "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
+    "https://smartdatamodels.org/context.jsonld",  
+    "iudx:EnvWeather"  
   ]  
 }  
 ```  
 #### WetterObserviert NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für ein WeatherObserved im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein WeatherObserved im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
