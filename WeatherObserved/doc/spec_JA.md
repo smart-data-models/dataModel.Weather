@@ -6,7 +6,7 @@
 
 ## プロパティのリスト  
 
-- `address`: 郵送先住所  - `airQualityIndex`: 大気質指標とは、ある日の空気の質を表す数値です。  - `airQualityIndexForecast`: 将来のある期間における総合的な大気質指数（AQI）の予測値。  - `airTemperatureForecast`: 将来の一定期間における気温の予測値。  - `alternateName`: このアイテムの別称  - `aqiMajorPollutant`: 大気質指標(AQI)の主要汚染物質。  - `aqiMajorPollutantForecast`: 将来の一定期間における大気質指標（AQI）の主要大気汚染物質の予測値。  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `atmosphericPressure`: 気圧はヘクトパスカルで測定される。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateObserved`: ユーザーによって定義された、観測されたエンティティの日付。  - `description`: このアイテムの説明  - `dewPoint`: 露点を数値で表したもの。水蒸気で飽和するために空気を冷やさなければならない観測温度  - `feelLikesTemperature`: アイテムの鑑賞温度  - `feelsLikesTemperature`: アイテムの鑑賞温度  - `gustSpeed`: 観測された平均風速を超える高速の風が、数秒間だけ突然吹くこと。  - `id`: エンティティのユニークな識別子  - `illuminance`:   - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `precipitation`: 登録された雨水の量。ユニ：「Liters per square meter」。  - `precipitationForecast`: 将来の一定期間における降雨量の予測値。  - `pressureTendency`: Enum:'falling, raising, steady'.圧力が上昇しているのか、下降しているのか。定量的な言葉で表現することも、定性的な言葉で表現することもできます。  - `refDevice`: この観測データを取得した機器を示す情報。  - `refPointOfInterest`: アイテムに関連するポイント  - `relativeHumidity`: 空気中の湿度。観測された瞬間の相対湿度（空気中の水蒸気量）  - `relativeHumidityForecast`: 将来の一定期間における相対湿度（空気中の水蒸気）の予測値  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `snowHeight`: 汎用の積雪深測定センサーで観測された雪の高さをセンチメートル単位で表したもの  - `solarRadiation`: 観測された日射量は、1平方メートルあたりのワット数で表されます。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `streamGauge`: 水位測定センサー、すなわち[Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge)によって観測された水位面の高さをセンチメートル単位で表したもの。  - `temperature`: アイテムの温度  - `type`: NGSI Entityタイプ。それはWeatherObservedでなければならない。  - `uVIndexMax`: 世界保健機関（WHO）のUVインデックス指標に基づく、期間中の最大UVインデックス。[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `visibility`: 視認性のカテゴリー  - `weatherType`: 天気のテキスト説明  - `windDirection`: 風切り音の方向  - `windSpeed`: 風の強さ    
+- `address`: 郵送先住所  - `airQualityIndex`: 大気質指標とは、ある日の空気の質を表す数値です。  - `airQualityIndexForecast`: 将来のある期間における総合的な大気質指数（AQI）の予測値。  - `airTemperatureForecast`: 将来の一定期間における気温の予測値。  - `airTemperatureTSA`: ある期間における基本プロパティの時間的な処理を定義するオブジェクト。最大値、最小値、瞬時値、平均値を提供します。  - `alternateName`: このアイテムの別称  - `aqiMajorPollutant`: 大気質指標(AQI)の主要汚染物質。  - `aqiMajorPollutantForecast`: 将来の一定期間における大気質指標（AQI）の主要大気汚染物質の予測値。  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `atmosphericPressure`: 気圧はヘクトパスカルで測定される。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateObserved`: ユーザーによって定義された、観測されたエンティティの日付。  - `description`: このアイテムの説明  - `dewPoint`: 露点を数値で表したもの。水蒸気で飽和するために空気を冷やさなければならない観測温度  - `feelLikesTemperature`: アイテムの鑑賞温度  - `feelsLikesTemperature`: アイテムの鑑賞温度  - `gustSpeed`: 観測された平均風速を超える高速の風が、数秒間だけ突然吹くこと。  - `id`: エンティティのユニークな識別子  - `illuminance`: 観測された瞬間の環境光強度  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `precipitation`: 登録された雨水の量。ユニ：「Liters per square meter」。  - `precipitationForecast`: 将来の一定期間における降雨量の予測値。  - `pressureTendency`: Enum:'falling, raising, steady'.圧力が上昇しているのか、下降しているのか。定量的な言葉で表現することも、定性的な言葉で表現することもできます。  - `refDevice`: この観測データを取得した機器を示す情報。  - `refPointOfInterest`: アイテムに関連するポイント  - `relativeHumidity`: 空気中の湿度。観測された瞬間の相対湿度（空気中の水蒸気量）  - `relativeHumidityForecast`: 将来の一定期間における相対湿度（空気中の水蒸気）の予測値  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `snowHeight`: 汎用の積雪深測定センサーで観測された雪の高さをセンチメートル単位で表したもの  - `solarRadiation`: 観測された日射量は、1平方メートルあたりのワット数で表されます。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `streamGauge`: 水位測定センサー、すなわち[Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge)によって観測された水位面の高さをセンチメートル単位で表したもの。  - `temperature`: アイテムの温度  - `type`: NGSI Entityタイプ。それはWeatherObservedでなければならない。  - `uVIndexMax`: 世界保健機関（WHO）のUVインデックス指標に基づく、期間中の最大UVインデックス。[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `visibility`: 視認性のカテゴリー  - `weatherType`: 天気のテキスト説明  - `windDirection`: 風切り音の方向  - `windSpeed`: 風の強さ    
 必須項目  
 - `dateObserved`  - `id`  - `location`  - `type`  ## データモデルによるプロパティの記述  
 アルファベット順（クリックすると詳細が表示されます）  
@@ -57,6 +57,20 @@ WeatherObserved:
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
+        type: Property    
+    airTemperatureTSA:    
+      description: 'Object defining the temporal processing of a basic property during a period. It provides Maximum, minimum, instant value and average'    
+      properties:    
+        avgOverTime:    
+          type: number    
+        instValue:    
+          type: number    
+        maxOverTime:    
+          type: number    
+        minOverTime:    
+          type: number    
+      type: object    
+      x-ngsi:    
         type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
@@ -153,11 +167,11 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     illuminance:    
-      description: ""    
+      description: 'Observed instantaneous ambient light intensity'    
       type: number    
       x-ngsi:    
         type: Property    
-        units: 'Observed instantaneous ambient light intensity.Lux'    
+        units: Lux    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -489,7 +503,7 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 ## ペイロードの例  
@@ -654,7 +668,8 @@ WeatherObserved:
   "snowHeight": 20,  
   "uvIndexMax": 1.0,  
   "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
+    "https://smartdatamodels.org/context.jsonld",  
+    "iudx:EnvWeather"  
   ]  
 }  
 ```  
