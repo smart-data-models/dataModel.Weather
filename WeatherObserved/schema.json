@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.2.0",
+  "$schemaVersion": "0.2.1",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
   "title": "Weather Observed schema - Smart Data Models",
@@ -125,11 +125,16 @@
         },
         "illuminance": {
           "type": "number",
-          "description": "Property. Observed instantaneous ambient light intensity.Units:'Lux'"
+          "description": "Property. Observed instantaneous ambient light intensity. Units:'Lux'"
         },
         "airQualityIndexForecast": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future."
+        },
+        "airTemperatureTSA": {
+          "type": "object",
+          "description": "Property. Air temperature time series aggregation",
+          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
         }
       }
     }
