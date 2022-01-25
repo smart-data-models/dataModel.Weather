@@ -435,8 +435,8 @@ WeatherObserved:
       x-ngsi:
         type: Property
     uVIndexMax:
-      description: 'The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)'
-      minimum: 1
+      description: 'The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored.'
+      minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -489,4 +489,4 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json
   x-model-tags: IUDX
-  x-version: 0.2.1
+  x-version: 0.2.2
