@@ -1,12 +1,14 @@
-Entité : WeatherObserved  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : WeatherObserved  
 ========================  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherObserved/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Une observation des conditions météorologiques à un endroit et à un moment donnés. Ce modèle de données a été développé en coopération avec les opérateurs mobiles et la GSMA.**  
+version : 0.2.2  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `airQualityIndex`: L'indice de qualité de l'air est un chiffre utilisé pour rendre compte de la qualité de l'air un jour donné.  - `airQualityIndexForecast`: Indice de qualité de l'air (IQA) global prévu pour une certaine durée dans le futur.  - `airTemperatureForecast`: Valeur prévisionnelle de la température de l'air sur une certaine durée dans le futur.  - `airTemperatureTSA`: Objet définissant le traitement temporel d'une propriété de base pendant une période. Il fournit les valeurs maximale, minimale, instantanée et moyenne.  - `alternateName`: Un nom alternatif pour cet élément  - `aqiMajorPollutant`: Polluant majeur de l'indice de qualité de l'air (IQA).  - `aqiMajorPollutantForecast`: Prévision des principaux polluants atmosphériques dans l'indice de qualité de l'air (IQA) sur une certaine durée dans le futur.  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `atmosphericPressure`: La pression atmosphérique observée mesurée en Hecto Pascals  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: Date de l'entité observée définie par l'utilisateur.  - `description`: Une description de cet article  - `dewPoint`: Le point de rosée codé sous la forme d'un nombre. Température observée à laquelle l'air doit être refroidi pour devenir saturé en vapeur d'eau.  - `feelLikesTemperature`: Appréciation de la température de l'objet  - `feelsLikesTemperature`: Appréciation de la température de l'objet  - `gustSpeed`: Une soudaine rafale de vent à grande vitesse, supérieure à la vitesse moyenne observée, qui ne dure que quelques secondes.  - `id`: Identifiant unique de l'entité  - `illuminance`: Intensité lumineuse ambiante instantanée observée  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `precipitation`: Quantité d'eau de pluie enregistrée. Unis : "Litres par mètre carré".  - `precipitationForecast`: Prévision des précipitations sur une certaine durée dans le futur.  - `pressureTendency`: Enum : 'falling, raising, steady'. La pression est-elle en hausse ou en baisse ? Elle peut être exprimée en termes quantitatifs ou qualitatifs.  - `refDevice`: Une référence au(x) dispositif(s) qui a (ont) capturé cette observation.  - `refPointOfInterest`: Point d'intérêt lié à l'article  - `relativeHumidity`: Humidité dans l'air. Humidité relative instantanée observée (vapeur d'eau dans l'air)  - `relativeHumidityForecast`: Prévision de l'humidité relative (vapeur d'eau dans l'air) sur une certaine durée dans le futur.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `snowHeight`: La hauteur de neige observée par les capteurs génériques de mesure de l'épaisseur de neige, exprimée en centimètres.  - `solarRadiation`: Le rayonnement solaire observé mesuré en Watts par carré  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `streamGauge`: L'élévation de la surface de l'eau observée par des capteurs de mesure hydrométrique, à savoir un [Stream Gauge] (https://en.wikipedia.org/wiki/Stream_gauge), exprimée en centimètres.  - `temperature`: Température de l'article  - `type`: Type d'entité NGSI. Il doit s'agir de WeatherObserved  - `uVIndexMax`: L'indice UV maximum pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `visibility`: Catégories de visibilité  - `weatherType`: Description textuelle de la météo  - `windDirection`: Direction du pari du vent  - `windSpeed`: Intensité du vent    
+- `address`: L'adresse postale  - `airQualityIndex`: L'indice de qualité de l'air est un chiffre utilisé pour rendre compte de la qualité de l'air un jour donné.  - `airQualityIndexForecast`: Indice de qualité de l'air (IQA) global prévu pour une certaine durée dans le futur.  - `airTemperatureForecast`: Valeur prévisionnelle de la température de l'air sur une certaine durée dans le futur.  - `airTemperatureTSA`: Objet définissant le traitement temporel d'une propriété de base pendant une période. Il fournit les valeurs maximum, minimum, instantanée et moyenne.  - `alternateName`: Un nom alternatif pour cet élément  - `aqiMajorPollutant`: Polluant majeur de l'indice de qualité de l'air (IQA).  - `aqiMajorPollutantForecast`: Prévision des principaux polluants atmosphériques dans l'indice de qualité de l'air (IQA) sur une certaine durée dans le futur.  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `atmosphericPressure`: La pression atmosphérique observée mesurée en Hecto Pascals  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `dateObserved`: Date de l'entité observée définie par l'utilisateur.  - `description`: Une description de cet article  - `dewPoint`: Le point de rosée codé sous la forme d'un nombre. Température observée à laquelle l'air doit être refroidi pour devenir saturé en vapeur d'eau.  - `feelLikesTemperature`: Appréciation de la température de l'objet  - `feelsLikesTemperature`: Appréciation de la température de l'objet  - `gustSpeed`: Une soudaine rafale de vent à grande vitesse, supérieure à la vitesse moyenne observée, qui ne dure que quelques secondes.  - `id`: Identifiant unique de l'entité  - `illuminance`: Intensité lumineuse ambiante instantanée observée  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `precipitation`: Quantité d'eau de pluie enregistrée. Unis : "Litres par mètre carré".  - `precipitationForecast`: Prévision des précipitations sur une certaine durée dans le futur.  - `pressureTendency`: Enum : 'falling, raising, steady'. La pression est-elle en hausse ou en baisse ? Elle peut être exprimée en termes quantitatifs ou qualitatifs.  - `refDevice`: Une référence au(x) dispositif(s) qui a (ont) capturé cette observation.  - `refPointOfInterest`: Point d'intérêt lié à l'article  - `relativeHumidity`: Humidité dans l'air. Humidité relative instantanée observée (vapeur d'eau dans l'air)  - `relativeHumidityForecast`: Prévision de l'humidité relative (vapeur d'eau dans l'air) sur une certaine durée dans le futur.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `snowHeight`: La hauteur de neige observée par les capteurs génériques de mesure de l'épaisseur de la neige, exprimée en centimètres.  - `solarRadiation`: Le rayonnement solaire observé mesuré en Watts par carré  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `streamGauge`: L'élévation de la surface de l'eau observée par des capteurs de mesure hydrométrique, à savoir un [Stream Gauge] (https://en.wikipedia.org/wiki/Stream_gauge), exprimée en centimètres.  - `temperature`: Température de l'article  - `type`: Type d'entité NGSI. Il doit s'agir de WeatherObserved  - `uVIndexMax`: L'indice UV maximum pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) les valeurs comprises entre 1 et 11 constituent la plage valable pour l'indice. La valeur 0 sert à décrire qu'aucun signal n'est détecté et qu'aucune valeur n'est stockée.  - `visibility`: Catégories de visibilité  - `weatherType`: Description textuelle de la météo  - `windDirection`: Direction du pari du vent  - `windSpeed`: Intensité du vent    
 Propriétés requises  
 - `dateObserved`  - `id`  - `location`  - `type`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -449,8 +451,8 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     uVIndexMax:    
-      description: 'The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)'    
-      minimum: 1    
+      description: 'The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored.'    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -503,7 +505,7 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.2.1    
+  x-version: 0.2.2    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -637,141 +639,140 @@ WeatherObserved:
 Voici un exemple de WeatherObserved au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
-  "type": "WeatherObserved",  
-  "dateObserved": "2016-11-30T07:00:00.00Z",  
-  "illuminance": 1000,  
-  "temperature": 3.3,  
-  "precipitation": 0,  
-  "atmosphericPressure": 938.9,  
-  "pressureTendency": 0.5,  
-  "refDevice": "urn:ngsi-ld:Device:device-0A3478",  
-  "source": "http://www.aemet.es",  
-  "windSpeed": 2,  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -4.754444444,  
-      41.640833333  
+    "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
+    "type": "WeatherObserved",  
+    "address": {  
+        "addressLocality": "Valladolid",  
+        "addressCountry": "ES"  
+    },  
+    "atmosphericPressure": 938.9,  
+    "dataProvider": "TEF",  
+    "dateObserved": "2016-11-30T07:00:00.00Z",  
+    "illuminance": 1000,  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            -4.754444444,  
+            41.640833333  
+        ]  
+    },  
+    "precipitation": 0,  
+    "pressureTendency": 0.5,  
+    "refDevice": "urn:ngsi-ld:Device:device-0A3478",  
+    "relativeHumidity": 1,  
+    "snowHeight": 20,  
+    "source": "http://www.aemet.es",  
+    "stationCode": "2422",  
+    "stationName": "Valladolid",  
+    "streamGauge": 50,  
+    "temperature": 3.3,  
+    "uvIndexMax": 1.0,  
+    "windDirection": -45,  
+    "windSpeed": 2,  
+    "@context": [  
+        "iudx:EnvWeather",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
     ]  
-  },  
-  "stationName": "Valladolid",  
-  "address": {  
-    "addressLocality": "Valladolid",  
-    "addressCountry": "ES"  
-  },  
-  "stationCode": "2422",  
-  "dataProvider": "TEF",  
-  "windDirection": -45,  
-  "relativeHumidity": 1,  
-  "streamGauge": 50,  
-  "snowHeight": 20,  
-  "uvIndexMax": 1.0,  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "iudx:EnvWeather"  
-  ]  
 }  
 ```  
 #### WeatherObserved NGSI-LD normalisé Exemple  
 Voici un exemple de WeatherObserved au format JSON-LD tel que normalisé. Ceci est compatible avec NGSI-LD lorsqu'on n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
-  "type": "WeatherObserved",  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-11-30T07:00:00.00Z"  
-    }  
-  },  
-  "illuminance": {  
-    "type": "Property",  
-    "value": 1000  
-  },  
-  "temperature": {  
-    "type": "Property",  
-    "value": 3.3  
-  },  
-  "precipitation": {  
-    "type": "Property",  
-    "value": 0  
-  },  
-  "atmosphericPressure": {  
-    "type": "Property",  
-    "value": 938.9  
-  },  
-  "pressureTendency": {  
-    "type": "Property",  
-    "value": 0.5  
-  },  
-  "refDevice": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Device:device-0A3478"  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://www.aemet.es"  
-  },  
-  "windSpeed": {  
-    "type": "Property",  
-    "value": 2  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -4.754444444,  
-        41.640833333  
-      ]  
-    }  
-  },  
-  "stationName": {  
-    "type": "Property",  
-    "value": "Valladolid"  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Valladolid",  
-      "addressCountry": "ES",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "stationCode": {  
-    "type": "Property",  
-    "value": "2422"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "TEF"  
-  },  
-  "windDirection": {  
-    "type": "Property",  
-    "value": -45  
-  },  
-  "relativeHumidity": {  
-    "type": "Property",  
-    "value": 1  
-  },  
-  "streamGauge": {  
-    "type": "Property",  
-    "value": 50  
-  },  
-  "snowHeight": {  
-    "type": "Property",  
-    "value": 20  
-  },  
-  "uvIndexMax": {  
-    "type": "Property",  
-    "value": 1.0  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
+    "type": "WeatherObserved",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "Valladolid",  
+            "addressCountry": "ES",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "atmosphericPressure": {  
+        "type": "Property",  
+        "value": 938.9  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "TEF"  
+    },  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-11-30T07:00:00.00Z"  
+        }  
+    },  
+    "illuminance": {  
+        "type": "Property",  
+        "value": 1000  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -4.754444444,  
+                41.640833333  
+            ]  
+        }  
+    },  
+    "precipitation": {  
+        "type": "Property",  
+        "value": 0  
+    },  
+    "pressureTendency": {  
+        "type": "Property",  
+        "value": 0.5  
+    },  
+    "refDevice": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Device:device-0A3478"  
+    },  
+    "relativeHumidity": {  
+        "type": "Property",  
+        "value": 1  
+    },  
+    "snowHeight": {  
+        "type": "Property",  
+        "value": 20  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://www.aemet.es"  
+    },  
+    "stationCode": {  
+        "type": "Property",  
+        "value": "2422"  
+    },  
+    "stationName": {  
+        "type": "Property",  
+        "value": "Valladolid"  
+    },  
+    "streamGauge": {  
+        "type": "Property",  
+        "value": 50  
+    },  
+    "temperature": {  
+        "type": "Property",  
+        "value": 3.3  
+    },  
+    "uvIndexMax": {  
+        "type": "Property",  
+        "value": 1.0  
+    },  
+    "windDirection": {  
+        "type": "Property",  
+        "value": -45  
+    },  
+    "windSpeed": {  
+        "type": "Property",  
+        "value": 2  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
