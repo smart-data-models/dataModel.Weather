@@ -84,8 +84,8 @@
             "windDirection": {
               "type": "number",
               "description": "Property. Model:'http://schema.org/Number'. Direction of the wind bet",
-              "minimum": -180,
-              "maximum": 180
+              "minimum": 0,
+              "maximum": 360
             },
             "windSpeed": {
               "type": "number",

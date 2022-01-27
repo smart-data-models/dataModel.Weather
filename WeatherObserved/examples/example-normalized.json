@@ -68,7 +68,7 @@
   },
   "windDirection": {
     "type": "Number",
-    "value": -45
+    "value": 135
   },
   "relativeHumidity": {
     "type": "Number",

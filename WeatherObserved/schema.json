@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.2.2",
+  "$schemaVersion": "0.3.1",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
   "title": "Weather Observed schema - Smart Data Models",

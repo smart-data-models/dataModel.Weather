@@ -33,7 +33,7 @@
     },
     "stationCode": "2422",
     "dataProvider": "TEF",
-    "windDirection": -45,
+    "windDirection": 135,
     "relativeHumidity": 1,
     "streamGauge": 50,
     "snowHeight": 20,
