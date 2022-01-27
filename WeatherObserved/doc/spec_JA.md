@@ -4,13 +4,15 @@
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherObserved/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな記述。**ある場所、ある時間の気象状況を観測すること。このデータモデルは、携帯電話会社とGSMAの協力を得て開発されました。  
-バージョン: 0.2.2  
+バージョン: 0.3.1  
 
 ## プロパティのリスト  
 
 - `address`: 郵送先住所  - `airQualityIndex`: 大気質指標とは、ある日の空気の質を表す数値です。  - `airQualityIndexForecast`: 将来のある期間における総合的な大気質指数（AQI）の予測値。  - `airTemperatureForecast`: 将来の一定期間における気温の予測値。  - `airTemperatureTSA`: ある期間における基本プロパティの時間的な処理を定義するオブジェクト。最大値、最小値、瞬時値、平均値を提供します。  - `alternateName`: このアイテムの別称  - `aqiMajorPollutant`: 大気質指標(AQI)の主要汚染物質。  - `aqiMajorPollutantForecast`: 将来の一定期間における大気質指標（AQI）の主要大気汚染物質の予測値。  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `atmosphericPressure`: 気圧はヘクトパスカルで測定される。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateObserved`: ユーザーによって定義された、観測されたエンティティの日付。  - `description`: このアイテムの説明  - `dewPoint`: 露点を数値で表したもの。水蒸気で飽和するために空気を冷やさなければならない観測温度  - `feelLikesTemperature`: アイテムの鑑賞温度  - `feelsLikesTemperature`: アイテムの鑑賞温度  - `gustSpeed`: 観測された平均風速を超える高速の風が、数秒間だけ突然吹くこと。  - `id`: エンティティのユニークな識別子  - `illuminance`: 観測された瞬間の環境光強度  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `precipitation`: 登録された雨水の量。ユニ：「Liters per square meter」。  - `precipitationForecast`: 将来の一定期間における降雨量の予測値。  - `pressureTendency`: Enum:'falling, raising, steady'.圧力が上昇しているのか、下降しているのか。定量的な言葉で表現することも、定性的な言葉で表現することもできます。  - `refDevice`: この観測データを取得した機器を示す情報。  - `refPointOfInterest`: アイテムに関連するポイント  - `relativeHumidity`: 空気中の湿度。観測された瞬間の相対湿度（空気中の水蒸気量）  - `relativeHumidityForecast`: 将来の一定期間における相対湿度（空気中の水蒸気）の予測値  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `snowHeight`: 汎用の積雪深測定センサーで観測された雪の高さをセンチメートル単位で表したもの  - `solarRadiation`: 観測された日射量は、1平方メートルあたりのワット数で表されます。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `streamGauge`: 水位測定センサー、すなわち[Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge)によって観測された水位面の高さをセンチメートル単位で表したもの。  - `temperature`: アイテムの温度  - `type`: NGSI Entityタイプ。それはWeatherObservedでなければならない。  - `uVIndexMax`: 世界保健機関（WHO）のUVインデックス対策に基づく、期間中の最大UVインデックスです。[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) 1から11までの値がインデックスの有効範囲です。値0は、信号が検出されなかったことを表すため、値は保存されません。  - `visibility`: 視認性のカテゴリー  - `weatherType`: 天気のテキスト説明  - `windDirection`: 風切り音の方向  - `windSpeed`: 風の強さ    
 必須項目  
-- `dateObserved`  - `id`  - `location`  - `type`  ## データモデルによるプロパティの記述  
+- `dateObserved`  - `id`  - `location`  - `type`    
+世界気象機関](https://library.wmo.int/doc_num.php?explnum_id=3177)に基づいて定義された風向きの範囲。  
+## データモデルによるプロパティの記述  
 アルファベット順（クリックすると詳細が表示されます）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -481,8 +483,8 @@ WeatherObserved:
         type: Property    
     windDirection:    
       description: 'Direction of the wind bet'    
-      maximum: 180    
-      minimum: -180    
+      maximum: 360    
+      minimum: 0    
       type: number    
       x-ngsi:    
         model: http://schema.org/Number    
@@ -505,7 +507,7 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.2.2    
+  x-version: 0.3.1    
 ```  
 </details>    
 ## ペイロードの例  
@@ -524,7 +526,10 @@ WeatherObserved:
   "dateObserved": "2016-11-30T07:00:00.00Z",  
   "location": {  
     "type": "Point",  
-    "coordinates": [-4.754444444, 41.640833333]  
+    "coordinates": [  
+      -4.754444444,  
+      41.640833333  
+    ]  
   },  
   "precipitation": 0,  
   "pressureTendency": 0.5,  
@@ -533,12 +538,12 @@ WeatherObserved:
   "stationCode": "2422",  
   "stationName": "Valladolid",  
   "temperature": 3.3,  
-  "windDirection": -45,  
+  "windDirection": 135,  
   "windSpeed": 2,  
   "illuminance": 1000,  
   "refDevice": "device-0A3478",  
   "streamGauge": 50,  
-  "snowHeight": 20,   
+  "snowHeight": 20,  
   "uvIndexMax": 1.0  
 }  
 ```  
@@ -615,7 +620,7 @@ WeatherObserved:
   },  
   "windDirection": {  
     "type": "Number",  
-    "value": -45  
+    "value": 135  
   },  
   "relativeHumidity": {  
     "type": "Number",  
@@ -639,140 +644,140 @@ WeatherObserved:
 ここではWeatherObservedをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-    "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
-    "type": "WeatherObserved",  
-    "address": {  
-        "addressLocality": "Valladolid",  
-        "addressCountry": "ES"  
-    },  
-    "atmosphericPressure": 938.9,  
-    "dataProvider": "TEF",  
-    "dateObserved": "2016-11-30T07:00:00.00Z",  
-    "illuminance": 1000,  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            -4.754444444,  
-            41.640833333  
-        ]  
-    },  
-    "precipitation": 0,  
-    "pressureTendency": 0.5,  
-    "refDevice": "urn:ngsi-ld:Device:device-0A3478",  
-    "relativeHumidity": 1,  
-    "snowHeight": 20,  
-    "source": "http://www.aemet.es",  
-    "stationCode": "2422",  
-    "stationName": "Valladolid",  
-    "streamGauge": 50,  
-    "temperature": 3.3,  
-    "uvIndexMax": 1.0,  
-    "windDirection": -45,  
-    "windSpeed": 2,  
-    "@context": [  
-        "iudx:EnvWeather",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
+  "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
+  "type": "WeatherObserved",  
+  "address": {  
+    "addressLocality": "Valladolid",  
+    "addressCountry": "ES"  
+  },  
+  "atmosphericPressure": 938.9,  
+  "dataProvider": "TEF",  
+  "dateObserved": "2016-11-30T07:00:00.00Z",  
+  "illuminance": 1000,  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -4.754444444,  
+      41.640833333  
     ]  
+  },  
+  "precipitation": 0,  
+  "pressureTendency": 0.5,  
+  "refDevice": "urn:ngsi-ld:Device:device-0A3478",  
+  "relativeHumidity": 1,  
+  "snowHeight": 20,  
+  "source": "http://www.aemet.es",  
+  "stationCode": "2422",  
+  "stationName": "Valladolid",  
+  "streamGauge": 50,  
+  "temperature": 3.3,  
+  "uvIndexMax": 1.0,  
+  "windDirection": 135,  
+  "windSpeed": 2,  
+  "@context": [  
+    "iudx:EnvWeather",  
+    "https://smart-data-models.github.io/dataModel.Weather/context.jsonld"  
+  ]  
 }  
 ```  
 #### WeatherObserved NGSI-LDの正規化例  
 ここでは、正規化されたJSON-LD形式のWeatherObservedの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-    "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
-    "type": "WeatherObserved",  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressLocality": "Valladolid",  
-            "addressCountry": "ES",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "atmosphericPressure": {  
-        "type": "Property",  
-        "value": 938.9  
-    },  
-    "dataProvider": {  
-        "type": "Property",  
-        "value": "TEF"  
-    },  
-    "dateObserved": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-11-30T07:00:00.00Z"  
-        }  
-    },  
-    "illuminance": {  
-        "type": "Property",  
-        "value": 1000  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -4.754444444,  
-                41.640833333  
-            ]  
-        }  
-    },  
-    "precipitation": {  
-        "type": "Property",  
-        "value": 0  
-    },  
-    "pressureTendency": {  
-        "type": "Property",  
-        "value": 0.5  
-    },  
-    "refDevice": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Device:device-0A3478"  
-    },  
-    "relativeHumidity": {  
-        "type": "Property",  
-        "value": 1  
-    },  
-    "snowHeight": {  
-        "type": "Property",  
-        "value": 20  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "http://www.aemet.es"  
-    },  
-    "stationCode": {  
-        "type": "Property",  
-        "value": "2422"  
-    },  
-    "stationName": {  
-        "type": "Property",  
-        "value": "Valladolid"  
-    },  
-    "streamGauge": {  
-        "type": "Property",  
-        "value": 50  
-    },  
-    "temperature": {  
-        "type": "Property",  
-        "value": 3.3  
-    },  
-    "uvIndexMax": {  
-        "type": "Property",  
-        "value": 1.0  
-    },  
-    "windDirection": {  
-        "type": "Property",  
-        "value": -45  
-    },  
-    "windSpeed": {  
-        "type": "Property",  
-        "value": 2  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
+  "type": "WeatherObserved",  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressLocality": "Valladolid",  
+      "addressCountry": "ES",  
+      "type": "PostalAddress"  
+    }  
+  },  
+  "atmosphericPressure": {  
+    "type": "Property",  
+    "value": 938.9  
+  },  
+  "dataProvider": {  
+    "type": "Property",  
+    "value": "TEF"  
+  },  
+  "dateObserved": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-11-30T07:00:00.00Z"  
+    }  
+  },  
+  "illuminance": {  
+    "type": "Property",  
+    "value": 1000  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -4.754444444,  
+        41.640833333  
+      ]  
+    }  
+  },  
+  "precipitation": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "pressureTendency": {  
+    "type": "Property",  
+    "value": 0.5  
+  },  
+  "refDevice": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Device:device-0A3478"  
+  },  
+  "relativeHumidity": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "snowHeight": {  
+    "type": "Property",  
+    "value": 20  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "http://www.aemet.es"  
+  },  
+  "stationCode": {  
+    "type": "Property",  
+    "value": "2422"  
+  },  
+  "stationName": {  
+    "type": "Property",  
+    "value": "Valladolid"  
+  },  
+  "streamGauge": {  
+    "type": "Property",  
+    "value": 50  
+  },  
+  "temperature": {  
+    "type": "Property",  
+    "value": 3.3  
+  },  
+  "uvIndexMax": {  
+    "type": "Property",  
+    "value": 1.0  
+  },  
+  "windDirection": {  
+    "type": "Property",  
+    "value": 135  
+  },  
+  "windSpeed": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.Weather/context.jsonld"  
+  ]  
 }  
 ```  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
