@@ -7,4 +7,12 @@ currentAdopters:
  organization:
  project: 
  comments: 
- startDate: 
+ startDate:
+-
+ adopter: Las Rozas Innova
+ description:
+ mail: jpena@lasrozasinnova.es
+ organization: Municipality of Las Rozas (Spain)
+ project: https://lasrozasinnova.es/cosmos-plataforma-de-ciudad-inteligente-de-las-rozas/
+ comments:
+ startDate: 1-1-2022
