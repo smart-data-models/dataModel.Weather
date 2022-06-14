@@ -31,9 +31,6 @@
         "temperature": {
           "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/temperature"
         },
-        "feelsLikesTemperature": {
-          "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/feelLikesTemperature"
-        },
         "relativeHumidity": {
           "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/relativeHumidity"
         },
