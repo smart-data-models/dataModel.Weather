@@ -24,7 +24,6 @@
         "description": "http://purl.org/dc/terms/description",
         "dewPoint": "https://smartdatamodels.org/dataModel.Weather/dewPoint",
         "feelLikesTemperature": "https://smartdatamodels.org/dataModel.Weather/feelLikesTemperature",
-        "feelsLikesTemperature": "https://smartdatamodels.org/dataModel.Weather/feelsLikesTemperature",
         "gustSpeed": "https://smartdatamodels.org/dataModel.Weather/gustSpeed",
         "id": "@id",
         "illuminance": "https://smartdatamodels.org/dataModel.Weather/illuminance",
