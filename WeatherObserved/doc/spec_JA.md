@@ -2,18 +2,18 @@
 エンティティWeatherObserved  
 =====================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherObserved/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**ある場所、ある時間の気象状況を観測すること。このデータモデルは、携帯電話会社とGSMAの協力を得て開発されました。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述。**ある場所と時間における天候の観測。このデータモデルは、携帯電話会社とGSMAの協力のもとで開発されました。  
 バージョン: 0.3.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `airQualityIndex`: 大気質指標とは、ある日の空気の質を表す数値です。  - `airQualityIndexForecast`: 将来のある期間における総合的な大気質指数（AQI）の予測値。  - `airTemperatureForecast`: 将来の一定期間における気温の予測値。  - `airTemperatureTSA`: ある期間における基本プロパティの時間的な処理を定義するオブジェクト。最大値、最小値、瞬時値、平均値を提供します。  - `alternateName`: このアイテムの別称  - `aqiMajorPollutant`: 大気質指標(AQI)の主要汚染物質。  - `aqiMajorPollutantForecast`: 将来の一定期間における大気質指標（AQI）の主要大気汚染物質の予測値。  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `atmosphericPressure`: 気圧はヘクトパスカルで測定される。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateObserved`: ユーザーによって定義された、観測されたエンティティの日付。  - `description`: このアイテムの説明  - `dewPoint`: 露点を数値で表したもの。水蒸気で飽和するために空気を冷やさなければならない観測温度  - `feelLikesTemperature`: アイテムの鑑賞温度  - `feelsLikesTemperature`: アイテムの鑑賞温度  - `gustSpeed`: 観測された平均風速を超える高速の風が、数秒間だけ突然吹くこと。  - `id`: エンティティのユニークな識別子  - `illuminance`: 観測された瞬間の環境光強度  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `precipitation`: 登録された雨水の量。ユニ：「Liters per square meter」。  - `precipitationForecast`: 将来の一定期間における降雨量の予測値。  - `pressureTendency`: Enum:'falling, raising, steady'.圧力が上昇しているのか、下降しているのか。定量的な言葉で表現することも、定性的な言葉で表現することもできます。  - `refDevice`: この観測データを取得した機器を示す情報。  - `refPointOfInterest`: アイテムに関連するポイント  - `relativeHumidity`: 空気中の湿度。観測された瞬間の相対湿度（空気中の水蒸気量）  - `relativeHumidityForecast`: 将来の一定期間における相対湿度（空気中の水蒸気）の予測値  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `snowHeight`: 汎用の積雪深測定センサーで観測された雪の高さをセンチメートル単位で表したもの  - `solarRadiation`: 観測された日射量は、1平方メートルあたりのワット数で表されます。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `streamGauge`: 水位測定センサー、すなわち[Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge)によって観測された水位面の高さをセンチメートル単位で表したもの。  - `temperature`: アイテムの温度  - `type`: NGSI Entityタイプ。それはWeatherObservedでなければならない。  - `uVIndexMax`: 世界保健機関（WHO）のUVインデックス対策に基づく、期間中の最大UVインデックスです。[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) 1から11までの値がインデックスの有効範囲です。値0は、信号が検出されなかったことを表すため、値は保存されません。  - `visibility`: 視認性のカテゴリー  - `weatherType`: 天気のテキスト説明  - `windDirection`: 風切り音の方向  - `windSpeed`: 風の強さ    
-必須項目  
+- `address`: 郵送先住所  - `airQualityIndex`: 大気質指標とは、ある日の大気の質を表す数値です。  - `airQualityIndexForecast`: 将来の一定期間の総合大気質指標（AQI）の予測値。  - `airTemperatureForecast`: 将来の一定期間の気温の予測値。  - `airTemperatureTSA`: 基本プロパティの期間処理を定義するオブジェクト。最大値、最小値、瞬時値、平均値を提供する。  - `alternateName`: この項目の別称  - `aqiMajorPollutant`: 大気質指標(AQI)の主要汚染物質。  - `aqiMajorPollutantForecast`: 将来の一定期間の大気質指標（AQI）における主要大気汚染物質の予測値。  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `atmosphericPressure`: ヘクトパスカルで観測される大気圧。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved`: ユーザが定義した観測対象の日付。  - `description`: このアイテムの説明  - `dewPoint`: 露点（Dew Point）：数値で表したもの。空気が水蒸気で飽和するために冷却されなければならない観測温度。  - `feelLikesTemperature`: アイテムの温度評価  - `gustSpeed`: 観測された平均風速を超える高速の風が突然発生し、数秒しか続かないこと。  - `id`: エンティティの一意な識別子  - `illuminance`: 観測された瞬間的な環境光強度  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `precipitation`: 雨水登録量。ユニ：「1平方メートルあたりのリットル数」。  - `precipitationForecast`: 将来の一定期間の降雨量の予測。  - `pressureTendency`: Enum:'falling, raising, steady'.圧力が上昇しているのか、下降しているのか。定量的に表現することも、定性的に表現することもできる。  - `refDevice`: この観測を捕捉した装置への参照。  - `refPointOfInterest`: アイテムに関連するポイント  - `relativeHumidity`: 空気中の湿度。観測された瞬間的な相対湿度（空気中の水蒸気量）  - `relativeHumidityForecast`: 将来の一定期間の相対湿度（空気中の水蒸気量）の予測値  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `snowHeight`: 汎用積雪深測定センサーで観測した雪の高さ（単位：センチメートル  - `solarRadiation`: 観測された日射量は1平方メートルあたりのワット数で表示されます。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `streamGauge`: 水位計（https://en.wikipedia.org/wiki/Stream_gauge）により観測された水面の高さをセンチメートル単位で表したもの。  - `temperature`: アイテムの温度  - `type`: NGSI Entity タイプ。これはWeatherObservedでなければならない。  - `uVIndexMax`: 世界保健機関のUVインデックス指標に基づく、期間中の最大UVインデックスです。[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) 1から11までの値がインデックスの有効範囲です。値0は、信号が検出されないので値が保存されないことを記述するためのものである。  - `visibility`: 視認性のカテゴリー  - `weatherType`: 天気予報のテキスト説明  - `windDirection`: 風のベットの向き  - `windSpeed`: 風の強さ    
+必要なプロパティ  
 - `dateObserved`  - `id`  - `location`  - `type`    
-世界気象機関](https://library.wmo.int/doc_num.php?explnum_id=3177)に基づいて定義された風向きの範囲。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+世界気象機関](https://library.wmo.int/doc_num.php?explnum_id=3177)に従って定義された風向きの範囲。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WeatherObserved:    
@@ -143,11 +143,6 @@ WeatherObserved:
         type: Property    
         units: 'Celsius degrees'    
     feelLikesTemperature:    
-      description: 'Temperature appreciation of the item'    
-      type: number    
-      x-ngsi:    
-        type: Property    
-    feelsLikesTemperature:    
       description: 'Temperature appreciation of the item'    
       type: number    
       x-ngsi:    
@@ -511,8 +506,8 @@ WeatherObserved:
 ```  
 </details>    
 ## ペイロードの例  
-#### WeatherObserved NGSI-v2 key-values の例。  
-ここではWeatherObservedをJSON-LD形式でkey-valuesにした例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### WeatherObserved NGSI-v2 key-value 例  
+ここでは、WeatherObservedをJSON-LD形式でkey-valuesとした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
@@ -547,8 +542,8 @@ WeatherObserved:
   "uvIndexMax": 1.0  
 }  
 ```  
-#### WeatherObserved NGSI-v2を正規化した例。  
-ここでは、正規化されたJSON-LD形式のWeatherObservedの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### WeatherObserved NGSI-v2 正規化例  
+以下は、正規化された JSON-LD 形式の WeatherObserved の例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Valladolid.2016-11-30T07-00-00.00Z",  
@@ -640,8 +635,8 @@ WeatherObserved:
   }  
 }  
 ```  
-#### WeatherObserved NGSI-LD キーバリューの例  
-ここではWeatherObservedをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### WeatherObserved NGSI-LD key-value 例  
+ここでは、WeatherObservedをJSON-LD形式でkey-valuesとした例を示す。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
@@ -680,8 +675,8 @@ WeatherObserved:
   ]  
 }  
 ```  
-#### WeatherObserved NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のWeatherObservedの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### WeatherObserved NGSI-LD 正規化例  
+以下は、正規化された JSON-LD 形式の WeatherObserved の例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
