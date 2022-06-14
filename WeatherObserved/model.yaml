@@ -129,11 +129,6 @@ WeatherObserved:
       type: number
       x-ngsi:
         type: Property
-    feelsLikesTemperature:
-      description: 'Temperature appreciation of the item'
-      type: number
-      x-ngsi:
-        type: Property
     gustSpeed:
       description: 'A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds.'
       type: number
