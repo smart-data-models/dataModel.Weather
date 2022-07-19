@@ -1,6 +1,6 @@
 {
   "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",
-  "type": "Alert",
+  "type": "WeatherAlert",
   "severity": {
     "type": "Text",
     "value": "medium"
