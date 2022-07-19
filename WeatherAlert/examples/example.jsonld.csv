@@ -1,2 +1,2 @@
-"severity_", "category_", "subCategory_", "alertSource_", "address__addressCountry_", "address__addressRegion_", "dateIssued_", "type_", "id_", "validTo_", "validFrom_", "@context__0_"
-"medium", "weather", "snow_ice", "http://www.meteoalarm.eu", "ES", "Huesca", "2016-03-14T13:54:01.00Z", "Alert", "WeatherAlert-83b872975414bfca10832e564a1bb416-7", "2016-03-14T23:59:00.00Z", "2016-03-14T13:00:00.00Z", "https://smartdatamodels.org/context.jsonld"
+"id_", "type_", "address__addressCountry_", "address__addressRegion_", "alertSource_", "category_", "dateIssued_", "severity_", "subCategory_", "validFrom_", "validTo_", "@context__0_"
+"WeatherAlert-83b872975414bfca10832e564a1bb416-7", "Alert", "ES", "Huesca", "http://www.meteoalarm.eu", "weather", "2016-03-14T13:54:01.00Z", "medium", "snow_ice", "2016-03-14T13:00:00.00Z", "2016-03-14T23:59:00.00Z", "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"
