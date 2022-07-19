@@ -1,17 +1,19 @@
-エンティティウェザーアラート  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティウェザーアラート  
 ==============  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherAlert/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明です。**指定された場所のユーザーまたはデバイスによって生成された天気予報**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**指定された場所のユーザーまたはデバイスによって生成された天気予報のアラート**。  
+バージョン: 0.1.2  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `alertSource`: 警報の発信源  - `alternateName`: このアイテムの別称  - `category`: 企業のカテゴリー  - `data`: 取得したデータを含むペイロード。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateIssued`: アイテムの発行日時がISO8601 UTC形式で表示されます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `severity`: アラームの重大性  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `subCategory`: 気象カテゴリーです。Enum:' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind' となっている。  - `type`: NGSI エンティティタイプ。Alertでなければならない。  - `validFrom`: この予報の有効期間の開始日をISO8601形式で表したもの  - `validTo`: ISO8601形式の予報の有効期間の終了日    
-必須項目  
+- `alertSource`: 警報の発生源  - `alternateName`: この項目の別称  - `category`: 事業体の区分  - `data`: 取得したデータを含むペイロード。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateIssued`: ISO8601 UTC フォーマットで発行された日付と時刻。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `severity`: アラームの重要度  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `subCategory`: 天気のカテゴリ。Enum:' 雪崩、沿岸イベント、寒波、洪水、霧、森林火災、熱波、高温、ハリケーン、氷、低温、降雨、rain_flood、雪、雪氷、雷雨、竜巻、熱帯サイクロン、津波、風'  - `type`: NGSI Entityタイプ。Alertでなければならない。  - `validFrom`: ISO8601形式で表したこの予報の有効期間の開始日  - `validTo`: ISO8601形式でのこの予報の有効期間の終了日    
+必要なプロパティ  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`    
-このフォルダには、NGSI v2で気象警報データを提供するためのすべてのソフトウェア・アーティファクトが含まれています。このデータのソースは、グローバルな[European Weather Alarm Service](http://meteoalarm.eu)です。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+このフォルダには、NGSI v2 で気象警報データを提供するためのすべてのソフトウェア成果物が含まれています。このデータのソースは、グローバルな [European Weather Alarm Service](http://meteoalarm.eu)です。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WeatherAlert:    
@@ -154,6 +156,7 @@ WeatherAlert:
         - tropicalCyclone    
         - tsunami    
         - wind    
+      type: string    
       x-ngsi:    
         type: Property    
     type:    
@@ -190,12 +193,12 @@ WeatherAlert:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherAlert/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.1    
+  x-version: 0.1.2    
 ```  
 </details>    
 ## ペイロードの例  
-#### WeatherAlert NGSI-v2 キー・バリューの例  
-ここではWeatherAlertをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### WeatherAlert NGSI-v2 key-value の例。  
+ここでは、WeatherAlertをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "severity": "medium",  
@@ -214,7 +217,7 @@ WeatherAlert:
 }  
 ```  
 #### WeatherAlert NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のWeatherAlertの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化された JSON-LD 形式の WeatherAlert の例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
@@ -256,79 +259,79 @@ WeatherAlert:
   }  
 }  
 ```  
-#### WeatherAlert NGSI-LD のキーバリューの例。  
-ここでは、WeatherAlertをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### WeatherAlert NGSI-LD キー値の例  
+ここでは、WeatherAlertをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "severity": "medium",  
-  "category": "weather",  
-  "subCategory": "snow_ice",  
-  "alertSource": "http://www.meteoalarm.eu",  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressRegion": "Huesca"  
-  },  
-  "dateIssued": "2016-03-14T13:54:01.00Z",  
-  "type": "Alert",  
-  "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-  "validTo": "2016-03-14T23:59:00.00Z",  
-  "validFrom": "2016-03-14T13:00:00.00Z",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
+    "type": "Alert",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressRegion": "Huesca"  
+    },  
+    "alertSource": "http://www.meteoalarm.eu",  
+    "category": "weather",  
+    "dateIssued": "2016-03-14T13:54:01.00Z",  
+    "severity": "medium",  
+    "subCategory": "snow_ice",  
+    "validFrom": "2016-03-14T13:00:00.00Z",  
+    "validTo": "2016-03-14T23:59:00.00Z",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### WeatherAlert NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のWeatherAlertの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### WeatherAlert NGSI-LD 正規化例  
+以下は、正規化された JSON-LD 形式の WeatherAlert の例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-  "type": "Alert",  
-  "severity": {  
-    "type": "Property",  
-    "value": "medium"  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": "weather"  
-  },  
-  "subCategory": {  
-    "type": "Property",  
-    "value": "snow/ice"  
-  },  
-  "alertSource": {  
-    "type": "Property",  
-    "value": "http://www.meteoalarm.eu"  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "ES",  
-      "addressRegion": "Huesca"  
-    }  
-  },  
-  "dateIssued": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-03-14T13:54:01.00Z"  
-    }  
-  },  
-  "validTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-03-14T23:59:00.00Z"  
-    }  
-  },  
-  "validFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-03-14T13:00:00.00Z"  
-    }  
-  },  
-  "@context": "https://smartdatamodels.org/context.jsonld"  
+    "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
+    "type": "Alert",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "ES",  
+            "addressRegion": "Huesca"  
+        }  
+    },  
+    "alertSource": {  
+        "type": "Property",  
+        "value": "http://www.meteoalarm.eu"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": "weather"  
+    },  
+    "dateIssued": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-03-14T13:54:01.00Z"  
+        }  
+    },  
+    "severity": {  
+        "type": "Property",  
+        "value": "medium"  
+    },  
+    "subCategory": {  
+        "type": "Property",  
+        "value": "snow/ice"  
+    },  
+    "validFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-03-14T13:00:00.00Z"  
+        }  
+    },  
+    "validTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-03-14T23:59:00.00Z"  
+        }  
+    },  
+    "@context": "https://smartdatamodels.org/context.jsonld"  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
