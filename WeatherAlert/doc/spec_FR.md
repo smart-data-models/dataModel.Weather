@@ -4,11 +4,11 @@
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherAlert/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Une alerte météo générée par un utilisateur ou un appareil dans un lieu donné**.  
-version : 0.1.2  
+version : 0.2.0  
 
 ## Liste des propriétés  
 
-- `alertSource`: Source de l'alerte  - `alternateName`: Un nom alternatif pour cet élément  - `category`: Catégorie de l'entité  - `data`: Charge utile contenant les données récupérées.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateIssued`: La date et l'heure d'émission de l'article au format ISO8601 UTC.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `severity`: Gravité de l'alarme  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `subCategory`: Catégories de temps. Enum:' avalanches, coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'.  - `type`: Type d'entité NGSI. Il doit s'agir d'une alerte.  - `validFrom`: Le début de la période de validité de cette prévision au format ISO8601.  - `validTo`: La fin de la période de validité de cette prévision au format ISO8601.    
+- `alertSource`: Source de l'alerte  - `alternateName`: Un nom alternatif pour cet élément  - `category`: Catégorie de l'entité  - `data`: Charge utile contenant les données récupérées.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateIssued`: La date et l'heure d'émission de l'article au format ISO8601 UTC.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `severity`: Gravité de l'alarme  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `subCategory`: Catégories de temps. Enum:' avalanches, coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'.  - `type`: Type d'entité NGSI. Il doit s'agir de WeatherAlert  - `validFrom`: Le début de la période de validité de cette prévision au format ISO8601.  - `validTo`: La fin de la période de validité de cette prévision au format ISO8601.    
 Propriétés requises  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`    
 Ce dossier contient tous les artefacts logiciels permettant d'offrir des données d'alerte météo dans NGSI v2. La source de ces données est le [European Weather Alarm Service] (http://meteoalarm.eu).  
@@ -160,9 +160,9 @@ WeatherAlert:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be Alert.'    
+      description: 'NGSI entity type. It has to be WeatherAlert'    
       enum:    
-        - Alert    
+        - WeatherAlert    
       type: string    
       x-ngsi:    
         type: Property    
@@ -193,7 +193,7 @@ WeatherAlert:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherAlert/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.2    
+  x-version: 0.2.0    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -210,7 +210,7 @@ WeatherAlert:
     "addressRegion": "Huesca"  
   },  
   "dateIssued": "2016-03-14T13:54:01.00Z",  
-  "type": "Alert",  
+  "type": "WeatherAlert",  
   "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
   "validTo": "2016-03-14T23:59:00.00Z",  
   "validFrom": "2016-03-14T13:00:00.00Z"  
@@ -221,7 +221,7 @@ WeatherAlert:
 ```json  
 {  
   "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-  "type": "Alert",  
+  "type": "WeatherAlert",  
   "severity": {  
     "type": "Text",  
     "value": "medium"  
@@ -259,12 +259,12 @@ WeatherAlert:
   }  
 }  
 ```  
-#### Valeurs clés NGSI-LD WeatherAlert Exemple  
-Voici un exemple d'une alerte météo au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### Valeurs-clés NGSI-LD de WeatherAlert Exemple  
+Voici un exemple d'une alerte météo au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
     "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-    "type": "Alert",  
+    "type": "WeatherAlert",  
     "address": {  
         "addressCountry": "ES",  
         "addressRegion": "Huesca"  
@@ -286,7 +286,7 @@ WeatherAlert:
 ```json  
 {  
     "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-    "type": "Alert",  
+    "type": "WeatherAlert",  
     "address": {  
         "type": "Property",  
         "value": {  
