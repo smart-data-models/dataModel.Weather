@@ -1,8 +1,10 @@
-Entidad: WeatherAlert  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entidad: WeatherAlert  
 =====================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherAlert/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Una alerta meteorológica generada por un usuario o dispositivo en un lugar determinado**  
+versión: 0.1.2  
 
 ## Lista de propiedades  
 
@@ -154,6 +156,7 @@ WeatherAlert:
         - tropicalCyclone    
         - tsunami    
         - wind    
+      type: string    
       x-ngsi:    
         type: Property    
     type:    
@@ -190,7 +193,7 @@ WeatherAlert:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherAlert/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.1    
+  x-version: 0.1.2    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -260,75 +263,75 @@ WeatherAlert:
 Aquí hay un ejemplo de un WeatherAlert en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "severity": "medium",  
-  "category": "weather",  
-  "subCategory": "snow_ice",  
-  "alertSource": "http://www.meteoalarm.eu",  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressRegion": "Huesca"  
-  },  
-  "dateIssued": "2016-03-14T13:54:01.00Z",  
-  "type": "Alert",  
-  "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-  "validTo": "2016-03-14T23:59:00.00Z",  
-  "validFrom": "2016-03-14T13:00:00.00Z",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
+    "type": "Alert",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressRegion": "Huesca"  
+    },  
+    "alertSource": "http://www.meteoalarm.eu",  
+    "category": "weather",  
+    "dateIssued": "2016-03-14T13:54:01.00Z",  
+    "severity": "medium",  
+    "subCategory": "snow_ice",  
+    "validFrom": "2016-03-14T13:00:00.00Z",  
+    "validTo": "2016-03-14T23:59:00.00Z",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### WeatherAlert NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de una Alerta Meteorológica en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-  "type": "Alert",  
-  "severity": {  
-    "type": "Property",  
-    "value": "medium"  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": "weather"  
-  },  
-  "subCategory": {  
-    "type": "Property",  
-    "value": "snow/ice"  
-  },  
-  "alertSource": {  
-    "type": "Property",  
-    "value": "http://www.meteoalarm.eu"  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "ES",  
-      "addressRegion": "Huesca"  
-    }  
-  },  
-  "dateIssued": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-03-14T13:54:01.00Z"  
-    }  
-  },  
-  "validTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-03-14T23:59:00.00Z"  
-    }  
-  },  
-  "validFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-03-14T13:00:00.00Z"  
-    }  
-  },  
-  "@context": "https://smartdatamodels.org/context.jsonld"  
+    "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
+    "type": "Alert",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "ES",  
+            "addressRegion": "Huesca"  
+        }  
+    },  
+    "alertSource": {  
+        "type": "Property",  
+        "value": "http://www.meteoalarm.eu"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": "weather"  
+    },  
+    "dateIssued": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-03-14T13:54:01.00Z"  
+        }  
+    },  
+    "severity": {  
+        "type": "Property",  
+        "value": "medium"  
+    },  
+    "subCategory": {  
+        "type": "Property",  
+        "value": "snow/ice"  
+    },  
+    "validFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-03-14T13:00:00.00Z"  
+        }  
+    },  
+    "validTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-03-14T23:59:00.00Z"  
+        }  
+    },  
+    "@context": "https://smartdatamodels.org/context.jsonld"  
 }  
 ```  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
