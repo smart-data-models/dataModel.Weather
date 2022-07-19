@@ -4,11 +4,11 @@
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherAlert/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Eine Wetterwarnung, die von einem Nutzer oder Gerät an einem bestimmten Ort erzeugt wird**  
-Version: 0.1.2  
+Version: 0.2.0  
 
 ## Liste der Eigenschaften  
 
-- `alertSource`: Quelle der Ausschreibung  - `alternateName`: Ein alternativer Name für diesen Artikel  - `category`: Kategorie der Einrichtung  - `data`: Nutzdaten, die die abgerufenen Daten enthalten.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateIssued`: Das Datum und die Uhrzeit, zu der der Artikel ausgestellt wurde, im Format ISO8601 UTC.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `severity`: Schwere des Alarms  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `subCategory`: Wetter-Kategorien. Enum:' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'  - `type`: NGSI-Entitätstyp. Es muss Alert sein.  - `validFrom`: Beginn des Gültigkeitszeitraums dieser Prognose im ISO8601-Format  - `validTo`: Das Ende des Gültigkeitszeitraums dieser Prognose im ISO8601-Format    
+- `alertSource`: Quelle der Ausschreibung  - `alternateName`: Ein alternativer Name für diesen Artikel  - `category`: Kategorie der Einrichtung  - `data`: Nutzdaten, die die abgerufenen Daten enthalten.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateIssued`: Das Datum und die Uhrzeit, zu der der Artikel ausgestellt wurde, im Format ISO8601 UTC.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `severity`: Schwere des Alarms  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `subCategory`: Wetter-Kategorien. Enum:' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'  - `type`: NGSI-Entitätstyp. Es muss WeatherAlert sein  - `validFrom`: Beginn des Gültigkeitszeitraums dieser Prognose im ISO8601-Format  - `validTo`: Das Ende des Gültigkeitszeitraums dieser Prognose im ISO8601-Format    
 Erforderliche Eigenschaften  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`    
 Dieser Ordner enthält alle Software-Artefakte, um Wetterwarndaten in NGSI v2 anzubieten. Die Quelle dieser Daten ist der globale [European Weather Alarm Service](http://meteoalarm.eu).  
@@ -160,9 +160,9 @@ WeatherAlert:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be Alert.'    
+      description: 'NGSI entity type. It has to be WeatherAlert'    
       enum:    
-        - Alert    
+        - WeatherAlert    
       type: string    
       x-ngsi:    
         type: Property    
@@ -193,12 +193,12 @@ WeatherAlert:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherAlert/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json    
   x-model-tags: ""    
-  x-version: 0.1.2    
+  x-version: 0.2.0    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
 #### WeatherAlert NGSI-v2 Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für einen WeatherAlert im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen WeatherAlert im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "severity": "medium",  
@@ -210,7 +210,7 @@ WeatherAlert:
     "addressRegion": "Huesca"  
   },  
   "dateIssued": "2016-03-14T13:54:01.00Z",  
-  "type": "Alert",  
+  "type": "WeatherAlert",  
   "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
   "validTo": "2016-03-14T23:59:00.00Z",  
   "validFrom": "2016-03-14T13:00:00.00Z"  
@@ -221,7 +221,7 @@ WeatherAlert:
 ```json  
 {  
   "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-  "type": "Alert",  
+  "type": "WeatherAlert",  
   "severity": {  
     "type": "Text",  
     "value": "medium"  
@@ -264,7 +264,7 @@ WeatherAlert:
 ```json  
 {  
     "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-    "type": "Alert",  
+    "type": "WeatherAlert",  
     "address": {  
         "addressCountry": "ES",  
         "addressRegion": "Huesca"  
@@ -286,7 +286,7 @@ WeatherAlert:
 ```json  
 {  
     "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-    "type": "Alert",  
+    "type": "WeatherAlert",  
     "address": {  
         "type": "Property",  
         "value": {  
