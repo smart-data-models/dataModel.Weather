@@ -47,7 +47,7 @@ WeatherObserved:
     airTemperatureTSA:
       description: 'Object defining the temporal processing of a basic property during a period. It provides Maximum, minimum, instant value and average'
       properties:
-        avgOverTime:
+        averageValue:
           type: number
         instValue:
           type: number
@@ -320,12 +320,13 @@ WeatherObserved:
       x-ngsi:
         type: Property
     precipitation:
-      description: 'Amount of water rain registered. Unis:''Liters per square meter''. '
+      description: 'Amount of water rain registered. '
       minimum: 0
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
+        units: 'Liters per square meter'
     precipitationForecast:
       description: 'Forecasted rainfall over a certain duration in future.'
       type: number
