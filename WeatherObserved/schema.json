@@ -37,7 +37,7 @@
         "precipitation": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Unis:'Liters per square meter'. "
+          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
         },
         "solarRadiation": {
           "type": "number",
