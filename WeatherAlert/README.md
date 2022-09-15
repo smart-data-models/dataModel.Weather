@@ -1,5 +1,5 @@
 # WeatherAlert
-Version: 0.1.2
+Version: 0.3.0
 
 ## Description 
 
