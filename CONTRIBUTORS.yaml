@@ -1,51 +1,51 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
--
- name: Alberto
- surname: Abella
- mail: alberto.abella@fiware.org
- organization: FIWARE Foundation
- project: 
- comments: 
--
- name: Dmitrii
- surname: Demin
- mail: mail@demin.co
- organization: None
- project: 
- comments:
--
- name: Jose M.
- surname: Cantera
- mail: jmcanterafonseca4github@gmail.com
- organization: CanteraFonseca.EU
- project: 
- comments: 
--
- name: Marc
- surname: Fajula
- mail: marc.fajula.soldevila@everis.com
- organization: Everis
- project:
- comments:
--
- name: Jason
- surname: Fox
- mail:
- organization: FIWARE Foundation
- project: 
- comments: 
--
- name: Joud
- surname: Sayed Issa
- mail: joudsayedissa@gmail.com
- organization: 
- project: 
- comments: 
--
- name:
- surname:
- mail:
- organization: IUDX
- project:
- comments:
+- name: Alberto
+  surname: Abella
+  mail: alberto.abella@fiware.org
+  organization: FIWARE Foundation
+  project: 
+  comments: 
+  year: 2022
+- name: Dmitrii
+  surname: Demin
+  mail: mail@demin.co
+  organization: 
+  project: 
+  comments: 
+  year: 2022
+- name: Jose M.
+  surname: Cantera
+  mail: jmcanterafonseca4github@gmail.com
+  organization: CanteraFonseca.EU
+  project: 
+  comments: 
+  year: 2022
+- name: Marc
+  surname: Fajula
+  mail: marc.fajula.soldevila@everis.com
+  organization: Everis
+  project: 
+  comments: 
+  year: 2022
+- name: Jason
+  surname: Fox
+  mail: 
+  organization: FIWARE Foundation
+  project: 
+  comments: 
+  year: 2022
+- name: Joud
+  surname: Sayed Issa
+  mail: joudsayedissa@gmail.com
+  organization: 
+  project: 
+  comments: 
+  year: 2022
+- name: 
+  surname: 
+  mail: 
+  organization: IUDX
+  project: 
+  comments: 
+  year: 2022
