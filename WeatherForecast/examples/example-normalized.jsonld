@@ -94,6 +94,7 @@
         "value": 0
     },
     "@context": [
-        "https://smartdatamdels.org/context.jsonld"
+        "https://smartdatamdels.org/context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"
     ]
 }
