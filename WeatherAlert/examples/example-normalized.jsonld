@@ -45,5 +45,5 @@
       "@value": "2016-03-14T23:59:00.00Z"
     }
   },
-  "@context": "https://smartdatamodels.org/context.jsonld"
+  "@context": ["https://smartdatamodels.org/context.jsonld"]
 }
