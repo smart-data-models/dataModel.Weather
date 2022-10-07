@@ -1,36 +1,37 @@
 {
-  "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",
-  "type": "WeatherObserved",
-  "address": {
-    "addressLocality": "Valladolid",
-    "addressCountry": "ES"
-  },
-  "atmosphericPressure": 938.9,
-  "dataProvider": "TEF",
-  "dateObserved": "2016-11-30T07:00:00.00Z",
-  "illuminance": 1000,
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      -4.754444444,
-      41.640833333
+    "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",
+    "type": "WeatherObserved",
+    "address": {
+        "addressLocality": "Valladolid",
+        "addressCountry": "ES"
+    },
+    "atmosphericPressure": 938.9,
+    "dataProvider": "TEF",
+    "dateObserved": "2016-11-30T07:00:00.00Z",
+    "illuminance": 1000,
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            -4.754444444,
+            41.640833333
+        ]
+    },
+    "precipitation": 0,
+    "pressureTendency": 0.5,
+    "refDevice": "urn:ngsi-ld:Device:device-0A3478",
+    "relativeHumidity": 1,
+    "snowHeight": 20,
+    "source": "http://www.aemet.es",
+    "stationCode": "2422",
+    "stationName": "Valladolid",
+    "streamGauge": 50,
+    "temperature": 3.3,
+    "uvIndexMax": 1.0,
+    "windDirection": 135,
+    "windSpeed": 2,
+    "@context": [
+        "iudx:EnvWeather",
+        "https://smart-data-models.github.io/dataModel.Weather/context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"
     ]
-  },
-  "precipitation": 0,
-  "pressureTendency": 0.5,
-  "refDevice": "urn:ngsi-ld:Device:device-0A3478",
-  "relativeHumidity": 1,
-  "snowHeight": 20,
-  "source": "http://www.aemet.es",
-  "stationCode": "2422",
-  "stationName": "Valladolid",
-  "streamGauge": 50,
-  "temperature": 3.3,
-  "uvIndexMax": 1.0,
-  "windDirection": 135,
-  "windSpeed": 2,
-  "@context": [
-    "iudx:EnvWeather",
-    "https://smart-data-models.github.io/dataModel.Weather/context.jsonld"
-  ]
 }
