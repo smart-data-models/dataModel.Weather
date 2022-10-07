@@ -102,5 +102,7 @@
         "type": "Property",
         "value": 1.5
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"
+    ]
 }
