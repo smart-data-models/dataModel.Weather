@@ -1,15 +1,31 @@
-Entität: SeaConditions  
-======================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: SeaConditions  
+======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Weather/blob/master/SeaConditions/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **Diese Einheit enthält eine harmonisierte geografische Beschreibung der Meeresbedingungen**  
+Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved`: Das Datum und die Uhrzeit dieser Beobachtung im Format ISO8601 UTC.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `pH`: Azidität oder Basizität einer wässrigen Lösung.  - `salinity`: Menge der in Wasser gelösten Salze.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `surfaceTemperature`: Temperatur der Meeresoberfläche.  - `type`: NGSI-LD-Entitätstyp. Es muss SeaConditions sein  - `waveHeight`: Höhe der Wellen.  - `waveLevel`: Er zeigt die Höhe der Wellen an und misst auch den Seegang des Meeres.  - `wavePeriod`: Gibt die Zeit zwischen den Scheitelpunkten einer Welle an.    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateObserved[string]`: Das Datum und die Uhrzeit dieser Beobachtung im Format ISO8601 UTC.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `pH[number]`: Azidität oder Basizität einer wässrigen Lösung.  . Model: [https://schema.org/Number](https://schema.org/Number)- `salinity[number]`: Menge der in Wasser gelösten Salze.  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `surfaceTemperature[number]`: Temperatur der Meeresoberfläche.  . Model: [https://schema.org/Number](https://schema.org/Number)- `type[string]`: NGSI-LD-Entitätstyp. Es muss SeaConditions sein  - `waveHeight[number]`: Höhe der Wellen.  . Model: [https://schema.org/Number](https://schema.org/Number)- `waveLevel[number]`: Er zeigt die Höhe der Wellen an und misst auch den Seegang.  . Model: [https://schema.org/Number](https://schema.org/Number)- `wavePeriod[number]`: Gibt die Zeit zwischen den Scheitelpunkten einer Welle an.  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SeaConditions:    
@@ -341,38 +357,45 @@ SeaConditions:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### SeaConditions NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
-{  
-  "id": "SeaCondition-PlayaLevante-Benidorm-123456",  
-  "type": "SeaConditions",  
-  "dateObserved": "2021-02-20T06:45:00Z",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -8.768460000000001,  
-      42.60214472222222  
-    ]  
-  },  
-  "name": "Mar en la Playa Levante",  
-  "description": "Información del estado del mar en la playa Levante",  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Benidorm"  
-  },  
-  "dataProvider": "Water-sensor-12345",  
-  "waveLevel": 1,  
-  "surfaceTemperature": 14.7,  
-  "waveHeight": 0.05,  
-  "wavePeriod": 1.5,  
-  "pH": 8.5,  
-  "salinity": 35  
-}  
+{  
+  "id": "SeaCondition-PlayaLevante-Benidorm-123456",  
+  "type": "SeaConditions",  
+  "dateObserved": "2021-02-20T06:45:00Z",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -8.768460000000001,  
+      42.60214472222222  
+    ]  
+  },  
+  "name": "Mar en la Playa Levante",  
+  "description": "Información del estado del mar en la playa Levante",  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Benidorm"  
+  },  
+  "dataProvider": "Water-sensor-12345",  
+  "waveLevel": 1,  
+  "surfaceTemperature": 14.7,  
+  "waveHeight": 0.05,  
+  "wavePeriod": 1.5,  
+  "pH": 8.5,  
+  "salinity": 35  
+}  
 ```  
+</details>  
 #### SeaConditions NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SeaCondition-PlayaLevante.Benidorm.123456",  
@@ -477,148 +500,162 @@ SeaConditions:
   ]  
 }  
 ```  
+</details>  
 #### SeaConditions NGSI-LD Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smaertdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:SeaCondition:SeaCondition-PlayaLevante-Benidorm-123456",  
-  "type": "SeaConditions",  
-  "dateObserved": "2021-02-20T06:45:00Z",  
-  "location": {  
-    "coordinates": [  
-      -8.768460000000001,  
-      42.60214472222222  
-    ],  
-    "type": "Point"  
-  },  
-  "name": "Mar en la Playa Levante",  
-  "description": "InformaciÃ³n del estado del mar en la playa Levante",  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Benidorm"  
-  },  
-  "dataProvider": "Water-sensor-12345",  
-  "waveLevel": 1,  
-  "surfaceTemperature": 14.7,  
-  "waveHeight": 0.05,  
-  "wavePeriod": 1.5,  
-  "pH": 8.5,  
-  "salinity": 35  
+    "id": "urn:ngsi-ld:SeaCondition:SeaCondition-PlayaLevante-Benidorm-123456",  
+    "type": "SeaConditions",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Benidorm"  
+    },  
+    "dataProvider": "Water-sensor-12345",  
+    "dateObserved": "2021-02-20T06:45:00Z",  
+    "description": "Informaci\u00f3n del estado del mar en la playa Levante",  
+    "location": {  
+        "coordinates": [  
+            -8.768460000000001,  
+            42.60214472222222  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Mar en la Playa Levante",  
+    "pH": 8.5,  
+    "salinity": 35,  
+    "surfaceTemperature": 14.7,  
+    "waveHeight": 0.05,  
+    "waveLevel": 1,  
+    "wavePeriod": 1.5,  
+    "@context": [  
+        "https://smaertdatamodels.org/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### SeaConditions NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine SeaConditions im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SeaCondition:SeaCondition-PlayaLevante-Benidorm-123456",  
-  "type": "SeaConditions",  
-  "dateCreated": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-02-20T06:45:00Z"  
-    }  
-  },  
-  "dateModified": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-02-20T06:45:00Z"  
-    }  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Mar en la Playa Levante"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "Playa Levante"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "InformaciÃ³n del estado del mar en la playa Levante"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "Water-sensor-12345"  
-  },  
-  "owner": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:SeaConditions:items:JVPZ:12516420",  
-      "urn:ngsi-ld:SeaConditions:items:XVAE:29040891"  
+    "id": "urn:ngsi-ld:SeaCondition:SeaCondition-PlayaLevante-Benidorm-123456",  
+    "type": "SeaConditions",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "streetAddress": "",  
+            "addressLocality": "Benidorm",  
+            "addressRegion": "Valencia",  
+            "addressCountry": "ES",  
+            "postalCode": "",  
+            "postOfficeBoxNumber": ""  
+        }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "Playa Levante"  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "Water-sensor-12345"  
+    },  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-20T06:45:00Z"  
+        }  
+    },  
+    "dateModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-02-20T06:45:00Z"  
+        }  
+    },  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": "2021-02-20T06:45:00Z"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Informaci\u00f3n del estado del mar en la playa Levante"  
+    },  
+    "location": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -8.768460000000001,  
+                42.60214472222222  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Mar en la Playa Levante"  
+    },  
+    "owner": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:SeaConditions:items:JVPZ:12516420",  
+            "urn:ngsi-ld:SeaConditions:items:XVAE:29040891"  
+        ]  
+    },  
+    "pH": {  
+        "type": "Property",  
+        "value": 8.5  
+    },  
+    "salinity": {  
+        "type": "Property",  
+        "value": 35  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:SeaConditions:items:KFKA:73977455",  
+            "urn:ngsi-ld:SeaConditions:items:GPZI:53207694"  
+        ]  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "surfaceTemperature": {  
+        "type": "Property",  
+        "value": 14.7  
+    },  
+    "waveHeight": {  
+        "type": "Property",  
+        "value": 0.05  
+    },  
+    "waveLevel": {  
+        "type": "Property",  
+        "value": 1  
+    },  
+    "wavePeriod": {  
+        "type": "Property",  
+        "value": 1.5  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
     ]  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:SeaConditions:items:KFKA:73977455",  
-      "urn:ngsi-ld:SeaConditions:items:GPZI:53207694"  
-    ]  
-  },  
-  "location": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -8.768460000000001, 42.60214472222222  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "streetAddress": "",  
-      "addressLocality": "Benidorm",  
-      "addressRegion": "Valencia",  
-      "addressCountry": "ES",  
-      "postalCode": "",  
-      "postOfficeBoxNumber": ""  
-    }  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "waveLevel": {  
-    "type": "Property",  
-    "value": 1  
-  },  
-  "surfaceTemperature": {  
-    "type": "Property",  
-    "value": 14.7  
-  },  
-  "waveHeight": {  
-    "type": "Property",  
-    "value": 0.05  
-  },  
-  "wavePeriod": {  
-    "type": "Property",  
-    "value": 1.5  
-  },  
-  "pH": {  
-    "type": "Property",  
-    "value": 8.5  
-  },  
-  "salinity": {  
-    "type": "Property",  
-    "value": 35  
-  },  
-  "dateObserved": {  
-    "type": "Property",  
-    "value": "2021-02-20T06:45:00Z"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
