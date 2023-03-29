@@ -39,10 +39,10 @@
           "minimum": 0,
           "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
         },
-        "solarIrradiation": {
+        "solarRadiation": {
           "type": "number",
           "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The solar or global radiation observed as sum of diffuse and direct irradiance reaching the same surface. Units:'w/m2'"
+          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
         },
         "directIrradiation": {
           "type": "number",
