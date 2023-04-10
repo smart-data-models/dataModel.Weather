@@ -33,25 +33,25 @@ WeatherObserved:
         model: https://schema.org/address
         type: Property
     airQualityIndex:
-      description: Air quality index is a number used to report the quality of the air on any given day.
+      description: 'Property. Model:''https://schema.org/Number''. Air quality index is a number used to report the quality of the air on any given day.'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     airQualityIndexForecast:
-      description: Forecasted overall Air Quality Index (AQI) over a certain duration in future.
+      description: 'Property. Model:''https://schema.org/Number''. Forecasted overall Air Quality Index (AQI) over a certain duration in future.'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     airTemperatureForecast:
-      description: Forecasted value of air temperature over a certain duration in future.
+      description: 'Property. Model:''https://schema.org/Number''. Forecasted value of air temperature over a certain duration in future.'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     airTemperatureTSA:
-      description: 'Object defining the temporal processing of a basic property during a period. It provides Maximum, minimum, instant value and average'
+      description: Property. Air temperature time series aggregation
       properties:
         averageValue:
           type: number
@@ -70,13 +70,13 @@ WeatherObserved:
       x-ngsi:
         type: Property
     aqiMajorPollutant:
-      description: Major pollutant in the Air Quality Index (AQI).
+      description: 'Property. Model:''https://schema.org/Text''. Major pollutant in the Air Quality Index (AQI).'
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
     aqiMajorPollutantForecast:
-      description: Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future.
+      description: 'Property. Model:''https://schema.org/Text''. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future.'
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -124,12 +124,28 @@ WeatherObserved:
       x-ngsi:
         type: Property
     dewPoint:
-      description: The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor
+      description: 'Property. Model:''https://schema.org/Number''. Units:''Celsius degrees''. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
         units: Celsius degrees
+    diffuseIrradiation:
+      description: 'Property. Model:''https://schema.org/Number''. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:''w/m2'''
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: w/m2
+    directIrradiation:
+      description: 'Property. Model:''https://schema.org/Number''. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:''w/m2'''
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: w/m2
     feelLikesTemperature:
       description: Temperature appreciation of the item
       type: number
@@ -154,7 +170,7 @@ WeatherObserved:
       x-ngsi:
         type: Property
     illuminance:
-      description: Observed instantaneous ambient light intensity
+      description: 'Property. Observed instantaneous ambient light intensity. Units:''Lux'''
       type: number
       x-ngsi:
         type: Property
@@ -326,7 +342,7 @@ WeatherObserved:
       x-ngsi:
         type: Property
     precipitation:
-      description: 'Amount of water rain registered. '
+      description: 'Property. Model:''https://schema.org/Number''. Amount of water rain registered. Units:''Liters per square meter''. '
       minimum: 0
       type: number
       x-ngsi:
@@ -334,13 +350,13 @@ WeatherObserved:
         type: Property
         units: Liters per square meter
     precipitationForecast:
-      description: Forecasted rainfall over a certain duration in future.
+      description: 'Property. Model:''https://schema.org/Number''. Forecasted rainfall over a certain duration in future.'
       type: number
       x-ngsi:
         model: https://schema.org/Number
         type: Property
     pressureTendency:
-      description: 'Enum:''falling, raising, steady''. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.'
+      description: 'Property. Enum:''falling, raising, steady''. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.'
       oneOf:
         - enum:
             - falling
@@ -360,7 +376,7 @@ WeatherObserved:
         - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: A reference to the device(s) which captured this observation.
+      description: 'Relationship. Model:''https://schema.org/URL''. A reference to the device(s) which captured this observation.'
       x-ngsi:
         model: https://schema.org/URL
         type: Relationship
@@ -378,7 +394,7 @@ WeatherObserved:
       x-ngsi:
         type: Property
     relativeHumidityForecast:
-      description: Forecasted relative humidity (water vapour in air) over a certain duration in future
+      description: 'Property. Model:''https://schema.org/Number''. Forecasted relative humidity (water vapour in air) over a certain duration in future'
       type: number
       x-ngsi:
         model: https://schema.org/Number
@@ -396,7 +412,7 @@ WeatherObserved:
       x-ngsi:
         type: Property
     snowHeight:
-      description: 'The snow height observed by generic snow depth measurement sensors, expressed in centimeters'
+      description: 'Property. Model:''https://schema.org/Number''. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:''centimeters'''
       minimum: 0
       type: number
       x-ngsi:
@@ -404,7 +420,7 @@ WeatherObserved:
         type: Property
         units: centimeters
     solarRadiation:
-      description: The solar radiation observed measured in Watts per square
+      description: 'Property. Model:''https://schema.org/Number''. The solar radiation observed measured in Watts per square. Units:''w/m2'''
       minimum: 0
       type: number
       x-ngsi:
@@ -417,7 +433,7 @@ WeatherObserved:
       x-ngsi:
         type: Property
     streamGauge:
-      description: 'The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters'
+      description: 'Property. Model:''https://schema.org/Number''. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:''centimeters'''
       minimum: 0
       type: number
       x-ngsi:
@@ -430,14 +446,14 @@ WeatherObserved:
       x-ngsi:
         type: Property
     type:
-      description: NGSI Entity type. It has to be WeatherObserved
+      description: Property. NGSI Entity type. It has to be WeatherObserved
       enum:
         - WeatherObserved
       type: string
       x-ngsi:
         type: Property
     uVIndexMax:
-      description: 'The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored.'
+      description: 'Property. Model:''https://schema.org/Number''. The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored.'
       minimum: 0
       type: number
       x-ngsi:
@@ -491,4 +507,4 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json
   x-model-tags: IUDX
-  x-version: 0.3.1
+  x-version: 0.3.2
