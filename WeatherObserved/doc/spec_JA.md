@@ -8,14 +8,14 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 グローバルな記述：**ある場所と時間における天候の観測。このデータモデルは、携帯電話会社およびGSMAの協力のもと開発されました。  
-バージョン：0.3.1  
+バージョン：0.3.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
 <sup><sub>[*] 属性に型がない場合は、複数の型や異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `airQualityIndex[number]`: 空気質指数とは、その日の空気の質を表す数値です。  . Model: [https://schema.org/Number](https://schema.org/Number)- `airQualityIndexForecast[number]`: 将来の一定期間の総合的な大気質指数（AQI）を予測したもの。  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureForecast[number]`: 将来の一定期間の気温を予測した値。  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureTSA[object]`: ある期間中の基本プロパティの時間的処理を定義するオブジェクト。最大値、最小値、瞬時値、平均値を提供する。  - `alternateName[string]`: このアイテムの別称  - `aqiMajorPollutant[string]`: 大気質指標（AQI）の主要汚染物質。  . Model: [https://schema.org/Text](https://schema.org/Text)- `aqiMajorPollutantForecast[string]`: 将来の一定期間の大気質指標（AQI）における主要大気汚染物質の予測値。  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 大気圧はヘクトパスカルで測定されます。  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved[string]`: ユーザが定義した観測対象の日付。  - `description[string]`: このアイテムの説明  - `dewPoint[number]`: 露点は数値で表される。空気が水蒸気で飽和するまでに冷やさなければならない観測温度。  . Model: [https://schema.org/Number](https://schema.org/Number)- `feelLikesTemperature[number]`: アイテムの温度感  - `gustSpeed[number]`: 観測された平均風速を超える高速の風が数秒間だけ突発的に発生すること。  - `id[*]`: エンティティの一意な識別子  - `illuminance[number]`: 観測された瞬間の環境光強度  - `location[*]`: アイテムへの Geojson 参照。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon のいずれかである。  - `name[string]`: この項目の名称です。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `precipitation[number]`: 登録された水の雨の量。  . Model: [https://schema.org/Number](https://schema.org/Number)- `precipitationForecast[number]`: 将来の一定期間の降雨量を予測したもの。  . Model: [https://schema.org/Number](https://schema.org/Number)- `pressureTendency[*]`: Enum:'falling, raising, steady'.圧力が上昇しているのか、下降しているのか。定量的に表現することも、定性的に表現することも可能です。  - `refDevice[*]`: この観測を行った機器への参照。  . Model: [https://schema.org/URL](https://schema.org/URL)- `refPointOfInterest[string]`: アイテムに関連するポイント  . Model: [http://schema.org/URL](http://schema.org/URL)- `relativeHumidity[number]`: 空気中の湿度。観測された瞬時相対湿度（空気中の水蒸気量）  - `relativeHumidityForecast[number]`: 将来の一定期間の相対湿度（空気中の水蒸気）を予測したもの。  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `snowHeight[number]`: 汎用の積雪深測定センサーで観測した雪の高さをセンチメートルで表したもの。  . Model: [https://schema.org/Number](https://schema.org/Number)- `solarRadiation[number]`: 観測された日射量は、1平方メートルあたりのワット数で測定されます。  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `streamGauge[number]`: 水位測定器（[Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge)）で観測された水位面の高さをセンチメートルで表したもの。  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: アイテムの温度  - `type[string]`: NGSI Entityタイプ。それはWeatherObservedでなければならない  - `uVIndexMax[number]`: 世界保健機関（WHO）のUVインデックス指標に基づく、期間中の最大UVインデックスです。[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) 1～11の値がインデックスの有効範囲です。値0は、信号が検出されないので値が保存されないことを説明するためのものです。  . Model: [https://schema.org/Number](https://schema.org/Number)- `visibility[*]`: 視認性のカテゴリー  . Model: [http://schema.org/Text](http://schema.org/Text)- `weatherType[string]`: 天気に関するテキスト説明  . Model: [http://schema.org/Text.](http://schema.org/Text.)- `windDirection[number]`: 風のベットの方向  . Model: [http://schema.org/Number](http://schema.org/Number)- `windSpeed[number]`: 風の強さ  . Model: [http//schema.org/Number](http//schema.org/Number)<!-- /30-PropertiesList -->  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `airQualityIndex[number]`: プロパティです。モデル:'https://schema.org/Number'.空気質指数は、任意の日の空気の質を報告するために使用される数値である。  . Model: [https://schema.org/Number](https://schema.org/Number)- `airQualityIndexForecast[number]`: プロパティです。モデル:'https://schema.org/Number'.将来の一定期間の総合大気質指数（AQI）の予測値。  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureForecast[number]`: プロパティです。モデル:'https://schema.org/Number'.将来の一定期間の気温を予測した値。  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureTSA[object]`: プロパティ気温の時系列集計  - `alternateName[string]`: このアイテムの別称  - `aqiMajorPollutant[string]`: プロパティです。モデル：'https://schema.org/Text'.大気質指標（AQI）における主要汚染物質。  . Model: [https://schema.org/Text](https://schema.org/Text)- `aqiMajorPollutantForecast[string]`: プロパティです。モデル:'https://schema.org/Text'.将来の一定期間の大気質指標（AQI）における主要大気汚染物質の予測値。  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: サービスまたは提供されるアイテムが提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 大気圧はヘクトパスカルで測定されます。  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateObserved[string]`: ユーザが定義した観測対象の日付。  - `description[string]`: このアイテムの説明  - `dewPoint[number]`: プロパティです。モデル：'https://schema.org/Number'.Units:'摂氏度'。数値としてエンコードされた露点。空気が水蒸気で飽和状態になるために冷却されなければならない観測された温度  . Model: [https://schema.org/Number](https://schema.org/Number)- `diffuseIrradiation[number]`: プロパティです。モデル:'https://schema.org/Number'.拡散放射照度とは、太陽放射照度のうち、大気によって散乱される部分である。単位：'w/m2'  . Model: [https://schema.org/Number](https://schema.org/Number)- `directIrradiation[number]`: プロパティです。モデル:'https://schema.org/Number'.直接放射照度とは、太陽放射照度のうち、直接表面に到達する部分である。単位：'w/m2'  . Model: [https://schema.org/Number](https://schema.org/Number)- `feelLikesTemperature[number]`: アイテムの温度感  - `gustSpeed[number]`: 観測された平均風速を超える高速の風が数秒間だけ突発的に発生すること。  - `id[*]`: エンティティの一意な識別子  - `illuminance[number]`: 特性です。観測された瞬間の環境光強度。単位：'Lux'  - `location[*]`: アイテムへの Geojson 参照。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon のいずれかである。  - `name[string]`: この項目の名称です。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `precipitation[number]`: プロパティです。モデル:'https://schema.org/Number'.登録された水雨の量。単位:'1平方メートルあたりリットル'。  . Model: [https://schema.org/Number](https://schema.org/Number)- `precipitationForecast[number]`: プロパティです。モデル:'https://schema.org/Number'.将来の一定期間の降雨量を予測したもの。  . Model: [https://schema.org/Number](https://schema.org/Number)- `pressureTendency[*]`: プロパティです。Enum:'falling, raising, steady'.圧力が上昇しているのか、下降しているのか。定量的に表現することも、定性的に表現することもできる。  - `refDevice[*]`: 関係です。モデル:'https://schema.org/URL'。この観測を捕捉したデバイスへの参照。  . Model: [https://schema.org/URL](https://schema.org/URL)- `refPointOfInterest[string]`: アイテムに関連するポイント  . Model: [http://schema.org/URL](http://schema.org/URL)- `relativeHumidity[number]`: 空気中の湿度。観測された瞬時相対湿度（空気中の水蒸気量）  - `relativeHumidityForecast[number]`: プロパティです。モデル:'https://schema.org/Number'.将来の一定期間の相対湿度（空気中の水蒸気）の予測値  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `snowHeight[number]`: プロパティです。モデル:'https://schema.org/Number'.汎用の積雪深測定センサーで観測された雪の高さをセンチメートルで表したものです。単位:'センチメートル'  . Model: [https://schema.org/Number](https://schema.org/Number)- `solarRadiation[number]`: プロパティです。モデル:'https://schema.org/Number'.1平方あたりのワット数で測定された観測された日射量。単位:'w/m2'  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `streamGauge[number]`: プロパティです。モデル:'https://schema.org/Number'.Hydrometric計測センサー、すなわち[Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge)によって観測された水位面の高さをセンチメートルで表したものです。単位:'センチメートル'  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: アイテムの温度  - `type[string]`: プロパティです。NGSI Entityタイプ。WeatherObservedでなければならない  - `uVIndexMax[number]`: プロパティです。モデル:'https://schema.org/Number'.世界保健機関のUVインデックス指標に基づく、期間中の最大UVインデックスを指定します。[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) 1から11までの値が指数の有効範囲です。値0は、信号が検出されないので値が保存されないことを説明するためのものである。  . Model: [https://schema.org/Number](https://schema.org/Number)- `visibility[*]`: 視認性のカテゴリー  . Model: [http://schema.org/Text](http://schema.org/Text)- `weatherType[string]`: 天気に関するテキスト説明  . Model: [http://schema.org/Text.](http://schema.org/Text.)- `windDirection[number]`: 風のベットの方向  . Model: [http://schema.org/Number](http://schema.org/Number)- `windSpeed[number]`: 風の強さ  . Model: [http//schema.org/Number](http//schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `dateObserved`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
@@ -64,25 +64,25 @@ WeatherObserved:
         model: https://schema.org/address    
         type: Property    
     airQualityIndex:    
-      description: Air quality index is a number used to report the quality of the air on any given day.    
+      description: 'Property. Model:''https://schema.org/Number''. Air quality index is a number used to report the quality of the air on any given day.'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     airQualityIndexForecast:    
-      description: Forecasted overall Air Quality Index (AQI) over a certain duration in future.    
+      description: 'Property. Model:''https://schema.org/Number''. Forecasted overall Air Quality Index (AQI) over a certain duration in future.'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     airTemperatureForecast:    
-      description: Forecasted value of air temperature over a certain duration in future.    
+      description: 'Property. Model:''https://schema.org/Number''. Forecasted value of air temperature over a certain duration in future.'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     airTemperatureTSA:    
-      description: 'Object defining the temporal processing of a basic property during a period. It provides Maximum, minimum, instant value and average'    
+      description: Property. Air temperature time series aggregation    
       properties:    
         averageValue:    
           type: number    
@@ -101,13 +101,13 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     aqiMajorPollutant:    
-      description: Major pollutant in the Air Quality Index (AQI).    
+      description: 'Property. Model:''https://schema.org/Text''. Major pollutant in the Air Quality Index (AQI).'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     aqiMajorPollutantForecast:    
-      description: Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future.    
+      description: 'Property. Model:''https://schema.org/Text''. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future.'    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -155,12 +155,28 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     dewPoint:    
-      description: The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor    
+      description: 'Property. Model:''https://schema.org/Number''. Units:''Celsius degrees''. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
         units: Celsius degrees    
+    diffuseIrradiation:    
+      description: 'Property. Model:''https://schema.org/Number''. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:''w/m2'''    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: w/m2    
+    directIrradiation:    
+      description: 'Property. Model:''https://schema.org/Number''. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:''w/m2'''    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: w/m2    
     feelLikesTemperature:    
       description: Temperature appreciation of the item    
       type: number    
@@ -185,7 +201,7 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     illuminance:    
-      description: Observed instantaneous ambient light intensity    
+      description: 'Property. Observed instantaneous ambient light intensity. Units:''Lux'''    
       type: number    
       x-ngsi:    
         type: Property    
@@ -357,7 +373,7 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     precipitation:    
-      description: 'Amount of water rain registered. '    
+      description: 'Property. Model:''https://schema.org/Number''. Amount of water rain registered. Units:''Liters per square meter''. '    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -365,13 +381,13 @@ WeatherObserved:
         type: Property    
         units: Liters per square meter    
     precipitationForecast:    
-      description: Forecasted rainfall over a certain duration in future.    
+      description: 'Property. Model:''https://schema.org/Number''. Forecasted rainfall over a certain duration in future.'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     pressureTendency:    
-      description: 'Enum:''falling, raising, steady''. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.'    
+      description: 'Property. Enum:''falling, raising, steady''. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.'    
       oneOf:    
         - enum:    
             - falling    
@@ -391,7 +407,7 @@ WeatherObserved:
         - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: A reference to the device(s) which captured this observation.    
+      description: 'Relationship. Model:''https://schema.org/URL''. A reference to the device(s) which captured this observation.'    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
@@ -409,7 +425,7 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     relativeHumidityForecast:    
-      description: Forecasted relative humidity (water vapour in air) over a certain duration in future    
+      description: 'Property. Model:''https://schema.org/Number''. Forecasted relative humidity (water vapour in air) over a certain duration in future'    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -427,7 +443,7 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     snowHeight:    
-      description: 'The snow height observed by generic snow depth measurement sensors, expressed in centimeters'    
+      description: 'Property. Model:''https://schema.org/Number''. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:''centimeters'''    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -435,7 +451,7 @@ WeatherObserved:
         type: Property    
         units: centimeters    
     solarRadiation:    
-      description: The solar radiation observed measured in Watts per square    
+      description: 'Property. Model:''https://schema.org/Number''. The solar radiation observed measured in Watts per square. Units:''w/m2'''    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -448,7 +464,7 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     streamGauge:    
-      description: 'The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters'    
+      description: 'Property. Model:''https://schema.org/Number''. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:''centimeters'''    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -461,14 +477,14 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     type:    
-      description: NGSI Entity type. It has to be WeatherObserved    
+      description: Property. NGSI Entity type. It has to be WeatherObserved    
       enum:    
         - WeatherObserved    
       type: string    
       x-ngsi:    
         type: Property    
     uVIndexMax:    
-      description: 'The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored.'    
+      description: 'Property. Model:''https://schema.org/Number''. The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored.'    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -522,7 +538,7 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.3.1    
+  x-version: 0.3.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
