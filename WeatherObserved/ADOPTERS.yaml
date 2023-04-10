@@ -16,3 +16,12 @@ currentAdopters:
  project: https://lasrozasinnova.es/cosmos-plataforma-de-ciudad-inteligente-de-las-rozas/
  comments:
  startDate: 1-1-2022
+ -
+ adopter: Inga Miadowicz
+ description:
+ mail: Inga.Miadowicz@dlr.de
+ organization: German Aerospace Center (DLR)
+ project: 
+ comments: Add fields direct and diffuseIrradiation
+ startDate: 3-29-2023
+
