@@ -1,5 +1,5 @@
 ---
-# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# Copyleft (c) 2022 Contributors to Smart Data Models initiative
 # 
 
 
@@ -11,7 +11,7 @@ info:
   description:  |
     An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.
   title: WeatherObserved
-  version: "0.3.1"
+  version: "0.3.2"
 openapi: "3.0.0"
 
 paths: 

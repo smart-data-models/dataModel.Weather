@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.3.1",
+  "$schemaVersion": "0.3.2",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
   "title": "Weather Observed schema - Smart Data Models",
@@ -43,6 +43,16 @@
           "type": "number",
           "minimum": 0,
           "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
+        },
+        "directIrradiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
+        },
+        "diffuseIrradiation": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
         },
         "pressureTendency": {
           "oneOf": [

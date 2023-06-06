@@ -1,5 +1,9 @@
 {
     "@context": {
+        "SeaConditions": "https://smartdatamodels.org/dataModel.Weather/SeaConditions",
+        "WeatherAlert": "https://smartdatamodels.org/dataModel.Weather/WeatherAlert",
+        "WeatherForecast": "https://smartdatamodels.org/dataModel.Weather/WeatherForecast",
+        "WeatherObserved": "https://smartdatamodels.org/dataModel.Weather/WeatherObserved",
         "address": "https://smartdatamodels.org/address",
         "airQualityIndex": "https://smartdatamodels.org/dataModel.Weather/airQualityIndex",
         "airQualityIndexForecast": "https://smartdatamodels.org/dataModel.Weather/airQualityIndexForecast",
@@ -23,6 +27,8 @@
         "dayMinimum": "https://smartdatamodels.org/dataModel.Weather/dayMinimum",
         "description": "http://purl.org/dc/terms/description",
         "dewPoint": "https://smartdatamodels.org/dataModel.Weather/dewPoint",
+        "diffuseIrradiation": "https://smartdatamodels.org/dataModel.Weather/diffuseIrradiation",
+        "directIrradiation": "https://smartdatamodels.org/dataModel.Weather/directIrradiation",
         "feelLikesTemperature": "https://smartdatamodels.org/dataModel.Weather/feelLikesTemperature",
         "gustSpeed": "https://smartdatamodels.org/dataModel.Weather/gustSpeed",
         "id": "@id",

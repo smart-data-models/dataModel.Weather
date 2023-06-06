@@ -1,30 +1,30 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entità: WeatherAlert  
-====================<!-- /10-Header -->  
+实体。天气警报  
+=======<!-- /10-Header -->  
 <!-- 15-License -->  
-[Licenza aperta](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherAlert/LICENSE.md)  
-[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherAlert/LICENSE.md)  
+[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Descrizione globale: **Allarme meteo generato da un utente o da un dispositivo in una determinata località**  
-versione: 0.3.0  
+全球描述。**由用户或设备在特定地点产生的天气警报**。  
+版本：0.3.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## Elenco delle proprietà  
+##属性列表  
 
-<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
-- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alertSource[*]`: Fonte della segnalazione  . Model: [http://schema.org/URL.](http://schema.org/URL.)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: Categoria dell'entità  - `data[object]`: Payload contenente i dati recuperati.  - `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateIssued[string]`: Data e ora di emissione dell'articolo in formato ISO8601 UTC.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `severity[string]`: Gravità dell'allarme  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `subCategory[string]`: Categorie meteorologiche. Enum:' valanghe, evento costiero, onda fredda, alluvione, nebbia, incendio boschivo, onda di calore, alta temperatura, uragano, ghiaccio, bassa temperatura, pioggia, pioggia_alluvione, neve, neve_ghiaccio, temporali, tornado, ciclone tropicale, tsunami, vento'.  - `type[string]`: Tipo di entità NGSI. Deve essere WeatherAlert  - `validFrom[string]`: L'inizio del periodo di validità di questa previsione in formato ISO8601.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `validTo[string]`: La fine del periodo di validità di questa previsione in formato ISO8601.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)<!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `alertSource[*]`: 警报的来源  . Model: [http://schema.org/URL.](http://schema.org/URL.)- `alternateName[string]`: 这个项目的一个替代名称  - `areaServed[string]`: 提供服务或提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: 该实体的类别  - `data[object]`: 包含检索到的数据的有效载荷。  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateIssued[string]`: 该项目以ISO8601 UTC格式发布的日期和时间。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `id[*]`: 实体的唯一标识符  - `location[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `name[string]`: 这个项目的名称。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `severity[string]`: 警报的严重性  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `subCategory[string]`: 天气类别。Enum:' 雪崩, 沿海事件, 冷浪, 洪水, 雾, 森林火灾, 热浪, 高温, 飓风, 冰, 低温, 降雨, 洪水, 雪, 冰雪, 雷暴, 龙卷风, 热带气旋, 海啸, 风' 。  - `type[string]`: NGSI实体类型。它必须是WeatherAlert  - `validFrom[string]`: 该预报的有效期的开始，为ISO8601格式  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `validTo[string]`: 作为ISO8601格式，该预报的有效期结束。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Proprietà richieste  
+所需属性  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `subCategory`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Questa cartella contiene tutti gli artefatti software per offrire dati di allerta meteo in NGSI v2. La fonte di questi dati è il servizio globale [European Weather Alarm Service](http://meteoalarm.eu).  
+这个文件夹包含了在NGSI v2中提供天气警报数据的所有软件工件。这些数据的来源是全球[欧洲天气警报服务](http://meteoalarm.eu)。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Modello di dati descrizione delle proprietà  
-Ordinati in ordine alfabetico (clicca per i dettagli)  
+## 数据模型的属性描述  
+按字母顺序排列（点击查看详情）。  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -397,9 +397,9 @@ WeatherAlert:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Esempi di payload  
-#### Valori-chiave WeatherAlert NGSI-v2 Esempio  
-Ecco un esempio di WeatherAlert in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## ＃＃＃＃有效载荷的例子  
+#### WeatherAlert NGSI-v2 关键值示例  
+这里是一个以JSON-LD格式作为key-values的WeatherAlert的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -419,8 +419,8 @@ WeatherAlert:
 }  
 ```  
 </details>  
-#### WeatherAlert NGSI-v2 normalizzato Esempio  
-Ecco un esempio di WeatherAlert in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+#### WeatherAlert的NGSI-v2规范化示例  
+下面是一个以JSON-LD格式规范化的WeatherAlert的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -464,8 +464,8 @@ WeatherAlert:
 }  
 ```  
 </details>  
-#### Valori chiave WeatherAlert NGSI-LD Esempio  
-Ecco un esempio di WeatherAlert in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### WeatherAlert NGSI-LD关键值示例  
+这里是一个以JSON-LD格式作为key-values的WeatherAlert的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -488,8 +488,8 @@ WeatherAlert:
 }  
 ```  
 </details>  
-#### WeatherAlert NGSI-LD normalizzato Esempio  
-Ecco un esempio di WeatherAlert in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+#### WeatherAlert NGSI-LD正常化的例子  
+这里是一个以JSON-LD格式规范化的WeatherAlert的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -549,7 +549,7 @@ WeatherAlert:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

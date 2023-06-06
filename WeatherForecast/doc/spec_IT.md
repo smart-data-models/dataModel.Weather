@@ -1,17 +1,32 @@
-Entità: WeatherForecast  
-=======================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: WeatherForecast  
+=======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherForecast/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Una descrizione armonizzata di una previsione meteorologica**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **Descrizione armonizzata di una previsione meteorologica**  
+versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `atmosphericPressure`: La pressione atmosferica osservata misurata in Hecto Pascal  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateIssued`: La data e l'ora in cui la previsione è stata emessa dall'ufficio meteorologico nel formato ISO8601 UTC.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateRetrieved`: La data e l'ora in cui la previsione è stata recuperata nel formato ISO8601 UTC.  - `dayMaximum`: Valori massimi per il periodo riportato. Sottoattributi:- `temperatura` : Temperatura massima. Vedere `WeatherForecast.temperature` per la descrizione e le unità. - `feelLikesTemperature`. Temperatura massima "feels like". Stessa semantica e unità di misura di `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Massima umidità relativa. Stessa semantica e unità di misura di `WeatherForecast.relativeHumidity`.  - `dayMinimum`: Valori minimi previsti per il periodo riportato.  Valori minimi per il periodo riportato. Sottoattributi:- `temperature` : Temperatura minima. Vedere `WeatherForecast.temperature` per la descrizione e le unità. - `feelLikesTemperature`. Temperatura minima "feels like". Stessa semantica e unità di misura di `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Umidità relativa minima. Stessa semantica e unità di misura di `WeatherForecast.relativeHumidity`.  - `description`: Una descrizione di questo articolo  - `feelLikesTemperature`: Valutazione della temperatura dell'oggetto  - `gustSpeed`: Un improvviso scoppio di vento ad alta velocità oltre la velocità media del vento osservata che dura solo per pochi secondi.  - `id`: Identificatore unico dell'entità  - `illuminance`: (https://en.wikipedia.org/wiki/Illuminance) osservati misurati in lux (lx) o lumen per metro quadrato (cd-sr-m-2).  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `precipitation`: Quantità di pioggia prevista  - `refPointOfInterest`: Punto di interesse relativo all'articolo  - `relativeHumidity`: Umidità nell'aria. Umidità relativa istantanea osservata (vapore acqueo nell'aria)  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `temperature`: Temperatura dell'oggetto  - `type`: Tipo di entità NGSI. Deve essere WeatherForecast  - `uVIndexMax`: L'indice UV massimo per il periodo, basato sulla misura dell'indice UV dell'Organizzazione Mondiale della Sanità. Riferimenti normativi: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  - `validFrom`: Data e ora di inizio del periodo di validità.  - `validTo`: Data e ora di fine del periodo di validità.  - `validity`: Include il periodo di validità di questa previsione come intervallo di tempo ISO8601. Come workaround per la mancanza di supporto di Orion Context Broker per gli intervalli di tempo, si possono usare due attributi separati: `validFrom`, `validTo`.  - `visibility`: Categorie di visibilità  - `weatherType`: Descrizione testuale del tempo  - `windDirection`: Direzione della scommessa del vento  - `windSpeed`: Intensità del vento    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: La pressione atmosferica osservata misurata in Hecto Pascal  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateIssued[string]`: Data e ora di emissione della previsione da parte dell'ufficio meteorologico in formato ISO8601 UTC.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateRetrieved[string]`: La data e l'ora in cui è stata recuperata la previsione nel formato ISO8601 UTC.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dayMaximum[object]`: Valori massimi per il periodo riportato. Sottoattributi:- `temperatura` : Temperatura massima. Vedere `WeatherForecast.temperature` per la descrizione e le unità. - `feelLikesTemperature`. Temperatura massima percepita. Stessa semantica e unità di misura di `WeatherForecast.feelsLikeTemperature`.- `Umidità relativa`. Umidità relativa massima. Stessa semantica e unità di misura di `WeatherForecast.relativeHumidity`.  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `dayMinimum[object]`: Valori minimi previsti per il periodo di riferimento.  Valori minimi previsti per il periodo di riferimento. Sottoattributi:- `temperatura` : Temperatura minima. Vedere `WeatherForecast.temperature` per la descrizione e le unità. - Temperatura minima: `feelLikesTemperature`. Temperatura minima che si percepisce come tale. Stessa semantica e unità di misura di `WeatherForecast.feelsLikeTemperature`.- `Umidità relativa`. Umidità relativa minima. Stessa semantica e unità di misura di `WeatherForecast.relativeHumidity`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `description[string]`: Descrizione dell'articolo  - `feelLikesTemperature[number]`: Valutazione della temperatura dell'oggetto  - `gustSpeed[number]`: Un'improvvisa raffica di vento ad alta velocità, superiore alla velocità media del vento osservata, che dura solo pochi secondi.  - `id[*]`: Identificatore univoco dell'entità  - `illuminance[number]`: (https://en.wikipedia.org/wiki/Illuminance) osservato in lux (lx) o lumen per metro quadro (cd-sr-m-2).  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento.  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `precipitation[number]`: Quantità di pioggia prevista  . Model: [https://schema.org/Number](https://schema.org/Number)- `refPointOfInterest[string]`: Punto di interesse relativo all'articolo  . Model: [http://schema.org/URL](http://schema.org/URL)- `relativeHumidity[number]`: Umidità dell'aria. Umidità relativa istantanea osservata (vapore acqueo nell'aria)  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `temperature[number]`: Temperatura dell'articolo  - `type[string]`: Tipo di entità NGSI. Deve essere WeatherForecast  - `uVIndexMax[number]`: L'indice UV massimo per il periodo, basato sulla misura dell'indice UV dell'Organizzazione Mondiale della Sanità. Riferimenti normativi: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  . Model: [https://schema.org/Number](https://schema.org/Number)- `validFrom[string]`: Data e ora di inizio del periodo di validità.  . Model: [https://schema.org/Text](https://schema.org/Text)- `validTo[string]`: Data e ora di fine del periodo di validità.  . Model: [https://schema.org/Text](https://schema.org/Text)- `validity[string]`: Include il periodo di validità di questa previsione come intervallo di tempo ISO8601. Come soluzione per la mancanza di supporto di Orion Context Broker per gli intervalli di tempo, si possono usare due attributi separati: `validFrom`, `validTo`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `visibility[*]`: Categorie di visibilità  . Model: [http://schema.org/Text](http://schema.org/Text)- `weatherType[string]`: Descrizione testuale del tempo  . Model: [http://schema.org/Text.](http://schema.org/Text.)- `windDirection[number]`: Direzione della scommessa del vento  . Model: [http://schema.org/Number](http://schema.org/Number)- `windSpeed[number]`: Intensità del vento  . Model: [http//schema.org/Number](http//schema.org/Number)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `address`  - `dateIssued`  - `id`  - `type`    
-Questa entità è principalmente associata ai segmenti verticali dell'ambiente e dell'agricoltura, ma è applicabile a molte applicazioni diverse. Questo modello di dati è stato sviluppato in collaborazione con gli operatori mobili e il [GSMA](https://www.gsma.com/iot/iot-big-data/).  
-## Descrizione del modello di dati delle proprietà  
+- `address`  - `dateIssued`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+Questa entità è associata principalmente ai segmenti verticali dell'ambiente e dell'agricoltura, ma è applicabile a molte applicazioni diverse. Questo modello di dati è stato sviluppato in collaborazione con gli operatori di telefonia mobile e il [GSMA] (https://www.gsma.com/iot/iot-big-data/).  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 WeatherForecast:    
@@ -166,7 +181,7 @@ WeatherForecast:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'Geoproperty. Geojson reference to the item. Point'    
+        - description: 'GeoProperty. Geojson reference to the item. Point'    
           properties:    
             bbox:    
               items:    
@@ -187,7 +202,7 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+        - description: 'GeoProperty. Geojson reference to the item. LineString'    
           properties:    
             bbox:    
               items:    
@@ -211,7 +226,7 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
           properties:    
             bbox:    
               items:    
@@ -237,7 +252,7 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
           properties:    
             bbox:    
               items:    
@@ -260,7 +275,7 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
           properties:    
             bbox:    
               items:    
@@ -286,7 +301,7 @@ WeatherForecast:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
           properties:    
             bbox:    
               items:    
@@ -315,7 +330,7 @@ WeatherForecast:
           title: 'GeoJSON MultiPolygon'    
           type: object    
       x-ngsi:    
-        type: Geoproperty    
+        type: GeoProperty    
     name:    
       description: 'The name of this item.'    
       type: string    
@@ -457,9 +472,14 @@ WeatherForecast:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempio di payloads  
-#### WeatherForecast NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un WeatherForecast in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### WeatherForecast NGSI-v2 valori-chiave Esempio  
+Ecco un esempio di WeatherForecast in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
@@ -495,8 +515,10 @@ WeatherForecast:
   "uVIndexMax": 1  
 }  
 ```  
+</details>  
 #### WeatherForecast NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un WeatherForecast in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di WeatherForecast in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
@@ -583,212 +605,225 @@ WeatherForecast:
   }  
 }  
 ```  
+</details>  
 #### WeatherForecast NGSI-LD valori chiave Esempio  
-Ecco un esempio di un WeatherForecast in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di WeatherForecast in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:WeatherForecast:Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
-  "type": "WeatherForecast",  
-  "dayMinimum": {  
-    "type": "Property",  
-    "value": {  
-      "feelsLikeTemperature": 11,  
-      "temperature": 11,  
-      "relativeHumidity": 0.7  
-    }  
-  },  
-  "feelsLikeTemperature": {  
-    "type": "Property",  
-    "value": 12  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "TEF"  
-  },  
-  "temperature": {  
-    "type": "Property",  
-    "value": 12  
-  },  
-  "validTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-01T23:00:00.00Z"  
-    }  
-  },  
-  "weatherType": {  
-    "type": "Property",  
-    "value": "overcast"  
-  },  
-  "precipitationProbability": {  
-    "type": "Property",  
-    "value": 0.15  
-  },  
-  "dayMaximum": {  
-    "type": "Property",  
-    "value": {  
-      "feelsLikeTemperature": 15,  
-      "temperature": 15,  
-      "relativeHumidity": 0.9  
-    }  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://www.aemet.es/xml/municipios/localidad_46250.xml"  
-  },  
-  "windSpeed": {  
-    "type": "Property",  
-    "value": 0  
-  },  
-  "validity": {  
-    "type": "Property",  
-    "value": "2016-12-01T18:00:00+01:00/2016-12-02T00:00:00+01:00"  
-  },  
-  "dateIssued": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-01T10:40:01.00Z"  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "Spain",  
-      "postalCode": "46005",  
-      "addressLocality": "Valencia",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "dateRetrieved": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-01T12:57:24.00Z"  
-    }  
-  },  
-  "validFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-01T17:00:00.00Z"  
-    }  
-  },  
-  "relativeHumidity": {  
-    "type": "Property",  
-    "value": 0.85  
-  },  
-  "uvIndexMax": {  
-    "type": "Property",  
-    "value": 1.0  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:WeatherForecast:Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
+    "type": "WeatherForecast",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "Spain",  
+            "postalCode": "46005",  
+            "addressLocality": "Valencia",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "TEF"  
+    },  
+    "dateIssued": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-01T10:40:01.00Z"  
+        }  
+    },  
+    "dateRetrieved": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-01T12:57:24.00Z"  
+        }  
+    },  
+    "dayMaximum": {  
+        "type": "Property",  
+        "value": {  
+            "feelsLikeTemperature": 15,  
+            "temperature": 15,  
+            "relativeHumidity": 0.9  
+        }  
+    },  
+    "dayMinimum": {  
+        "type": "Property",  
+        "value": {  
+            "feelsLikeTemperature": 11,  
+            "temperature": 11,  
+            "relativeHumidity": 0.7  
+        }  
+    },  
+    "feelsLikeTemperature": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "precipitationProbability": {  
+        "type": "Property",  
+        "value": 0.15  
+    },  
+    "relativeHumidity": {  
+        "type": "Property",  
+        "value": 0.85  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://www.aemet.es/xml/municipios/localidad_46250.xml"  
+    },  
+    "temperature": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "uvIndexMax": {  
+        "type": "Property",  
+        "value": 1.0  
+    },  
+    "validFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-01T17:00:00.00Z"  
+        }  
+    },  
+    "validTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-01T23:00:00.00Z"  
+        }  
+    },  
+    "validity": {  
+        "type": "Property",  
+        "value": "2016-12-01T18:00:00+01:00/2016-12-02T00:00:00+01:00"  
+    },  
+    "weatherType": {  
+        "type": "Property",  
+        "value": "overcast"  
+    },  
+    "windSpeed": {  
+        "type": "Property",  
+        "value": 0  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### WeatherForecast NGSI-LD normalizzato Esempio  
-Ecco un esempio di un WeatherForecast in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di WeatherForecast in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
-  "type": "WeatherForecast",  
-  "dayMinimum": {  
-    "type": "Property",  
-    "value": {  
-      "feelsLikeTemperature": 11,  
-      "temperature": 11,  
-      "relativeHumidity": 0.7  
-    }  
-  },  
-  "feelsLikeTemperature": {  
-    "type": "Property",  
-    "value": 12  
-  },  
-  "dataProvider": {  
-    "type": "Text",  
-    "value": "TEF"  
-  },  
-  "temperature": {  
-    "type": "Property",  
-    "value": 12  
-  },  
-  "validTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-01T23:00:00.00Z"  
-    }  
-  },  
-  "weatherType": {  
-    "type": "Text",  
-    "value": "overcast"  
-  },  
-  "precipitationProbability": {  
-    "type": "Property",  
-    "value": 0.15  
-  },  
-  "dayMaximum": {  
-    "type": "Property",  
-    "value": {  
-      "feelsLikeTemperature": 15,  
-      "temperature": 15,  
-      "relativeHumidity": 0.9  
-    }  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://www.aemet.es/xml/municipios/localidad_46250.xml"  
-  },  
-  "windSpeed": {  
-    "type": "Property",  
-    "value": 0  
-  },  
-  "validity": {  
-    "type": "Property",  
-    "value": "2016-12-01T18:00:00+01:00/2016-12-02T00:00:00+01:00"  
-  },  
-  "dateIssued": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-01T10:40:01.00Z"  
-    }  
-  },  
-  "address": {  
-    "type": "PostalAddress",  
-    "value": {  
-      "addressCountry": "Spain",  
-      "postalCode": "46005",  
-      "addressLocality": "Valencia"  
-    }  
-  },  
-  "dateRetrieved": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-01T12:57:24.00Z"  
-    }  
-  },  
-  "validFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-12-01T17:00:00.00Z"  
-    }  
-  },  
-  "relativeHumidity": {  
-    "type": "Property",  
-    "value": 0.85  
-  },  
-  "uVIndexMax": {  
-    "type": "Property",  
-    "value": 1.00  
-  },  
-  "@context": [  
-    "https://smartdatamdels.org/context.jsonld"  
-  ]  
+    "id": "Spain-WeatherForecast-46005_2016-12-01T18:00:00_2016-12-02T00:00:00",  
+    "type": "WeatherForecast",  
+    "address": {  
+        "type": "PostalAddress",  
+        "value": {  
+            "addressCountry": "Spain",  
+            "postalCode": "46005",  
+            "addressLocality": "Valencia"  
+        }  
+    },  
+    "dataProvider": {  
+        "type": "Text",  
+        "value": "TEF"  
+    },  
+    "dateIssued": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-01T10:40:01.00Z"  
+        }  
+    },  
+    "dateRetrieved": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-01T12:57:24.00Z"  
+        }  
+    },  
+    "dayMaximum": {  
+        "type": "Property",  
+        "value": {  
+            "feelsLikeTemperature": 15,  
+            "temperature": 15,  
+            "relativeHumidity": 0.9  
+        }  
+    },  
+    "dayMinimum": {  
+        "type": "Property",  
+        "value": {  
+            "feelsLikeTemperature": 11,  
+            "temperature": 11,  
+            "relativeHumidity": 0.7  
+        }  
+    },  
+    "feelsLikeTemperature": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "precipitationProbability": {  
+        "type": "Property",  
+        "value": 0.15  
+    },  
+    "relativeHumidity": {  
+        "type": "Property",  
+        "value": 0.85  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://www.aemet.es/xml/municipios/localidad_46250.xml"  
+    },  
+    "temperature": {  
+        "type": "Property",  
+        "value": 12  
+    },  
+    "uVIndexMax": {  
+        "type": "Property",  
+        "value": 1.0  
+    },  
+    "validFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-01T17:00:00.00Z"  
+        }  
+    },  
+    "validTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-12-01T23:00:00.00Z"  
+        }  
+    },  
+    "validity": {  
+        "type": "Property",  
+        "value": "2016-12-01T18:00:00+01:00/2016-12-02T00:00:00+01:00"  
+    },  
+    "weatherType": {  
+        "type": "Text",  
+        "value": "overcast"  
+    },  
+    "windSpeed": {  
+        "type": "Property",  
+        "value": 0  
+    },  
+    "@context": [  
+        "https://smartdatamdels.org/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
+    ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  

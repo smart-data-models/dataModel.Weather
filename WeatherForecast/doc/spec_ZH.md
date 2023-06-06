@@ -1,30 +1,30 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entität: WeatherForecast  
-========================<!-- /10-Header -->  
+实体。天气预报  
+=======<!-- /10-Header -->  
 <!-- 15-License -->  
-[Offene Lizenz](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherForecast/LICENSE.md)  
-[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherForecast/LICENSE.md)  
+[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Globale Beschreibung: **Eine harmonisierte Beschreibung einer Wettervorhersage**  
-Version: 0.0.1  
+全球描述。**对天气预报的统一描述**。  
+版本：0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## Liste der Eigenschaften  
+##属性列表  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: Der beobachtete atmosphärische Druck, gemessen in Hecto-Pascal  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateIssued[string]`: Das Datum und die Uhrzeit, zu der die Vorhersage vom Wetteramt ausgegeben wurde, im Format ISO8601 UTC.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateRetrieved[string]`: Das Datum und die Uhrzeit des Abrufs der Vorhersage im Format ISO8601 UTC.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dayMaximum[object]`: Höchstwerte für den gemeldeten Zeitraum. Unterattribute:- `Temperatur` : Höchsttemperatur. Siehe `WeatherForecast.temperature` für Beschreibung und Einheiten. - FühlbareTemperatur`. Maximale gefühlte Temperatur. Gleiche Semantik und Einheiten wie `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Maximale relative Luftfeuchtigkeit. Dieselbe Semantik und dieselben Einheiten wie `WeatherForecast.relativeHumidity`.  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `dayMinimum[object]`: Für den Berichtszeitraum prognostizierte Mindestwerte.  Mindestwerte für den gemeldeten Zeitraum. Unterattribute:- `temperature` : Mindesttemperatur. Siehe `WeatherForecast.temperature` für Beschreibung und Einheiten. - FühlbareTemperatur`. Minimale gefühlte Temperatur. Gleiche Semantik und Einheiten wie `WeatherForecast.feelsLikeTemperature`.- `relativeHumidity`. Minimale relative Luftfeuchtigkeit. Dieselbe Semantik und dieselben Einheiten wie `WeatherForecast.relativeHumidity`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `description[string]`: Eine Beschreibung dieses Artikels  - `feelLikesTemperature[number]`: Bewertung der Temperatur des Gegenstands  - `gustSpeed[number]`: Ein plötzlicher Ausbruch von Wind mit hoher Geschwindigkeit, der die beobachtete durchschnittliche Windgeschwindigkeit übersteigt und nur wenige Sekunden dauert.  - `id[*]`: Eindeutiger Bezeichner der Entität  - `illuminance[number]`: (https://en.wikipedia.org/wiki/Illuminance), gemessen in Lux (lx) oder Lumen pro Quadratmeter (cd-sr-m-2).  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `precipitation[number]`: Erwartete Wassermenge  . Model: [https://schema.org/Number](https://schema.org/Number)- `refPointOfInterest[string]`: Interessanter Punkt im Zusammenhang mit dem Artikel  . Model: [http://schema.org/URL](http://schema.org/URL)- `relativeHumidity[number]`: Feuchte in der Luft. Beobachtete momentane relative Luftfeuchtigkeit (Wasserdampf in der Luft)  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `temperature[number]`: Temperatur des Gegenstandes  - `type[string]`: NGSI-Entitätstyp. Es muss WeatherForecast sein  - `uVIndexMax[number]`: Der maximale UV-Index für den Zeitraum, basierend auf der UV-Index-Messung der Weltgesundheitsorganisation. Normative Referenzen: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  . Model: [https://schema.org/Number](https://schema.org/Number)- `validFrom[string]`: Datum und Uhrzeit des Beginns des Gültigkeitszeitraums.  . Model: [https://schema.org/Text](https://schema.org/Text)- `validTo[string]`: Datum und Uhrzeit des Endes des Gültigkeitszeitraums.  . Model: [https://schema.org/Text](https://schema.org/Text)- `validity[string]`: Enthält den Gültigkeitszeitraum für diese Prognose als ISO8601-Zeitintervall. Als Workaround für die fehlende Unterstützung von Orion Context Broker für Datumsintervalle können zwei separate Attribute verwendet werden: GültigVon" und "GültigBis".  . Model: [https://schema.org/Text](https://schema.org/Text)- `visibility[*]`: Kategorien der Sichtbarkeit  . Model: [http://schema.org/Text](http://schema.org/Text)- `weatherType[string]`: Textbeschreibung des Wetters  . Model: [http://schema.org/Text.](http://schema.org/Text.)- `windDirection[number]`: Wette auf die Windrichtung  . Model: [http://schema.org/Number](http://schema.org/Number)- `windSpeed[number]`: Intensität des Windes  . Model: [http//schema.org/Number](http//schema.org/Number)<!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: 这个项目的一个替代名称  - `areaServed[string]`: 提供服务或提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 观察到的大气压力以Hecto Pascals为单位。  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateIssued[string]`: 气象局发布预报的日期和时间，格式为ISO8601 UTC。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `dateRetrieved[string]`: 以ISO8601 UTC格式检索预报的日期和时间。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dayMaximum[object]`: 报告期间的最高值。子属性：- `temperature`：最高温度。描述和单位见`WeatherForecast.temperature'。- `感觉温度'。最大的感觉温度。与`WeatherForecast.feelLikeTemperature'的语义和单位相同。最大的相对湿度。与`WeatherForecast.relativeHumidity'的语义和单位相同。  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)- `dayMinimum[object]`: 报告期内预测的最低值。  报告期间的最低值。子属性：- `temperature`：最低温度。描述和单位见`WeatherForecast.temperature'。- `感觉温度'。最低感觉温度。与`WeatherForecast.feelLikeTemperature'的语义和单位相同。最低相对湿度。与`WeatherForecast.relativeHumidity`的语义和单位相同。  . Model: [https://schema.org/Text](https://schema.org/Text)- `description[string]`: 对这个项目的描述  - `feelLikesTemperature[number]`: 项目的温度欣赏  - `gustSpeed[number]`: 突然爆发的高速风，超过观察到的平均风速，只持续了几秒钟。  - `id[*]`: 实体的唯一标识符  - `illuminance[number]`: (https://en.wikipedia.org/wiki/Illuminance)观察，以勒克斯(lx)或每平方米流明(cd-sr-m-2)衡量。  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `name[string]`: 这个项目的名称。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `precipitation[number]`: 预计的水雨量  . Model: [https://schema.org/Number](https://schema.org/Number)- `refPointOfInterest[string]`: 与该项目有关的兴趣点  . Model: [http://schema.org/URL](http://schema.org/URL)- `relativeHumidity[number]`: 空气中的湿度。观测到的瞬时相对湿度（空气中的水蒸气）。  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `temperature[number]`: 项目的温度  - `type[string]`: NGSI实体类型。它必须是WeatherForecast  - `uVIndexMax[number]`: 根据世界卫生组织的紫外线指数测量，该时期的最大紫外线指数。规范性参考资料。[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  . Model: [https://schema.org/Number](https://schema.org/Number)- `validFrom[string]`: 有效期的开始日期和时间。  . Model: [https://schema.org/Text](https://schema.org/Text)- `validTo[string]`: 有效期结束日期和时间。  . Model: [https://schema.org/Text](https://schema.org/Text)- `validity[string]`: 包括作为ISO8601时间间隔的该预测的有效期。作为Orion Context Broker不支持日期时间间隔的变通方法，它可以使用两个单独的属性。`validFrom`, `validTo`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `visibility[*]`: 能见度的类别  . Model: [http://schema.org/Text](http://schema.org/Text)- `weatherType[string]`: 天气的文字描述  . Model: [http://schema.org/Text.](http://schema.org/Text.)- `windDirection[number]`: 赌风的方向  . Model: [http://schema.org/Number](http://schema.org/Number)- `windSpeed[number]`: 风的强度  . Model: [http//schema.org/Number](http//schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Erforderliche Eigenschaften  
+所需属性  
 - `address`  - `dateIssued`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Diese Einheit wird in erster Linie mit den vertikalen Segmenten Umwelt und Landwirtschaft in Verbindung gebracht, ist aber auf viele verschiedene Anwendungen anwendbar. Dieses Datenmodell wurde in Zusammenarbeit mit Mobilfunkbetreibern und der [GSMA] (https://www.gsma.com/iot/iot-big-data/) entwickelt.  
+该实体主要与环境和农业的垂直领域相关，但也适用于许多不同的应用。这个数据模型是与移动运营商和[GSMA]（https://www.gsma.com/iot/iot-big-data/）合作开发的。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Datenmodell Beschreibung der Eigenschaften  
-Alphabetisch sortiert (für Details anklicken)  
+## 数据模型的属性描述  
+按字母顺序排列（点击查看详情）。  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -476,9 +476,9 @@ WeatherForecast:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Beispiel-Nutzlasten  
-#### WeatherForecast NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen WeatherForecast im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+## ＃＃＃＃有效载荷的例子  
+#### WeatherForecast NGSI-v2 key-values 示例  
+这里是一个以JSON-LD格式作为关键值的WeatherForecast的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -516,8 +516,8 @@ WeatherForecast:
 }  
 ```  
 </details>  
-#### WeatherForecast NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen WeatherForecast im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### WeatherForecast NGSI-v2归一化实例  
+下面是一个以JSON-LD格式规范化的WeatherForecast的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -606,8 +606,8 @@ WeatherForecast:
 }  
 ```  
 </details>  
-#### WeatherForecast NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für einen WeatherForecast im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+#### WeatherForecast NGSI-LD key-values 示例  
+这里是一个以JSON-LD格式作为key-values的WeatherForecast的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -713,8 +713,8 @@ WeatherForecast:
 }  
 ```  
 </details>  
-#### WeatherForecast NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen WeatherForecast im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### WeatherForecast NGSI-LD 归一化实例  
+下面是一个JSON-LD格式的规范化的WeatherForecast的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -822,7 +822,7 @@ WeatherForecast:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
