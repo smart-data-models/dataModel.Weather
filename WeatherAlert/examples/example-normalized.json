@@ -11,7 +11,7 @@
   },
   "subCategory": {
     "type": "Text",
-    "value": "snow/ice"
+    "value": "snow_ice"
   },
   "alertSource": {
     "type": "Text",
