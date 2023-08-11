@@ -1,5 +1,5 @@
 {
-  "id": "SeaCondition-PlayaLevante.Benidorm.123456",
+  "id": "SeaCondition-PlayaLevante-Benidorm-123456",
   "type": "SeaConditions",
   "dateCreated": {
     "type": "DateTime",
@@ -96,8 +96,5 @@
   "dateObserved": {
     "type": "Number",
     "value": "2021-02-20T06:45:00Z"
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
+  }
 }
