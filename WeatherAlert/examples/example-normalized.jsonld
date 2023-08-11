@@ -29,7 +29,7 @@
   },
   "subCategory": {
     "type": "Property",
-    "value": "snow/ice"
+    "value": "snow_ice"
   },
   "validFrom": {
     "type": "Property",
