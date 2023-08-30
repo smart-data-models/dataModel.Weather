@@ -28,30 +28,30 @@
                 "dateRetrieved": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. The date and time the forecast was retrieved in ISO8601 UTC format."
+                    "description": "Property. Model:'https://schema.org/DateTime'. The date and time the forecast was retrieved in ISO8601 UTC format"
                 },
                 "dateIssued": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. The date and time the forecast was issued by the meteorological bureau in ISO8601 UTC format."
+                    "description": "Property. Model:'https://schema.org/DateTime'. The date and time the forecast was issued by the meteorological bureau in ISO8601 UTC format"
                 },
                 "validity": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text'. Includes the validity period for this forecast as a ISO8601 time interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `validFrom`, `validTo`."
+                    "description": "Property. Model:'https://schema.org/Text'. Includes the validity period for this forecast as a ISO8601 time interval. As a workaround for the lack of support of Orion Context Broker for datetime intervals, it can be used two separate attributes: `validFrom`, `validTo`"
                 },
                 "validFrom": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/Text'. Validity period start date and time."
+                    "description": "Property. Model:'https://schema.org/Text'. Validity period start date and time"
                 },
                 "validTo": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/Text'. Validity period end date and time."
+                    "description": "Property. Model:'https://schema.org/Text'. Validity period end date and time"
                 },
                 "dayMaximum": {
                     "type": "object",
-                    "description": "Property. Model:'https://schema.org/StructuredValue'. Maximum values for the reported period. Subattributes:- `temperature` : Maximum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Maximum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.-   `relativeHumidity`. Maximum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`.",
+                    "description": "Property. Model:'https://schema.org/StructuredValue'. Maximum values for the reported period. Subattributes:- `temperature` : Maximum temperature. See `WeatherForecast.temperature` for description and units. - `feelLikesTemperature`. Maximum feels like temperature. Same semantics and units as `WeatherForecast.feelsLikeTemperature`.-   `relativeHumidity`. Maximum relative humidity. Same semantics and units as `WeatherForecast.relativeHumidity`",
                     "properties": {
                         "temperature": {
                             "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/temperature"
@@ -87,7 +87,7 @@
                 "precipitation": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Property. Model:'https://schema.org/Number'. Amount of water rain expected. Units:'Liters per square meter'."
+                    "description": "Property. Model:'https://schema.org/Number'. Amount of water rain expected. Units:'Liters per square meter'"
                 }
             }
         }
