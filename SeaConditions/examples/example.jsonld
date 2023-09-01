@@ -23,7 +23,7 @@
     "waveLevel": 1,
     "wavePeriod": 1.5,
     "@context": [
-        "https://smaertdatamodels.org/context.jsonld",
+        "https://smartdatamodels.org/context.jsonld",
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"
     ]
