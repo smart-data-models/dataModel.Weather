@@ -15,7 +15,17 @@
 ## Liste des propriétés  
 
 <sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `airQualityIndex[number]`: Propriété. Modèle : "https://schema.org/Number". L'indice de qualité de l'air est un nombre utilisé pour rendre compte de la qualité de l'air un jour donné.  . Model: [https://schema.org/Number](https://schema.org/Number)- `airQualityIndexForecast[number]`: Propriété. Modèle : "https://schema.org/Number". Indice global de qualité de l'air (IQA) prévu pour une certaine durée dans le futur.  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureForecast[number]`: Propriété. Modèle : "https://schema.org/Number". Valeur prévue de la température de l'air sur une certaine durée dans le futur.  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureTSA[object]`: Propriété. Agrégation des séries temporelles de la température de l'air  - `alternateName[string]`: Un nom alternatif pour ce poste  - `aqiMajorPollutant[string]`: Propriété. Modèle : "https://schema.org/Text". Polluant majeur de l'indice de qualité de l'air (IQA).  . Model: [https://schema.org/Text](https://schema.org/Text)- `aqiMajorPollutantForecast[string]`: Propriété. Modèle : "https://schema.org/Text". Principal polluant atmosphérique prévu dans l'indice de qualité de l'air (IQA) sur une certaine durée à l'avenir.  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: La pression atmosphérique observée est mesurée en Hecto Pascals.  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Date de création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage.  - `dateModified[string]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage.  - `dateObserved[string]`: Date de l'entité observée définie par l'utilisateur.  - `description[string]`: Une description de l'article  - `dewPoint[number]`: Propriété. Modèle : "https://schema.org/Number". Unités : "Celsius degrees". Le point de rosée encodé sous forme de nombre. Température observée à laquelle l'air doit être refroidi pour devenir saturé en vapeur d'eau.  . Model: [https://schema.org/Number](https://schema.org/Number)- `diffuseIrradiation[number]`: Propriété. Modèle : "https://schema.org/Number". L'irradiation diffuse est la partie de l'irradiation solaire qui est diffusée par l'atmosphère. Unités : "w/m2  . Model: [https://schema.org/Number](https://schema.org/Number)- `directIrradiation[number]`: Propriété. Modèle : "https://schema.org/Number". L'irradiation directe est la partie de l'irradiation solaire qui atteint directement une surface. Unités : "w/m2  . Model: [https://schema.org/Number](https://schema.org/Number)- `feelLikesTemperature[number]`: Appréciation de la température de l'objet  - `gustSpeed[number]`: Une rafale soudaine de vent à grande vitesse dépassant la vitesse moyenne observée et ne durant que quelques secondes.  - `id[*]`: Identifiant unique de l'entité  - `illuminance[number]`: Propriété. Intensité lumineuse ambiante instantanée observée. Unités : "Lux  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `precipitation[number]`: Propriété. Modèle : "https://schema.org/Number". Quantité d'eau de pluie enregistrée. Unités : "Litres par mètre carré".  . Model: [https://schema.org/Number](https://schema.org/Number)- `precipitationForecast[number]`: Propriété. Modèle : "https://schema.org/Number". Prévision des précipitations sur une certaine durée dans le futur.  . Model: [https://schema.org/Number](https://schema.org/Number)- `pressureTendency[*]`: Propriété. Enum : "en baisse, en hausse, stable". La pression augmente-t-elle ou diminue-t-elle ? Elle peut être exprimée en termes quantitatifs ou qualitatifs.  - `refDevice[*]`: Relation. Modèle : "https://schema.org/URL". Une référence au(x) dispositif(s) qui a (ont) capturé cette observation.  . Model: [https://schema.org/URL](https://schema.org/URL)- `refPointOfInterest[string]`: Point d'intérêt lié à l'objet  . Model: [http://schema.org/URL](http://schema.org/URL)- `relativeHumidity[number]`: Humidité de l'air. Humidité relative instantanée observée (vapeur d'eau dans l'air)  - `relativeHumidityForecast[number]`: Propriété. Modèle : "https://schema.org/Number". Prévision de l'humidité relative (vapeur d'eau dans l'air) sur une certaine durée dans le futur  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `snowHeight[number]`: Propriété. Modèle : "https://schema.org/Number". Hauteur de neige observée par les capteurs génériques de mesure de l'épaisseur de neige, exprimée en centimètres. Unités : "centimètres  . Model: [https://schema.org/Number](https://schema.org/Number)- `solarRadiation[number]`: Propriété. Modèle : "https://schema.org/Number". Le rayonnement solaire observé est mesuré en watts par carré. Unités : "w/m2  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `streamGauge[number]`: Propriété. Modèle : "https://schema.org/Number". L'élévation de la surface du niveau de l'eau observée par les capteurs de mesure hydrométriques, à savoir un [Stream Gauge] (https://en.wikipedia.org/wiki/Stream_gauge), exprimée en centimètres. Unités : "centimètres  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: Température de l'article  - `type[string]`: Propriété. Type d'entité NGSI. Il doit s'agir de WeatherObserved  - `uVIndexMax[number]`: Propriété. Modèle : "https://schema.org/Number". L'indice UV maximal pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) Les valeurs comprises entre 1 et 11 constituent la plage de validité de l'indice. La valeur 0 indique qu'aucun signal n'a été détecté et qu'aucune valeur n'est donc enregistrée.  . Model: [https://schema.org/Number](https://schema.org/Number)- `visibility[*]`: Catégories de visibilité  . Model: [http://schema.org/Text](http://schema.org/Text)- `weatherType[string]`: Description textuelle du temps  . Model: [http://schema.org/Text.](http://schema.org/Text.)- `windDirection[number]`: Direction du vent pari  . Model: [http://schema.org/Number](http://schema.org/Number)- `windSpeed[number]`: Intensité du vent  . Model: [http//schema.org/Number](http//schema.org/Number)<!-- /30-PropertiesList -->  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Le pays. Par exemple, l'Espagne  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La localité dans laquelle se trouve l'adresse postale et qui se trouve dans la région  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La région dans laquelle se trouve la localité et qui se trouve dans le pays  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un district est un type de division administrative qui, dans certains pays, est géré par le gouvernement local.    
+	- `postOfficeBoxNumber[string]`: Le numéro de la boîte postale pour les adresses de boîtes postales. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: L'adresse de la rue  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `airQualityIndex[number]`: L'indice de qualité de l'air est un nombre utilisé pour indiquer la qualité de l'air un jour donné.  . Model: [https://schema.org/Number](https://schema.org/Number)- `airQualityIndexForecast[number]`: Indice global de qualité de l'air (IQA) prévu pour une certaine durée à l'avenir  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureForecast[number]`: Valeur prévue de la température de l'air sur une certaine durée dans le futur  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureTSA[object]`: Agrégation des séries temporelles de la température de l'air  	- `averageValue[number]`: Valeur moyenne du traitement temporel dans le temps    
+	- `instValue[number]`: Valeur instantanée du traitement temporel    
+	- `maxOverTime[number]`: Valeur maximale du traitement temporel dans le temps    
+- `alternateName[string]`: Un nom alternatif pour ce poste  - `aqiMajorPollutant[string]`: Principal polluant de l'indice de qualité de l'air (IQA)  . Model: [https://schema.org/Text](https://schema.org/Text)- `aqiMajorPollutantForecast[string]`: Principaux polluants atmosphériques prévus dans l'indice de qualité de l'air (IQA) sur une certaine durée à l'avenir  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `dateObserved[date-time]`: Date de l'entité observée définie par l'utilisateur  - `description[string]`: Une description de l'article  - `dewPoint[number]`: Le point de rosée codé sous forme de nombre. Température observée à laquelle l'air doit être refroidi pour devenir saturé en vapeur d'eau.  . Model: [https://schema.org/Number](https://schema.org/Number)- `diffuseIrradiation[number]`: L'irradiation diffuse est la partie de l'irradiation solaire qui est dispersée par l'atmosphère.  . Model: [https://schema.org/Number](https://schema.org/Number)- `directIrradiation[number]`: L'irradiation directe est la partie de l'irradiation solaire qui atteint directement une surface.  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identifiant unique de l'entité  - `illuminance[number]`: Intensité lumineuse ambiante instantanée observée  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `precipitation[number]`: Quantité d'eau de pluie enregistrée.  . Model: [https://schema.org/Number](https://schema.org/Number)- `precipitationForecast[number]`: Prévision des précipitations sur une certaine durée dans le futur  . Model: [https://schema.org/Number](https://schema.org/Number)- `pressureTendency[*]`: Enum : "en baisse, en hausse, stable". La pression augmente-t-elle ou diminue-t-elle ? Elle peut être exprimée en termes quantitatifs ou qualitatifs  - `refDevice[*]`: Une référence au(x) dispositif(s) qui a(ont) capturé cette observation  . Model: [https://schema.org/URL](https://schema.org/URL)- `relativeHumidity[number]`: Humidité de l'air. Humidité relative instantanée observée (vapeur d'eau dans l'air)  - `relativeHumidityForecast[number]`: Prévision de l'humidité relative (vapeur d'eau dans l'air) sur une certaine durée dans le futur  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `snowHeight[number]`: Hauteur de neige observée par les capteurs génériques de mesure de l'épaisseur de la neige, exprimée en centimètres.  . Model: [https://schema.org/Number](https://schema.org/Number)- `solarRadiation[number]`: Le rayonnement solaire observé est mesuré en watts par mètre carré.  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `streamGauge[number]`: L'élévation de la surface du niveau de l'eau observée par les capteurs de mesure hydrométrique, à savoir un [Stream Gauge] (https://en.wikipedia.org/wiki/Stream_gauge), exprimée en centimètres.  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: Température de l'article  - `type[string]`: Type d'entité NGSI. Il doit s'agir de WeatherObserved  - `uVIndexMax[number]`: L'indice UV maximal pour la période, basé sur la mesure de l'indice UV de l'Organisation mondiale de la santé. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) Les valeurs comprises entre 1 et 11 constituent la plage de validité de l'indice. La valeur 0 indique qu'aucun signal n'a été détecté et qu'aucune valeur n'est donc enregistrée.  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `dateObserved`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
@@ -36,78 +46,193 @@ WeatherObserved:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
           type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
         streetNr:    
-          description: Number identifying a specific property on a public street.    
+          description: Number identifying a specific property on a public street    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     airQualityIndex:    
-      description: 'Property. Model:''https://schema.org/Number''. Air quality index is a number used to report the quality of the air on any given day.'    
+      description: Air quality index is a number used to report the quality of the air on any given day    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     airQualityIndexForecast:    
-      description: 'Property. Model:''https://schema.org/Number''. Forecasted overall Air Quality Index (AQI) over a certain duration in future.'    
+      description: Forecasted overall Air Quality Index (AQI) over a certain duration in future    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     airTemperatureForecast:    
-      description: 'Property. Model:''https://schema.org/Number''. Forecasted value of air temperature over a certain duration in future.'    
+      description: Forecasted value of air temperature over a certain duration in future    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     airTemperatureTSA:    
-      description: Property. Air temperature time series aggregation    
+      description: Air temperature time series aggregation    
       properties:    
         averageValue:    
+          description: Average value of temporal processing over time    
           type: number    
+          x-ngsi:    
+            type: Property    
         instValue:    
+          description: Instant value of temporal processing    
           type: number    
+          x-ngsi:    
+            type: Property    
         maxOverTime:    
+          description: Maximum value of temporal processing over time    
           type: number    
+          x-ngsi:    
+            type: Property    
         minOverTime:    
+          description: Minimum value of temporal processing over time    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
+    allOf:    
+      - feelLikesTemperature:    
+          description: Temperature appreciation of the item    
+          type: number    
+          x-ngsi:    
+            type: Property    
+        relativeHumidity:    
+          description: Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)    
+          maximum: 1    
+          minimum: 0    
+          type: number    
+          x-ngsi:    
+            type: Property    
+        temperature:    
+          description: Temperature of the item    
+          type: number    
+          x-ngsi:    
+            type: Property    
+      - atmosphericPressure:    
+          description: The atmospheric pressure observed measured in Hecto Pascals    
+          minimum: 0    
+          type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
+            units: Hecto pascals    
+        gustSpeed:    
+          description: A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds    
+          type: number    
+          x-ngsi:    
+            type: Property    
+        illuminance:    
+          description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)'    
+          minimum: 0    
+          type: number    
+          x-ngsi:    
+            model: https://schema.org/Number    
+            type: Property    
+        refPointOfInterest:    
+          description: Point of interest related to the item    
+          type: string    
+          x-ngsi:    
+            model: http://schema.org/URL    
+            type: Relationship    
+        visibility:    
+          anyOf:    
+            - enum:    
+                - veryPoor    
+                - poor    
+                - moderate    
+                - good    
+                - veryGood    
+                - excellent    
+              type: string    
+            - minimum: 0    
+              type: number    
+          description: Categories of visibility    
+          x-ngsi:    
+            model: http://schema.org/Text    
+            type: Property    
+        weatherType:    
+          description: Text description of the weather    
+          type: string    
+          x-ngsi:    
+            model: http://schema.org/Text    
+            type: Property    
+        windDirection:    
+          description: Direction of the wind bet    
+          maximum: 360    
+          minimum: 0    
+          type: number    
+          x-ngsi:    
+            model: http://schema.org/Number    
+            type: Property    
+        windSpeed:    
+          description: Intensity of the wind    
+          minimum: 0    
+          type: number    
+          x-ngsi:    
+            model: http//schema.org/Number    
+            type: Property    
     alternateName:    
       description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     aqiMajorPollutant:    
-      description: 'Property. Model:''https://schema.org/Text''. Major pollutant in the Air Quality Index (AQI).'    
+      description: Major pollutant in the Air Quality Index (AQI)    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     aqiMajorPollutantForecast:    
-      description: 'Property. Model:''https://schema.org/Text''. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future.'    
+      description: Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -118,33 +243,25 @@ WeatherObserved:
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
-    atmosphericPressure:    
-      description: The atmospheric pressure observed measured in Hecto Pascals    
-      minimum: 0    
-      type: number    
-      x-ngsi:    
-        model: https://schema.org/Number    
-        type: Property    
-        units: Hecto pascals    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateObserved:    
-      description: Date of the observed entity defined by the user.    
+      description: Date of the observed entity defined by the user    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -155,14 +272,14 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     dewPoint:    
-      description: 'Property. Model:''https://schema.org/Number''. Units:''Celsius degrees''. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor'    
+      description: The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
         units: Celsius degrees    
     diffuseIrradiation:    
-      description: 'Property. Model:''https://schema.org/Number''. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:''w/m2'''    
+      description: Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -170,38 +287,32 @@ WeatherObserved:
         type: Property    
         units: w/m2    
     directIrradiation:    
-      description: 'Property. Model:''https://schema.org/Number''. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:''w/m2'''    
+      description: Direct irradiance is the part of the solar irradiance that directly reaches a surface    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
         units: w/m2    
-    feelLikesTemperature:    
-      description: Temperature appreciation of the item    
-      type: number    
-      x-ngsi:    
-        type: Property    
-    gustSpeed:    
-      description: A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds.    
-      type: number    
-      x-ngsi:    
-        type: Property    
     id:    
-      anyOf: &weatherobserved_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     illuminance:    
-      description: 'Property. Observed instantaneous ambient light intensity. Units:''Lux'''    
+      description: Observed instantaneous ambient light intensity    
       type: number    
       x-ngsi:    
         type: Property    
@@ -209,7 +320,7 @@ WeatherObserved:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: GeoProperty. Geojson reference to the item. Point    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -230,7 +341,9 @@ WeatherObserved:
             - coordinates    
           title: GeoJSON Point    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. LineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -254,7 +367,9 @@ WeatherObserved:
             - coordinates    
           title: GeoJSON LineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. Polygon    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -280,7 +395,9 @@ WeatherObserved:
             - coordinates    
           title: GeoJSON Polygon    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiPoint    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -303,7 +420,9 @@ WeatherObserved:
             - coordinates    
           title: GeoJSON MultiPoint    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -329,7 +448,9 @@ WeatherObserved:
             - coordinates    
           title: GeoJSON MultiLineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -357,23 +478,39 @@ WeatherObserved:
             - coordinates    
           title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *weatherobserved_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     precipitation:    
-      description: 'Property. Model:''https://schema.org/Number''. Amount of water rain registered. Units:''Liters per square meter''. '    
+      description: 'Amount of water rain registered. '    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -381,13 +518,13 @@ WeatherObserved:
         type: Property    
         units: Liters per square meter    
     precipitationForecast:    
-      description: 'Property. Model:''https://schema.org/Number''. Forecasted rainfall over a certain duration in future.'    
+      description: Forecasted rainfall over a certain duration in future    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     pressureTendency:    
-      description: 'Property. Enum:''falling, raising, steady''. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms.'    
+      description: 'Enum:''falling, raising, steady''. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms'    
       oneOf:    
         - enum:    
             - falling    
@@ -399,23 +536,21 @@ WeatherObserved:
         type: Property    
     refDevice:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Relationship. Model:''https://schema.org/URL''. A reference to the device(s) which captured this observation.'    
+          x-ngsi:    
+            type: Property    
+      description: A reference to the device(s) which captured this observation    
       x-ngsi:    
         model: https://schema.org/URL    
-        type: Relationship    
-    refPointOfInterest:    
-      description: Point of interest related to the item    
-      type: string    
-      x-ngsi:    
-        model: http://schema.org/URL    
         type: Relationship    
     relativeHumidity:    
       description: Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)    
@@ -425,7 +560,7 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     relativeHumidityForecast:    
-      description: 'Property. Model:''https://schema.org/Number''. Forecasted relative humidity (water vapour in air) over a certain duration in future'    
+      description: Forecasted relative humidity (water vapour in air) over a certain duration in future    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
@@ -443,7 +578,7 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     snowHeight:    
-      description: 'Property. Model:''https://schema.org/Number''. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:''centimeters'''    
+      description: 'The snow height observed by generic snow depth measurement sensors, expressed in centimeters'    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -451,7 +586,7 @@ WeatherObserved:
         type: Property    
         units: centimeters    
     solarRadiation:    
-      description: 'Property. Model:''https://schema.org/Number''. The solar radiation observed measured in Watts per square. Units:''w/m2'''    
+      description: The solar radiation observed measured in Watts per square    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -459,12 +594,12 @@ WeatherObserved:
         type: Property    
         units: w/m2    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     streamGauge:    
-      description: 'Property. Model:''https://schema.org/Number''. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:''centimeters'''    
+      description: 'The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters'    
       minimum: 0    
       type: number    
       x-ngsi:    
@@ -477,55 +612,18 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     type:    
-      description: Property. NGSI Entity type. It has to be WeatherObserved    
+      description: NGSI Entity type. It has to be WeatherObserved    
       enum:    
         - WeatherObserved    
       type: string    
       x-ngsi:    
         type: Property    
     uVIndexMax:    
-      description: 'Property. Model:''https://schema.org/Number''. The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored.'    
+      description: 'The maximum UV index for the period, based on the World Health Organization''s UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored'    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
-        type: Property    
-    visibility:    
-      anyOf:    
-        - enum:    
-            - veryPoor    
-            - poor    
-            - moderate    
-            - good    
-            - veryGood    
-            - excellent    
-          type: string    
-        - minimum: 0    
-          type: number    
-      description: Categories of visibility    
-      x-ngsi:    
-        model: http://schema.org/Text    
-        type: Property    
-    weatherType:    
-      description: Text description of the weather    
-      type: string    
-      x-ngsi:    
-        model: http://schema.org/Text.    
-        type: Property    
-    windDirection:    
-      description: Direction of the wind bet    
-      maximum: 360    
-      minimum: 0    
-      type: number    
-      x-ngsi:    
-        model: http://schema.org/Number    
-        type: Property    
-    windSpeed:    
-      description: Intensity of the wind    
-      minimum: 0    
-      type: number    
-      x-ngsi:    
-        model: http//schema.org/Number    
         type: Property    
   required:    
     - id    
@@ -727,101 +825,99 @@ WeatherObserved:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
-    "type": "WeatherObserved",  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressLocality": "Valladolid",  
-            "addressCountry": "ES",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "atmosphericPressure": {  
-        "type": "Property",  
-        "value": 938.9  
-    },  
-    "dataProvider": {  
-        "type": "Property",  
-        "value": "TEF"  
-    },  
-    "dateObserved": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-11-30T07:00:00.00Z"  
-        }  
-    },  
-    "illuminance": {  
-        "type": "Property",  
-        "value": 1000  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -4.754444444,  
-                41.640833333  
-            ]  
-        }  
-    },  
-    "precipitation": {  
-        "type": "Property",  
-        "value": 0  
-    },  
-    "pressureTendency": {  
-        "type": "Property",  
-        "value": 0.5  
-    },  
-    "refDevice": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Device:device-0A3478"  
-    },  
-    "relativeHumidity": {  
-        "type": "Property",  
-        "value": 1  
-    },  
-    "snowHeight": {  
-        "type": "Property",  
-        "value": 20  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "http://www.aemet.es"  
-    },  
-    "stationCode": {  
-        "type": "Property",  
-        "value": "2422"  
-    },  
-    "stationName": {  
-        "type": "Property",  
-        "value": "Valladolid"  
-    },  
-    "streamGauge": {  
-        "type": "Property",  
-        "value": 50  
-    },  
-    "temperature": {  
-        "type": "Property",  
-        "value": 3.3  
-    },  
-    "uvIndexMax": {  
-        "type": "Property",  
-        "value": 1.0  
-    },  
-    "windDirection": {  
-        "type": "Property",  
-        "value": 135  
-    },  
-    "windSpeed": {  
-        "type": "Property",  
-        "value": 2  
-    },  
-    "@context": [  
-        "https://smart-data-models.github.io/dataModel.Weather/context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:WeatherObserved:Spain-WeatherObserved-Valladolid-2016-11-30T07:00:00.00Z",  
+  "type": "WeatherObserved",  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressLocality": "Valladolid",  
+      "addressCountry": "ES"  
+    }  
+  },  
+  "atmosphericPressure": {  
+    "type": "Property",  
+    "value": 938.9  
+  },  
+  "dataProvider": {  
+    "type": "Property",  
+    "value": "TEF"  
+  },  
+  "dateObserved": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-11-30T07:00:00.00Z"  
+    }  
+  },  
+  "illuminance": {  
+    "type": "Property",  
+    "value": 1000  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -4.754444444,  
+        41.640833333  
+      ]  
+    }  
+  },  
+  "precipitation": {  
+    "type": "Property",  
+    "value": 0  
+  },  
+  "pressureTendency": {  
+    "type": "Property",  
+    "value": 0.5  
+  },  
+  "refDevice": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Device:device-0A3478"  
+  },  
+  "relativeHumidity": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "snowHeight": {  
+    "type": "Property",  
+    "value": 20  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "http://www.aemet.es"  
+  },  
+  "stationCode": {  
+    "type": "Property",  
+    "value": "2422"  
+  },  
+  "stationName": {  
+    "type": "Property",  
+    "value": "Valladolid"  
+  },  
+  "streamGauge": {  
+    "type": "Property",  
+    "value": 50  
+  },  
+  "temperature": {  
+    "type": "Property",  
+    "value": 3.3  
+  },  
+  "uvIndexMax": {  
+    "type": "Property",  
+    "value": 1.0  
+  },  
+  "windDirection": {  
+    "type": "Property",  
+    "value": 135  
+  },  
+  "windSpeed": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.Weather/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
