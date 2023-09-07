@@ -4,30 +4,6 @@
         "WeatherAlert": "https://smartdatamodels.org/dataModel.Weather/WeatherAlert",
         "WeatherForecast": "https://smartdatamodels.org/dataModel.Weather/WeatherForecast",
         "WeatherObserved": "https://smartdatamodels.org/dataModel.Weather/WeatherObserved",
-        "addressCountry": "https://smartdatamodels.org/addressCountry",
-        "addressLocality": "https://smartdatamodels.org/addressLocality",
-        "addressRegion": "https://smartdatamodels.org/addressRegion",
-        "averageValue": "https://smartdatamodels.org/dataModel.Weather/averageValue",
-        "bbox": {
-            "@container": "@list",
-            "@id": "geojson:bbox"
-        },
-        "coordinates": {
-            "@container": "@list",
-            "@id": "geojson:coordinates"
-        },
-        "district": "https://smartdatamodels.org/district",
-        "feelLikesTemperature": "https://smartdatamodels.org/dataModel.Weather/feelLikesTemperature",
-        "instValue": "https://smartdatamodels.org/instValue",
-        "maxOverTime": "https://smartdatamodels.org/maxOverTime",
-        "minOverTime": "https://smartdatamodels.org/minOverTime",
-        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
-        "postOfficeBoxNumber": "https://smartdatamodels.org/postOfficeBoxNumber",
-        "postalCode": "https://smartdatamodels.org/postalCode",
-        "relativeHumidity": "https://smartdatamodels.org/dataModel.Weather/relativeHumidity",
-        "streetAddress": "https://smartdatamodels.org/streetAddress",
-        "streetNr": "https://smartdatamodels.org/streetNr",
-        "temperature": "https://smartdatamodels.org/dataModel.Weather/temperature",
-        "type": "@type"
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/"
     }
 }
