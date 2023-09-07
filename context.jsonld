@@ -13,7 +13,6 @@
         "airTemperatureForecast": "https://smartdatamodels.org/dataModel.Weather/airTemperatureForecast",
         "airTemperatureTSA": "https://smartdatamodels.org/dataModel.Weather/airTemperatureTSA",
         "alertSource": "https://smartdatamodels.org/dataModel.Weather/alertSource",
-        "allOf": "https://smartdatamodels.org/dataModel.Weather/allOf",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "aqiMajorPollutant": "https://smartdatamodels.org/dataModel.Weather/aqiMajorPollutant",
         "aqiMajorPollutantForecast": "https://smartdatamodels.org/dataModel.Weather/aqiMajorPollutantForecast",
