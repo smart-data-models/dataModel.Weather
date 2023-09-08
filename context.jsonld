@@ -16,6 +16,7 @@
         "aqiMajorPollutant": "https://smartdatamodels.org/dataModel.Weather/aqiMajorPollutant",
         "aqiMajorPollutantForecast": "https://smartdatamodels.org/dataModel.Weather/aqiMajorPollutantForecast",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "atmosphericPressure": "https://smartdatamodels.org/dataModel.Weather/atmosphericPressure",
         "averageValue": "https://smartdatamodels.org/dataModel.Weather/averageValue",
         "bbox": {
             "@container": "@list",
@@ -41,6 +42,7 @@
         "directIrradiation": "https://smartdatamodels.org/dataModel.Weather/directIrradiation",
         "district": "https://smartdatamodels.org/district",
         "feelLikesTemperature": "https://smartdatamodels.org/dataModel.Weather/feelLikesTemperature",
+        "gustSpeed": "https://smartdatamodels.org/dataModel.Weather/gustSpeed",
         "illuminance": "https://smartdatamodels.org/dataModel.Weather/illuminance",
         "instValue": "https://smartdatamodels.org/instValue",
         "maxOverTime": "https://smartdatamodels.org/maxOverTime",
@@ -53,6 +55,7 @@
         "postalCode": "https://smartdatamodels.org/postalCode",
         "precipitation": "https://smartdatamodels.org/dataModel.Weather/precipitation",
         "precipitationForecast": "https://smartdatamodels.org/dataModel.Weather/precipitationForecast",
+        "refPointOfInterest": "https://smartdatamodels.org/dataModel.Weather/refPointOfInterest",
         "relativeHumidity": "https://smartdatamodels.org/dataModel.Weather/relativeHumidity",
         "relativeHumidityForecast": "https://smartdatamodels.org/dataModel.Weather/relativeHumidityForecast",
         "salinity": "https://smartdatamodels.org/dataModel.Weather/salinity",
@@ -73,6 +76,9 @@
         "validity": "https://smartdatamodels.org/dataModel.Weather/validity",
         "waveHeight": "https://smartdatamodels.org/dataModel.Weather/waveHeight",
         "waveLevel": "https://smartdatamodels.org/dataModel.Weather/waveLevel",
-        "wavePeriod": "https://smartdatamodels.org/dataModel.Weather/wavePeriod"
+        "wavePeriod": "https://smartdatamodels.org/dataModel.Weather/wavePeriod",
+        "weatherType": "https://smartdatamodels.org/dataModel.Weather/weatherType",
+        "windDirection": "https://smartdatamodels.org/dataModel.Weather/windDirection",
+        "windSpeed": "https://smartdatamodels.org/dataModel.Weather/windSpeed"
     }
 }
