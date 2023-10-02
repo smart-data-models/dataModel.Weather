@@ -1,3 +1,3 @@
-/* (Beta) Export of data model SeaConditions of the subject dataModel.Weather for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model SeaConditions of the subject dataModel.Weather for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE SeaConditions_type AS ENUM ('SeaConditions');
-CREATE TABLE SeaConditions (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, dateObserved timestamp, description text, id text, location json, name text, owner json, pH text, salinity text, seeAlso json, source text, surfaceTemperature text, type SeaConditions_type, waveHeight text, waveLevel text, wavePeriod text);
+CREATE TABLE SeaConditions (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, dateObserved TIMESTAMP, description TEXT, name TEXT, owner JSON, pH NUMERIC, salinity NUMERIC, source TEXT, surfaceTemperature NUMERIC, type SeaConditions_type, waveHeight NUMERIC, waveLevel NUMERIC, wavePeriod NUMERIC);
