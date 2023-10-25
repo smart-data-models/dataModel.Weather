@@ -1,40 +1,42 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-language not supported  
-======================<!-- /10-Header -->  
+엔티티: WeatherObserved  
+====================<!-- /10-Header -->  
 <!-- 15-License -->  
-language not supported  
-language not supported  
+[오픈 라이선스](https://github.com/smart-data-models//dataModel.Weather/blob/master/WeatherObserved/LICENSE.md)  
+[문서 자동 생성](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-language not supported  
-language not supported  
+글로벌 설명: **특정 장소와 시간에 대한 기상 조건 관측. 이 데이터 모델은 이동 통신사 및 GSMA와 협력하여 개발되었습니다.**  
+버전: 0.3.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
-language not supported  
-language not supported  
-- `address[object]`: language not supported  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: language not supported  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: language not supported  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: language not supported  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: language not supported    
-	- `postOfficeBoxNumber[string]`: language not supported  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: language not supported  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: language not supported  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: language not supported    
-- `airQualityIndex[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `airQualityIndexForecast[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureForecast[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureTSA[object]`: language not supported  	- `averageValue[number]`: language not supported    
-	- `instValue[number]`: language not supported    
-	- `maxOverTime[number]`: language not supported    
-	- `minOverTime[number]`: language not supported    
-- `alternateName[string]`: language not supported  - `aqiMajorPollutant[string]`: language not supported  . Model: [https://schema.org/Text](https://schema.org/Text)- `aqiMajorPollutantForecast[string]`: language not supported  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: language not supported  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: language not supported  - `dateCreated[date-time]`: language not supported  - `dateModified[date-time]`: language not supported  - `dateObserved[date-time]`: language not supported  - `description[string]`: language not supported  - `dewPoint[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `diffuseIrradiation[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `directIrradiation[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: language not supported  - `illuminance[number]`: language not supported  - `location[*]`: language not supported  - `name[string]`: language not supported  - `owner[array]`: language not supported  - `precipitation[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `precipitationForecast[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `pressureTendency[*]`: language not supported  - `refDevice[*]`: language not supported  . Model: [https://schema.org/URL](https://schema.org/URL)- `relativeHumidity[number]`: language not supported  - `relativeHumidityForecast[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: language not supported  - `snowHeight[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `solarRadiation[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: language not supported  - `streamGauge[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: language not supported  - `type[string]`: language not supported  - `uVIndexMax[number]`: language not supported  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+
+## 속성 목록  
+
+<sup><sub>[*] 속성에 유형이 없는 것은 여러 유형 또는 다른 형식/패턴을 가질 수 있기 때문입니다</sub></sup>.  
+- `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예를 들어, 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 도로명 주소가 있는 지역 및 해당 지역에 속한 지역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 해당 지역이 위치한 지역과 해당 국가의 지역  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 지구는 일부 국가에서는 지방 정부에서 관리하는 행정 구역의 일종입니다.    
+	- `postOfficeBoxNumber[string]`: 사서함 주소의 우체국 사서함 번호입니다. 예: 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 우편 번호입니다. 예: 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 거리 주소  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 공공 도로의 특정 건물을 식별하는 번호    
+- `airQualityIndex[number]`: 공기질 지수는 특정 날짜의 공기질을 보고하는 데 사용되는 수치입니다.  . Model: [https://schema.org/Number](https://schema.org/Number)- `airQualityIndexForecast[number]`: 향후 특정 기간 동안의 전체 공기 품질 지수(AQI) 예측  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureForecast[number]`: 향후 특정 기간 동안의 기온 예측 값  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureTSA[object]`: 기온 시계열 집계  	- `averageValue[number]`: 시간 경과에 따른 임시 처리의 평균값    
+	- `instValue[number]`: 시간적 처리의 즉각적인 가치    
+	- `maxOverTime[number]`: 시간 경과에 따른 시간 처리의 최대값    
+	- `minOverTime[number]`: 시간 경과에 따른 시간 처리의 최소값    
+- `alternateName[string]`: 이 항목의 대체 이름  - `aqiMajorPollutant[string]`: 대기질 지수(AQI)의 주요 오염 물질  . Model: [https://schema.org/Text](https://schema.org/Text)- `aqiMajorPollutantForecast[string]`: 향후 일정 기간 동안 대기질 지수(AQI)에서 주요 대기 오염 물질을 예측합니다.  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateObserved[date-time]`: 사용자가 정의한 관찰된 엔티티의 날짜  - `description[string]`: 이 항목에 대한 설명  - `dewPoint[number]`: 숫자로 인코딩된 이슬점입니다. 수증기로 포화 상태가 되기 위해 공기를 냉각해야 하는 관측 온도  . Model: [https://schema.org/Number](https://schema.org/Number)- `diffuseIrradiation[number]`: 확산 조도는 태양 복사 조도 중 대기에 의해 산란되는 부분입니다.  . Model: [https://schema.org/Number](https://schema.org/Number)- `directIrradiation[number]`: 직접 복사 조도는 태양 복사 조도 중 표면에 직접 도달하는 부분입니다.  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: 엔티티의 고유 식별자  - `illuminance[number]`: 관찰된 순간 주변 광도  - `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `name[string]`: 이 항목의 이름  - `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `precipitation[number]`: 등록된 강우량입니다.  . Model: [https://schema.org/Number](https://schema.org/Number)- `precipitationForecast[number]`: 향후 특정 기간 동안의 예상 강우량  . Model: [https://schema.org/Number](https://schema.org/Number)- `pressureTendency[*]`: 열거형: '떨어짐, 상승, 안정'. 압력이 상승하고 있나요, 하락하고 있나요? 정량적 또는 정성적 용어로 표현할 수 있습니다.  - `refDevice[*]`: 이 관찰을 캡처한 디바이스에 대한 참조입니다.  . Model: [https://schema.org/URL](https://schema.org/URL)- `relativeHumidity[number]`: 공기 중 습도. 관측된 순간 상대 습도(공기 중 수증기)  - `relativeHumidityForecast[number]`: 향후 특정 기간 동안의 상대 습도(공기 중 수증기) 예측  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `snowHeight[number]`: 일반적인 적설 깊이 측정 센서로 관측한 적설 높이(센티미터 단위)  . Model: [https://schema.org/Number](https://schema.org/Number)- `solarRadiation[number]`: 관측된 태양 복사열은 평방당 와트 단위로 측정됩니다.  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 문자 시퀀스입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `streamGauge[number]`: 수위계 측정 센서가 관측한 수위 표면 높이, 즉 [스트림 게이지](https://en.wikipedia.org/wiki/Stream_gauge)는 센티미터로 표시됩니다.  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: 품목의 온도  - `type[string]`: NGSI 엔티티 유형. WeatherObserved여야 합니다.  - `uVIndexMax[number]`: 세계보건기구의 자외선 지수 측정값을 기준으로 한 해당 기간의 최대 자외선 지수입니다. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) 1에서 11 사이의 값이 지수의 유효한 범위입니다. 값 0은 신호가 감지되지 않아 값이 저장되지 않았음을 설명하는 값입니다.  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-language not supported  
+필수 속성  
 - `dateObserved`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-language not supported  
+세계기상기구]에 따라 정의된 풍향 범위(https://library.wmo.int/doc_num.php?explnum_id=3177)  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## language not supported  
-language not supported  
+## 속성에 대한 데이터 모델 설명  
+알파벳순으로 정렬(자세한 내용을 보려면 클릭)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -643,9 +645,9 @@ WeatherObserved:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-language not supported  
-language not supported  
-language not supported  
+## 페이로드 예시  
+#### WeatherObserved NGSI-v2 키 값 예시  
+다음은 키 값으로 JSON-LD 형식의 WeatherObserved의 예입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -682,8 +684,8 @@ WeatherObserved:
 }  
 ```  
 </details>  
-language not supported  
-language not supported  
+#### WeatherObserved NGSI-v2 정규화 예제  
+다음은 정규화된 JSON-LD 형식의 WeatherObserved의 예입니다. 이는 옵션을 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -777,8 +779,8 @@ WeatherObserved:
 }  
 ```  
 </details>  
-language not supported  
-language not supported  
+#### WeatherObserved NGSI-LD 키 값 예시  
+다음은 키 값으로 JSON-LD 형식의 WeatherObserved의 예입니다. 이는 `옵션=키값`을 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -820,8 +822,8 @@ WeatherObserved:
 }  
 ```  
 </details>  
-language not supported  
-language not supported  
+#### WeatherObserved NGSI-LD 정규화 예제  
+다음은 정규화된 JSON-LD 형식의 WeatherObserved의 예입니다. 이는 옵션을 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -924,7 +926,7 @@ WeatherObserved:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-language not supported  
+10](https://smartdatamodels.org/index.php/faqs/)를 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
