@@ -7,8 +7,7 @@
   },
   "dateModified": {
     "type": "DateTime",
-    "value":  "2021-02-20T06:45:00Z"
-
+    "value": "2021-02-20T06:45:00Z"
   },
   "source": {
     "type": "Text",
@@ -24,7 +23,7 @@
   },
   "description": {
     "type": "Text",
-    "value": "Información del estado del mar en la playa Levante"
+    "value": "Informaci\u00f3n del estado del mar en la playa Levante"
   },
   "dataProvider": {
     "type": "Text",
@@ -70,8 +69,8 @@
     "value": ""
   },
   "waveLevel": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "surfaceTemperature": {
     "type": "Number",
@@ -94,7 +93,7 @@
     "value": 35
   },
   "dateObserved": {
-    "type": "Number",
+    "type": "DateTime",
     "value": "2021-02-20T06:45:00Z"
   }
 }
