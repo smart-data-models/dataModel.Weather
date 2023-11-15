@@ -46,11 +46,11 @@
     "value": "http://www.aemet.es/xml/municipios/localidad_46250.xml"
   },
   "windSpeed": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "validity": {
-    "type": "Text",
+    "type": "DateTime",
     "value": "2016-12-01T18:00:00+01:00/2016-12-02T00:00:00+01:00"
   },
   "dateIssued": {
@@ -58,7 +58,7 @@
     "value": "2016-12-01T10:40:01.00Z"
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressCountry": "Spain",
       "postalCode": "46005",
@@ -78,7 +78,7 @@
     "value": 0.85
   },
   "uVIndexMax": {
-    "type": "Number",
-    "value": 1.00
+    "type": "Boolean",
+    "value": true
   }
 }
