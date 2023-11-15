@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.3.1",
+  "$schemaVersion": "0.4.1",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json",
   "title": "Smart Data Models - Weather Alert data model ",
@@ -23,13 +23,6 @@
           "description": "Property. NGSI entity type. It has to be WeatherAlert",
           "enum": [
             "WeatherAlert"
-          ]
-        },
-        "category": {
-          "type": "string",
-          "description": "Property. Category of the entity",
-          "enum": [
-            "weather"
           ]
         },
         "subCategory": {
