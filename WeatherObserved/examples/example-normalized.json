@@ -14,8 +14,8 @@
     "value": 3.3
   },
   "precipitation": {
-    "type": "Number",
-    "value": 0
+    "type": "Boolean",
+    "value": false
   },
   "atmosphericPressure": {
     "type": "Number",
@@ -26,7 +26,7 @@
     "value": 0.5
   },
   "refDevice": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "device-0A3478"
   },
   "source": {
@@ -52,7 +52,7 @@
     "value": "Valladolid"
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressLocality": "Valladolid",
       "addressCountry": "ES"
@@ -71,8 +71,8 @@
     "value": 135
   },
   "relativeHumidity": {
-    "type": "Number",
-    "value": 1
+    "type": "Boolean",
+    "value": true
   },
   "streamGauge": {
     "type": "Number",
@@ -83,7 +83,7 @@
     "value": 20
   },
   "uvIndexMax": {
-    "type": "Number",
-    "value": 1.0
+    "type": "Boolean",
+    "value": true
   }
 }
