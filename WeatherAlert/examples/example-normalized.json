@@ -18,7 +18,7 @@
     "value": "http://www.meteoalarm.eu"
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressCountry": "ES",
       "addressRegion": "Huesca"
