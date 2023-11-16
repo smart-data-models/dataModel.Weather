@@ -84,9 +84,15 @@ WeatherAlert:
         model: https://schema.org/Text
         type: Property
     category:
-      description: Category of the entity
+      description: 'Category of the Alert. Enum:''traffic, naturalDisaster, weather, environment, health, security, agriculture'''
       enum:
+        - traffic
+        - naturalDisaster
         - weather
+        - environment
+        - health
+        - security
+        - agriculture
       type: string
       x-ngsi:
         type: Property
@@ -417,8 +423,8 @@ WeatherAlert:
     - dateIssued
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherAlert/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json
   x-model-tags: ""
-  x-version: 0.3.1
+  x-version: 0.4.1
