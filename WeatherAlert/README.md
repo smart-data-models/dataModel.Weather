@@ -1,6 +1,6 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
 # WeatherAlert
-Version: 0.3.1
+Version: 0.4.1
 
 ## Description 
 
