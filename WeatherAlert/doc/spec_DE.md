@@ -17,11 +17,12 @@
 <sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
 - `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
 	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Lande liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
 	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
 	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Nummer zur Identifizierung eines bestimmten Grundstücks an einer öffentlichen Straße    
 - `alertSource[*]`: Quelle der Ausschreibung  . Model: [http://schema.org/URL](http://schema.org/URL)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: Kategorie der Einrichtung  - `data[object]`: Nutzdaten, die die abgerufenen Daten enthalten  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateIssued[date-time]`: Datum und Uhrzeit der Ausstellung des Artikels im Format ISO8601 UTC  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `severity[string]`: Schwere des Alarms  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `subCategory[string]`: Wetter-Kategorien. Enum:' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'  - `type[string]`: NGSI-Entitätstyp. Es muss WeatherAlert sein  - `validFrom[date-time]`: Beginn des Gültigkeitszeitraums dieser Prognose im ISO8601-Format  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `validTo[date-time]`: Das Ende des Gültigkeitszeitraums dieser Prognose im ISO8601-Format  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
@@ -122,9 +123,15 @@ WeatherAlert:
         model: https://schema.org/Text    
         type: Property    
     category:    
-      description: Category of the entity    
+      description: 'Category of the Alert. Enum:''traffic, naturalDisaster, weather, environment, health, security, agriculture'''    
       enum:    
+        - traffic    
+        - naturalDisaster    
         - weather    
+        - environment    
+        - health    
+        - security    
+        - agriculture    
       type: string    
       x-ngsi:    
         type: Property    
@@ -455,11 +462,11 @@ WeatherAlert:
     - dateIssued    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherAlert/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json    
   x-model-tags: ""    
-  x-version: 0.3.1    
+  x-version: 0.4.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -512,7 +519,7 @@ WeatherAlert:
     "value": "http://www.meteoalarm.eu"  
   },  
   "address": {  
-    "type": "PostalAddress",  
+    "type": "StructuredValue",  
     "value": {  
       "addressCountry": "ES",  
       "addressRegion": "Huesca"  
@@ -538,22 +545,22 @@ WeatherAlert:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-    "type": "WeatherAlert",  
-    "address": {  
-        "addressCountry": "ES",  
-        "addressRegion": "Huesca"  
-    },  
-    "alertSource": "http://www.meteoalarm.eu",  
-    "category": "weather",  
-    "dateIssued": "2016-03-14T13:54:01.00Z",  
-    "severity": "medium",  
-    "subCategory": "snow_ice",  
-    "validFrom": "2016-03-14T13:00:00.00Z",  
-    "validTo": "2016-03-14T23:59:00.00Z",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
-    ]  
+  "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
+  "type": "WeatherAlert",  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressRegion": "Huesca"  
+  },  
+  "alertSource": "http://www.meteoalarm.eu",  
+  "category": "weather",  
+  "dateIssued": "2016-03-14T13:54:01.00Z",  
+  "severity": "medium",  
+  "subCategory": "snow_ice",  
+  "validFrom": "2016-03-14T13:00:00.00Z",  
+  "validTo": "2016-03-14T23:59:00.00Z",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
