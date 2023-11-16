@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Number identifying a specific property on a public street    
 - `alertSource[*]`: Source of the alert  . Model: [http://schema.org/URL](http://schema.org/URL)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: Category of the entity  - `data[object]`: Payload containing the data retrieved  - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateIssued[date-time]`: The date and time the item was issued in ISO8601 UTC format  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `severity[string]`: Severity of the Alarm  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `subCategory[string]`: Weather categories. Enum:' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'  - `type[string]`: NGSI entity type. It has to be WeatherAlert  - `validFrom[date-time]`: The start of the validity period for this forecast as a ISO8601 format  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `validTo[date-time]`: The end of the validity period for this forecast as a ISO8601 format  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
@@ -122,9 +123,15 @@ WeatherAlert:
         model: https://schema.org/Text    
         type: Property    
     category:    
-      description: Category of the entity    
+      description: 'Category of the Alert. Enum:''traffic, naturalDisaster, weather, environment, health, security, agriculture'''    
       enum:    
+        - traffic    
+        - naturalDisaster    
         - weather    
+        - environment    
+        - health    
+        - security    
+        - agriculture    
       type: string    
       x-ngsi:    
         type: Property    
@@ -455,11 +462,11 @@ WeatherAlert:
     - dateIssued    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherAlert/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json    
   x-model-tags: ""    
-  x-version: 0.3.1    
+  x-version: 0.4.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -512,7 +519,7 @@ WeatherAlert:
     "value": "http://www.meteoalarm.eu"  
   },  
   "address": {  
-    "type": "PostalAddress",  
+    "type": "StructuredValue",  
     "value": {  
       "addressCountry": "ES",  
       "addressRegion": "Huesca"  
@@ -538,22 +545,22 @@ WeatherAlert:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
-    "type": "WeatherAlert",  
-    "address": {  
-        "addressCountry": "ES",  
-        "addressRegion": "Huesca"  
-    },  
-    "alertSource": "http://www.meteoalarm.eu",  
-    "category": "weather",  
-    "dateIssued": "2016-03-14T13:54:01.00Z",  
-    "severity": "medium",  
-    "subCategory": "snow_ice",  
-    "validFrom": "2016-03-14T13:00:00.00Z",  
-    "validTo": "2016-03-14T23:59:00.00Z",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
-    ]  
+  "id": "WeatherAlert-83b872975414bfca10832e564a1bb416-7",  
+  "type": "WeatherAlert",  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressRegion": "Huesca"  
+  },  
+  "alertSource": "http://www.meteoalarm.eu",  
+  "category": "weather",  
+  "dateIssued": "2016-03-14T13:54:01.00Z",  
+  "severity": "medium",  
+  "subCategory": "snow_ice",  
+  "validFrom": "2016-03-14T13:00:00.00Z",  
+  "validTo": "2016-03-14T23:59:00.00Z",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
