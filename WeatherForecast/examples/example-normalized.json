@@ -78,7 +78,7 @@
     "value": 0.85
   },
   "uVIndexMax": {
-    "type": "Boolean",
-    "value": true
+    "type": "Number",
+    "value": 1.0
   }
 }
