@@ -47,20 +47,12 @@
       ]
     }
   },
-  "stationName": {
-    "type": "Text",
-    "value": "Valladolid"
-  },
   "address": {
     "type": "StructuredValue",
     "value": {
       "addressLocality": "Valladolid",
       "addressCountry": "ES"
     }
-  },
-  "stationCode": {
-    "type": "Text",
-    "value": "2422"
   },
   "dataProvider": {
     "type": "Text",
@@ -82,8 +74,8 @@
     "type": "Number",
     "value": 20
   },
-  "uvIndexMax": {
-    "type": "Boolean",
-    "value": true
+  "uVIndexMax": {
+    "type": "Number",
+    "value": 1.0
   }
 }

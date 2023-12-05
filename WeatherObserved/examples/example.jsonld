@@ -26,7 +26,7 @@
   "stationName": "Valladolid",
   "streamGauge": 50,
   "temperature": 3.3,
-  "uvIndexMax": 1.0,
+  "uVIndexMax": 1.0,
   "windDirection": 135,
   "windSpeed": 2,
   "@context": [
