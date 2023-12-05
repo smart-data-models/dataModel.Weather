@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 全球描述：**对某一地点和时间的天气状况的观测。该数据模型是与移动运营商和 GSMA 合作开发的。  
-版本： 0.3.2  
+版本： 0.3.3  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -22,12 +22,12 @@
 	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-	- `streetNr[string]`: 在公共街道上标识特定房产的编号    
+	- `streetNr[string]`: 标识公共街道上特定房产的编号    
 - `airQualityIndex[number]`: 空气质量指数是用来报告任何一天的空气质量的数字  . Model: [https://schema.org/Number](https://schema.org/Number)- `airQualityIndexForecast[number]`: 未来一定时间内的总体空气质量指数（AQI）预测值  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureForecast[number]`: 未来一定时间内的气温预测值  . Model: [https://schema.org/Number](https://schema.org/Number)- `airTemperatureTSA[object]`: 气温时间序列汇总  	- `averageValue[number]`: 随时间变化的时间处理平均值    
 	- `instValue[number]`: 时间处理的即时价值    
 	- `maxOverTime[number]`: 时间处理的最大值    
 	- `minOverTime[number]`: 随时间变化的时间处理最小值    
-- `alternateName[string]`: 该项目的替代名称  - `aqiMajorPollutant[string]`: 空气质量指数（AQI）中的主要污染物  . Model: [https://schema.org/Text](https://schema.org/Text)- `aqiMajorPollutantForecast[string]`: 未来一定时间内空气质量指数（AQI）中主要空气污染物的预测值  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: 提供服务或产品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `dateObserved[date-time]`: 用户定义的被观测实体的日期  - `description[string]`: 项目描述  - `dewPoint[number]`: 以数字编码的露点。空气必须冷却到什么温度才能达到水蒸气饱和的观测温度  . Model: [https://schema.org/Number](https://schema.org/Number)- `diffuseIrradiation[number]`: 漫射辐照度是太阳辐照度中被大气散射的部分  . Model: [https://schema.org/Number](https://schema.org/Number)- `directIrradiation[number]`: 直接辐照度是太阳辐照度中直接到达表面的部分  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: 实体的唯一标识符  - `illuminance[number]`: 观测到的瞬时环境光强  - `location[*]`: 项目的 Geojson 引用。可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `precipitation[number]`: 登记的雨水量。  . Model: [https://schema.org/Number](https://schema.org/Number)- `precipitationForecast[number]`: 未来某段时间的降雨量预测  . Model: [https://schema.org/Number](https://schema.org/Number)- `pressureTendency[*]`: 枚举："下降、升高、稳定"。压力是上升还是下降？可以用定量或定性来表示  - `refDevice[*]`: 捕捉这一观测结果的设备的参考信息  . Model: [https://schema.org/URL](https://schema.org/URL)- `relativeHumidity[number]`: 空气湿度。观测到的瞬时相对湿度（空气中的水蒸气）  - `relativeHumidityForecast[number]`: 未来一定时间内的相对湿度（空气中的水蒸气）预测值  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `snowHeight[number]`: 通用雪深测量传感器观测到的雪高，以厘米为单位  . Model: [https://schema.org/Number](https://schema.org/Number)- `solarRadiation[number]`: 观测到的太阳辐射以每平方瓦特为单位。  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `streamGauge[number]`: 水文测量传感器（即[测流仪](https://en.wikipedia.org/wiki/Stream_gauge)）观测到的水位面高程，单位为厘米  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: 物品的温度  - `type[string]`: NGSI 实体类型。必须是 WeatherObserved  - `uVIndexMax[number]`: 根据世界卫生组织的紫外线指数衡量标准，该时段的最大紫外线指数。[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)1 到 11 之间的数值是该指数的有效范围。数值 0 表示没有检测到信号，因此不存储数值。  . Model: [https://schema.org/Number](https://schema.org/Number)<!-- /30-PropertiesList -->  
+- `alternateName[string]`: 该项目的替代名称  - `aqiMajorPollutant[string]`: 空气质量指数（AQI）中的主要污染物  . Model: [https://schema.org/Text](https://schema.org/Text)- `aqiMajorPollutantForecast[string]`: 未来一定时间内空气质量指数（AQI）中主要空气污染物的预测值  . Model: [https://schema.org/Text](https://schema.org/Text)- `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 观测到的大气压力单位为海克托帕斯卡  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `dateObserved[date-time]`: 用户定义的被观测实体的日期  - `description[string]`: 项目描述  - `dewPoint[number]`: 以数字编码的露点。空气必须冷却到什么温度才能达到水蒸气饱和的观测温度  . Model: [https://schema.org/Number](https://schema.org/Number)- `diffuseIrradiation[number]`: 漫射辐照度是太阳辐照度中被大气散射的部分  . Model: [https://schema.org/Number](https://schema.org/Number)- `directIrradiation[number]`: 直接辐照度是太阳辐照度中直接到达表面的部分  . Model: [https://schema.org/Number](https://schema.org/Number)- `feelLikesTemperature[number]`: 物品的温度鉴赏  - `gustSpeed[number]`: 突然出现的超过观测平均风速的高速风，持续时间只有几秒钟  - `id[*]`: 实体的唯一标识符  - `illuminance[number]`: 观测到的瞬时环境光强  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `precipitation[number]`: 登记的雨水量。  . Model: [https://schema.org/Number](https://schema.org/Number)- `precipitationForecast[number]`: 未来某段时间的降雨量预测  . Model: [https://schema.org/Number](https://schema.org/Number)- `pressureTendency[*]`: 枚举："下降、升高、稳定"。压力是上升还是下降？可以用定量或定性来表示  - `refDevice[*]`: 捕捉这一观测结果的设备的参考信息  . Model: [https://schema.org/URL](https://schema.org/URL)- `refPointOfInterest[string]`: 与物品有关的兴趣点  . Model: [http://schema.org/URL](http://schema.org/URL)- `relativeHumidity[number]`: 空气湿度。观测到的瞬时相对湿度（空气中的水蒸气）  - `relativeHumidityForecast[number]`: 未来一定时间内的相对湿度（空气中的水蒸气）预测值  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `snowHeight[number]`: 通用雪深测量传感器观测到的雪高，以厘米为单位  . Model: [https://schema.org/Number](https://schema.org/Number)- `solarRadiation[number]`: 观测到的太阳辐射以瓦特每平方  . Model: [https://schema.org/Number](https://schema.org/Number)- `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `streamGauge[number]`: 水文测量传感器（即[测流仪](https://en.wikipedia.org/wiki/Stream_gauge)）观测到的水位面高程，单位为厘米  . Model: [https://schema.org/Number](https://schema.org/Number)- `temperature[number]`: 物品的温度  - `type[string]`: NGSI 实体类型。必须是 WeatherObserved  - `uVIndexMax[number]`: 根据世界卫生组织的紫外线指数衡量标准，该时段的最大紫外线指数。[http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)1 到 11 之间的数值是该指数的有效范围。数值 0 表示没有检测到信号，因此不存储数值。  . Model: [https://schema.org/Number](https://schema.org/Number)- `visibility[*]`: 可见度类别  . Model: [http://schema.org/Text](http://schema.org/Text)- `weatherType[string]`: 天气文字说明  . Model: [http://schema.org/Text](http://schema.org/Text)- `windDirection[number]`: 风向赌注  . Model: [http://schema.org/Number](http://schema.org/Number)- `windSpeed[number]`: 风的强度  . Model: [http//schema.org/Number](http//schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `dateObserved`  - `id`  - `location`  - `type`  <!-- /35-RequiredProperties -->  
@@ -141,87 +141,6 @@ WeatherObserved:
       type: object    
       x-ngsi:    
         type: Property    
-    allOf:    
-      - feelLikesTemperature:    
-          description: Temperature appreciation of the item    
-          type: number    
-          x-ngsi:    
-            type: Property    
-        relativeHumidity:    
-          description: Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)    
-          maximum: 1    
-          minimum: 0    
-          type: number    
-          x-ngsi:    
-            type: Property    
-        temperature:    
-          description: Temperature of the item    
-          type: number    
-          x-ngsi:    
-            type: Property    
-      - atmosphericPressure:    
-          description: The atmospheric pressure observed measured in Hecto Pascals    
-          minimum: 0    
-          type: number    
-          x-ngsi:    
-            model: https://schema.org/Number    
-            type: Property    
-            units: Hecto pascals    
-        gustSpeed:    
-          description: A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds    
-          type: number    
-          x-ngsi:    
-            type: Property    
-        illuminance:    
-          description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)'    
-          minimum: 0    
-          type: number    
-          x-ngsi:    
-            model: https://schema.org/Number    
-            type: Property    
-        refPointOfInterest:    
-          description: Point of interest related to the item    
-          type: string    
-          x-ngsi:    
-            model: http://schema.org/URL    
-            type: Relationship    
-        visibility:    
-          anyOf:    
-            - enum:    
-                - veryPoor    
-                - poor    
-                - moderate    
-                - good    
-                - veryGood    
-                - excellent    
-              type: string    
-            - minimum: 0    
-              type: number    
-          description: Categories of visibility    
-          x-ngsi:    
-            model: http://schema.org/Text    
-            type: Property    
-        weatherType:    
-          description: Text description of the weather    
-          type: string    
-          x-ngsi:    
-            model: http://schema.org/Text    
-            type: Property    
-        windDirection:    
-          description: Direction of the wind bet    
-          maximum: 360    
-          minimum: 0    
-          type: number    
-          x-ngsi:    
-            model: http://schema.org/Number    
-            type: Property    
-        windSpeed:    
-          description: Intensity of the wind    
-          minimum: 0    
-          type: number    
-          x-ngsi:    
-            model: http//schema.org/Number    
-            type: Property    
     alternateName:    
       description: An alternative name for this item    
       type: string    
@@ -245,6 +164,14 @@ WeatherObserved:
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    atmosphericPressure:    
+      description: The atmospheric pressure observed measured in Hecto Pascals    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: Hecto pascals    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
@@ -296,6 +223,16 @@ WeatherObserved:
         model: https://schema.org/Number    
         type: Property    
         units: w/m2    
+    feelsLikeTemperature:    
+      description: Temperature appreciation of the item    
+      type: number    
+      x-ngsi:    
+        type: Property    
+    gustSpeed:    
+      description: A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds    
+      type: number    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf:    
         - description: Identifier format of any NGSI entity    
@@ -314,9 +251,11 @@ WeatherObserved:
       x-ngsi:    
         type: Property    
     illuminance:    
-      description: Observed instantaneous ambient light intensity    
+      description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)'    
+      minimum: 0    
       type: number    
       x-ngsi:    
+        model: https://schema.org/Number    
         type: Property    
         units: Lux    
     location:    
@@ -554,6 +493,12 @@ WeatherObserved:
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
+    refPointOfInterest:    
+      description: Point of interest related to the item    
+      type: string    
+      x-ngsi:    
+        model: http://schema.org/URL    
+        type: Relationship    
     relativeHumidity:    
       description: Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)    
       maximum: 1    
@@ -627,6 +572,43 @@ WeatherObserved:
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
+    visibility:    
+      anyOf:    
+        - enum:    
+            - veryPoor    
+            - poor    
+            - moderate    
+            - good    
+            - veryGood    
+            - excellent    
+          type: string    
+        - minimum: 0    
+          type: number    
+      description: Categories of visibility    
+      x-ngsi:    
+        model: http://schema.org/Text    
+        type: Property    
+    weatherType:    
+      description: Text description of the weather    
+      type: string    
+      x-ngsi:    
+        model: http://schema.org/Text    
+        type: Property    
+    windDirection:    
+      description: Direction of the wind bet    
+      maximum: 360    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+    windSpeed:    
+      description: Intensity of the wind    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: http//schema.org/Number    
+        type: Property    
   required:    
     - id    
     - type    
@@ -638,7 +620,7 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.3.3    
+  x-version: 0.3.4    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -671,8 +653,6 @@ WeatherObserved:
   "pressureTendency": 0.5,  
   "relativeHumidity": 1,  
   "source": "http://www.aemet.es",  
-  "stationCode": "2422",  
-  "stationName": "Valladolid",  
   "temperature": 3.3,  
   "windDirection": 135,  
   "windSpeed": 2,  
@@ -680,11 +660,11 @@ WeatherObserved:
   "refDevice": "device-0A3478",  
   "streamGauge": 50,  
   "snowHeight": 20,  
-  "uvIndexMax": 1.0  
+  "uVIndexMax": 1.0  
 }  
 ```  
 </details>  
-#### WeatherObserved NGSI-v2 归一化示例  
+#### WeatherObserved NGSI-v2 normalized 示例  
 下面是一个规范化的 JSON-LD 格式 WeatherObserved 示例。在不使用选项的情况下，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -704,8 +684,8 @@ WeatherObserved:
     "value": 3.3  
   },  
   "precipitation": {  
-    "type": "Boolean",  
-    "value": false  
+    "type": "Number",  
+    "value": 0.1  
   },  
   "atmosphericPressure": {  
     "type": "Number",  
@@ -737,20 +717,12 @@ WeatherObserved:
       ]  
     }  
   },  
-  "stationName": {  
-    "type": "Text",  
-    "value": "Valladolid"  
-  },  
   "address": {  
     "type": "StructuredValue",  
     "value": {  
       "addressLocality": "Valladolid",  
       "addressCountry": "ES"  
     }  
-  },  
-  "stationCode": {  
-    "type": "Text",  
-    "value": "2422"  
   },  
   "dataProvider": {  
     "type": "Text",  
@@ -761,8 +733,8 @@ WeatherObserved:
     "value": 135  
   },  
   "relativeHumidity": {  
-    "type": "Boolean",  
-    "value": true  
+    "type": "Number",  
+    "value": 0.15  
   },  
   "streamGauge": {  
     "type": "Number",  
@@ -772,9 +744,9 @@ WeatherObserved:
     "type": "Number",  
     "value": 20  
   },  
-  "uvIndexMax": {  
-    "type": "Boolean",  
-    "value": true  
+  "uVIndexMax": {  
+    "type": "Number",  
+    "value": 1.0  
   }  
 }  
 ```  
@@ -807,15 +779,12 @@ WeatherObserved:
   "relativeHumidity": 1,  
   "snowHeight": 20,  
   "source": "http://www.aemet.es",  
-  "stationCode": "2422",  
-  "stationName": "Valladolid",  
   "streamGauge": 50,  
   "temperature": 3.3,  
-  "uvIndexMax": 1.0,  
+  "uVIndexMax": 1.0,  
   "windDirection": 135,  
   "windSpeed": 2,  
   "@context": [  
-    "iudx:EnvWeather",  
     "https://smart-data-models.github.io/dataModel.Weather/context.jsonld",  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
   ]  
@@ -889,14 +858,6 @@ WeatherObserved:
     "type": "Property",  
     "value": "http://www.aemet.es"  
   },  
-  "stationCode": {  
-    "type": "Property",  
-    "value": "2422"  
-  },  
-  "stationName": {  
-    "type": "Property",  
-    "value": "Valladolid"  
-  },  
   "streamGauge": {  
     "type": "Property",  
     "value": 50  
@@ -905,7 +866,7 @@ WeatherObserved:
     "type": "Property",  
     "value": 3.3  
   },  
-  "uvIndexMax": {  
+  "uVIndexMax": {  
     "type": "Property",  
     "value": 1.0  
   },  
@@ -918,7 +879,7 @@ WeatherObserved:
     "value": 2  
   },  
   "@context": [  
-    "https://smart-data-models.github.io/dataModel.Weather/context.jsonld"  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
   ]  
 }  
 ```  
