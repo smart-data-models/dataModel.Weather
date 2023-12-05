@@ -180,7 +180,7 @@ WeatherObserved:
         model: https://schema.org/Number
         type: Property
         units: w/m2
-    feelLikesTemperature:
+    feelsLikeTemperature:
       description: Temperature appreciation of the item
       type: number
       x-ngsi:
@@ -208,9 +208,11 @@ WeatherObserved:
       x-ngsi:
         type: Property
     illuminance:
-      description: Observed instantaneous ambient light intensity
+      description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)'
+      minimum: 0
       type: number
       x-ngsi:
+        model: https://schema.org/Number
         type: Property
         units: Lux
     location:
@@ -575,4 +577,4 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json
   x-model-tags: IUDX
-  x-version: 0.3.3
+  x-version: 0.3.4
