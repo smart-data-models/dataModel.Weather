@@ -23,13 +23,13 @@
 	- `postalCode[string]`: 우편 번호입니다. 예: 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 거리 주소  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: 공공 도로의 특정 건물을 식별하는 번호    
-- `alternateName[string]`: 이 항목의 대체 이름  - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 조화 데이터 엔티티의 공급자를 식별하는 일련의 문자  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateIssued[date-time]`: 기상청에서 예보를 발표한 날짜와 시간(ISO8601 UTC 형식)  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateRetrieved[date-time]`: 예측이 검색된 날짜 및 시간(ISO8601 UTC 형식)  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dayMaximum[object]`: 보고된 기간의 최대값입니다. 하위 속성 :- `온도` : 최고 온도. 설명 및 단위는 `WeatherForecast.temperature`를 참조하세요. - `feelLikesTemperature`. 최대 체감 온도. 날씨예보.느낌온도`와 의미 및 단위가 동일합니다.-`상대습도`. 최대 상대 습도. 웨더예보.상대습도`와 의미 및 단위가 동일합니다.  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)	- `feelLikesTemperature[number]`: 품목의 온도 감상    
+- `alternateName[string]`: 이 항목의 대체 이름  - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `atmosphericPressure[number]`: 헥토 파스칼로 측정된 관측 대기압  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자열입니다.  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateIssued[date-time]`: 기상청에서 예보를 발표한 날짜와 시간(ISO8601 UTC 형식)  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateRetrieved[date-time]`: 예측이 검색된 날짜 및 시간(ISO8601 UTC 형식)  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dayMaximum[object]`: 보고된 기간의 최대값입니다. 하위 속성 :- `온도` : 최고 온도. 설명 및 단위는 `WeatherForecast.temperature`를 참조하세요. - `feelLikesTemperature`. 최대 체감 온도. 날씨예보.느낌온도`와 의미 및 단위가 동일합니다.-`상대습도`. 최대 상대 습도. 웨더예보.상대습도`와 의미 및 단위가 동일합니다.  . Model: [https://schema.org/StructuredValue](https://schema.org/StructuredValue)	- `feelLikesTemperature[number]`: 품목의 온도 감상    
 	- `relativeHumidity[number]`: 공기 중 습도. 관측된 순간 상대 습도(공기 중 수증기)    
 	- `temperature[number]`: 품목의 온도    
 - `dayMinimum[object]`: 보고된 기간에 대해 예측된 최소값입니다.  보고된 기간의 최소값입니다. 하위 속성 :- `온도` : 최저 온도. 설명 및 단위는 `WeatherForecast.temperature`를 참조하세요. - `feelLikesTemperature`. 최소 체감 온도. 날씨예보.느낌온도`와 의미 및 단위가 동일합니다.-`상대습도`. 최소 상대 습도. 웨더예보.상대습도`와 의미 및 단위가 동일합니다.  . Model: [https://schema.org/Text](https://schema.org/Text)	- `feelLikesTemperature[number]`: 품목의 온도 감상    
 	- `relativeHumidity[number]`: 공기 중 습도. 관측된 순간 상대 습도(공기 중 수증기)    
 	- `temperature[number]`: 품목의 온도    
-- `description[string]`: 이 항목에 대한 설명  - `id[*]`: 엔티티의 고유 식별자  - `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인스트링, 다각형, 멀티포인트, 멀티라인스트링, 멀티폴리곤일 수 있습니다.  - `name[string]`: 이 항목의 이름  - `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `precipitation[number]`: 예상 강수량  . Model: [https://schema.org/Number](https://schema.org/Number)- `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 일련의 문자입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `type[string]`: NGSI 엔티티 유형. 일기 예보여야 합니다.  - `uVIndexMax[number]`: 세계보건기구의 자외선 지수 측정값을 기준으로 한 해당 기간의 최대 자외선 지수입니다. 규범적 참조: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  . Model: [https://schema.org/Number](https://schema.org/Number)- `validFrom[date-time]`: 유효 기간 시작 날짜 및 시간  . Model: [https://schema.org/Text](https://schema.org/Text)- `validTo[date-time]`: 유효 기간 종료 날짜 및 시간  . Model: [https://schema.org/Text](https://schema.org/Text)- `validity[string]`: 이 예측의 유효 기간을 ISO8601 시간 간격으로 포함합니다. 날짜/시간 간격에 대한 Orion 컨텍스트 브로커의 지원 부족에 대한 해결 방법으로 두 개의 별도 속성을 사용할 수 있습니다: 유효 기간`, `유효 기간`.  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+- `description[string]`: 이 항목에 대한 설명  - `feelLikesTemperature[number]`: 품목의 온도 감상  - `gustSpeed[number]`: 관측된 평균 풍속을 초과하는 고속의 바람이 갑자기 몇 초 동안만 지속되는 경우  - `id[*]`: 엔티티의 고유 식별자  - `illuminance[number]`: (https://en.wikipedia.org/wiki/Illuminance) 관측값은 럭스(lx) 또는 평방미터당 루멘(cd-sr-m-2) 단위로 측정됩니다.  . Model: [https://schema.org/Number](https://schema.org/Number)- `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `name[string]`: 이 항목의 이름  - `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `precipitation[number]`: 예상 강수량  . Model: [https://schema.org/Number](https://schema.org/Number)- `precipitationProbability[number]`: 강우 확률.  . Model: [https://schema.org/Number](https://schema.org/Number)- `refPointOfInterest[string]`: 항목과 관련된 관심 지점  . Model: [http://schema.org/URL](http://schema.org/URL)- `relativeHumidity[number]`: 공기 중 습도. 관측된 순간 상대 습도(공기 중 수증기)  - `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 일련의 문자입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `temperature[number]`: 품목의 온도  - `type[string]`: NGSI 엔티티 유형. 일기 예보여야 합니다.  - `uVIndexMax[number]`: 세계보건기구의 자외선 지수 측정값을 기준으로 한 해당 기간의 최대 자외선 지수입니다. 규범적 참조: [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/)  . Model: [https://schema.org/Number](https://schema.org/Number)- `validFrom[date-time]`: 유효 기간 시작 날짜 및 시간  . Model: [https://schema.org/Text](https://schema.org/Text)- `validTo[date-time]`: 유효 기간 종료 날짜 및 시간  . Model: [https://schema.org/Text](https://schema.org/Text)- `validity[string]`: 이 예측의 유효 기간을 ISO8601 시간 간격으로 포함합니다. 날짜/시간 간격에 대한 Orion 컨텍스트 브로커의 지원 부족에 대한 해결 방법으로 두 개의 별도 속성을 사용할 수 있습니다: 유효 기간`, `유효 기간`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `visibility[*]`: 가시성 카테고리  . Model: [http://schema.org/Text](http://schema.org/Text)- `weatherType[string]`: 날씨에 대한 텍스트 설명  . Model: [http://schema.org/Text](http://schema.org/Text)- `windDirection[number]`: 바람의 방향 내기  . Model: [http://schema.org/Number](http://schema.org/Number)- `windSpeed[number]`: 바람의 강도  . Model: [http//schema.org/Number](http//schema.org/Number)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 필수 속성  
 - `dateIssued`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -99,87 +99,6 @@ WeatherForecast:
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
-    allOf:    
-      - feelLikesTemperature:    
-          description: Temperature appreciation of the item    
-          type: number    
-          x-ngsi:    
-            type: Property    
-        relativeHumidity:    
-          description: Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)    
-          maximum: 1    
-          minimum: 0    
-          type: number    
-          x-ngsi:    
-            type: Property    
-        temperature:    
-          description: Temperature of the item    
-          type: number    
-          x-ngsi:    
-            type: Property    
-      - atmosphericPressure:    
-          description: The atmospheric pressure observed measured in Hecto Pascals    
-          minimum: 0    
-          type: number    
-          x-ngsi:    
-            model: https://schema.org/Number    
-            type: Property    
-            units: Hecto pascals    
-        gustSpeed:    
-          description: A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds    
-          type: number    
-          x-ngsi:    
-            type: Property    
-        illuminance:    
-          description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)'    
-          minimum: 0    
-          type: number    
-          x-ngsi:    
-            model: https://schema.org/Number    
-            type: Property    
-        refPointOfInterest:    
-          description: Point of interest related to the item    
-          type: string    
-          x-ngsi:    
-            model: http://schema.org/URL    
-            type: Relationship    
-        visibility:    
-          anyOf:    
-            - enum:    
-                - veryPoor    
-                - poor    
-                - moderate    
-                - good    
-                - veryGood    
-                - excellent    
-              type: string    
-            - minimum: 0    
-              type: number    
-          description: Categories of visibility    
-          x-ngsi:    
-            model: http://schema.org/Text    
-            type: Property    
-        weatherType:    
-          description: Text description of the weather    
-          type: string    
-          x-ngsi:    
-            model: http://schema.org/Text    
-            type: Property    
-        windDirection:    
-          description: Direction of the wind bet    
-          maximum: 360    
-          minimum: 0    
-          type: number    
-          x-ngsi:    
-            model: http://schema.org/Number    
-            type: Property    
-        windSpeed:    
-          description: Intensity of the wind    
-          minimum: 0    
-          type: number    
-          x-ngsi:    
-            model: http//schema.org/Number    
-            type: Property    
     alternateName:    
       description: An alternative name for this item    
       type: string    
@@ -191,6 +110,14 @@ WeatherForecast:
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    atmosphericPressure:    
+      description: The atmospheric pressure observed measured in Hecto Pascals    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: Hecto pascals    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
@@ -275,6 +202,16 @@ WeatherForecast:
       type: string    
       x-ngsi:    
         type: Property    
+    feelsLikeTemperature:    
+      description: Temperature appreciation of the item    
+      type: number    
+      x-ngsi:    
+        type: Property    
+    gustSpeed:    
+      description: A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds    
+      type: number    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf:    
         - description: Identifier format of any NGSI entity    
@@ -292,6 +229,14 @@ WeatherForecast:
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
+    illuminance:    
+      description: '(https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)'    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: Lux    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -492,6 +437,26 @@ WeatherForecast:
         model: https://schema.org/Number    
         type: Property    
         units: Liters per square meter    
+    precipitationProbability:    
+      description: Probability of rainfall.    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+    refPointOfInterest:    
+      description: Point of interest related to the item    
+      type: string    
+      x-ngsi:    
+        model: http://schema.org/URL    
+        type: Relationship    
+    relativeHumidity:    
+      description: Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)    
+      maximum: 1    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: list of uri pointing to additional resources about the item    
       oneOf:    
@@ -507,6 +472,11 @@ WeatherForecast:
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
+      x-ngsi:    
+        type: Property    
+    temperature:    
+      description: Temperature of the item    
+      type: number    
       x-ngsi:    
         type: Property    
     type:    
@@ -543,6 +513,43 @@ WeatherForecast:
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    visibility:    
+      anyOf:    
+        - enum:    
+            - veryPoor    
+            - poor    
+            - moderate    
+            - good    
+            - veryGood    
+            - excellent    
+          type: string    
+        - minimum: 0    
+          type: number    
+      description: Categories of visibility    
+      x-ngsi:    
+        model: http://schema.org/Text    
+        type: Property    
+    weatherType:    
+      description: Text description of the weather    
+      type: string    
+      x-ngsi:    
+        model: http://schema.org/Text    
+        type: Property    
+    windDirection:    
+      description: Direction of the wind bet    
+      maximum: 360    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: http://schema.org/Number    
+        type: Property    
+    windSpeed:    
+      description: Intensity of the wind    
+      minimum: 0    
+      type: number    
+      x-ngsi:    
+        model: http//schema.org/Number    
+        type: Property    
   required:    
     - id    
     - type    
@@ -553,7 +560,7 @@ WeatherForecast:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherForecast/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -652,8 +659,8 @@ WeatherForecast:
     "value": "http://www.aemet.es/xml/municipios/localidad_46250.xml"  
   },  
   "windSpeed": {  
-    "type": "Boolean",  
-    "value": false  
+    "type": "Number",  
+    "value": 0.2  
   },  
   "validity": {  
     "type": "DateTime",  
@@ -684,8 +691,8 @@ WeatherForecast:
     "value": 0.85  
   },  
   "uVIndexMax": {  
-    "type": "Boolean",  
-    "value": true  
+    "type": "Number",  
+    "value": 1.0  
   }  
 }  
 ```  
@@ -829,7 +836,7 @@ WeatherForecast:
   },  
   "windSpeed": {  
     "type": "Property",  
-    "value": 0  
+    "value": 0.2  
   },  
   "@context": [  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"  
