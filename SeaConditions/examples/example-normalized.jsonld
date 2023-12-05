@@ -1,108 +1,108 @@
 {
-    "id": "urn:ngsi-ld:SeaCondition:SeaCondition-PlayaLevante-Benidorm-123456",
-    "type": "SeaConditions",
-    "address": {
-        "type": "Property",
-        "value": {
-            "streetAddress": "",
-            "addressLocality": "Benidorm",
-            "addressRegion": "Valencia",
-            "addressCountry": "ES",
-            "postalCode": "",
-            "postOfficeBoxNumber": ""
-        }
-    },
-    "alternateName": {
-        "type": "Property",
-        "value": "Playa Levante"
-    },
-    "areaServed": {
-        "type": "Property",
-        "value": ""
-    },
-    "dataProvider": {
-        "type": "Property",
-        "value": "Water-sensor-12345"
-    },
-    "dateCreated": {
-        "type": "Property",
-        "value": {
-            "@type": "DateTime",
-            "@value": "2021-02-20T06:45:00Z"
-        }
-    },
-    "dateModified": {
-        "type": "Property",
-        "value": {
-            "@type": "DateTime",
-            "@value": "2021-02-20T06:45:00Z"
-        }
-    },
-    "dateObserved": {
-        "type": "Property",
-        "value": "2021-02-20T06:45:00Z"
-    },
-    "description": {
-        "type": "Property",
-        "value": "Informaci\u00f3n del estado del mar en la playa Levante"
-    },
-    "location": {
-        "type": "Property",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                -8.768460000000001,
-                42.60214472222222
-            ]
-        }
-    },
-    "name": {
-        "type": "Property",
-        "value": "Mar en la Playa Levante"
-    },
-    "owner": {
-        "type": "Property",
-        "value": [
-            "urn:ngsi-ld:SeaConditions:items:JVPZ:12516420",
-            "urn:ngsi-ld:SeaConditions:items:XVAE:29040891"
-        ]
-    },
-    "pH": {
-        "type": "Property",
-        "value": 8.5
-    },
-    "salinity": {
-        "type": "Property",
-        "value": 35
-    },
-    "seeAlso": {
-        "type": "Property",
-        "value": [
-            "urn:ngsi-ld:SeaConditions:items:KFKA:73977455",
-            "urn:ngsi-ld:SeaConditions:items:GPZI:53207694"
-        ]
-    },
-    "source": {
-        "type": "Property",
-        "value": ""
-    },
-    "surfaceTemperature": {
-        "type": "Property",
-        "value": 14.7
-    },
-    "waveHeight": {
-        "type": "Property",
-        "value": 0.05
-    },
-    "waveLevel": {
-        "type": "Property",
-        "value": 1
-    },
-    "wavePeriod": {
-        "type": "Property",
-        "value": 1.5
-    },
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"
+  "id": "urn:ngsi-ld:SeaCondition:SeaCondition-PlayaLevante-Benidorm-123456",
+  "type": "SeaConditions",
+  "address": {
+    "type": "Property",
+    "value": {
+      "streetAddress": "",
+      "addressLocality": "Benidorm",
+      "addressRegion": "Valencia",
+      "addressCountry": "ES",
+      "postalCode": "",
+      "postOfficeBoxNumber": ""
+    }
+  },
+  "alternateName": {
+    "type": "Property",
+    "value": "Playa Levante"
+  },
+  "areaServed": {
+    "type": "Property",
+    "value": ""
+  },
+  "dataProvider": {
+    "type": "Property",
+    "value": "Water-sensor-12345"
+  },
+  "dateCreated": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2021-02-20T06:45:00Z"
+    }
+  },
+  "dateModified": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2021-02-20T06:45:00Z"
+    }
+  },
+  "dateObserved": {
+    "type": "Property",
+    "value": "2021-02-20T06:45:00Z"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Informaci\u00f3n del estado del mar en la playa Levante"
+  },
+  "location": {
+    "type": "Property",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -8.768460000000001,
+        42.60214472222222
+      ]
+    }
+  },
+  "name": {
+    "type": "Property",
+    "value": "Mar en la Playa Levante"
+  },
+  "owner": {
+    "type": "Property",
+    "value": [
+      "urn:ngsi-ld:SeaConditions:items:JVPZ:12516420",
+      "urn:ngsi-ld:SeaConditions:items:XVAE:29040891"
     ]
+  },
+  "pH": {
+    "type": "Property",
+    "value": 8.5
+  },
+  "salinity": {
+    "type": "Property",
+    "value": 35
+  },
+  "seeAlso": {
+    "type": "Property",
+    "value": [
+      "urn:ngsi-ld:SeaConditions:items:KFKA:73977455",
+      "urn:ngsi-ld:SeaConditions:items:GPZI:53207694"
+    ]
+  },
+  "source": {
+    "type": "Property",
+    "value": ""
+  },
+  "surfaceTemperature": {
+    "type": "Property",
+    "value": 14.7
+  },
+  "waveHeight": {
+    "type": "Property",
+    "value": 0.05
+  },
+  "waveLevel": {
+    "type": "Property",
+    "value": 1
+  },
+  "wavePeriod": {
+    "type": "Property",
+    "value": 1.5
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"
+  ]
 }

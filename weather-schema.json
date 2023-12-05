@@ -52,68 +52,75 @@
     },
     "Weather-Commons": {
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/Weather-AirConditions"
+      "properties": {
+        "weatherType": {
+          "type": "string",
+          "description": "Property. Text description of the weather. Model:'http://schema.org/Text'"
         },
-        {
-          "properties": {
-            "weatherType": {
+        "visibility": {
+          "description": "Property. Model:'http://schema.org/Text'. Categories of visibility",
+          "anyOf": [
+            {
               "type": "string",
-              "description": "Property. Text description of the weather. Model:'http://schema.org/Text'"
-            },
-            "visibility": {
-              "description": "Property. Model:'http://schema.org/Text'. Categories of visibility",
-              "anyOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "veryPoor",
-                    "poor",
-                    "moderate",
-                    "good",
-                    "veryGood",
-                    "excellent"
-                  ]
-                },
-                {
-                  "type": "number",
-                  "minimum": 0
-                }
+              "enum": [
+                "veryPoor",
+                "poor",
+                "moderate",
+                "good",
+                "veryGood",
+                "excellent"
               ]
             },
-            "windDirection": {
+            {
               "type": "number",
-              "description": "Property. Model:'http://schema.org/Number'. Direction of the wind bet",
-              "minimum": 0,
-              "maximum": 360
-            },
-            "windSpeed": {
-              "type": "number",
-              "description": "Property. Model:'http//schema.org/Number'. Intensity of the wind",
               "minimum": 0
-            },
-            "gustSpeed": {
-              "type": "number",
-              "description": "Property. A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds"
-            },
-            "refPointOfInterest": {
-              "type": "string",
-              "description": "Relationship. Model:'http://schema.org/URL'. Point of interest related to the item"
-            },
-            "atmosphericPressure": {
-              "type": "number",
-              "minimum": 0,
-              "description": "Property. Model:'https://schema.org/Number'. The atmospheric pressure observed measured in Hecto Pascals. Units:'Hecto pascals'"
-            },
-            "illuminance": {
-              "type": "number",
-              "minimum": 0,
-              "description": "Property. Model:'https://schema.org/Number'. (https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)"
             }
-          }
+          ]
+        },
+        "windDirection": {
+          "type": "number",
+          "description": "Property. Model:'http://schema.org/Number'. Direction of the wind bet",
+          "minimum": 0,
+          "maximum": 360
+        },
+        "windSpeed": {
+          "type": "number",
+          "description": "Property. Model:'http//schema.org/Number'. Intensity of the wind",
+          "minimum": 0
+        },
+        "gustSpeed": {
+          "type": "number",
+          "description": "Property. A sudden burst of high-speed wind over the observed average wind speed lasting only for a few seconds"
+        },
+        "refPointOfInterest": {
+          "type": "string",
+          "description": "Relationship. Model:'http://schema.org/URL'. Point of interest related to the item"
+        },
+        "atmosphericPressure": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. The atmospheric pressure observed measured in Hecto Pascals. Units:'Hecto pascals'"
+        },
+        "illuminance": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. (https://en.wikipedia.org/wiki/Illuminance) observed measured in lux (lx) or lumens per square metre (cd·sr·m−2)"
+        },
+        "temperature": {
+          "type": "number",
+          "description": "Property. Temperature of the item"
+        },
+        "feelLikesTemperature": {
+          "type": "number",
+          "description": "Property. Temperature appreciation of the item"
+        },
+        "relativeHumidity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Property. Humidity in the Air. Observed instantaneous relative humidity (water vapour in air)"
         }
-      ]
+      }
     },
     "Weather-Alert": {
       "type": "object",
@@ -147,13 +154,13 @@
         "category": {
           "type": "string",
           "enum": [
-            "traffic",
-            "naturalDisaster",
-            "weather",
+            "agriculture",
             "environment",
             "health",
+            "naturalDisaster",
             "security",
-            "agriculture"
+            "traffic",
+            "weather"
           ],
           "description": "Property. Category of the Alert. Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'"
         },
