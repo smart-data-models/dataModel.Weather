@@ -63,8 +63,8 @@
     "value": 135
   },
   "relativeHumidity": {
-    "type": "Boolean",
-    "value": true
+    "type": "Number",
+    "value": 0.15
   },
   "streamGauge": {
     "type": "Number",
