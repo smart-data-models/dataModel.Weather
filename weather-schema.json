@@ -110,7 +110,7 @@
           "type": "number",
           "description": "Property. Temperature of the item"
         },
-        "feelLikesTemperature": {
+        "feelsLikeTemperature": {
           "type": "number",
           "description": "Property. Temperature appreciation of the item"
         },

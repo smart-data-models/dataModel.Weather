@@ -88,6 +88,11 @@
           "type": "number",
           "minimum": 0,
           "description": "Property. Model:'https://schema.org/Number'. Amount of water rain expected. Units:'Liters per square meter'"
+        },
+        "precipitationProbability": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Probability of rainfall."
         }
       }
     }
