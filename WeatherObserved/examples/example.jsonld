@@ -28,7 +28,6 @@
   "windDirection": 135,
   "windSpeed": 2,
   "@context": [
-    "iudx:EnvWeather",
     "https://smart-data-models.github.io/dataModel.Weather/context.jsonld",
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"
   ]
