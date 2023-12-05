@@ -11,7 +11,7 @@ info:
   description:  |
     An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.
   title: WeatherObserved
-  version: "0.3.2"
+  version: "0.3.3"
 openapi: "3.0.0"
 
 paths: 
