@@ -22,8 +22,6 @@
   "relativeHumidity": 1,
   "snowHeight": 20,
   "source": "http://www.aemet.es",
-  "stationCode": "2422",
-  "stationName": "Valladolid",
   "streamGauge": 50,
   "temperature": 3.3,
   "uVIndexMax": 1.0,
