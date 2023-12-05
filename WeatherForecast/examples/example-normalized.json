@@ -46,8 +46,8 @@
     "value": "http://www.aemet.es/xml/municipios/localidad_46250.xml"
   },
   "windSpeed": {
-    "type": "Boolean",
-    "value": false
+    "type": "Number",
+    "value": 0.2
   },
   "validity": {
     "type": "DateTime",
