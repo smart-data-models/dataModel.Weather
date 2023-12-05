@@ -157,7 +157,7 @@ WeatherForecast:
       type: string
       x-ngsi:
         type: Property
-    feelLikesTemperature:
+    feelsLikeTemperature:
       description: Temperature appreciation of the item
       type: number
       x-ngsi:
@@ -191,6 +191,7 @@ WeatherForecast:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
+        units: Lux
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
@@ -514,4 +515,4 @@ WeatherForecast:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherForecast/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherForecast/schema.json
   x-model-tags: ""
-  x-version: 0.0.2
+  x-version: 0.0.3
