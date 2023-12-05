@@ -595,4 +595,4 @@ WeatherObserved:
   x-license-url: https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json
   x-model-tags: IUDX
-  x-version: 0.3.2
+  x-version: 0.3.3
