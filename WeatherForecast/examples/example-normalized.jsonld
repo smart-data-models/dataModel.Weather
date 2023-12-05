@@ -91,7 +91,7 @@
   },
   "windSpeed": {
     "type": "Property",
-    "value": 0
+    "value": 0.2
   },
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.Weather/master/context.jsonld"
