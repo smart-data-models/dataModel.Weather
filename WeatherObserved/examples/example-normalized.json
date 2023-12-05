@@ -14,8 +14,8 @@
     "value": 3.3
   },
   "precipitation": {
-    "type": "Boolean",
-    "value": false
+    "type": "Number",
+    "value": 0.1
   },
   "atmosphericPressure": {
     "type": "Number",
