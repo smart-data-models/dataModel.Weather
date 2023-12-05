@@ -391,6 +391,13 @@ WeatherForecast:
         model: https://schema.org/Number
         type: Property
         units: Liters per square meter
+    precipitationProbability:
+      description: Probability of rainfall.
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
     refPointOfInterest:
       description: Point of interest related to the item
       type: string
