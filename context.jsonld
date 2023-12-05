@@ -58,6 +58,7 @@
         "postalCode": "https://smartdatamodels.org/postalCode",
         "precipitation": "https://smartdatamodels.org/dataModel.Weather/precipitation",
         "precipitationForecast": "https://smartdatamodels.org/dataModel.Weather/precipitationForecast",
+        "precipitationProbability": "https://smartdatamodels.org/dataModel.Weather/precipitationProbability",
         "pressureTendency": "https://smartdatamodels.org/dataModel.Weather/pressureTendency",
         "refDevice": "https://smartdatamodels.org/dataModel.Weather/refDevice",
         "refPointOfInterest": "https://smartdatamodels.org/dataModel.Weather/refPointOfInterest",
