@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.3.3",
+  "$schemaVersion": "0.3.4",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
   "title": "Weather Observed schema - Smart Data Models",
@@ -27,12 +27,6 @@
         },
         "dateObserved": {
           "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
-        },
-        "temperature": {
-          "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/temperature"
-        },
-        "relativeHumidity": {
-          "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-AirConditions/properties/relativeHumidity"
         },
         "precipitation": {
           "type": "number",
@@ -129,10 +123,6 @@
         "relativeHumidityForecast": {
           "type": "number",
           "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
-        },
-        "illuminance": {
-          "type": "number",
-          "description": "Property. Observed instantaneous ambient light intensity. Units:'Lux'"
         },
         "airQualityIndexForecast": {
           "type": "number",
