@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.4.1",
+  "validationSchema": "https://github.com/smart-data-models/dataModel.Weather/edit/master/WeatherAlert/schema.json", 
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json",
   "title": "Smart Data Models - Weather Alert data model ",
