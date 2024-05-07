@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.4.1",
-  "validationSchema": "https://github.com/smart-data-models/dataModel.Weather/edit/master/WeatherAlert/schema.json", 
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherAlert/schema.json",
   "title": "Smart Data Models - Weather Alert data model ",
@@ -28,6 +27,10 @@
         },
         "subCategory": {
           "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/WeatherAlertCategories"
+        },
+        "validationSchema": {
+          "type": "string",
+          "description": "Property. URL to the corresponding validation schema of the data model. Default value: https://github.com/smart-data-models/dataModel.Weather/edit/master/WeatherAlert/schema.json"
         }
       }
     }
