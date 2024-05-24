@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "WeatherForecast"
 subject = "dataModel.Weather"
-dateIssued = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2016-12-01T10:40:01.00Z'}}"
+dateIssued = "2016-12-01T10:40:01.00Z"
 attribute = "dateIssued"
 value = dateIssued
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-dateRetrieved = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2016-12-01T12:57:24.00Z'}}"
+dateRetrieved = "2016-12-01T12:57:24.00Z"
 attribute = "dateRetrieved"
 value = dateRetrieved
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-dayMaximum = {'type': 'Property', 'value': {'feelsLikeTemperature': 15, 'temperature': 15, 'relativeHumidity': 0.9}}
+dayMaximum = {'feelsLikeTemperature': 15, 'temperature': 15, 'relativeHumidity': 0.9}
 attribute = "dayMaximum"
 value = dayMaximum
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-dayMinimum = {'type': 'Property', 'value': {'feelsLikeTemperature': 11, 'temperature': 11, 'relativeHumidity': 0.7}}
+dayMinimum = {'feelsLikeTemperature': 11, 'temperature': 11, 'relativeHumidity': 0.7}
 attribute = "dayMinimum"
 value = dayMinimum
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
