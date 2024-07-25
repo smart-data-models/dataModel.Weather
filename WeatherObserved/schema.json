@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$schemaVersion": "0.3.4",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
