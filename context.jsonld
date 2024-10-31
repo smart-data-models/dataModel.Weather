@@ -21,14 +21,14 @@
         "averageValue": "https://smartdatamodels.org/dataModel.Weather/averageValue",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "category": "https://smartdatamodels.org/dataModel.Weather/category",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
-        "data": "ngsi-ld:data",
+        "data": "https://uri.etsi.org/ngsi-ld/data",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
         "dateIssued": "https://smartdatamodels.org/dataModel.Weather/dateIssued",
@@ -43,11 +43,12 @@
         "directIrradiation": "https://smartdatamodels.org/dataModel.Weather/directIrradiation",
         "district": "https://smartdatamodels.org/district",
         "feelLikesTemperature": "https://smartdatamodels.org/dataModel.Weather/feelLikesTemperature",
+        "feelsLikeTemperature": "https://smartdatamodels.org/dataModel.Weather/feelsLikeTemperature",
         "gustSpeed": "https://smartdatamodels.org/dataModel.Weather/gustSpeed",
         "id": "@id",
         "illuminance": "https://smartdatamodels.org/dataModel.Weather/illuminance",
         "instValue": "https://smartdatamodels.org/instValue",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "maxOverTime": "https://smartdatamodels.org/maxOverTime",
         "minOverTime": "https://smartdatamodels.org/minOverTime",
         "name": "https://smartdatamodels.org/name",
